@@ -1,4 +1,5 @@
 files/.vim/sessions
 files/.vim/netrwhist
-# In case a private key is put in the repo
+# Just in case
 *.pem
+*.bash_history
