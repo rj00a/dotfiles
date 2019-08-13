@@ -50,19 +50,6 @@ alias sm='mv -i'
 # Safe copy, prompt before overwriting
 alias sc='cp -i'
 
-alias gi='git init'
-alias gp='git push'
-alias gf='git fetch'
-alias gs='git status'
-alias gd='git diff'
-alias ga='git add'
-alias gb='git branch'
-alias gc='git commit'
-alias gl='git log'
-alias gr='git reset'
-alias gre='git rebase'
-alias gsh='git show'
-
 # BitTorrent Curses Interface
 alias rtor='rtorrent'
 
