@@ -86,6 +86,7 @@ neofetch
 net-tools
 netctl
 network-manager-applet
+networkmanager-openvpn
 nitrogen
 noto-fonts
 noto-fonts-cjk
@@ -94,6 +95,7 @@ nvidia
 nvidia-settings
 obs-studio
 openssh
+openvpn
 pacman
 pandoc
 papirus-icon-theme

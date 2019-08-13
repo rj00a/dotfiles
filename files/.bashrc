@@ -69,7 +69,7 @@ alias ya='youtube-dl -xic --add-metadata "$(xclip -o)"'
 alias vlcx='vlc "$(xclip -o)"'
 
 # Self explanatory
-alias fuck='pkill -ie'
+alias fuck='sudo pkill -ie'
 
 # Echo to stderr
 errcho() {

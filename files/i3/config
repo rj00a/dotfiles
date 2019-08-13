@@ -239,3 +239,6 @@ exec nitrogen --restore
 # Useful for tiling window managers
 exec unclutter
 
+# Start the NetworkManager applet
+exec nm-applet
+

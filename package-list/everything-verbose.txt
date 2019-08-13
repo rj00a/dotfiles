@@ -2940,7 +2940,7 @@ Groups          : None
 Provides        : None
 Depends On      : gcc-libs  libtasn1  readline  zlib  nettle  p11-kit  libidn2  libidn2.so=0-64  libunistring
 Optional Deps   : guile: for use with Guile bindings [installed]
-Required By     : ffmpeg  glib-networking  gnupg  libcups  libimobiledevice  libzip  vlc  vte3  wget
+Required By     : ffmpeg  glib-networking  gnupg  libcups  libimobiledevice  libzip  pkcs11-helper  vlc  vte3  wget
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -5934,7 +5934,7 @@ Depends On      : None
 Optional Deps   : acpi: For battery script
                   bc: For bandwidth script [installed]
                   lm_sensors: For temperature script [installed]
-                  openvpn: For openvpn script
+                  openvpn: For openvpn script [installed]
                   playerctl: For mediaplayer script [installed]
                   alsa-utils: For volume script [installed]
                   sysstat: For cpu_usage script
@@ -6213,7 +6213,7 @@ Groups          : base
 Provides        : iproute
 Depends On      : glibc  iptables  libelf
 Optional Deps   : linux-atm: ATM support
-Required By     : netctl  networkmanager
+Required By     : netctl  networkmanager  openvpn
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -10011,7 +10011,7 @@ Groups          : None
 Provides        : None
 Depends On      : glib2  nss  libutil-linux  jansson  systemd-libs
 Optional Deps   : None
-Required By     : libnm-glib  libnma  networkmanager
+Required By     : libnm-glib  libnma  networkmanager  networkmanager-openvpn
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -10056,7 +10056,7 @@ Provides        : None
 Depends On      : libnm  gcr  gtk3  iso-codes  mobile-broadband-provider-info
 Optional Deps   : None
 Required By     : nm-connection-editor
-Optional For    : None
+Optional For    : networkmanager-openvpn
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 794.00 KiB
@@ -10566,7 +10566,7 @@ Groups          : None
 Provides        : None
 Depends On      : glib2  libgcrypt
 Optional Deps   : gnome-keyring: key storage service, or use any other service implementing org.freedesktop.secrets
-Required By     : network-manager-applet  pinentry  vlc  webkit2gtk
+Required By     : network-manager-applet  networkmanager-openvpn  pinentry  vlc  webkit2gtk
 Optional For    : git
 Conflicts With  : None
 Replaces        : None
@@ -12374,7 +12374,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc
 Optional Deps   : None
-Required By     : btrfs-progs  cairo
+Required By     : btrfs-progs  cairo  openvpn
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -13068,6 +13068,28 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
+Name            : networkmanager-openvpn
+Version         : 1.8.10-1
+Description     : NetworkManager VPN plugin for OpenVPN
+Architecture    : x86_64
+URL             : https://wiki.gnome.org/Projects/NetworkManager
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : libnm  libsecret  openvpn
+Optional Deps   : libnma: GUI support [installed]
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1196.00 KiB
+Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Build Date      : Fri 08 Feb 2019 08:23:43 AM PST
+Install Date    : Tue 13 Aug 2019 01:45:07 AM PDT
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
 Name            : ninja
 Version         : 1.9.0-1
 Description     : Small build system with a focus on speed
@@ -13256,7 +13278,7 @@ Groups          : None
 Provides        : None
 Depends On      : nspr>=4.20  sqlite  zlib  sh  p11-kit
 Optional Deps   : None
-Required By     : chromium  discord  jre-openjdk-headless  jre11-openjdk-headless  jre8-openjdk-headless  libnm  poppler  volume_key
+Required By     : chromium  discord  jre-openjdk-headless  jre11-openjdk-headless  jre8-openjdk-headless  libnm  pkcs11-helper  poppler  volume_key
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -13530,7 +13552,7 @@ Groups          : None
 Provides        : None
 Depends On      : perl
 Optional Deps   : ca-certificates [installed]
-Required By     : coreutils  curl  git  iputils  kmod  ldns  libarchive  libsasl  libssh  libssh2  libtorrent  libzip  openssh  python  python2  s-nail  wpa_supplicant  zathura-pdf-mupdf
+Required By     : coreutils  curl  git  iputils  kmod  ldns  libarchive  libsasl  libssh  libssh2  libtorrent  libzip  openssh  openvpn  pkcs11-helper  python  python2  s-nail  wpa_supplicant  zathura-pdf-mupdf
 Optional For    : glib-networking
 Conflicts With  : None
 Replaces        : None
@@ -13539,6 +13561,29 @@ Packager        : Pierre Schmitz <pierre@archlinux.de>
 Build Date      : Tue 28 May 2019 09:23:39 AM PDT
 Install Date    : Mon 24 Jun 2019 02:07:56 PM PDT
 Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : openvpn
+Version         : 2.4.7-1
+Description     : An easy-to-use, robust and highly configurable VPN (Virtual Private Network)
+Architecture    : x86_64
+URL             : https://openvpn.net/index.php/open-source.html
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : openssl  lzo  iproute2  systemd-libs  pkcs11-helper
+Optional Deps   : easy-rsa: easy CA and certificate handling
+                  pam: authenticate via PAM [installed]
+Required By     : networkmanager-openvpn
+Optional For    : i3blocks
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1047.00 KiB
+Packager        : Christian Hesse <arch@eworm.de>
+Build Date      : Tue 19 Feb 2019 12:52:50 PM PST
+Install Date    : Tue 13 Aug 2019 01:38:23 AM PDT
+Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
 
@@ -13686,7 +13731,7 @@ Provides        : None
 Depends On      : glibc  cracklib  libtirpc  pambase
 Optional Deps   : None
 Required By     : cups  i3lock-color  inetutils  kbd  polkit  shadow  sudo  systemd  util-linux
-Optional For    : None
+Optional For    : openvpn
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 2.61 MiB
@@ -14798,6 +14843,28 @@ Installed Size  : 759.00 KiB
 Packager        : Andreas Radke <andyrtr@archlinux.org>
 Build Date      : Wed 10 Apr 2019 11:43:20 AM PDT
 Install Date    : Mon 24 Jun 2019 03:37:51 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : pkcs11-helper
+Version         : 1.25.1-1
+Description     : A library that simplifies the interaction with PKCS11 providers for end-user applications using a simple API and optional OpenSSL engine
+Architecture    : x86_64
+URL             : https://github.com/OpenSC/pkcs11-helper
+Licenses        : GPL  BSD
+Groups          : None
+Provides        : None
+Depends On      : gnutls  nss  openssl
+Optional Deps   : None
+Required By     : openvpn
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 280.00 KiB
+Packager        : Christian Hesse <arch@eworm.de>
+Build Date      : Wed 17 Oct 2018 11:56:11 AM PDT
+Install Date    : Tue 13 Aug 2019 01:38:23 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -16885,7 +16952,7 @@ Groups          : None
 Provides        : libsystemd  libsystemd.so=0-64  libudev.so=1-64
 Depends On      : glibc  libcap  libgcrypt  lz4  xz
 Optional Deps   : None
-Required By     : colord  dbus  device-mapper  dhcpcd  libatasmart  libgudev  libnm  libusb  lvm2  ndctl  procps-ng  systemd  util-linux
+Required By     : colord  dbus  device-mapper  dhcpcd  libatasmart  libgudev  libnm  libusb  lvm2  ndctl  openvpn  procps-ng  systemd  util-linux
 Optional For    : vlc
 Conflicts With  : libsystemd
 Replaces        : libsystemd
