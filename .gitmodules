@@ -1,0 +1,27 @@
+[submodule "files/.vim/bundle/fzf.vim"]
+	path = files/.vim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "files/.vim/bundle/matchit"]
+	path = files/.vim/bundle/matchit
+	url = https://github.com/tmhedberg/matchit
+[submodule "files/.vim/bundle/nerdtree"]
+	path = files/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "files/.vim/bundle/vim-airline"]
+	path = files/.vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "files/.vim/bundle/vim-airline-themes"]
+	path = files/.vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "files/.vim/bundle/vim-bbye"]
+	path = files/.vim/bundle/vim-bbye
+	url = https://github.com/moll/vim-bbye
+[submodule "files/.vim/bundle/vim-surround"]
+	path = files/.vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "files/.vim/bundle/zig.vim"]
+	path = files/.vim/bundle/zig.vim
+	url = https://github.com/ziglang/zig.vim
+[submodule "files/.vim/bundle/vim-cool"]
+	path = files/.vim/bundle/vim-cool
+	url = https://github.com/romainl/vim-cool

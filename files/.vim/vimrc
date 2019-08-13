@@ -1,0 +1,374 @@
+" Clear search buffer when sourcing this file
+let @/ = ""
+
+" Enable line numbers
+set number
+
+" Line numbers are close to the edge of the window
+set numberwidth=2
+
+" Disable visual line wrap
+"set nowrap
+
+" Set formatoptions (see :help fo-table)
+set formatoptions=q
+
+" Set column limit for formatting with 'gq'
+set textwidth=100
+
+" Do not put the cursor back at the first column when typing '#' in .c files
+set cinkeys=0{,0},0),:,!^F,o,O,e
+
+" Note: The vim-cool plugin automatically disables hlsearch when you are done searching
+
+" Incremental Search
+" Jumps to the next match as you type
+set incsearch
+
+" Highlight search results
+set hlsearch
+
+" Disable case sensitive searches
+set ignorecase
+
+" Become case sensitive while searching only if search string contains at least one capital letter
+set smartcase
+
+" Save when lose focus, and ignore warnings when it fails
+"au FocusLost * silent! wa
+
+" Vertical splits will put new windows right of the current window
+" Horizontal splits will put new windows above the current window
+set splitright
+
+" In Gvim, remove the menu bar, toolbar, and scrollbar completely
+set guioptions=aegit
+
+" Hide the tab line
+set showtabline=0
+
+" Treat octal numbers like decimal numbers, becuase that's what they are most of the time
+set nrformats=bin,hex
+
+" I don't even know
+set nojoinspaces
+
+" Disable cursor blinking
+"set guicursor+=a:blinkon0
+
+" Only blink cursor in insert mode
+"set guicursor+=n-v-c:blinkon0
+
+" Hide the startup message
+set shortmess=I
+
+" Share with system clipboard
+set clipboard^=unnamedplus
+
+" Automatically reload files when they are modified externally
+set autoread
+
+" Make history greater than default
+set history=500
+
+" Always show the stuff at the bottom
+set ruler
+
+" Less backslashes needed in regular expressions by default
+set magic
+
+" Disable annoying error sounds
+set noerrorbells
+set novisualbell
+
+" Don't redraw screen while executing macro
+" Good for performance
+set lazyredraw
+
+" Place backup, swap, and undo files in a dedicated 'temp' directory
+" instead of the same directory the file is located in
+if has("win32")
+    set directory=$TEMP,c:\tmp,c:\temp
+    set backupdir=$TEMP,c:\tmp,c:\temp
+    set undodir=$TEMP,c:\tmp,c:\temp
+else
+    set directory=~/tmp,/var/tmp,/tmp
+    set backupdir=~/tmp,/var/tmp,/tmp
+    set undodir=~/tmp,/var/tmp,/tmp
+endif
+
+" Disable swap files, because we have version control anyway
+set noswapfile
+
+" Shows a menu on the status line with autocomplete options when pressing tab
+set wildmenu
+
+" Shows the input of an incomplete command
+set showcmd
+
+" Allows switching between multiple unsaved buffers
+set hidden
+
+" Backspace unconditionally works against auto indentation and more
+set backspace=indent,eol,start
+
+" Render tabs and trailing spaces, and non-breaking space
+set list
+set listchars=tab:>\ ,space:\ ,trail:-,nbsp:·
+
+" Tab key inserts spaces instead of \t
+"set expandtab
+
+" Set lisp mode for emacs lisp
+autocmd Filetype el setlocal lisp
+
+" Tabs appear 4 spaces wide
+set tabstop=4
+
+" Tabs count as 4 spaces
+set shiftwidth=4
+
+" Copy indent from current line when starting new line
+set autoindent
+
+" Don't run zig fmt after saving
+let g:zig_fmt_autosave = 0
+
+" Execute .vimrc file in current directory automatically
+set exrc
+
+" Prevents exrc and other stuff from running potentially dangerous shell commands
+set secure
+
+" Removes the delay after pressing escape in insert mode, hopefully
+set noesckeys
+set timeoutlen=1000 ttimeoutlen=0
+
+" Keep the cursor centered at all times
+set scrolloff=999
+
+" Clear old mappings when sourcing this file
+mapclear
+
+" Map Y to be consistent with C and D
+noremap Y y$
+
+" Session slots
+" TODO: Proper directory on windows/macos?
+nnoremap <leader>1 :wa\|mksession! ~/.vim/sessions/1.vim<cr>
+nnoremap <leader>! :so ~/.vim/sessions/1.vim<cr>
+nnoremap <leader>2 :wa\|mksession! ~/.vim/sessions/2.vim<cr>
+nnoremap <leader>@ :so ~/.vim/sessions/2.vim<cr>
+nnoremap <leader>3 :wa\|mksession! ~/.vim/sessions/3.vim<cr>
+nnoremap <leader># :so ~/.vim/sessions/3.vim<cr>
+
+" Edit vimrc
+noremap <leader>- :e ~/.vim/vimrc<cr>
+
+" Copy line into command buffer and run it
+nnoremap <leader>= yy:<c-r>"<bs><cr>
+vnoremap <leader>= y:<c-r>"<cr>
+
+" Delete trailing whitespace in buffer
+nnoremap <leader>0 :%s/\s\+$//\|:noh<cr><c-o>
+
+" Run zig fmt on current file
+noremap <leader>9 :up\|!zig fmt %<cr>
+
+" Disable the annoying message in the command line when using Ctrl-c
+nnoremap <c-c> <silent> <c-c>
+
+" Write file with sudo permissions
+nnoremap <leader>W :w !sudo tee %<cr>
+noremap <silent> <leader>w :up<cr>
+
+" Open vertical terminal
+noremap <silent> <leader>t :vert term<cr>
+
+" Don't let the terminal interupt buffer switching
+tnoremap <silent> <c-j> <c-w>:bn<cr>
+tnoremap <silent> <c-k> <c-w>:bp<cr>
+
+" Ctrl+backspace deletes whole word
+inoremap <c-bs> <c-w>
+cnoremap <c-bs> <c-w>
+vnoremap <c-bs> b
+
+inoremap <c-s-bs> <esc>vBda
+cnoremap <c-s-bs> <c-w>
+
+" Rebind the open man page on symbol binding
+vnoremap K <nop>
+noremap K m0i<cr><esc>`0
+
+" Delete WORD using ctrl-w in insert mode
+" (Doesn't work because reasons)
+"inoremap <c-s-w> <esc>BdWa
+
+" Switch between buffers
+noremap <silent> <c-k> :bp<cr>
+inoremap <silent> <c-k> <esc>:bp<cr>
+noremap <silent> <c-j> :bn<cr>
+inoremap <silent> <c-j> <esc>:bn<cr>
+
+" Closes the current buffer without closing the window
+" Also doesn't leave any [New File]s around
+" Provided by the vim-bbye plugin
+noremap <silent> <leader>d :up\|Bdelete<cr>
+noremap <silent> <leader>D :Bdelete!<cr>
+
+" Enable syntax highlighting
+syntax on
+
+"set guifont=Consolas\ 11
+set guifont=Inconsolata\ 11.5
+"set guifont=Ubuntu\ Mono\ 11.5
+
+" Colorschemes are located in ~/.vim/colors/
+let which_colo = 'alduin'
+
+if which_colo == 'alduin'
+    " Darker background
+    let g:alduin_Shout_Dragon_Aspect = 1
+
+    " Use underline matchparens instead of block
+    let g:alduin_Shout_Aura_Whisper = 1
+
+    " Disable string background highlight
+    let g:alduin_Shout_Animal_Allegiance = 1
+
+    colo alduin
+
+    " Make the cursor number the line the same as the others
+    highlight CursorLineNR guifg=#020202 guibg=#444444
+
+elseif which_colo == 'arcadia'
+    " Darker background
+    let g:arcadia_Twilight = 1
+
+    colo arcadia
+
+    " Use underline matchparens instead of block
+    highlight MatchParen guifg=#eeeeee guibg=#1c1c1c gui=underline ctermfg=255 ctermbg=234 cterm=underline
+
+elseif which_colo == 'despacio'
+    " Darker background
+    let g:despacio_Twilight = 1
+
+    colo despacio
+
+    " Use underline matchparens instead of block
+    highlight MatchParen guifg=#eeeeee guibg=#1c1c1c gui=underline ctermfg=255 ctermbg=234 cterm=underline
+
+elseif which_colo == 'sierra'
+    " Darker background
+    let g:sierra_Twilight = 1
+
+    " Use underline matchparens instead of block
+    let g:sierra_Nevada = 1
+
+    colo sierra
+
+elseif which_colo == 'hybrid'
+    colo elflord " Set this first to work around a bug
+    colo hybrid
+endif
+
+" Load vim-pathogen
+execute pathogen#infect()
+
+" Load helptags
+Helptags
+
+" Toggle NERDTree
+noremap <leader>e :NERDTreeToggle<cr>
+
+" Show current file in NERDTree
+noremap <leader>r :NERDTreeFind<cr>
+
+" Change NERDTree root dir to vim's CWD
+" Also focus NERDTree
+noremap <leader>c :NERDTreeCWD<cr>
+
+" Search for file with fzf
+nnoremap <silent> <leader>f :Files<cr>
+
+" Grep for string using ripgrep
+nnoremap <silent> <leader>s :Rg<cr>
+
+" Search for open buffer
+noremap <silent> <leader>b :Buffers<cr>
+
+" Search marks
+noremap <silent> <leader>m :Marks<cr>
+
+" Search lines in open buffers
+noremap <silent> <leader>l :Lines<cr>
+
+" Search v:oldfiles and open buffers
+noremap <silent> <leader>h :History<cr>
+
+" Open NERDTree when vim starts on a directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+
+" Show hidden files
+let g:NERDTreeShowHidden = 1
+
+" Hide help text and bookmarks label
+let g:NERDTreeMinimalUI = 1
+
+" Change Vim's CWD when NERDTree is first initialized, and nowhere else
+let g:NERDTreeChDirMode = 1
+
+" Close NERDTree after a file has been opened
+"let g:NERDTreeQuitOnOpen = 1
+
+" Netrw
+" Use the tree view by default
+let g:netrw_liststyle = 3
+
+" Remove the banner
+let g:netrw_banner = 0
+
+" Show the list of open buffers and tabs at the top of the screen
+let g:airline#extensions#bufferline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+
+" Make the bufferline prettier
+let g:airline#extensions#bufferline#left_sep = ' '
+let g:airline#extensions#bufferline#right_sep = ' '
+let g:airline#extensions#bufferline#left_alt_sep = ' '
+let g:airline#extensions#bufferline#right_alt_sep = ' '
+
+"Make the tabline prettier
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#right_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = ' '
+let g:airline#extensions#tabline#right_alt_sep = ' '
+
+" On the tabline, only show the file name with the full path on the right
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" Set Airline theme with the vim-airline-themes plugin
+let g:airline_theme = 'atomic'
+
+" Allow CtrlP to show hidden files
+let g:ctrlp_show_hidden = 1
+
+" Make fzf match the color scheme (Doesn't fully work for :Rg)
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+

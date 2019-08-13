@@ -1,0 +1,5 @@
+/* Gvim background window is white by default. This makes it black. */
+window#vim-main-window {
+    background-color: #000000;
+}
+
