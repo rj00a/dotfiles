@@ -1026,7 +1026,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : cgdb
-Version         : 0.7.0-3
+Version         : 0.7.1-1
 Description     : Curses-based interface to the GNU Debugger
 Architecture    : x86_64
 URL             : http://cgdb.github.io/
@@ -1039,10 +1039,10 @@ Required By     : None
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 416.00 KiB
-Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Fri 11 Jan 2019 12:26:27 AM PST
-Install Date    : Mon 24 Jun 2019 05:36:30 PM PDT
+Installed Size  : 423.00 KiB
+Packager        : Sven-Hendrik Haase <svenstaro@gmail.com>
+Build Date      : Tue 13 Aug 2019 04:05:43 AM PDT
+Install Date    : Tue 13 Aug 2019 11:12:21 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -2228,28 +2228,6 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
-Name            : fortune-mod
-Version         : 2.10.0-1
-Description     : The Fortune Cookie Program from BSD games
-Architecture    : x86_64
-URL             : https://www.shlomifish.org/open-source/projects/fortune-mod/
-Licenses        : BSD
-Groups          : None
-Provides        : None
-Depends On      : recode
-Optional Deps   : None
-Required By     : None
-Optional For    : None
-Conflicts With  : None
-Replaces        : None
-Installed Size  : 4.34 MiB
-Packager        : Kyle Keen <keenerd@gmail.com>
-Build Date      : Thu 18 Jul 2019 11:01:46 PM PDT
-Install Date    : Sat 20 Jul 2019 12:24:48 PM PDT
-Install Reason  : Explicitly installed
-Install Script  : No
-Validated By    : Signature
-
 Name            : freetype2
 Version         : 2.10.1-1
 Description     : Font rasterization library
@@ -2806,7 +2784,7 @@ Groups          : base
 Provides        : None
 Depends On      : linux-api-headers>=4.10  tzdata  filesystem
 Optional Deps   : gd: for memusagestat
-Required By     : a52dec  alsa-lib  argon2  attr  bash  binutils  bison  bluez-libs  btrfs-progs  bzip2  cdparanoia  cmark-gfm  confuse  convertlit  coreutils  cracklib  dav1d  device-mapper  dhcpcd  diffutils  dosfstools  expat  faad2  fakeroot  file  findutils  flex  fribidi  gavl  gawk  gcc-libs  gdbm  giflib  grep  gsl  gsm  gvim  gzip  hspell  hugo  hyphen  ijs  iproute2  jansson  json-c  kbd  keyutils  kmod  l-smash  less  lhasa  lib32-glibc  libass  libasyncns  libatomic_ops  libcap  libcap-ng  libdatrie  libdvbpsi  libebur128  libepoxy  libev  libevdev  libexif  libffi  libgpg-error  libice  libidn  libksba  liblouis  libmad  libmnl  libmpcdec  libmpeg2  libndp  libnet  libnfnetlink  libnghttp2  libnl  libogg  libomxil-bellagio  libpcap  libpciaccess  libpgm  libpipeline  libraw1394  libseccomp  libsodium  libsynctex  libtasn1  libtool  libunistring  libunwind  libupnp  libusb  libuv  libvisual  libxau  libxdmcp  libxkbcommon  libxshmfence  lz4  lzo  m4  make  mbedtls  mdadm  mkinitcpio-busybox  mtdev  ncurses  net-tools  nspr  openal  opencore-amr  opera-ffmpeg-codecs  opus  orc  p11-kit  pacman  pam  patch  pciutils  perf  perl  pixman  pkgconf  popt  readline  recode  rhash  run-parts  sbc  sdl2  sed  serd  shaderc  snappy  speexdsp  sudo  sysfsutils  systemd-libs  tar  tcc  tree  tslib  valgrind  vid.stab  vulkan-icd-loader  wayland  wget  which  xorg-bdftopcf  xvidcore  zlib
+Required By     : a52dec  alsa-lib  argon2  attr  bash  binutils  bison  bluez-libs  btrfs-progs  bzip2  cdparanoia  cmark-gfm  confuse  convertlit  coreutils  cracklib  dav1d  device-mapper  dhcpcd  diffutils  dosfstools  expat  faad2  fakeroot  file  findutils  flex  fribidi  gavl  gawk  gcc-libs  gdbm  giflib  grep  gsl  gsm  gvim  gzip  hspell  hugo  hyphen  ijs  iproute2  jansson  json-c  kbd  keyutils  kmod  l-smash  less  lhasa  lib32-glibc  libass  libasyncns  libatomic_ops  libcap  libcap-ng  libdatrie  libdvbpsi  libebur128  libepoxy  libev  libevdev  libexif  libffi  libgpg-error  libice  libidn  libksba  liblouis  libmad  libmnl  libmpcdec  libmpeg2  libndp  libnet  libnfnetlink  libnghttp2  libnl  libogg  libomxil-bellagio  libpcap  libpciaccess  libpgm  libpipeline  libraw1394  libseccomp  libsodium  libsynctex  libtasn1  libtool  libunistring  libunwind  libupnp  libusb  libuv  libvisual  libxau  libxdmcp  libxkbcommon  libxshmfence  lz4  lzo  m4  make  mbedtls  mdadm  mkinitcpio-busybox  mtdev  ncurses  net-tools  nspr  openal  opencore-amr  opera-ffmpeg-codecs  opus  orc  p11-kit  pacman  pam  patch  pciutils  perf  perl  pixman  pkgconf  popt  readline  rhash  run-parts  sbc  sdl2  sed  serd  shaderc  snappy  speexdsp  sudo  sysfsutils  systemd-libs  tar  tcc  tree  tslib  valgrind  vid.stab  vulkan-icd-loader  wayland  wget  which  xorg-bdftopcf  xvidcore  zlib
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -9491,7 +9469,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : libinput
-Version         : 1.14.0-1
+Version         : 1.14.0-2
 Description     : Input device management and event handling library
 Architecture    : x86_64
 URL             : https://www.freedesktop.org/wiki/Software/libinput/
@@ -9501,15 +9479,15 @@ Provides        : None
 Depends On      : mtdev  systemd  libevdev  libwacom
 Optional Deps   : gtk3: libinput debug-gui [installed]
                   python-pyudev: libinput measure
-                  python-evdev: libinput measure
+                  python-libevdev: libinput measure
 Required By     : qt5-base  xf86-input-libinput
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 902.00 KiB
 Packager        : Andreas Radke <andyrtr@archlinux.org>
-Build Date      : Sat 10 Aug 2019 12:24:44 PM PDT
-Install Date    : Mon 12 Aug 2019 10:26:09 PM PDT
+Build Date      : Tue 13 Aug 2019 12:05:16 PM PDT
+Install Date    : Tue 13 Aug 2019 11:12:21 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -13789,7 +13767,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : pango
-Version         : 1:1.44.3-1
+Version         : 1:1.44.4-1
 Description     : A library for layout and rendering of text
 Architecture    : x86_64
 URL             : https://www.pango.org/
@@ -13802,10 +13780,10 @@ Required By     : girara  gst-plugins-base  gtk2  gtk3  i3-gaps  librsvg  pangom
 Optional For    : imagemagick
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 3.89 MiB
+Installed Size  : 4.10 MiB
 Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
-Build Date      : Sun 04 Aug 2019 06:41:17 AM PDT
-Install Date    : Sun 04 Aug 2019 08:02:53 PM PDT
+Build Date      : Tue 13 Aug 2019 12:44:27 PM PDT
+Install Date    : Tue 13 Aug 2019 11:12:21 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -15963,28 +15941,6 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
-Name            : recode
-Version         : 3.7.1-1
-Description     : Converts files between various character sets and usages
-Architecture    : x86_64
-URL             : https://github.com/rrthomas/recode
-Licenses        : GPL3  LGPL3
-Groups          : None
-Provides        : None
-Depends On      : glibc
-Optional Deps   : None
-Required By     : fortune-mod
-Optional For    : None
-Conflicts With  : None
-Replaces        : None
-Installed Size  : 1608.00 KiB
-Packager        : Christian Hesse <arch@eworm.de>
-Build Date      : Thu 25 Oct 2018 08:10:29 AM PDT
-Install Date    : Sat 29 Jun 2019 02:26:58 AM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : Signature
-
 Name            : reflector
 Version         : 2019.3-1
 Description     : A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
@@ -17464,8 +17420,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 2.08 MiB
 Packager        : Unknown Packager
-Build Date      : Tue 02 Jul 2019 11:09:01 PM PDT
-Install Date    : Tue 02 Jul 2019 11:09:03 PM PDT
+Build Date      : Tue 13 Aug 2019 11:13:18 PM PDT
+Install Date    : Tue 13 Aug 2019 11:13:20 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : Yes
 Validated By    : None

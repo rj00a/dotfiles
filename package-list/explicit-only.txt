@@ -34,7 +34,6 @@ file
 filesystem
 findutils
 flex
-fortune-mod
 fzf
 gawk
 gcc

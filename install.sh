@@ -16,6 +16,7 @@ cfg .gtkrc-2.0 ~/
 cfg .Xresources ~/
 cfg ranger ~/.config/
 cfg .gitconfig ~/
+cfg terminalrc ~/.config/xfce4/terminal/
 
 xrdb -load ~/.Xresources
 

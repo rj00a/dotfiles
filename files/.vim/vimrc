@@ -114,7 +114,7 @@ set backspace=indent,eol,start
 
 " Render tabs and trailing spaces, and non-breaking space
 set list
-set listchars=tab:>\ ,space:\ ,trail:-,nbsp:·
+set listchars=tab:>\ ,space:\ ,trail:-
 
 " Tab key inserts spaces instead of \t
 "set expandtab
