@@ -17,8 +17,6 @@ cfg .Xresources ~/
 cfg ranger ~/.config/
 cfg .gitconfig ~/
 
-#ln -sf /opt/piavpn/bin/pia-client path-symlinks/pia-client
-
 xrdb -load ~/.Xresources
 
 # Run `nitrogen ~/config/` to configure wallpaper.
