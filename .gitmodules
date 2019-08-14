@@ -22,6 +22,6 @@
 [submodule "files/.vim/bundle/zig.vim"]
 	path = files/.vim/bundle/zig.vim
 	url = https://github.com/ziglang/zig.vim
-[submodule "files/.vim/bundle/vim-cool"]
-	path = files/.vim/bundle/vim-cool
-	url = https://github.com/romainl/vim-cool
+[submodule "files/.vim/bundle/vim-slash"]
+	path = files/.vim/bundle/vim-slash
+	url = https://github.com/junegunn/vim-slash
