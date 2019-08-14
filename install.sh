@@ -17,8 +17,12 @@ cfg .Xresources ~/
 cfg ranger ~/.config/
 cfg .gitconfig ~/
 cfg terminalrc ~/.config/xfce4/terminal/
+cfg vlcrc ~/.config/vlc/
 
 xrdb -load ~/.Xresources
 
-# Run `nitrogen ~/config/` to configure wallpaper.
+sudo systemctl enable NetworkManager
+sudo systemctl enable org.cups.cupsd
+
+# Run `nitrogen ~/install/` to configure wallpaper.
 
