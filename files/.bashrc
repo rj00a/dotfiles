@@ -4,26 +4,30 @@ set -o vi
 # Bind Ctrl+L to clear screen in insert mode as well as normal mode.
 bind -m vi-insert "\C-l":clear-screen
 
+# Extended globbing. Lots of cool stuff
+shopt -s extglob
+
+# Can change the working directory without using 'cd'
+# Annoyingly echoes to stdout though
+shopt -s autocd
+
 # Make autocomplete use colors
 bind 'set colored-stats on'
 
 # A generated PS1 from http://bashrcgenerator.com
 # It looks something like this: [ryan@rjpc 0 ~]$
 export PS1="\[\033[38;5;7m\][\[$(tput sgr0)\]\[\033[38;5;13m\]\u\[$(tput sgr0)\]\[\033[38;5;7m\]@\[$(tput sgr0)\]\[\033[38;5;14m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;7m\]\$?\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;7m\]\w]\[$(tput sgr0)\]\[\033[38;5;8m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-# This is not needed in .bashrc because exported variables are persisent
+
+# Preferred Programs
 export EDITOR=/usr/bin/gvim
 export VISUAL=/usr/bin/gvim
+export BROWSER=chromium
+
 # Ignore duplicate entries in command history
 export HISTCONTROL=ignoreboth:erasedups
-# The default internet browser
-export BROWSER=chromium
 
 # Add ~/config/path-symlinks to PATH if they aren't already there
 [[ ":$PATH:" != *":~/shared/scripts:"* ]] && export PATH="~/shared/scripts:${PATH}"
-
-# Can change the working directory without using 'cd'
-# Annoyingly echoes to stdout though
-shopt -s autocd
 
 # Allows use of the 'z' command
 # Installed with the 'z' pacman package (community repo)
@@ -33,16 +37,22 @@ source /usr/share/z/z.sh
 alias backup-data='~/programs/backup-data.sh'
 
 alias ls='ls -A --color=auto --group-directories-first'
+
 # List lots of stuff
 alias la='ls -oA --color=auto'
 
-alias r='ranger'
+#alias fm='vifm'
+
+alias tra='trash'
 
 alias gv='gvim'
 
 alias mkd='mkdir -p'
 
 alias tou='touch'
+
+# Colred tree view, ignore .git
+alias tre='tree -CaI .git | less -r'
 
 # Safe move, prompt before overwriting
 alias sm='mv -i'

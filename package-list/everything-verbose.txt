@@ -1555,7 +1555,7 @@ Groups          : None
 Provides        : None
 Depends On      : glib2
 Optional Deps   : None
-Required By     : chromium  gtk2  gtk3  keepassxc  kio  krita  steam  zathura  zathura-cb  zathura-djvu  zathura-pdf-mupdf  zathura-ps
+Required By     : chromium  gtk2  gtk3  keepassxc  kio  krita  steam  sxiv  zathura  zathura-cb  zathura-djvu  zathura-pdf-mupdf  zathura-ps
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -1919,6 +1919,28 @@ Install Date    : Tue 06 Aug 2019 12:15:55 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
+
+Name            : em-keyboard
+Version         : 0.0.7-3
+Description     : Command-line utility for referencing emoji characters by name
+Architecture    : any
+URL             : https://github.com/kennethreitz/em-keyboard
+Licenses        : custom:MIT
+Groups          : None
+Provides        : None
+Depends On      : python-docopt  python-xerox
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 227.00 KiB
+Packager        : Unknown Packager
+Build Date      : Thu 15 Aug 2019 04:08:26 AM PDT
+Install Date    : Thu 15 Aug 2019 04:08:28 AM PDT
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : None
 
 Name            : enchant
 Version         : 2.2.5-1
@@ -3467,7 +3489,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : harfbuzz
-Version         : 2.5.3-1
+Version         : 2.6.0-1
 Description     : OpenType text shaping engine
 Architecture    : x86_64
 URL             : https://www.freedesktop.org/wiki/Software/HarfBuzz
@@ -3480,16 +3502,16 @@ Required By     : chromium  freetype2  harfbuzz-icu  libass  pango  vlc
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 4.24 MiB
+Installed Size  : 4.35 MiB
 Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
-Build Date      : Wed 26 Jun 2019 11:19:53 AM PDT
-Install Date    : Thu 27 Jun 2019 05:36:54 PM PDT
+Build Date      : Wed 14 Aug 2019 01:15:15 AM PDT
+Install Date    : Wed 14 Aug 2019 01:33:36 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : harfbuzz-icu
-Version         : 2.5.3-1
+Version         : 2.6.0-1
 Description     : OpenType text shaping engine (ICU integration)
 Architecture    : x86_64
 URL             : https://www.freedesktop.org/wiki/Software/HarfBuzz
@@ -3504,8 +3526,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 18.00 KiB
 Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
-Build Date      : Wed 26 Jun 2019 11:19:53 AM PDT
-Install Date    : Thu 27 Jun 2019 05:36:54 PM PDT
+Build Date      : Wed 14 Aug 2019 01:15:15 AM PDT
+Install Date    : Wed 14 Aug 2019 01:33:36 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -5698,7 +5720,7 @@ Groups          : None
 Provides        : None
 Depends On      : None
 Optional Deps   : None
-Required By     : adwaita-icon-theme  chromium  cups  djvulibre  gtk-update-icon-cache  jdk-openjdk  jdk11-openjdk  jre8-openjdk  keepassxc  krita  libxfce4ui  nitrogen  purpose  qt5-tools  steam  sxiv-git  v4l-utils  xfce4-terminal
+Required By     : adwaita-icon-theme  chromium  cups  djvulibre  gtk-update-icon-cache  jdk-openjdk  jdk11-openjdk  jre8-openjdk  keepassxc  krita  libxfce4ui  nitrogen  purpose  qt5-tools  steam  sxiv  v4l-utils  xfce4-terminal
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -6103,14 +6125,14 @@ Groups          : None
 Provides        : None
 Depends On      : libtiff  giflib  bzip2  freetype2  libxext  libpng  libid3tag  libjpeg-turbo
 Optional Deps   : None
-Required By     : sxiv-git
+Required By     : sxiv
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 1121.00 KiB
 Packager        : Ronald van Haren <ronald@archlinux.org>
 Build Date      : Wed 28 Mar 2018 12:52:43 AM PDT
-Install Date    : Wed 24 Jul 2019 05:21:42 PM PDT
+Install Date    : Thu 15 Aug 2019 04:16:47 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -9148,14 +9170,14 @@ Groups          : None
 Provides        : None
 Depends On      : glibc
 Optional Deps   : None
-Required By     : sxiv-git
+Required By     : sxiv
 Optional For    : mlt
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 2.03 MiB
 Packager        : Jan de Groot <jgc@archlinux.org>
 Build Date      : Fri 11 Aug 2017 03:09:56 PM PDT
-Install Date    : Wed 24 Jul 2019 05:21:42 PM PDT
+Install Date    : Thu 15 Aug 2019 04:16:47 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -11579,7 +11601,7 @@ Groups          : None
 Provides        : None
 Depends On      : fontconfig  libxrender
 Optional Deps   : None
-Required By     : dmenu  pango  sxiv-git
+Required By     : dmenu  pango  sxiv
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -13767,7 +13789,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : pango
-Version         : 1:1.44.4-1
+Version         : 1:1.44.5-1
 Description     : A library for layout and rendering of text
 Architecture    : x86_64
 URL             : https://www.pango.org/
@@ -13782,8 +13804,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 4.10 MiB
 Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
-Build Date      : Tue 13 Aug 2019 12:44:27 PM PDT
-Install Date    : Tue 13 Aug 2019 11:12:21 PM PDT
+Build Date      : Wed 14 Aug 2019 11:19:04 AM PDT
+Install Date    : Wed 14 Aug 2019 01:33:36 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -14971,7 +14993,7 @@ Provides        : None
 Depends On      : libjpeg  gcc-libs  cairo  fontconfig  openjpeg2  lcms2  nss  curl
 Optional Deps   : poppler-data: encoding data to display PDF documents containing CJK characters
 Required By     : cups-filters  poppler-qt5
-Optional For    : ranger
+Optional For    : None
 Conflicts With  : poppler-qt3<0.79.0  poppler-qt4<0.79.0
 Replaces        : None
 Installed Size  : 4.93 MiB
@@ -15219,7 +15241,7 @@ Optional Deps   : python-setuptools [installed]
                   mpdecimal: for decimal
                   xz: for lzma [installed]
                   tk: for tkinter
-Required By     : gdb-common  iotop  libbytesize  perf  pulsemixer  python-appdirs  python-attrs  python-dbus  python-gobject  python-pyparsing  python-six  ranger  reflector  trash-cli  youtube-dl
+Required By     : gdb-common  iotop  libbytesize  perf  pulsemixer  python-appdirs  python-attrs  python-dbus  python-docopt  python-gobject  python-pyparsing  python-six  python-xerox  reflector  trash-cli  youtube-dl
 Optional For    : btrfs-progs  clang  glib2  gvim  ki18n  libnewt  libproxy  obs-studio  tdb  usbutils  util-linux  vim-runtime  volume_key
 Conflicts With  : None
 Replaces        : python3
@@ -15315,6 +15337,28 @@ Installed Size  : 8.18 MiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
 Build Date      : Sat 30 Jun 2018 02:40:28 PM PDT
 Install Date    : Sun 11 Aug 2019 10:07:24 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : python-docopt
+Version         : 0.6.2-5
+Description     : Pythonic argument parser, that will make you smile
+Architecture    : any
+URL             : https://github.com/docopt/docopt
+Licenses        : MIT
+Groups          : None
+Provides        : None
+Depends On      : python
+Optional Deps   : None
+Required By     : em-keyboard
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 84.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Sat 30 Jun 2018 10:43:25 AM PDT
+Install Date    : Thu 15 Aug 2019 04:08:19 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -15428,6 +15472,28 @@ Install Date    : Mon 24 Jun 2019 05:36:30 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
+
+Name            : python-xerox
+Version         : 0.4.1-2
+Description     : Simple copy+paste module for Python
+Architecture    : any
+URL             : https://github.com/kennethreitz/xerox
+Licenses        : custom:MIT
+Groups          : None
+Provides        : None
+Depends On      : xclip  python3
+Optional Deps   : None
+Required By     : em-keyboard
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 70.00 KiB
+Packager        : Unknown Packager
+Build Date      : Thu 15 Aug 2019 04:08:23 AM PDT
+Install Date    : Thu 15 Aug 2019 04:08:25 AM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : None
 
 Name            : python2
 Version         : 2.7.16-1
@@ -15859,41 +15925,6 @@ Packager        : Antonio Rojas <arojas@archlinux.org>
 Build Date      : Mon 27 May 2019 09:49:18 AM PDT
 Install Date    : Mon 24 Jun 2019 04:44:30 PM PDT
 Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : Signature
-
-Name            : ranger
-Version         : 1.9.2-1
-Description     : Simple, vim-like file manager
-Architecture    : any
-URL             : https://ranger.github.io
-Licenses        : GPL
-Groups          : None
-Provides        : None
-Depends On      : python
-Optional Deps   : atool: for previews of archives
-                  elinks: for previews of html pages
-                  ffmpegthumbnailer: for video previews
-                  highlight: for syntax highlighting of code
-                  libcaca: for ASCII-art image previews
-                  lynx: for previews of html pages
-                  mediainfo: for viewing information about media files
-                  odt2txt: for OpenDocument texts
-                  perl-image-exiftool: for viewing information about media files
-                  poppler: for pdf previews [installed]
-                  python-chardet: in case of encoding detection problems
-                  sudo: to use the "run as root"-feature [installed]
-                  transmission-cli: for viewing bittorrent information
-                  w3m: for previews of images and html pages
-Required By     : None
-Optional For    : None
-Conflicts With  : None
-Replaces        : None
-Installed Size  : 1917.00 KiB
-Packager        : Levente Polyak <anthraxx@archlinux.org>
-Build Date      : Wed 21 Nov 2018 03:39:52 PM PST
-Install Date    : Mon 24 Jun 2019 05:36:29 PM PDT
-Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
 
@@ -16771,7 +16802,7 @@ Provides        : None
 Depends On      : glibc  libgcrypt  pam  libldap
 Optional Deps   : None
 Required By     : yay
-Optional For    : ranger
+Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 3.22 MiB
@@ -16806,27 +16837,27 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
-Name            : sxiv-git
-Version         : 2019.07.16-1
-Description     : Simple (or small or suckless) X Image Viewer
+Name            : sxiv
+Version         : 25-1
+Description     : Simple X Image Viewer
 Architecture    : x86_64
 URL             : https://github.com/muennich/sxiv
 Licenses        : GPL2
 Groups          : None
-Provides        : sxiv
-Depends On      : imlib2  libexif  libxft  hicolor-icon-theme
+Provides        : None
+Depends On      : imlib2  desktop-file-utils  xdg-utils  hicolor-icon-theme  libexif  libxft
 Optional Deps   : None
 Required By     : None
 Optional For    : None
-Conflicts With  : sxiv
+Conflicts With  : None
 Replaces        : None
-Installed Size  : 166.00 KiB
-Packager        : Unknown Packager
-Build Date      : Wed 24 Jul 2019 05:21:54 PM PDT
-Install Date    : Wed 24 Jul 2019 05:21:57 PM PDT
+Installed Size  : 82.00 KiB
+Packager        : Lukas Fleischer <lfleischer@archlinux.org>
+Build Date      : Fri 22 Feb 2019 07:38:09 AM PST
+Install Date    : Thu 15 Aug 2019 04:16:47 AM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
-Validated By    : None
+Validated By    : Signature
 
 Name            : sysfsutils
 Version         : 2.1.0-10
@@ -18499,7 +18530,7 @@ Groups          : None
 Provides        : None
 Depends On      : libxmu
 Optional Deps   : None
-Required By     : None
+Required By     : python-xerox
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -18527,7 +18558,7 @@ Optional Deps   : kde-cli-tools: for KDE Plasma5 support in xdg-open
                   perl-file-mimeinfo: for generic support in xdg-open
                   perl-net-dbus: Perl extension to dbus used in xdg-screensaver
                   perl-x11-protocol: Perl X11 protocol used in xdg-screensaver
-Required By     : chromium  jre8-openjdk  qt5-base
+Required By     : chromium  jre8-openjdk  qt5-base  sxiv
 Optional For    : cups  discord
 Conflicts With  : None
 Replaces        : None

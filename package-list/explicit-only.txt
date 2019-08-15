@@ -29,6 +29,7 @@ diffutils
 discord
 dmenu
 e2fsprogs
+em-keyboard
 fakeroot
 file
 filesystem
@@ -110,7 +111,6 @@ psmisc
 pulseaudio
 pulseaudio-alsa
 pulsemixer
-ranger
 reflector
 reiserfsprogs
 ripgrep
@@ -121,7 +121,7 @@ sed
 shadow
 steam
 sudo
-sxiv-git
+sxiv
 sysfsutils
 systemd-boot-pacman-hook
 systemd-sysvcompat

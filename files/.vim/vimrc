@@ -88,13 +88,13 @@ set lazyredraw
 " Place backup, swap, and undo files in a dedicated 'temp' directory
 " instead of the same directory the file is located in
 if has("win32")
-    set directory=$TEMP,c:\tmp,c:\temp
-    set backupdir=$TEMP,c:\tmp,c:\temp
-    set undodir=$TEMP,c:\tmp,c:\temp
+	set directory=$TEMP,c:\tmp,c:\temp
+	set backupdir=$TEMP,c:\tmp,c:\temp
+	set undodir=$TEMP,c:\tmp,c:\temp
 else
-    set directory=~/tmp,/var/tmp,/tmp
-    set backupdir=~/tmp,/var/tmp,/tmp
-    set undodir=~/tmp,/var/tmp,/tmp
+	set directory=~/tmp,/var/tmp,/tmp
+	set backupdir=~/tmp,/var/tmp,/tmp
+	set undodir=~/tmp,/var/tmp,/tmp
 endif
 
 " Disable swap files, because we have version control anyway
@@ -228,50 +228,53 @@ set guifont=Inconsolata\ 11.5
 let which_colo = 'alduin'
 
 if which_colo == 'alduin'
-    " Darker background
-    let g:alduin_Shout_Dragon_Aspect = 1
+	" Darker background
+	let g:alduin_Shout_Dragon_Aspect = 1
 
-    " Use underline matchparens instead of block
-    let g:alduin_Shout_Aura_Whisper = 1
+	" Use underline matchparens instead of block
+	let g:alduin_Shout_Aura_Whisper = 1
 
-    " Disable string background highlight
-    let g:alduin_Shout_Animal_Allegiance = 1
+	" Disable string background highlight
+	let g:alduin_Shout_Animal_Allegiance = 1
 
-    colo alduin
+	colo alduin
 
-    " Make the cursor number the line the same as the others
-    highlight CursorLineNR guifg=#020202 guibg=#444444
+	" Make the cursor number line the same as the others
+	hi CursorLineNR guifg=#020202 guibg=#444444
+
+	" Black and white cursor in gvim
+	hi Cursor guifg=#000000 guibg=#ffffff
 
 elseif which_colo == 'arcadia'
-    " Darker background
-    let g:arcadia_Twilight = 1
+	" Darker background
+	let g:arcadia_Twilight = 1
 
-    colo arcadia
+	colo arcadia
 
-    " Use underline matchparens instead of block
-    highlight MatchParen guifg=#eeeeee guibg=#1c1c1c gui=underline ctermfg=255 ctermbg=234 cterm=underline
+	" Use underline matchparens instead of block
+	hi MatchParen guifg=#eeeeee guibg=#1c1c1c gui=underline ctermfg=255 ctermbg=234 cterm=underline
 
 elseif which_colo == 'despacio'
-    " Darker background
-    let g:despacio_Twilight = 1
+	" Darker background
+	let g:despacio_Twilight = 1
 
-    colo despacio
+	colo despacio
 
-    " Use underline matchparens instead of block
-    highlight MatchParen guifg=#eeeeee guibg=#1c1c1c gui=underline ctermfg=255 ctermbg=234 cterm=underline
+	" Use underline matchparens instead of block
+	hi MatchParen guifg=#eeeeee guibg=#1c1c1c gui=underline ctermfg=255 ctermbg=234 cterm=underline
 
 elseif which_colo == 'sierra'
-    " Darker background
-    let g:sierra_Twilight = 1
+	" Darker background
+	let g:sierra_Twilight = 1
 
-    " Use underline matchparens instead of block
-    let g:sierra_Nevada = 1
+	" Use underline matchparens instead of block
+	let g:sierra_Nevada = 1
 
-    colo sierra
+	colo sierra
 
 elseif which_colo == 'hybrid'
-    colo elflord " Set this first to work around a bug
-    colo hybrid
+	colo elflord " Set this first to work around a bug
+	colo hybrid
 endif
 
 " Load vim-pathogen
@@ -279,16 +282,6 @@ execute pathogen#infect()
 
 " Load helptags
 Helptags
-
-" Toggle NERDTree
-noremap <leader>e :NERDTreeToggle<cr>
-
-" Show current file in NERDTree
-noremap <leader>r :NERDTreeFind<cr>
-
-" Change NERDTree root dir to vim's CWD
-" Also focus NERDTree
-noremap <leader>c :NERDTreeCWD<cr>
 
 " Search for file with fzf
 nnoremap <silent> <leader>f :Files<cr>
@@ -308,23 +301,6 @@ noremap <silent> <leader>l :Lines<cr>
 " Search v:oldfiles and open buffers
 noremap <silent> <leader>h :History<cr>
 
-" Open NERDTree when vim starts on a directory
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-
-" Show hidden files
-let g:NERDTreeShowHidden = 1
-
-" Hide help text and bookmarks label
-let g:NERDTreeMinimalUI = 1
-
-" Change Vim's CWD when NERDTree is first initialized, and nowhere else
-let g:NERDTreeChDirMode = 1
-
-" Close NERDTree after a file has been opened
-"let g:NERDTreeQuitOnOpen = 1
-
-" Netrw
 " Use the tree view by default
 let g:netrw_liststyle = 3
 
@@ -358,17 +334,17 @@ let g:ctrlp_show_hidden = 1
 
 " Make fzf match the color scheme (Doesn't fully work for :Rg)
 let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+\ { 'fg': ['fg', 'Normal'],
+\ 'bg': ['bg', 'Normal'],
+\ 'hl': ['fg', 'Comment'],
+\ 'fg+': ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+\ 'bg+': ['bg', 'CursorLine', 'CursorColumn'],
+\ 'hl+': ['fg', 'Statement'],
+\ 'info': ['fg', 'PreProc'],
+\ 'border': ['fg', 'Ignore'],
+\ 'prompt': ['fg', 'Conditional'],
+\ 'pointer': ['fg', 'Exception'],
+\ 'marker': ['fg', 'Keyword'],
+\ 'spinner': ['fg', 'Label'],
+\ 'header': ['fg', 'Comment'] }
 
