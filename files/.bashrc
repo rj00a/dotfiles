@@ -51,6 +51,8 @@ alias mkd='mkdir -p'
 
 alias tou='touch'
 
+alias view='vim -R'
+
 # Colred tree view, ignore .git
 alias tre='tree -CaI .git | less -r'
 
