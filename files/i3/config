@@ -207,6 +207,8 @@ bindsym $mod+Shift+v exec --no-startup-id vlc "$(xclip -o)"
 
 #################### STARTUP PROGRAMS ####################
 
+exec --no-startup-id xrdb ~/.Xresources
+
 # swap caps and escape
 exec --no-startup-id setxkbmap -option "caps:swapescape"
 

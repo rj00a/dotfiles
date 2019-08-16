@@ -18,8 +18,6 @@ cfg .gitconfig ~/
 cfg alacritty.yml ~/.config/
 cfg vlcrc ~/.config/vlc/
 
-xrdb -load ~/.Xresources
-
 sudo systemctl enable NetworkManager
 sudo systemctl enable org.cups.cupsd
 
