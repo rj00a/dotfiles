@@ -15,7 +15,7 @@ cfg gtk-3.0 ~/.config/
 cfg .gtkrc-2.0 ~/
 cfg .Xresources ~/
 cfg .gitconfig ~/
-cfg terminalrc ~/.config/xfce4/terminal/
+cfg alacritty.yml ~/.config/
 cfg vlcrc ~/.config/vlc/
 
 xrdb -load ~/.Xresources
