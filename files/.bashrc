@@ -51,11 +51,6 @@ alias mkd='mkdir -p'
 
 alias tou='touch'
 
-alias view='vim -R'
-
-# Colred tree view, ignore .git
-alias tre='tree -CaI .git | less -r'
-
 # Safe move, prompt before overwriting
 alias sm='mv -i'
 
@@ -82,6 +77,12 @@ alias vlcx='vlc "$(xclip -o)"'
 
 # Self explanatory
 alias fuck='sudo pkill -ie'
+
+# Colored tree view.
+# Ignore hidden directories
+tre() {
+	tree -C $@ | less -r
+}
 
 # Echo to stderr
 errcho() {
