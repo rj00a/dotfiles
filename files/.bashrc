@@ -15,6 +15,10 @@ shopt -s autocd
 shopt -s histappend
 
 # After each command, append to the history file and reread it
+#export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+# After each command, append to the history file and reread it
+unset PROMPT_COMMAND
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 # Make autocomplete use colors
@@ -34,7 +38,6 @@ export HISTCONTROL=ignoreboth:erasedups
 
 # Allows use of the 'z' command
 # Installed with the 'z' pacman package (community repo)
-# Run 'man z' for more info
 source /usr/share/z/z.sh
 
 alias backup-data='~/programs/backup-data.sh'
