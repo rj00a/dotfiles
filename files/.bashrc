@@ -11,6 +11,12 @@ shopt -s extglob
 # Annoyingly echoes to stdout though
 shopt -s autocd
 
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
+
+# After each command, append to the history file and reread it
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
 # Make autocomplete use colors
 bind 'set colored-stats on'
 
@@ -19,15 +25,12 @@ bind 'set colored-stats on'
 export PS1="\[\033[38;5;7m\][\[$(tput sgr0)\]\[\033[38;5;13m\]\u\[$(tput sgr0)\]\[\033[38;5;7m\]@\[$(tput sgr0)\]\[\033[38;5;14m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;7m\]\$?\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;7m\]\w]\[$(tput sgr0)\]\[\033[38;5;8m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
 # Preferred Programs
-export EDITOR=/usr/bin/gvim
-export VISUAL=/usr/bin/gvim
+export EDITOR=vim
+export VISUAL=vim
 export BROWSER=chromium
 
 # Ignore duplicate entries in command history
 export HISTCONTROL=ignoreboth:erasedups
-
-# Add ~/config/path-symlinks to PATH if they aren't already there
-[[ ":$PATH:" != *":~/shared/scripts:"* ]] && export PATH="~/shared/scripts:${PATH}"
 
 # Allows use of the 'z' command
 # Installed with the 'z' pacman package (community repo)
@@ -40,6 +43,8 @@ alias ls='ls -A --color=auto --group-directories-first'
 
 # List lots of stuff
 alias la='ls -oA --color=auto'
+
+alias view='vim -R'
 
 #alias fm='vifm'
 
@@ -77,6 +82,9 @@ alias vlcx='vlc "$(xclip -o)"'
 
 # Self explanatory
 alias fuck='sudo pkill -ie'
+
+# Grep for some installed packages
+alias paks='yay -Qq | rg -i'
 
 # Colored tree view.
 # Ignore hidden directories

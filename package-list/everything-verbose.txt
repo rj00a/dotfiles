@@ -132,6 +132,28 @@ Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : None
 
+Name            : alacritty
+Version         : 0.3.3-3
+Description     : A cross-platform, GPU-accelerated terminal emulator
+Architecture    : x86_64
+URL             : https://github.com/jwilm/alacritty
+Licenses        : Apache
+Groups          : None
+Provides        : None
+Depends On      : freetype2  fontconfig  libxi  libxcursor  libxrandr
+Optional Deps   : alacritty-terminfo: terminfo for alacritty
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 7.05 MiB
+Packager        : Jiachen YANG <farseerfc@archlinux.org>
+Build Date      : Thu 25 Jul 2019 10:29:20 PM PDT
+Install Date    : Thu 15 Aug 2019 11:55:21 PM PDT
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
 Name            : alsa-lib
 Version         : 1.1.9-1
 Description     : An alternative implementation of Linux sound support
@@ -143,7 +165,7 @@ Provides        : None
 Depends On      : glibc
 Optional Deps   : python2: for python smixer plugin [installed]
 Required By     : alsa-plugins  alsa-utils  chromium  ffmpeg  gst-plugins-base  i3status  lib32-alsa-lib  libcanberra  libsndfile  polybar  zita-alsa-pcmi
-Optional For    : jre-openjdk  jre11-openjdk  jre8-openjdk  sdl2  v4l-utils  vlc
+Optional For    : jre-openjdk  jre11-openjdk  jre8-openjdk  sdl  sdl2  v4l-utils  vlc
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 2.00 MiB
@@ -595,7 +617,7 @@ Groups          : base
 Provides        : sh
 Depends On      : readline>=7.0  glibc  ncurses
 Optional Deps   : bash-completion: for tab completion
-Required By     : autoconf  automake  bison  bzip2  ca-certificates-utils  db  dhcpcd  dialog  diffutils  dmenu  e2fsprogs  fakeroot  fftw  findutils  flex  foomatic-db-engine  freetype2  fzf  gawk  gdbm  gettext  gmp  gpm  gzip  haskell-hashable  haskell-network-uri  haskell-random  haskell-utf8-string  icu  ijs  iptables  js60  keyutils  libdca  libgpg-error  libksba  libnet  libpaper  libpcap  libpng  libteam  libtool  lvm2  m4  man-db  mkinitcpio  nano  neofetch  nspr  nss  openresolv  pacman  pcre  pcre2  perf  pkgconf  steam  systemd  texinfo  unzip  vte-common  which  xdg-utils  xfsprogs  xz  z
+Required By     : autoconf  automake  bison  bzip2  ca-certificates-utils  db  dhcpcd  dialog  diffutils  dmenu  e2fsprogs  fakeroot  fftw  findutils  flex  foomatic-db-engine  freetype2  fzf  gawk  gdbm  gettext  gmp  gpm  gzip  haskell-hashable  haskell-network-uri  haskell-random  haskell-utf8-string  icu  ijs  iptables  js60  keyutils  libdca  libgpg-error  libksba  libnet  libpaper  libpcap  libpng  libteam  libtool  lvm2  m4  man-db  mkinitcpio  nano  neofetch  nspr  nss  openresolv  pacman  pcre  pcre2  perf  pkgconf  steam  systemd  texinfo  unzip  which  xdg-utils  xfsprogs  xz  z
 Optional For    : vim-runtime
 Conflicts With  : None
 Replaces        : None
@@ -1365,24 +1387,24 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : cups
-Version         : 2.2.11-2
+Version         : 2.2.12-1
 Description     : The CUPS Printing System - daemon package
 Architecture    : x86_64
 URL             : https://www.cups.org/
 Licenses        : GPL
 Groups          : None
 Provides        : None
-Depends On      : acl  pam  libcups>=2.2.11  cups-filters  bc  dbus  systemd  libpaper  hicolor-icon-theme
+Depends On      : acl  pam  libcups>=2.2.12  cups-filters  bc  dbus  systemd  libpaper  hicolor-icon-theme
 Optional Deps   : xdg-utils: xdg .desktop file support [installed]
                   colord: for ICC color profile support [installed]
 Required By     : None
 Optional For    : hplip
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 13.92 MiB
+Installed Size  : 13.93 MiB
 Packager        : Andreas Radke <andyrtr@archlinux.org>
-Build Date      : Mon 15 Apr 2019 10:23:55 PM PDT
-Install Date    : Sun 11 Aug 2019 09:24:56 PM PDT
+Build Date      : Thu 15 Aug 2019 10:29:29 PM PDT
+Install Date    : Fri 16 Aug 2019 01:36:13 AM PDT
 Install Reason  : Explicitly installed
 Install Script  : Yes
 Validated By    : Signature
@@ -2216,7 +2238,7 @@ Groups          : None
 Provides        : None
 Depends On      : expat  freetype2
 Optional Deps   : None
-Required By     : cairo  chromium  ffmpeg  ghostscript  imagemagick  libass  libbluray  libxft  poppler  qt5-base  ttf-fira-mono  ttf-fira-sans  ttf-inconsolata  ttf-merriweather  ttf-merriweather-sans  ttf-ms-fonts  ttf-opensans  ttf-oswald  ttf-quintessential  ttf-roboto  ttf-signika  ttf-twemoji  vlc
+Required By     : alacritty  cairo  chromium  ffmpeg  ghostscript  imagemagick  libass  libbluray  libxft  poppler  qt5-base  ttf-dejavu  ttf-inconsolata  ttf-ms-fonts  ttf-opensans  ttf-roboto  ttf-twemoji  vlc
 Optional For    : cmatrix
 Conflicts With  : None
 Replaces        : None
@@ -2260,7 +2282,7 @@ Groups          : None
 Provides        : libfreetype.so=6-64
 Depends On      : zlib  bzip2  sh  libpng  harfbuzz
 Optional Deps   : None
-Required By     : chromium  dmenu  ffmpeg  fontconfig  harfbuzz  imlib2  jre-openjdk-headless  jre11-openjdk-headless  libass  libbluray  libraqm  libxfont2  maim  steam  vlc  xorg-mkfontscale
+Required By     : alacritty  chromium  dmenu  ffmpeg  fontconfig  harfbuzz  imlib2  jre-openjdk-headless  jre11-openjdk-headless  libass  libbluray  libraqm  libxfont2  maim  sdl_ttf  steam  vlc  xorg-mkfontscale
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -2317,7 +2339,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : fzf
-Version         : 0.18.0-1
+Version         : 0.18.0-2
 Description     : Command-line fuzzy finder
 Architecture    : x86_64
 URL             : https://github.com/junegunn/fzf
@@ -2333,10 +2355,10 @@ Required By     : None
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 3.54 MiB
-Packager        : Filipe Laíns <lains@archlinux.org>
-Build Date      : Thu 11 Apr 2019 02:18:51 AM PDT
-Install Date    : Mon 24 Jun 2019 04:42:10 PM PDT
+Installed Size  : 3.48 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 16 Aug 2019 01:19:59 AM PDT
+Install Date    : Fri 16 Aug 2019 09:52:36 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -2439,7 +2461,7 @@ Groups          : base
 Provides        : gcc-libs-multilib  libgo.so=14-64  libgfortran.so=5-64  libubsan.so=1-64  libasan.so=5-64  libtsan.so=0-64  liblsan.so=0-64
 Depends On      : glibc>=2.27
 Optional Deps   : None
-Required By     : aom  aspell  brotli  compiler-rt  db  double-conversion  exiv2  fftw  flac  gc  gcc  gettext  glslang  gmp  gnutls  gperf  gptfdisk  graphite  groff  hunspell  icu  ilmbase  js60  jsoncpp  libebml  libelf  libmodplug  libproxy  libsigc++  libsoxr  libvoikko  llvm-libs  ncurses  ninja  pcre  pcre2  poppler  portsmf  re2  ripgrep  rttr  shaderc  snappy  spirv-tools  thin-provisioning-tools  v4l-utils  vid.stab  vulkan-tools  vulkan-validation-layers  webrtc-audio-processing  wxgtk-common  zeromq  zita-alsa-pcmi  zita-resampler
+Required By     : aom  aspell  brotli  compiler-rt  db  double-conversion  exiv2  fftw  flac  gc  gcc  gettext  glslang  gmp  gnutls  gperf  gptfdisk  graphite  groff  hunspell  icu  ilmbase  js60  jsoncpp  libebml  libelf  libmodplug  libproxy  libsigc++  libsoxr  libvoikko  llvm-libs  ncurses  ninja  pcre  pcre2  poppler  portsmf  re2  ripgrep  rttr  shaderc  snappy  spirv-tools  thin-provisioning-tools  unrar  v4l-utils  vid.stab  vulkan-tools  vulkan-validation-layers  webrtc-audio-processing  wxgtk-common  zeromq  zita-alsa-pcmi  zita-resampler
 Optional For    : None
 Conflicts With  : None
 Replaces        : gcc-libs-multilib
@@ -2695,7 +2717,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : git
-Version         : 2.22.0-1
+Version         : 2.22.1-1
 Description     : the fast distributed version control system
 Architecture    : x86_64
 URL             : https://git-scm.com/
@@ -2721,10 +2743,10 @@ Required By     : yay
 Optional For    : gettext
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 39.55 MiB
+Installed Size  : 39.53 MiB
 Packager        : Christian Hesse <arch@eworm.de>
-Build Date      : Sat 08 Jun 2019 11:32:41 AM PDT
-Install Date    : Mon 24 Jun 2019 02:27:27 PM PDT
+Build Date      : Mon 12 Aug 2019 12:11:58 PM PDT
+Install Date    : Thu 15 Aug 2019 09:35:50 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : Yes
 Validated By    : Signature
@@ -2784,7 +2806,7 @@ Provides        : None
 Depends On      : pcre  libffi  libutil-linux  zlib
 Optional Deps   : python: gdbus-codegen, glib-genmarshal, glib-mkenums, gtester-report [installed]
                   libelf: gresource inspection tool [installed]
-Required By     : at-spi2-core  atk  avahi  cairo  dbus-glib  dconf  desktop-file-utils  enchant  gdk-pixbuf2  gettext  girara  glib-networking  glibmm  gobject-introspection-runtime  graphene  gsettings-desktop-schemas  gstreamer  harfbuzz  json-glib  libass  libcroco  libgudev  libgusb  libibus  liblqr  libmm-glib  libnm  libplist  libsecret  libsoup  libwacom  libxfce4util  perf  playerctl  polkit  python-dbus  rest  shared-mime-info
+Required By     : at-spi2-core  atk  avahi  cairo  dbus-glib  dconf  desktop-file-utils  enchant  gdk-pixbuf2  gettext  girara  glib-networking  glibmm  gobject-introspection-runtime  graphene  gsettings-desktop-schemas  gstreamer  harfbuzz  json-glib  libass  libcroco  libgudev  libgusb  libibus  liblqr  libmm-glib  libnm  libplist  libsecret  libsoup  libwacom  perf  playerctl  polkit  python-dbus  rest  shared-mime-info
 Optional For    : libproxy
 Conflicts With  : None
 Replaces        : None
@@ -2806,7 +2828,7 @@ Groups          : base
 Provides        : None
 Depends On      : linux-api-headers>=4.10  tzdata  filesystem
 Optional Deps   : gd: for memusagestat
-Required By     : a52dec  alsa-lib  argon2  attr  bash  binutils  bison  bluez-libs  btrfs-progs  bzip2  cdparanoia  cmark-gfm  confuse  convertlit  coreutils  cracklib  dav1d  device-mapper  dhcpcd  diffutils  dosfstools  expat  faad2  fakeroot  file  findutils  flex  fribidi  gavl  gawk  gcc-libs  gdbm  giflib  grep  gsl  gsm  gvim  gzip  hspell  hugo  hyphen  ijs  iproute2  jansson  json-c  kbd  keyutils  kmod  l-smash  less  lhasa  lib32-glibc  libass  libasyncns  libatomic_ops  libcap  libcap-ng  libdatrie  libdvbpsi  libebur128  libepoxy  libev  libevdev  libexif  libffi  libgpg-error  libice  libidn  libksba  liblouis  libmad  libmnl  libmpcdec  libmpeg2  libndp  libnet  libnfnetlink  libnghttp2  libnl  libogg  libomxil-bellagio  libpcap  libpciaccess  libpgm  libpipeline  libraw1394  libseccomp  libsodium  libsynctex  libtasn1  libtool  libunistring  libunwind  libupnp  libusb  libuv  libvisual  libxau  libxdmcp  libxkbcommon  libxshmfence  lz4  lzo  m4  make  mbedtls  mdadm  mkinitcpio-busybox  mtdev  ncurses  net-tools  nspr  openal  opencore-amr  opera-ffmpeg-codecs  opus  orc  p11-kit  pacman  pam  patch  pciutils  perf  perl  pixman  pkgconf  popt  readline  rhash  run-parts  sbc  sdl2  sed  serd  shaderc  snappy  speexdsp  sudo  sysfsutils  systemd-libs  tar  tcc  tree  tslib  valgrind  vid.stab  vulkan-icd-loader  wayland  wget  which  xorg-bdftopcf  xvidcore  zlib
+Required By     : a52dec  alsa-lib  argon2  attr  bash  binutils  bison  bluez-libs  btrfs-progs  bzip2  cdparanoia  cmark-gfm  confuse  convertlit  coreutils  cracklib  dav1d  device-mapper  dhcpcd  diffutils  dosfstools  expat  faad2  fakeroot  file  findutils  flex  fribidi  gavl  gawk  gcc-libs  gdbm  giflib  grep  gsl  gsm  gvim  gzip  hspell  hugo  hyphen  ijs  iproute2  jansson  json-c  kbd  keyutils  kmod  l-smash  less  lhasa  lib32-glibc  libass  libasyncns  libatomic_ops  libcap  libcap-ng  libdatrie  libdvbpsi  libebur128  libepoxy  libev  libevdev  libexif  libffi  libgpg-error  libice  libidn  libksba  liblouis  libmad  libmnl  libmpcdec  libmpeg2  libndp  libnet  libnfnetlink  libnghttp2  libnl  libogg  libomxil-bellagio  libpcap  libpciaccess  libpgm  libpipeline  libraw1394  libseccomp  libsodium  libsynctex  libtasn1  libtool  libunistring  libunwind  libupnp  libusb  libuv  libvisual  libxau  libxdmcp  libxkbcommon  libxshmfence  lz4  lzo  m4  make  mbedtls  mdadm  mkinitcpio-busybox  mtdev  ncurses  net-tools  nspr  openal  opencore-amr  opera-ffmpeg-codecs  opus  orc  p11-kit  pacman  pam  patch  pciutils  perf  perl  pixman  pkgconf  popt  readline  rhash  run-parts  sbc  sdl  sdl2  sed  serd  shaderc  snappy  speexdsp  sudo  sysfsutils  systemd-libs  tar  tcc  tree  tslib  valgrind  vid.stab  vulkan-icd-loader  wayland  wget  which  xorg-bdftopcf  xvidcore  zlib
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -2940,7 +2962,7 @@ Groups          : None
 Provides        : None
 Depends On      : gcc-libs  libtasn1  readline  zlib  nettle  p11-kit  libidn2  libidn2.so=0-64  libunistring
 Optional Deps   : guile: for use with Guile bindings [installed]
-Required By     : ffmpeg  glib-networking  gnupg  libcups  libimobiledevice  libzip  pkcs11-helper  vlc  vte3  wget
+Required By     : ffmpeg  glib-networking  gnupg  libcups  libimobiledevice  libzip  pkcs11-helper  vlc  wget
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -2953,7 +2975,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : go
-Version         : 2:1.12.7-1
+Version         : 2:1.12.8-1
 Description     : Core compiler tools for the Go programming language
 Architecture    : x86_64
 URL             : https://golang.org/
@@ -2966,10 +2988,10 @@ Required By     : None
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 476.27 MiB
-Packager        : Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
-Build Date      : Tue 09 Jul 2019 10:13:54 PM PDT
-Install Date    : Thu 11 Jul 2019 10:08:30 PM PDT
+Installed Size  : 476.30 MiB
+Packager        : Morten Linderud <foxboron@archlinux.org>
+Build Date      : Wed 14 Aug 2019 11:59:37 AM PDT
+Install Date    : Thu 15 Aug 2019 09:35:56 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -3339,7 +3361,7 @@ Provides        : None
 Depends On      : atk  pango  libxcursor  libxinerama  libxrandr  libxi  libxcomposite  libxdamage  shared-mime-info  cairo  libcups  gtk-update-icon-cache  librsvg  desktop-file-utils
 Optional Deps   : gnome-themes-standard: Default widget theme
                   adwaita-icon-theme: Default icon theme [installed]
-Required By     : gtkmm  libxfce4ui  lxappearance
+Required By     : gtkmm  lxappearance
 Optional For    : avahi  jre-openjdk  jre11-openjdk  jre8-openjdk  lv2  mlt  perf  pinentry  suil
 Conflicts With  : None
 Replaces        : None
@@ -3361,7 +3383,7 @@ Groups          : None
 Provides        : gtk3-print-backends
 Depends On      : atk  cairo  libxcursor  libxinerama  libxrandr  libxi  libepoxy  gdk-pixbuf2  dconf  libxcomposite  libxdamage  pango  shared-mime-info  at-spi2-atk  wayland  libxkbcommon  adwaita-icon-theme  json-glib  librsvg  wayland-protocols  desktop-file-utils  mesa  cantarell-fonts  colord  rest  libcups  libcanberra  fribidi  iso-codes  gtk-update-icon-cache
 Optional Deps   : None
-Required By     : chromium  gcr  girara  gvim  libnma  libxfce4ui  nvidia-settings  vte3  webkit2gtk  wxgtk3
+Required By     : chromium  gcr  girara  gvim  libnma  nvidia-settings  webkit2gtk  wxgtk3
 Optional For    : avahi  ghostscript  jre-openjdk  jre11-openjdk  libinput  qt5-base  suil  vlc
 Conflicts With  : gtk3-print-backends
 Replaces        : gtk3-print-backends<=3.22.26-1
@@ -3476,7 +3498,7 @@ Groups          : base  base-devel
 Provides        : None
 Depends On      : glibc  bash  less
 Optional Deps   : None
-Required By     : logrotate  mkinitcpio  texinfo
+Required By     : logrotate  mkinitcpio  nethack  texinfo
 Optional For    : man-db
 Conflicts With  : None
 Replaces        : None
@@ -4479,7 +4501,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-http
-Version         : 4000.3.14-18
+Version         : 4000.3.14-19
 Description     : A library for client-side HTTP
 Architecture    : x86_64
 URL             : https://hackage.haskell.org/package/HTTP
@@ -4494,8 +4516,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 1722.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Sat 10 Aug 2019 10:27:59 PM PDT
-Install Date    : Sun 11 Aug 2019 01:57:19 AM PDT
+Build Date      : Wed 14 Aug 2019 08:31:58 PM PDT
+Install Date    : Thu 15 Aug 2019 09:35:56 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -4677,7 +4699,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-ipynb
-Version         : 0.1-56
+Version         : 0.1-57
 Description     : Data structure for working with Jupyter notebooks (ipynb)
 Architecture    : x86_64
 URL             : https://github.com/jgm/ipynb
@@ -4692,8 +4714,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 721.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Tue 06 Aug 2019 09:45:26 AM PDT
-Install Date    : Tue 06 Aug 2019 05:11:38 PM PDT
+Build Date      : Wed 14 Aug 2019 10:22:54 PM PDT
+Install Date    : Thu 15 Aug 2019 09:35:56 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -5720,7 +5742,7 @@ Groups          : None
 Provides        : None
 Depends On      : None
 Optional Deps   : None
-Required By     : adwaita-icon-theme  chromium  cups  djvulibre  gtk-update-icon-cache  jdk-openjdk  jdk11-openjdk  jre8-openjdk  keepassxc  krita  libxfce4ui  nitrogen  purpose  qt5-tools  steam  sxiv  v4l-utils  xfce4-terminal
+Required By     : adwaita-icon-theme  chromium  cups  djvulibre  gtk-update-icon-cache  jdk-openjdk  jdk11-openjdk  jre8-openjdk  keepassxc  krita  nitrogen  purpose  qt5-tools  steam  sxiv  v4l-utils
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -5808,7 +5830,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : hugo
-Version         : 0.56.3-1
+Version         : 0.57.0-1
 Description     : Fast and Flexible Static Site Generator in Go
 Architecture    : x86_64
 URL             : https://gohugo.io/
@@ -5821,10 +5843,10 @@ Required By     : None
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 49.65 MiB
+Installed Size  : 49.58 MiB
 Packager        : Jaroslav Lichtblau <svetlemodry@archlinux.org>
-Build Date      : Tue 06 Aug 2019 09:51:43 AM PDT
-Install Date    : Tue 06 Aug 2019 05:11:39 PM PDT
+Build Date      : Thu 15 Aug 2019 10:15:03 AM PDT
+Install Date    : Thu 15 Aug 2019 09:35:57 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -8853,7 +8875,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : libcups
-Version         : 2.2.11-2
+Version         : 2.2.12-1
 Description     : The CUPS Printing System - client libraries and headers
 Architecture    : x86_64
 URL             : https://www.cups.org/
@@ -8866,10 +8888,10 @@ Required By     : chromium  cups  cups-filters  ghostscript  gtk2  gtk3  qt5-bas
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 865.00 KiB
+Installed Size  : 869.00 KiB
 Packager        : Andreas Radke <andyrtr@archlinux.org>
-Build Date      : Mon 15 Apr 2019 10:23:55 PM PDT
-Install Date    : Mon 24 Jun 2019 03:49:14 PM PDT
+Build Date      : Thu 15 Aug 2019 10:29:29 PM PDT
+Install Date    : Fri 16 Aug 2019 01:36:13 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -9524,7 +9546,7 @@ Groups          : None
 Provides        : libjpeg=8.2.2
 Depends On      : None
 Optional Deps   : None
-Required By     : chromium  gdk-pixbuf2  ghostscript  gst-plugins-base  i3lock-color  imlib2  jasper  jre-openjdk-headless  jre11-openjdk-headless  libtiff  libwebp  maim  poppler  qpdf  qt5-base  v4l-utils  zathura-pdf-mupdf
+Required By     : chromium  gdk-pixbuf2  ghostscript  gst-plugins-base  i3lock-color  imlib2  jasper  jre-openjdk-headless  jre11-openjdk-headless  libtiff  libwebp  maim  poppler  qpdf  qt5-base  sdl_image  v4l-utils  zathura-pdf-mupdf
 Optional For    : vlc
 Conflicts With  : None
 Replaces        : None
@@ -9809,7 +9831,7 @@ Licenses        : GPL2
 Groups          : None
 Provides        : mpeg2dec
 Depends On      : glibc
-Optional Deps   : sdl: required for mpeg2dec
+Optional Deps   : sdl: required for mpeg2dec [installed]
                   libxv: required for mpeg2dec [installed]
 Required By     : vlc
 Optional For    : None
@@ -10319,7 +10341,7 @@ Groups          : None
 Provides        : None
 Depends On      : zlib  sh
 Optional Deps   : None
-Required By     : aribb24  cairo  freetype2  gdk-pixbuf2  ghostscript  gst-plugins-base  imagemagick  imlib2  jbig2dec  libcups  libwebp  maim  openjpeg2  qrencode
+Required By     : aribb24  cairo  freetype2  gdk-pixbuf2  ghostscript  gst-plugins-base  imagemagick  imlib2  jbig2dec  libcups  libwebp  maim  openjpeg2  qrencode  sdl_image
 Optional For    : vlc
 Conflicts With  : None
 Replaces        : None
@@ -10391,7 +10413,7 @@ Provides        : None
 Depends On      : dbus  libasyncns  libcap  libxtst  libsm  libsndfile  systemd
 Optional Deps   : None
 Required By     : chromium  ffmpeg  i3status  phonon-qt5  polybar  pulseaudio  qt5-multimedia
-Optional For    : alsa-plugins  discord  sdl2  vlc
+Optional For    : alsa-plugins  discord  sdl  sdl2  vlc
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 1404.00 KiB
@@ -10610,7 +10632,7 @@ Groups          : None
 Provides        : None
 Depends On      : libice  libutil-linux
 Optional Deps   : None
-Required By     : libpulse  libxfce4ui  libxt  wxgtk3
+Required By     : libpulse  libxt  wxgtk3
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -10918,7 +10940,7 @@ Groups          : None
 Provides        : None
 Depends On      : libjpeg  zlib  xz  zstd
 Optional Deps   : freeglut: for using tiffgt
-Required By     : djvulibre  gdk-pixbuf2  ghostscript  imlib2  lcms2  libcups  libwebp  openjpeg2
+Required By     : djvulibre  gdk-pixbuf2  ghostscript  imlib2  lcms2  libcups  libwebp  openjpeg2  sdl_image
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -11337,7 +11359,7 @@ Groups          : None
 Provides        : None
 Depends On      : libxcb  xproto  kbproto
 Optional Deps   : None
-Required By     : at-spi2-atk  ffmpeg  gdk-pixbuf2  lib32-libx11  libva  libxext  libxfixes  libxkbfile  libxrender  libxt  maim  sdl2  slop  startup-notification  unclutter  vulkan-validation-layers  xorg-xinit  xorg-xinput  xorg-xmodmap  xorg-xrandr  xorg-xrdb
+Required By     : at-spi2-atk  ffmpeg  gdk-pixbuf2  lib32-libx11  libva  libxext  libxfixes  libxkbfile  libxrender  libxt  maim  sdl  sdl2  slop  startup-notification  unclutter  vulkan-validation-layers  xorg-xinit  xorg-xinput  xorg-xmodmap  xorg-xrandr  xorg-xrdb
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -11425,7 +11447,7 @@ Groups          : None
 Provides        : None
 Depends On      : libxfixes  libxrender
 Optional Deps   : gnome-themes-standard: fallback icon theme
-Required By     : gtk2  gtk3  sdl2
+Required By     : alacritty  gtk2  gtk3  sdl2
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -11491,7 +11513,7 @@ Groups          : None
 Provides        : None
 Depends On      : libx11  xextproto
 Optional Deps   : None
-Required By     : cairo  ffmpeg  imagemagick  imlib2  lib32-libxext  libglvnd  libva  libvdpau  libxi  libxinerama  libxmu  libxnvctrl  libxpm  libxrandr  libxss  libxtst  libxv  libxxf86vm  maim  sdl2  slop
+Required By     : cairo  ffmpeg  imagemagick  imlib2  lib32-libxext  libglvnd  libva  libvdpau  libxi  libxinerama  libxmu  libxnvctrl  libxpm  libxrandr  libxss  libxtst  libxv  libxxf86vm  maim  sdl  sdl2  slop
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -11499,50 +11521,6 @@ Installed Size  : 367.00 KiB
 Packager        : Andreas Radke <andyrtr@archlinux.org>
 Build Date      : Sun 17 Mar 2019 05:23:02 AM PDT
 Install Date    : Mon 24 Jun 2019 03:37:51 PM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : Signature
-
-Name            : libxfce4ui
-Version         : 4.14.1-2
-Description     : Commonly used Xfce widgets among Xfce applications
-Architecture    : x86_64
-URL             : https://www.xfce.org/
-Licenses        : GPL2
-Groups          : None
-Provides        : None
-Depends On      : libxfce4util  gtk2  gtk3  xfconf  libsm  startup-notification  hicolor-icon-theme
-Optional Deps   : None
-Required By     : xfce4-terminal
-Optional For    : None
-Conflicts With  : None
-Replaces        : None
-Installed Size  : 1853.00 KiB
-Packager        : Evangelos Foutras <evangelos@foutrelis.com>
-Build Date      : Sun 11 Aug 2019 04:04:26 PM PDT
-Install Date    : Mon 12 Aug 2019 10:26:09 PM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : Signature
-
-Name            : libxfce4util
-Version         : 4.14.0-1
-Description     : Basic utility non-GUI functions for Xfce
-Architecture    : x86_64
-URL             : https://www.xfce.org/
-Licenses        : GPL2
-Groups          : None
-Provides        : None
-Depends On      : glib2
-Optional Deps   : None
-Required By     : libxfce4ui  xfconf
-Optional For    : None
-Conflicts With  : None
-Replaces        : None
-Installed Size  : 826.00 KiB
-Packager        : Evangelos Foutras <evangelos@foutrelis.com>
-Build Date      : Sun 11 Aug 2019 09:16:37 AM PDT
-Install Date    : Mon 12 Aug 2019 10:26:09 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -11623,7 +11601,7 @@ Groups          : None
 Provides        : None
 Depends On      : libxext  inputproto
 Optional Deps   : None
-Required By     : glew  gtk2  gtk3  libxtst  qt5-base  unclutter  xorg-xinput
+Required By     : alacritty  glew  gtk2  gtk3  libxtst  qt5-base  unclutter  xorg-xinput
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -11821,7 +11799,7 @@ Groups          : None
 Provides        : None
 Depends On      : libxext  libxrender  randrproto
 Optional Deps   : None
-Required By     : gtk2  gtk3  maim  xorg-xrandr
+Required By     : alacritty  gtk2  gtk3  maim  xorg-xrandr
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -11843,7 +11821,7 @@ Groups          : None
 Provides        : None
 Depends On      : libx11>=1.3.4  renderproto
 Optional Deps   : None
-Required By     : cairo  libxcursor  libxft  libxrandr  qt5-base  sdl2  slop
+Required By     : cairo  libxcursor  libxft  libxrandr  qt5-base  sdl  sdl2  slop
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -12164,7 +12142,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : llvm
-Version         : 8.0.1-1
+Version         : 8.0.1-2
 Description     : Collection of modular and reusable compiler and toolchain technologies
 Architecture    : x86_64
 URL             : https://llvm.org/
@@ -12178,15 +12156,15 @@ Optional For    : clang
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 207.19 MiB
-Packager        : Evangelos Foutras <evangelos@foutrelis.com>
-Build Date      : Sat 20 Jul 2019 03:16:11 AM PDT
-Install Date    : Wed 24 Jul 2019 12:40:31 AM PDT
+Packager        : Juergen Hoetzel <juergen@archlinux.org>
+Build Date      : Thu 15 Aug 2019 01:20:11 PM PDT
+Install Date    : Fri 16 Aug 2019 01:36:16 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : llvm-libs
-Version         : 8.0.1-1
+Version         : 8.0.1-2
 Description     : LLVM runtime libraries
 Architecture    : x86_64
 URL             : https://llvm.org/
@@ -12200,9 +12178,9 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 70.74 MiB
-Packager        : Evangelos Foutras <evangelos@foutrelis.com>
-Build Date      : Sat 20 Jul 2019 03:16:11 AM PDT
-Install Date    : Wed 24 Jul 2019 12:40:24 AM PDT
+Packager        : Juergen Hoetzel <juergen@archlinux.org>
+Build Date      : Thu 15 Aug 2019 01:20:11 PM PDT
+Install Date    : Fri 16 Aug 2019 01:36:14 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -12687,7 +12665,7 @@ Licenses        : GPL
 Groups          : None
 Provides        : None
 Depends On      : libebur128
-Optional Deps   : sdl_image: SDL1 plugin
+Optional Deps   : sdl_image: SDL1 plugin [installed]
                   sdl2: SDL2 plugin [installed]
                   libsamplerate: libavresample plugin [installed]
                   sox: SOX (Audio Swiss Army Knife) plugin
@@ -12855,7 +12833,7 @@ Groups          : None
 Provides        : libncurses++w.so=6-64  libformw.so=6-64  libmenuw.so=6-64  libpanelw.so=6-64  libncursesw.so=6-64
 Depends On      : glibc  gcc-libs
 Optional Deps   : None
-Required By     : alsa-utils  aspell  bash  cgdb  cmatrix  dialog  gdb  gptfdisk  guile  guile2.0  htop  lame  less  lib32-ncurses  libedit  libxml2  llvm-libs  nano  ncdu  pinentry  procps-ng  psmisc  readline  texinfo  vi
+Required By     : alsa-utils  aspell  bash  cgdb  cmatrix  dialog  gdb  gptfdisk  guile  guile2.0  htop  lame  less  lib32-ncurses  libedit  libxml2  llvm-libs  nano  ncdu  nethack  pinentry  procps-ng  psmisc  readline  texinfo  vi
 Optional For    : vlc
 Conflicts With  : None
 Replaces        : None
@@ -12994,6 +12972,28 @@ Installed Size  : 95.00 KiB
 Packager        : Florian Pritz <bluewind@xinu.at>
 Build Date      : Tue 12 Feb 2019 01:36:49 PM PST
 Install Date    : Mon 24 Jun 2019 02:08:07 PM PDT
+Install Reason  : Explicitly installed
+Install Script  : Yes
+Validated By    : Signature
+
+Name            : nethack
+Version         : 3.6.2-1
+Description     : A single player dungeon exploration game
+Architecture    : x86_64
+URL             : https://www.nethack.org/index.html
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : ncurses  gzip
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 4.28 MiB
+Packager        : schuay <jakob.gruber@gmail.com>
+Build Date      : Mon 13 May 2019 12:13:22 PM PDT
+Install Date    : Sat 17 Aug 2019 12:56:31 AM PDT
 Install Reason  : Explicitly installed
 Install Script  : Yes
 Validated By    : Signature
@@ -13765,7 +13765,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : pandoc
-Version         : 2.7.3-23
+Version         : 2.7.3-24
 Description     : Conversion between markup formats
 Architecture    : x86_64
 URL             : https://pandoc.org
@@ -13780,10 +13780,10 @@ Required By     : None
 Optional For    : None
 Conflicts With  : haskell-pandoc
 Replaces        : haskell-pandoc
-Installed Size  : 42.94 MiB
+Installed Size  : 43.02 MiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Sat 10 Aug 2019 11:56:45 PM PDT
-Install Date    : Sun 11 Aug 2019 01:57:20 AM PDT
+Build Date      : Wed 14 Aug 2019 10:43:44 PM PDT
+Install Date    : Thu 15 Aug 2019 09:35:58 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -13952,7 +13952,7 @@ Groups          : None
 Provides        : None
 Depends On      : gcc-libs  readline  zlib  bzip2  bash
 Optional Deps   : None
-Required By     : git  libbytesize  ripgrep  systemd  vte3  wget
+Required By     : git  libbytesize  ripgrep  systemd  wget
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -16236,6 +16236,29 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
+Name            : sdl
+Version         : 1.2.15-10
+Description     : A library for portable low-level access to a video framebuffer, audio output, mouse, and keyboard
+Architecture    : x86_64
+URL             : https://www.libsdl.org
+Licenses        : LGPL
+Groups          : None
+Provides        : None
+Depends On      : glibc  libxext  libxrender  libx11
+Optional Deps   : alsa-lib: ALSA audio driver [installed]
+                  libpulse: PulseAudio audio driver [installed]
+Required By     : sdl_image  sdl_ttf
+Optional For    : libmpeg2
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1041.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Nov 2018 03:09:49 PM PST
+Install Date    : Thu 15 Aug 2019 11:24:00 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
 Name            : sdl2
 Version         : 2.0.10-1
 Description     : A library for portable low-level access to a video framebuffer, audio output, mouse, and keyboard (Version 2)
@@ -16256,6 +16279,50 @@ Installed Size  : 2.96 MiB
 Packager        : Sven-Hendrik Haase <svenstaro@gmail.com>
 Build Date      : Fri 26 Jul 2019 04:24:42 AM PDT
 Install Date    : Sat 27 Jul 2019 12:34:09 AM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : sdl_image
+Version         : 1.2.12-5
+Description     : A simple library to load images of various formats as SDL surfaces
+Architecture    : x86_64
+URL             : https://www.libsdl.org/projects/SDL_image/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : sdl>=1.2.13  libpng  libjpeg>=7  libtiff  zlib
+Optional Deps   : None
+Required By     : None
+Optional For    : mlt  vlc
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 65.00 KiB
+Packager        : Evangelos Foutras <evangelos@foutrelis.com>
+Build Date      : Fri 09 Nov 2018 02:08:49 PM PST
+Install Date    : Thu 15 Aug 2019 11:24:00 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : sdl_ttf
+Version         : 2.0.11-5
+Description     : A library that allows you to use TrueType fonts in your SDL applications
+Architecture    : x86_64
+URL             : https://www.libsdl.org/projects/SDL_ttf/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : sdl  freetype2
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 42.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Nov 2018 11:02:58 PM PST
+Install Date    : Thu 15 Aug 2019 11:24:00 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -16757,7 +16824,7 @@ Groups          : None
 Provides        : None
 Depends On      : libx11  xcb-util
 Optional Deps   : None
-Required By     : i3-gaps  libxfce4ui
+Required By     : i3-gaps
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -17171,69 +17238,25 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
-Name            : ttf-croscore
-Version         : 20190111-2
-Description     : Chrome OS core fonts
+Name            : ttf-dejavu
+Version         : 2.37-2
+Description     : Font family based on the Bitstream Vera Fonts with a wider range of characters
 Architecture    : any
-URL             : https://www.google.com/get/noto/
-Licenses        : custom:SIL
+URL             : https://dejavu-fonts.github.io/
+Licenses        : custom
 Groups          : None
 Provides        : ttf-font
-Depends On      : None
+Depends On      : fontconfig  xorg-fonts-encodings  xorg-mkfontscale  xorg-mkfontdir
 Optional Deps   : None
 Required By     : chromium  steam
-Optional For    : None
+Optional For    : vlc
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 5.75 MiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sat 13 Jul 2019 05:46:10 AM PDT
-Install Date    : Sat 13 Jul 2019 03:28:10 PM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : Signature
-
-Name            : ttf-fira-mono
-Version         : 2:3.206-3
-Description     : Mozilla's monospace typeface designed for Firefox OS
-Architecture    : any
-URL             : https://github.com/mozilla/Fira
-Licenses        : custom:OFL
-Groups          : None
-Provides        : None
-Depends On      : fontconfig  xorg-font-utils
-Optional Deps   : None
-Required By     : None
-Optional For    : None
-Conflicts With  : None
-Replaces        : None
-Installed Size  : 547.00 KiB
-Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Fri 09 Nov 2018 03:54:09 PM PST
-Install Date    : Tue 25 Jun 2019 02:20:34 AM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : Signature
-
-Name            : ttf-fira-sans
-Version         : 1:4.301-1
-Description     : Mozilla's sans-serif typeface designed for Firefox OS
-Architecture    : any
-URL             : https://github.com/mozilla/Fira
-Licenses        : custom:OFL
-Groups          : None
-Provides        : None
-Depends On      : fontconfig  xorg-font-utils
-Optional Deps   : None
-Required By     : None
-Optional For    : None
-Conflicts With  : None
-Replaces        : None
-Installed Size  : 43.42 MiB
-Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Thu 13 Sep 2018 10:39:47 AM PDT
-Install Date    : Tue 25 Jun 2019 02:20:34 AM PDT
-Install Reason  : Installed as a dependency for another package
+Installed Size  : 9.75 MiB
+Packager        : Jan de Groot <jgc@archlinux.org>
+Build Date      : Fri 16 Feb 2018 03:03:31 PM PST
+Install Date    : Fri 16 Aug 2019 09:49:08 PM PDT
+Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
 
@@ -17258,50 +17281,6 @@ Install Date    : Tue 25 Jun 2019 02:20:35 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
-
-Name            : ttf-merriweather
-Version         : 1:2.005-1
-Description     : A typeface that is pleasant to read on screens by Sorkin Type Co
-Architecture    : any
-URL             : http://sorkintype.com/
-Licenses        : custom:SIL Open Font License v1.1
-Groups          : None
-Provides        : None
-Depends On      : fontconfig  xorg-fonts-encodings  xorg-font-utils
-Optional Deps   : None
-Required By     : None
-Optional For    : None
-Conflicts With  : ttf-google-fonts-opinionated-git  ttf-merriweather-ib
-Replaces        : None
-Installed Size  : 2.53 MiB
-Packager        : Unknown Packager
-Build Date      : Tue 25 Jun 2019 02:32:38 AM PDT
-Install Date    : Tue 25 Jun 2019 02:32:39 AM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : None
-
-Name            : ttf-merriweather-sans
-Version         : 1.006-4
-Description     : A sans-serif typeface that is pleasant to read on screens by Sorkin Type Co
-Architecture    : any
-URL             : https://fonts.google.com/specimen/Merriweather+Sans
-Licenses        : custom:SIL Open Font License v1.1
-Groups          : None
-Provides        : None
-Depends On      : fontconfig  xorg-fonts-encodings  xorg-font-utils
-Optional Deps   : None
-Required By     : None
-Optional For    : None
-Conflicts With  : ttf-google-fonts-opinionated-git  ttf-merriweather-sans-ib
-Replaces        : None
-Installed Size  : 511.00 KiB
-Packager        : Unknown Packager
-Build Date      : Tue 25 Jun 2019 02:32:41 AM PDT
-Install Date    : Tue 25 Jun 2019 02:32:42 AM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : None
 
 Name            : ttf-ms-fonts
 Version         : 2.0-10
@@ -17347,50 +17326,6 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
-Name            : ttf-oswald
-Version         : 4.101-1
-Description     : Sans-serif typeface from Google by Vernon Adams
-Architecture    : any
-URL             : https://fonts.google.com/specimen/Oswald
-Licenses        : custom:SIL Open Font License v1.1
-Groups          : None
-Provides        : None
-Depends On      : fontconfig  xorg-fonts-encodings  xorg-font-utils
-Optional Deps   : None
-Required By     : None
-Optional For    : None
-Conflicts With  : ttf-google-fonts-opinionated-git  otf-oswald-ib
-Replaces        : None
-Installed Size  : 580.00 KiB
-Packager        : Unknown Packager
-Build Date      : Tue 25 Jun 2019 02:32:43 AM PDT
-Install Date    : Tue 25 Jun 2019 02:32:45 AM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : None
-
-Name            : ttf-quintessential
-Version         : 1.001-4
-Description     : Calligraphic typeface from Google by Brian J. Bonislawsky
-Architecture    : any
-URL             : https://fonts.google.com/specimen/Quintessential
-Licenses        : custom:SIL Open Font License v1.1
-Groups          : None
-Provides        : None
-Depends On      : fontconfig  xorg-fonts-encodings  xorg-font-utils
-Optional Deps   : None
-Required By     : None
-Optional For    : None
-Conflicts With  : ttf-google-fonts-opinionated-git  otf-quintessential-ib
-Replaces        : None
-Installed Size  : 105.00 KiB
-Packager        : Unknown Packager
-Build Date      : Tue 25 Jun 2019 02:32:46 AM PDT
-Install Date    : Tue 25 Jun 2019 02:32:47 AM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : None
-
 Name            : ttf-roboto
 Version         : 2.138-1
 Description     : Google's signature family of fonts
@@ -17412,28 +17347,6 @@ Install Date    : Tue 25 Jun 2019 02:20:35 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
-
-Name            : ttf-signika
-Version         : 1.002-2
-Description     : Sans-serif typeface from Google by Anna Giedryś
-Architecture    : any
-URL             : https://fonts.google.com/specimen/Signika
-Licenses        : custom:SIL Open Font License v1.1
-Groups          : None
-Provides        : None
-Depends On      : fontconfig  xorg-fonts-encodings  xorg-font-utils
-Optional Deps   : None
-Required By     : None
-Optional For    : None
-Conflicts With  : ttf-google-fonts-opinionated-git  ttf-signika-family-ib
-Replaces        : None
-Installed Size  : 671.00 KiB
-Packager        : Unknown Packager
-Build Date      : Tue 25 Jun 2019 02:32:49 AM PDT
-Install Date    : Tue 25 Jun 2019 02:32:50 AM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : None
 
 Name            : ttf-twemoji
 Version         : 11.3.0-2
@@ -17565,6 +17478,28 @@ Installed Size  : 26.00 KiB
 Packager        : Maxim Baz <archlinux@maximbaz.com>
 Build Date      : Tue 11 Dec 2018 12:55:07 PM PST
 Install Date    : Wed 24 Jul 2019 11:01:05 PM PDT
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+
+Name            : unrar
+Version         : 1:5.7.5-1
+Description     : The RAR uncompression program
+Architecture    : x86_64
+URL             : https://www.rarlab.com/rar_add.htm
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : gcc-libs
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 306.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sun 28 Apr 2019 11:38:59 PM PDT
+Install Date    : Thu 15 Aug 2019 10:17:33 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -17846,7 +17781,7 @@ Optional Deps   : avahi: service discovery using bonjour protocol [installed]
                   smbclient: SMB access plugin
                   libcdio: audio CD playback
                   ttf-freefont: subtitle font 
-                  ttf-dejavu: subtitle font
+                  ttf-dejavu: subtitle font [installed]
                   libssh2: sftp access [installed]
                   libnfs: NFS access
                   mpg123: mpg123 codec
@@ -17873,7 +17808,7 @@ Optional Deps   : avahi: service discovery using bonjour protocol [installed]
                   libass: Subtitle support [installed]
                   libkate: Kate codec
                   libtiger: Tiger rendering for Kate streams
-                  sdl_image: SDL image support
+                  sdl_image: SDL image support [installed]
                   srt: SRT input/output plugin
                   aalib: ASCII art video output
                   libcaca: colored ASCII art video output
@@ -17923,50 +17858,6 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
-Name            : vte-common
-Version         : 0.56.3-1
-Description     : Common files used by vte and vte3
-Architecture    : x86_64
-URL             : https://wiki.gnome.org/Apps/Terminal/VTE
-Licenses        : LGPL
-Groups          : None
-Provides        : None
-Depends On      : sh
-Optional Deps   : None
-Required By     : vte3
-Optional For    : None
-Conflicts With  : None
-Replaces        : None
-Installed Size  : 2048.00 B
-Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
-Build Date      : Mon 06 May 2019 02:22:02 PM PDT
-Install Date    : Mon 24 Jun 2019 10:43:54 PM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : Signature
-
-Name            : vte3
-Version         : 0.56.3-1
-Description     : Virtual Terminal Emulator widget for use with GTK3
-Architecture    : x86_64
-URL             : https://wiki.gnome.org/Apps/Terminal/VTE
-Licenses        : LGPL
-Groups          : None
-Provides        : None
-Depends On      : gtk3  pcre2  gnutls  vte-common
-Optional Deps   : None
-Required By     : xfce4-terminal
-Optional For    : None
-Conflicts With  : None
-Replaces        : None
-Installed Size  : 1573.00 KiB
-Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
-Build Date      : Mon 06 May 2019 02:22:02 PM PDT
-Install Date    : Mon 24 Jun 2019 10:43:54 PM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : Signature
-
 Name            : vulkan-headers
 Version         : 1:1.1.119-1
 Description     : Vulkan header files
@@ -17990,7 +17881,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : vulkan-icd-loader
-Version         : 1.1.117-1
+Version         : 1.1.119-1
 Description     : Vulkan Installable Client Driver (ICD) Loader
 Architecture    : x86_64
 URL             : https://www.khronos.org/vulkan/
@@ -18003,10 +17894,10 @@ Required By     : dav1d  libplacebo  vulkan-tools  vulkan-validation-layers
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 394.00 KiB
+Installed Size  : 398.00 KiB
 Packager        : Laurent Carlier <lordheavym@gmail.com>
-Build Date      : Mon 12 Aug 2019 09:13:24 AM PDT
-Install Date    : Mon 12 Aug 2019 10:26:10 PM PDT
+Build Date      : Fri 16 Aug 2019 01:12:27 AM PDT
+Install Date    : Fri 16 Aug 2019 09:52:37 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -18614,50 +18505,6 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
-Name            : xfce4-terminal
-Version         : 0.8.8-2
-Description     : A modern terminal emulator primarily for the Xfce desktop environment
-Architecture    : x86_64
-URL             : https://www.xfce.org/
-Licenses        : GPL2
-Groups          : xfce4
-Provides        : None
-Depends On      : libxfce4ui  vte3  hicolor-icon-theme
-Optional Deps   : None
-Required By     : None
-Optional For    : None
-Conflicts With  : terminal
-Replaces        : terminal
-Installed Size  : 2004.00 KiB
-Packager        : Evangelos Foutras <evangelos@foutrelis.com>
-Build Date      : Sun 11 Aug 2019 04:37:57 PM PDT
-Install Date    : Mon 12 Aug 2019 10:26:10 PM PDT
-Install Reason  : Explicitly installed
-Install Script  : No
-Validated By    : Signature
-
-Name            : xfconf
-Version         : 4.14.1-1
-Description     : Flexible, easy-to-use configuration management system
-Architecture    : x86_64
-URL             : https://www.xfce.org/
-Licenses        : GPL2
-Groups          : xfce4
-Provides        : None
-Depends On      : libxfce4util
-Optional Deps   : None
-Required By     : libxfce4ui
-Optional For    : None
-Conflicts With  : None
-Replaces        : None
-Installed Size  : 1062.00 KiB
-Packager        : Evangelos Foutras <evangelos@foutrelis.com>
-Build Date      : Sun 11 Aug 2019 03:47:43 PM PDT
-Install Date    : Mon 12 Aug 2019 10:26:09 PM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : Signature
-
 Name            : xfsprogs
 Version         : 4.20.0-2
 Description     : XFS filesystem utilities
@@ -18778,7 +18625,7 @@ Groups          : None
 Provides        : None
 Depends On      : xorg-bdftopcf  xorg-mkfontdir  xorg-mkfontscale  xorg-font-util
 Optional Deps   : None
-Required By     : ttf-fira-mono  ttf-fira-sans  ttf-inconsolata  ttf-merriweather  ttf-merriweather-sans  ttf-ms-fonts  ttf-opensans  ttf-oswald  ttf-quintessential  ttf-signika
+Required By     : ttf-inconsolata  ttf-ms-fonts  ttf-opensans
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -18800,7 +18647,7 @@ Groups          : xorg-fonts  xorg
 Provides        : None
 Depends On      : None
 Optional Deps   : None
-Required By     : ttf-merriweather  ttf-merriweather-sans  ttf-ms-fonts  ttf-opensans  ttf-oswald  ttf-quintessential  ttf-signika
+Required By     : ttf-dejavu  ttf-ms-fonts  ttf-opensans
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -18822,7 +18669,7 @@ Groups          : xorg-apps  xorg
 Provides        : xorg-mkfontdir
 Depends On      : freetype2  libfontenc
 Optional Deps   : None
-Required By     : xorg-font-utils
+Required By     : ttf-dejavu  xorg-font-utils
 Optional For    : None
 Conflicts With  : xorg-mkfontdir
 Replaces        : xorg-mkfontdir
@@ -19189,7 +19036,7 @@ Install Script  : No
 Validated By    : None
 
 Name            : youtube-dl
-Version         : 2019.08.02-1
+Version         : 2019.08.13-1
 Description     : A small command-line program to download videos from YouTube.com and a few more sites
 Architecture    : any
 URL             : https://rg3.github.io/youtube-dl/
@@ -19205,10 +19052,10 @@ Required By     : None
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 12.69 MiB
+Installed Size  : 12.70 MiB
 Packager        : Jaroslav Lichtblau <svetlemodry@archlinux.org>
-Build Date      : Tue 06 Aug 2019 10:25:00 AM PDT
-Install Date    : Tue 06 Aug 2019 05:11:43 PM PDT
+Build Date      : Thu 15 Aug 2019 10:38:51 AM PDT
+Install Date    : Thu 15 Aug 2019 09:35:58 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -19302,10 +19149,10 @@ Install Script  : Yes
 Validated By    : Signature
 
 Name            : zathura
-Version         : 0.4.3-2
+Version         : 0.4.3-3
 Description     : Minimalistic document viewer
 Architecture    : x86_64
-URL             : http://pwmt.org/projects/zathura/
+URL             : https://git.pwmt.org/pwmt/zathura
 Licenses        : custom
 Groups          : None
 Provides        : None
@@ -19319,10 +19166,10 @@ Required By     : zathura-cb  zathura-djvu  zathura-pdf-mupdf  zathura-ps
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 531.00 KiB
-Packager        : Rémy Oudompheng <remy@archlinux.org>
-Build Date      : Sat 11 May 2019 05:49:41 AM PDT
-Install Date    : Mon 24 Jun 2019 05:36:29 PM PDT
+Installed Size  : 857.00 KiB
+Packager        : Johannes Löthberg <johannes@kyriasis.com>
+Build Date      : Thu 15 Aug 2019 10:27:24 AM PDT
+Install Date    : Thu 15 Aug 2019 09:35:58 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -19460,7 +19307,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : zig-git
-Version         : 0.4.0.r949.gceec2393c-1
+Version         : 0.4.0.r1088.gff7e826b8-1
 Description     : a programming language prioritizing robustness, optimality, and clarity
 Architecture    : x86_64
 URL             : http://ziglang.org
@@ -19473,10 +19320,10 @@ Required By     : None
 Optional For    : None
 Conflicts With  : zig
 Replaces        : None
-Installed Size  : 95.91 MiB
+Installed Size  : 107.72 MiB
 Packager        : Unknown Packager
-Build Date      : Tue 30 Jul 2019 05:21:02 PM PDT
-Install Date    : Tue 30 Jul 2019 05:26:34 PM PDT
+Build Date      : Thu 15 Aug 2019 05:10:55 PM PDT
+Install Date    : Thu 15 Aug 2019 05:16:28 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : None
@@ -19557,7 +19404,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc
 Optional Deps   : None
-Required By     : binutils  boost-libs  btrfs-progs  ccache  cracklib  curl  exiv2  ffmpeg  file  freetype2  ghostscript  glib2  gnutls  gvim  haskell-digest  haskell-zlib  hspell  js60  kmod  lib32-zlib  libarchive  libelf  libfontenc  libid3tag  libpng  libssh  libssh2  libsynctex  libtar  libtiff  libxml2  libzip  llvm-libs  man-db  minizip  multimc-git  nss  openexr  openjpeg2  pcre  pcre2  perf  python  python2  qpdf  sqlite  taglib  wxgtk-common  zstd
+Required By     : binutils  boost-libs  btrfs-progs  ccache  cracklib  curl  exiv2  ffmpeg  file  freetype2  ghostscript  glib2  gnutls  gvim  haskell-digest  haskell-zlib  hspell  js60  kmod  lib32-zlib  libarchive  libelf  libfontenc  libid3tag  libpng  libssh  libssh2  libsynctex  libtar  libtiff  libxml2  libzip  llvm-libs  man-db  minizip  multimc-git  nss  openexr  openjpeg2  pcre  pcre2  perf  python  python2  qpdf  sdl_image  sqlite  taglib  wxgtk-common  zstd
 Optional For    : None
 Conflicts With  : None
 Replaces        : None

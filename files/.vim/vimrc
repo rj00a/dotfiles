@@ -134,6 +134,9 @@ set autoindent
 " Don't run zig fmt after saving
 let g:zig_fmt_autosave = 0
 
+" Set expandtab for .zig files only
+autocmd FileType zig setlocal expandtab
+
 " Execute .vimrc file in current directory automatically
 set exrc
 
@@ -199,7 +202,7 @@ cnoremap <c-s-bs> <c-w>
 
 " Rebind the open man page on symbol binding
 vnoremap K <nop>
-noremap K m0i<cr><esc>`0
+noremap K m0i<cr><esc>'0
 
 " Delete WORD using ctrl-w in insert mode
 " (Doesn't work because reasons)
@@ -220,9 +223,8 @@ noremap <silent> <leader>D :Bdelete!<cr>
 " Enable syntax highlighting
 syntax on
 
-"set guifont=Consolas\ 11
-set guifont=Inconsolata\ 11.5
-"set guifont=Ubuntu\ Mono\ 11.5
+"set guifont=Inconsolata\ 11.5
+set guifont=Ubuntu\ Mono\ 12
 
 " Colorschemes are located in ~/.vim/colors/
 let which_colo = 'alduin'

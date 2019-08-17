@@ -3,3 +3,4 @@ files/.vim/netrwhist
 # Just in case
 *.pem
 *.bash_history
+*.netrwhist

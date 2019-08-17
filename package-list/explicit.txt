@@ -1,7 +1,8 @@
-==== Generated with "pacman -Qq" ====
+==== Generated with "pacman -Qqe" ====
 
 adobe-source-code-pro-fonts
 aic94xx-firmware
+alacritty
 alsa-utils
 arc-gtk-theme
 audacity
@@ -85,6 +86,7 @@ ncdu
 neofetch
 net-tools
 netctl
+nethack
 network-manager-applet
 networkmanager-openvpn
 nitrogen
@@ -130,10 +132,12 @@ tcc
 texinfo
 trash-cli
 tree
+ttf-dejavu
 ttf-ms-fonts
 ttf-twemoji
 ttf-ubuntu-font-family
 unclutter
+unrar
 unzip
 usbutils
 util-linux
@@ -150,7 +154,6 @@ which
 wpa_supplicant
 xclip
 xdotool
-xfce4-terminal
 xfsprogs
 xorg-server
 xorg-xinit
