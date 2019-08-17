@@ -22,3 +22,6 @@
 [submodule "files/.vim/bundle/vim-slash"]
 	path = files/.vim/bundle/vim-slash
 	url = https://github.com/junegunn/vim-slash
+[submodule "files/.vim/bundle/vim-vinegar"]
+	path = files/.vim/bundle/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar

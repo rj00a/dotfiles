@@ -88,9 +88,9 @@ alias paks='yay -Qq | rg -i'
 
 # Colored tree view.
 # Ignore hidden directories
-tre() {
-	tree -C $@ | less -r
-}
+#tre() {
+#	tree -C $@ | less -r
+#}
 
 # Echo to stderr
 errcho() {

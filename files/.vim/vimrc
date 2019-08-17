@@ -303,11 +303,17 @@ noremap <silent> <leader>l :Lines<cr>
 " Search v:oldfiles and open buffers
 noremap <silent> <leader>h :History<cr>
 
+" Open netrw in the CWD
+noremap <silent> <leader>e :E<cr>
+
 " Use the tree view by default
 let g:netrw_liststyle = 3
 
-" Remove the banner
+" Remove the banner by default
 let g:netrw_banner = 0
+
+" Changing the netrw directory also changes the CWD
+"let g:netrw_keepdir = 0
 
 " Show the list of open buffers and tabs at the top of the screen
 let g:airline#extensions#bufferline#enabled = 1
@@ -330,9 +336,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Set Airline theme with the vim-airline-themes plugin
 let g:airline_theme = 'atomic'
-
-" Allow CtrlP to show hidden files
-let g:ctrlp_show_hidden = 1
 
 " Make fzf match the color scheme (Doesn't fully work for :Rg)
 let g:fzf_colors =
