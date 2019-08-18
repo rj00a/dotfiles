@@ -1095,6 +1095,28 @@ Install Reason  : Explicitly installed
 Install Script  : Yes
 Validated By    : Signature
 
+Name            : chrpath
+Version         : 0.16-2
+Description     : Change or delete the rpath or runpath in ELF files
+Architecture    : x86_64
+URL             : http://directory.fsf.org/project/chrpath/
+Licenses        : GPL2
+Groups          : None
+Provides        : None
+Depends On      : glibc
+Optional Deps   : None
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 63.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Mon 04 Jun 2018 12:08:29 PM PDT
+Install Date    : Sat 17 Aug 2019 04:47:22 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
 Name            : clang
 Version         : 8.0.1-1
 Description     : C language family frontend for LLVM
@@ -2828,7 +2850,7 @@ Groups          : base
 Provides        : None
 Depends On      : linux-api-headers>=4.10  tzdata  filesystem
 Optional Deps   : gd: for memusagestat
-Required By     : a52dec  alsa-lib  argon2  attr  bash  binutils  bison  bluez-libs  btrfs-progs  bzip2  cdparanoia  cmark-gfm  confuse  convertlit  coreutils  cracklib  dav1d  device-mapper  dhcpcd  diffutils  dosfstools  expat  faad2  fakeroot  file  findutils  flex  fribidi  gavl  gawk  gcc-libs  gdbm  giflib  grep  gsl  gsm  gvim  gzip  hspell  hugo  hyphen  ijs  iproute2  jansson  json-c  kbd  keyutils  kmod  l-smash  less  lhasa  lib32-glibc  libass  libasyncns  libatomic_ops  libcap  libcap-ng  libdatrie  libdvbpsi  libebur128  libepoxy  libev  libevdev  libexif  libffi  libgpg-error  libice  libidn  libksba  liblouis  libmad  libmnl  libmpcdec  libmpeg2  libndp  libnet  libnfnetlink  libnghttp2  libnl  libogg  libomxil-bellagio  libpcap  libpciaccess  libpgm  libpipeline  libraw1394  libseccomp  libsodium  libsynctex  libtasn1  libtool  libunistring  libunwind  libupnp  libusb  libuv  libvisual  libxau  libxdmcp  libxkbcommon  libxshmfence  lz4  lzo  m4  make  mbedtls  mdadm  mkinitcpio-busybox  mtdev  ncurses  net-tools  nspr  openal  opencore-amr  opera-ffmpeg-codecs  opus  orc  p11-kit  pacman  pam  patch  pciutils  perf  perl  pixman  pkgconf  popt  readline  rhash  run-parts  sbc  sdl  sdl2  sed  serd  shaderc  snappy  speexdsp  sudo  sysfsutils  systemd-libs  tar  tcc  tree  tslib  valgrind  vid.stab  vulkan-icd-loader  wayland  wget  which  xorg-bdftopcf  xvidcore  zlib
+Required By     : a52dec  alsa-lib  argon2  attr  bash  binutils  bison  bluez-libs  btrfs-progs  bzip2  cdparanoia  chrpath  cmark-gfm  confuse  convertlit  coreutils  cracklib  dav1d  device-mapper  dhcpcd  diffutils  dosfstools  expat  faad2  fakeroot  file  findutils  flex  fribidi  gavl  gawk  gcc-libs  gdbm  giflib  grep  gsl  gsm  gvim  gzip  hspell  hugo  hyphen  ijs  iproute2  jansson  json-c  kbd  keyutils  kmod  l-smash  less  lhasa  lib32-glibc  libass  libasyncns  libatomic_ops  libcap  libcap-ng  libdatrie  libdvbpsi  libebur128  libepoxy  libev  libevdev  libexif  libffi  libgpg-error  libice  libidn  libksba  liblouis  libmad  libmnl  libmpcdec  libmpeg2  libndp  libnet  libnfnetlink  libnghttp2  libnl  libogg  libomxil-bellagio  libpcap  libpciaccess  libpgm  libpipeline  libraw1394  libseccomp  libsodium  libsynctex  libtasn1  libtool  libunistring  libunwind  libupnp  libusb  libuv  libvisual  libxau  libxdmcp  libxkbcommon  libxshmfence  lz4  lzo  m4  make  mbedtls  mdadm  mkinitcpio-busybox  mtdev  ncurses  net-tools  nspr  openal  opencore-amr  opera-ffmpeg-codecs  opus  orc  p11-kit  pacman  pam  patch  pciutils  perf  perl  pixman  pkgconf  popt  readline  rhash  run-parts  sbc  sdl  sdl2  sed  serd  shaderc  snappy  speexdsp  sudo  sysfsutils  systemd-libs  tar  tcc  tree  tslib  valgrind  vid.stab  vulkan-icd-loader  wayland  wget  which  xorg-bdftopcf  xvidcore  zlib
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -9546,7 +9568,7 @@ Groups          : None
 Provides        : libjpeg=8.2.2
 Depends On      : None
 Optional Deps   : None
-Required By     : chromium  gdk-pixbuf2  ghostscript  gst-plugins-base  i3lock-color  imlib2  jasper  jre-openjdk-headless  jre11-openjdk-headless  libtiff  libwebp  maim  poppler  qpdf  qt5-base  sdl_image  v4l-utils  zathura-pdf-mupdf
+Required By     : chromium  gdk-pixbuf2  ghostscript  gst-plugins-base  i3lock-color  imlib2  jasper  jre-openjdk-headless  jre11-openjdk-headless  libtiff  libwebp  maim  poppler  qpdf  qt5-base  v4l-utils  zathura-pdf-mupdf
 Optional For    : vlc
 Conflicts With  : None
 Replaces        : None
@@ -10341,7 +10363,7 @@ Groups          : None
 Provides        : None
 Depends On      : zlib  sh
 Optional Deps   : None
-Required By     : aribb24  cairo  freetype2  gdk-pixbuf2  ghostscript  gst-plugins-base  imagemagick  imlib2  jbig2dec  libcups  libwebp  maim  openjpeg2  qrencode  sdl_image
+Required By     : aribb24  cairo  freetype2  gdk-pixbuf2  ghostscript  gst-plugins-base  imagemagick  imlib2  jbig2dec  libcups  libwebp  maim  openjpeg2  qrencode
 Optional For    : vlc
 Conflicts With  : None
 Replaces        : None
@@ -10940,7 +10962,7 @@ Groups          : None
 Provides        : None
 Depends On      : libjpeg  zlib  xz  zstd
 Optional Deps   : freeglut: for using tiffgt
-Required By     : djvulibre  gdk-pixbuf2  ghostscript  imlib2  lcms2  libcups  libwebp  openjpeg2  sdl_image
+Required By     : djvulibre  gdk-pixbuf2  ghostscript  imlib2  lcms2  libcups  libwebp  openjpeg2
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -12665,7 +12687,7 @@ Licenses        : GPL
 Groups          : None
 Provides        : None
 Depends On      : libebur128
-Optional Deps   : sdl_image: SDL1 plugin [installed]
+Optional Deps   : sdl_image: SDL1 plugin
                   sdl2: SDL2 plugin [installed]
                   libsamplerate: libavresample plugin [installed]
                   sox: SOX (Audio Swiss Army Knife) plugin
@@ -12993,7 +13015,7 @@ Replaces        : None
 Installed Size  : 4.28 MiB
 Packager        : schuay <jakob.gruber@gmail.com>
 Build Date      : Mon 13 May 2019 12:13:22 PM PDT
-Install Date    : Sat 17 Aug 2019 12:56:31 AM PDT
+Install Date    : Sat 17 Aug 2019 06:04:49 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : Yes
 Validated By    : Signature
@@ -16247,7 +16269,7 @@ Provides        : None
 Depends On      : glibc  libxext  libxrender  libx11
 Optional Deps   : alsa-lib: ALSA audio driver [installed]
                   libpulse: PulseAudio audio driver [installed]
-Required By     : sdl_image  sdl_ttf
+Required By     : sdl_ttf
 Optional For    : libmpeg2
 Conflicts With  : None
 Replaces        : None
@@ -16279,28 +16301,6 @@ Installed Size  : 2.96 MiB
 Packager        : Sven-Hendrik Haase <svenstaro@gmail.com>
 Build Date      : Fri 26 Jul 2019 04:24:42 AM PDT
 Install Date    : Sat 27 Jul 2019 12:34:09 AM PDT
-Install Reason  : Installed as a dependency for another package
-Install Script  : No
-Validated By    : Signature
-
-Name            : sdl_image
-Version         : 1.2.12-5
-Description     : A simple library to load images of various formats as SDL surfaces
-Architecture    : x86_64
-URL             : https://www.libsdl.org/projects/SDL_image/
-Licenses        : custom
-Groups          : None
-Provides        : None
-Depends On      : sdl>=1.2.13  libpng  libjpeg>=7  libtiff  zlib
-Optional Deps   : None
-Required By     : None
-Optional For    : mlt  vlc
-Conflicts With  : None
-Replaces        : None
-Installed Size  : 65.00 KiB
-Packager        : Evangelos Foutras <evangelos@foutrelis.com>
-Build Date      : Fri 09 Nov 2018 02:08:49 PM PST
-Install Date    : Thu 15 Aug 2019 11:24:00 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -17808,7 +17808,7 @@ Optional Deps   : avahi: service discovery using bonjour protocol [installed]
                   libass: Subtitle support [installed]
                   libkate: Kate codec
                   libtiger: Tiger rendering for Kate streams
-                  sdl_image: SDL image support [installed]
+                  sdl_image: SDL image support
                   srt: SRT input/output plugin
                   aalib: ASCII art video output
                   libcaca: colored ASCII art video output
@@ -19404,7 +19404,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc
 Optional Deps   : None
-Required By     : binutils  boost-libs  btrfs-progs  ccache  cracklib  curl  exiv2  ffmpeg  file  freetype2  ghostscript  glib2  gnutls  gvim  haskell-digest  haskell-zlib  hspell  js60  kmod  lib32-zlib  libarchive  libelf  libfontenc  libid3tag  libpng  libssh  libssh2  libsynctex  libtar  libtiff  libxml2  libzip  llvm-libs  man-db  minizip  multimc-git  nss  openexr  openjpeg2  pcre  pcre2  perf  python  python2  qpdf  sdl_image  sqlite  taglib  wxgtk-common  zstd
+Required By     : binutils  boost-libs  btrfs-progs  ccache  cracklib  curl  exiv2  ffmpeg  file  freetype2  ghostscript  glib2  gnutls  gvim  haskell-digest  haskell-zlib  hspell  js60  kmod  lib32-zlib  libarchive  libelf  libfontenc  libid3tag  libpng  libssh  libssh2  libsynctex  libtar  libtiff  libxml2  libzip  llvm-libs  man-db  minizip  multimc-git  nss  openexr  openjpeg2  pcre  pcre2  perf  python  python2  qpdf  sqlite  taglib  wxgtk-common  zstd
 Optional For    : None
 Conflicts With  : None
 Replaces        : None

@@ -49,6 +49,7 @@ ccache
 cdparanoia
 cgdb
 chromium
+chrpath
 clang
 cloc
 cmake
@@ -730,7 +731,6 @@ s-nail
 sbc
 sdl
 sdl2
-sdl_image
 sdl_ttf
 sed
 serd

@@ -17,6 +17,7 @@ cfg .Xresources ~/
 cfg .gitconfig ~/
 cfg alacritty.yml ~/.config/
 cfg vlcrc ~/.config/vlc/
+cfg .nethackrc ~/
 
 sudo systemctl enable NetworkManager
 sudo systemctl enable org.cups.cupsd
