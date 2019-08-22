@@ -245,7 +245,10 @@ if which_colo == 'alduin'
 	hi CursorLineNR guifg=#020202 guibg=#444444
 
 	" Black and white cursor in gvim
-	hi Cursor guifg=#000000 guibg=#ffffff
+	"hi Cursor guifg=#000000 guibg=#ffffff
+
+	" Yellow cursor in gvim
+	hi Cursor guifg=#ffff00 guibg=#af0000
 
 elseif which_colo == 'arcadia'
 	" Darker background

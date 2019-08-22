@@ -6,14 +6,14 @@ OPTIONS=!bones
 
 # Curses Options
 OPTIONS=windowtype:curses
-OPTIONS=perm_invent
+#OPTIONS=perm_invent
 OPTIONS=splash_screen
-OPTIONS=align_message:bottom
+#OPTIONS=align_message:bottom
 
 # Misc Options
-OPTIONS=color,number_pad:1,suppress_alert:3.4.3,!cmdassist
+OPTIONS=color,number_pad:0,suppress_alert:3.4.3,!cmdassist
 OPTIONS=showexp,time
-OPTIONS=!hilite_pet,hilite_pile
+OPTIONS=hilite_pet,hilite_pile
 OPTIONS=lit_corridor,dark_room,use_darkgray
 OPTIONS=msg_window:reversed,msghistory:100
 OPTIONS=menu_objsyms,!implicit_uncursed
@@ -21,7 +21,7 @@ OPTIONS=disclose:+i +a +v +g +c +o
 OPTIONS=sortloot:full
 
 SYMBOLS=S_ghost:X
-OPTIONS=fruit:blueberry muffin,boulder:0
+OPTIONS=fruit:froot,boulder:0
 OPTIONS=paranoid_confirmation:Confirm quit attack pray wand Remove
 OPTIONS=!pickup_thrown,autopickup,pickup_types:$%?!"=/*
 OPTIONS=autodig,autoquiver,autoopen

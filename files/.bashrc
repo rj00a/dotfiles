@@ -42,6 +42,8 @@ source /usr/share/z/z.sh
 
 alias backup-data='~/programs/backup-data.sh'
 
+alias nethack='nethack -d ~/games/nethack-playground'
+
 alias ls='ls -A --color=auto --group-directories-first'
 
 # List lots of stuff
@@ -89,12 +91,6 @@ alias fuck='sudo pkill -ie'
 # Grep for some installed packages
 alias paks='yay -Qq | rg -i'
 
-# Colored tree view.
-# Ignore hidden directories
-#tre() {
-#	tree -C $@ | less -r
-#}
-
 # Echo to stderr
 errcho() {
 	>&2 echo $@
@@ -116,20 +112,21 @@ play() {
 }
 
 # Open all files in a directory with vlc and exit
-# Useful for playing albums
+# Useful for quickly playing albums
 playd() {
 	local file="$(fzf)"
 	if [ -z "$file" ]; then
 		return $?
 	fi
-	nohup vlc "$(dirname "$file")" > /dev/null
+	vlc "$(dirname "$file")" &
+	echo "$(dirname "$file")"
 	exit 0
 }
 
 # Pipe stdout and stderr of command to less
 le() {
 	if [ -z "$1" ]; then
-		errcho 'Expected one argument'
+		errcho 'Expected at least one argument'
 		return 1
 	fi
 	"$@" |& less -r --
@@ -137,8 +134,8 @@ le() {
 
 # Run pandoc on a file and convert it to HTML, then open it in a browser
 panv() {
-	if [ -z "$1" ]; then
-		errcho 'Expected one argument'
+	if [ $# != 1 ]; then
+		errcho 'Expected exactly one argument'
 		return 1
 	fi
 	local tmp=`mktemp`.html
