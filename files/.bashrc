@@ -1,9 +1,3 @@
-# Enable vi mode
-set -o vi
-
-# Bind Ctrl+L to clear screen in insert mode as well as normal mode.
-bind -m vi-insert "\C-l":clear-screen
-
 # Extended globbing. Lots of cool stuff
 shopt -s extglob
 
@@ -78,9 +72,9 @@ alias syyu='yay -Syyu'
 alias py="python3 -Bqic 'from math import *'"
 
 # Download youtube video
-alias yv='youtube-dl -ic --add-metadata $(xclip -o)'
+alias yv='youtube-dl -iwcR infinite --add-metadata'
 # Download youtube audio only
-alias ya='youtube-dl -xic --add-metadata "$(xclip -o)"'
+alias ya='youtube-dl -xwicR infinite -f bestaudio --audio-quality 0 --add-metadata'
 
 # Useful for youtube videos, twitch streams, etc.
 alias vlcx='vlc "$(xclip -o)"'
