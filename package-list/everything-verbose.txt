@@ -155,7 +155,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : alsa-lib
-Version         : 1.1.9-1
+Version         : 1.1.9-2
 Description     : An alternative implementation of Linux sound support
 Architecture    : x86_64
 URL             : https://www.alsa-project.org
@@ -163,15 +163,15 @@ Licenses        : LGPL
 Groups          : None
 Provides        : None
 Depends On      : glibc
-Optional Deps   : python2: for python smixer plugin [installed]
+Optional Deps   : None
 Required By     : alsa-plugins  alsa-utils  chromium  ffmpeg  gst-plugins-base  i3status  lib32-alsa-lib  libcanberra  libsndfile  polybar  zita-alsa-pcmi
 Optional For    : jre-openjdk  jre11-openjdk  jre8-openjdk  sdl  sdl2  v4l-utils  vlc
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 2.00 MiB
-Packager        : Anatol Pomozov <anatol.pomozov@gmail.com>
-Build Date      : Sun 12 May 2019 12:13:34 PM PDT
-Install Date    : Mon 24 Jun 2019 03:37:52 PM PDT
+Installed Size  : 1766.00 KiB
+Packager        : Jelle van der Waa <jelle@vdwaa.nl>
+Build Date      : Sat 17 Aug 2019 02:57:14 PM PDT
+Install Date    : Sun 18 Aug 2019 04:35:34 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -411,7 +411,7 @@ Groups          : None
 Provides        : None
 Depends On      : glib2
 Optional Deps   : None
-Required By     : at-spi2-atk  atkmm  gtk2  gtk3
+Required By     : at-spi2-atk  atkmm  gtk2  gtk3  lib32-atk
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -446,7 +446,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : attica
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Qt library that implements the Open Collaboration Services API
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -460,9 +460,9 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 1573.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Mon 08 Jul 2019 03:36:50 AM PDT
-Install Date    : Mon 15 Jul 2019 04:20:07 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:45:43 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:48 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -477,7 +477,7 @@ Groups          : None
 Provides        : xfsattr
 Depends On      : glibc
 Optional Deps   : None
-Required By     : acl  coreutils  libarchive  libcap  patch  sed  tar
+Required By     : acl  coreutils  lib32-attr  libarchive  libcap  patch  sed  tar
 Optional For    : None
 Conflicts With  : xfsattr
 Replaces        : xfsattr
@@ -617,7 +617,7 @@ Groups          : base
 Provides        : sh
 Depends On      : readline>=7.0  glibc  ncurses
 Optional Deps   : bash-completion: for tab completion
-Required By     : autoconf  automake  bison  bzip2  ca-certificates-utils  db  dhcpcd  dialog  diffutils  dmenu  e2fsprogs  fakeroot  fftw  findutils  flex  foomatic-db-engine  freetype2  fzf  gawk  gdbm  gettext  gmp  gpm  gzip  haskell-hashable  haskell-network-uri  haskell-random  haskell-utf8-string  icu  ijs  iptables  js60  keyutils  libdca  libgpg-error  libksba  libnet  libpaper  libpcap  libpng  libteam  libtool  lvm2  m4  man-db  mkinitcpio  nano  neofetch  nspr  nss  openresolv  pacman  pcre  pcre2  perf  pkgconf  steam  systemd  texinfo  unzip  which  xdg-utils  xfsprogs  xz  z
+Required By     : autoconf  automake  bison  bzip2  ca-certificates-utils  db  dhcpcd  dialog  diffutils  dmenu  e2fsprogs  fakeroot  fftw  findutils  flex  foomatic-db-engine  freetype2  fzf  gawk  gdbm  gettext  gmp  gpm  gzip  haskell-hashable  haskell-network-uri  haskell-random  haskell-utf8-string  icu  ijs  iptables  js60  keyutils  libdca  libgpg-error  libksba  libnet  libpaper  libpcap  libpng  libteam  libtool  lsb-release  lvm2  m4  man-db  mkinitcpio  nano  neofetch  nspr  nss  openresolv  pacman  pcre  pcre2  perf  pkgconf  steam  systemd  texinfo  unzip  which  xdg-utils  xfsprogs  xz  z
 Optional For    : vim-runtime
 Conflicts With  : None
 Replaces        : None
@@ -762,7 +762,7 @@ Install Script  : No
 Validated By    : None
 
 Name            : breeze-icons
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Breeze icon themes
 Architecture    : any
 URL             : https://community.kde.org/Frameworks
@@ -775,10 +775,10 @@ Required By     : kdenlive
 Optional For    : kiconthemes
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 65.42 MiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 03:09:57 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Installed Size  : 65.27 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 08:43:54 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:49 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -860,7 +860,7 @@ Provides        : None
 Depends On      : ca-certificates-mozilla
 Optional Deps   : None
 Required By     : curl
-Optional For    : openssl  wget
+Optional For    : lib32-openssl  openssl  wget
 Conflicts With  : ca-certificates-cacert<=20140824-4
 Replaces        : ca-certificates-cacert<=20140824-4
 Installed Size  : 1024.00 B
@@ -904,7 +904,7 @@ Provides        : ca-certificates  ca-certificates-java
 Depends On      : bash  coreutils  findutils  p11-kit>=0.23.1
 Optional Deps   : None
 Required By     : ca-certificates-mozilla  curl  jre-openjdk-headless  jre11-openjdk-headless  jre8-openjdk-headless
-Optional For    : openssl  wget
+Optional For    : lib32-openssl  openssl  wget
 Conflicts With  : ca-certificates-java
 Replaces        : ca-certificates-java
 Installed Size  : 8.00 KiB
@@ -925,7 +925,7 @@ Groups          : None
 Provides        : None
 Depends On      : libpng  libxrender  libxext  fontconfig  pixman  glib2  lzo
 Optional Deps   : None
-Required By     : cairomm  frei0r-plugins  gtk2  gtk3  i3lock-color  pango  polybar  poppler  zathura-pdf-mupdf
+Required By     : cairomm  frei0r-plugins  gtk2  gtk3  i3lock-color  lib32-cairo  pango  polybar  poppler  zathura-pdf-mupdf
 Optional For    : harfbuzz  python-gobject
 Conflicts With  : None
 Replaces        : None
@@ -1004,7 +1004,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : ccache
-Version         : 3.7.2-1
+Version         : 3.7.3-1
 Description     : Compiler cache that speeds up recompilation by caching previous compilations
 Architecture    : x86_64
 URL             : https://ccache.samba.org/
@@ -1019,8 +1019,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 317.00 KiB
 Packager        : Levente Polyak <anthraxx@archlinux.org>
-Build Date      : Wed 24 Jul 2019 04:06:36 PM PDT
-Install Date    : Wed 24 Jul 2019 05:53:39 PM PDT
+Build Date      : Wed 21 Aug 2019 10:55:17 AM PDT
+Install Date    : Wed 21 Aug 2019 09:58:23 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -1387,23 +1387,23 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : cryptsetup
-Version         : 2.1.0-1
+Version         : 2.2.0-1
 Description     : Userspace setup tool for transparent encryption of block devices using dm-crypt
 Architecture    : x86_64
 URL             : https://gitlab.com/cryptsetup/cryptsetup/
 Licenses        : GPL
 Groups          : base
 Provides        : None
-Depends On      : device-mapper  libgcrypt  popt  libutil-linux  json-c  argon2
+Depends On      : device-mapper  openssl  popt  libutil-linux  json-c  argon2
 Optional Deps   : None
 Required By     : systemd  volume_key
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1784.00 KiB
+Installed Size  : 2.08 MiB
 Packager        : Christian Hesse <arch@eworm.de>
-Build Date      : Fri 08 Feb 2019 07:41:26 AM PST
-Install Date    : Mon 24 Jun 2019 02:07:57 PM PDT
+Build Date      : Thu 15 Aug 2019 12:01:19 PM PDT
+Install Date    : Tue 20 Aug 2019 07:39:48 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -1432,7 +1432,7 @@ Install Script  : Yes
 Validated By    : Signature
 
 Name            : cups-filters
-Version         : 1.25.1-1
+Version         : 1.25.3-1
 Description     : OpenPrinting CUPS Filters
 Architecture    : x86_64
 URL             : https://wiki.linuxfoundation.org/openprinting/cups-filters
@@ -1449,10 +1449,10 @@ Required By     : cups  foomatic-db-engine
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 2.93 MiB
+Installed Size  : 2.94 MiB
 Packager        : Andreas Radke <andyrtr@archlinux.org>
-Build Date      : Fri 05 Jul 2019 11:33:40 PM PDT
-Install Date    : Sun 11 Aug 2019 09:24:56 PM PDT
+Build Date      : Wed 21 Aug 2019 10:29:05 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -1524,7 +1524,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : dbus
-Version         : 1.12.16-1
+Version         : 1.12.16-2
 Description     : Freedesktop.org message bus system
 Architecture    : x86_64
 URL             : https://wiki.freedesktop.org/www/Software/dbus/
@@ -1537,10 +1537,10 @@ Required By     : at-spi2-core  avahi  chromium  colord  cups  dbus-glib  ghosts
 Optional For    : None
 Conflicts With  : libdbus
 Replaces        : libdbus
-Installed Size  : 921.00 KiB
+Installed Size  : 925.00 KiB
 Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
-Build Date      : Tue 11 Jun 2019 12:51:14 PM PDT
-Install Date    : Mon 24 Jun 2019 02:07:57 PM PDT
+Build Date      : Tue 13 Aug 2019 06:39:21 AM PDT
+Install Date    : Sun 18 Aug 2019 04:35:34 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -1864,7 +1864,7 @@ Groups          : base
 Provides        : None
 Depends On      : sh  libutil-linux
 Optional Deps   : None
-Required By     : btrfs-progs  krb5  libldap
+Required By     : btrfs-progs  krb5  lib32-e2fsprogs  libldap
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -2260,7 +2260,7 @@ Groups          : None
 Provides        : None
 Depends On      : expat  freetype2
 Optional Deps   : None
-Required By     : alacritty  cairo  chromium  ffmpeg  ghostscript  imagemagick  libass  libbluray  libxft  poppler  qt5-base  ttf-dejavu  ttf-inconsolata  ttf-ms-fonts  ttf-opensans  ttf-roboto  ttf-twemoji  vlc
+Required By     : alacritty  cairo  chromium  ffmpeg  ghostscript  imagemagick  lib32-fontconfig  libass  libbluray  libxft  poppler  qt5-base  ttf-dejavu  ttf-inconsolata  ttf-ms-fonts  ttf-opensans  ttf-roboto  ttf-twemoji  vlc
 Optional For    : cmatrix
 Conflicts With  : None
 Replaces        : None
@@ -2304,7 +2304,7 @@ Groups          : None
 Provides        : libfreetype.so=6-64
 Depends On      : zlib  bzip2  sh  libpng  harfbuzz
 Optional Deps   : None
-Required By     : alacritty  chromium  dmenu  ffmpeg  fontconfig  harfbuzz  imlib2  jre-openjdk-headless  jre11-openjdk-headless  libass  libbluray  libraqm  libxfont2  maim  sdl_ttf  steam  vlc  xorg-mkfontscale
+Required By     : alacritty  chromium  dmenu  ffmpeg  fontconfig  harfbuzz  imlib2  jre-openjdk-headless  jre11-openjdk-headless  lib32-freetype2  libass  libbluray  libraqm  libxfont2  maim  sdl_ttf  steam  vlc  xorg-mkfontscale
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -2348,7 +2348,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc
 Optional Deps   : None
-Required By     : ffmpeg  gtk3  libass  libraqm  pango  vlc
+Required By     : ffmpeg  gtk3  lib32-fribidi  libass  libraqm  pango  vlc
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -2615,7 +2615,7 @@ Groups          : None
 Provides        : None
 Depends On      : glib2  libpng  libtiff  libjpeg  libx11  jasper  shared-mime-info
 Optional Deps   : None
-Required By     : gtk-update-icon-cache  gtk3  libnotify  librsvg  steam
+Required By     : gtk-update-icon-cache  gtk3  lib32-gdk-pixbuf2  libnotify  librsvg  steam
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -2628,7 +2628,7 @@ Install Script  : Yes
 Validated By    : Signature
 
 Name            : gettext
-Version         : 0.19.8.1-3
+Version         : 0.20.1-1
 Description     : GNU internationalization library
 Architecture    : x86_64
 URL             : https://www.gnu.org/software/gettext/
@@ -2641,10 +2641,10 @@ Required By     : None
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 8.02 MiB
-Packager        : Allan McRae <allan@archlinux.org>
-Build Date      : Tue 06 Nov 2018 05:46:49 AM PST
-Install Date    : Mon 24 Jun 2019 02:07:59 PM PDT
+Installed Size  : 7.31 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 02:32:52 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -2739,7 +2739,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : git
-Version         : 2.22.1-1
+Version         : 2.23.0-1
 Description     : the fast distributed version control system
 Architecture    : x86_64
 URL             : https://git-scm.com/
@@ -2765,10 +2765,10 @@ Required By     : yay
 Optional For    : gettext
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 39.53 MiB
+Installed Size  : 36.25 MiB
 Packager        : Christian Hesse <arch@eworm.de>
-Build Date      : Mon 12 Aug 2019 12:11:58 PM PDT
-Install Date    : Thu 15 Aug 2019 09:35:50 PM PDT
+Build Date      : Sat 17 Aug 2019 01:39:44 PM PDT
+Install Date    : Tue 20 Aug 2019 07:39:49 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : Yes
 Validated By    : Signature
@@ -2828,7 +2828,7 @@ Provides        : None
 Depends On      : pcre  libffi  libutil-linux  zlib
 Optional Deps   : python: gdbus-codegen, glib-genmarshal, glib-mkenums, gtester-report [installed]
                   libelf: gresource inspection tool [installed]
-Required By     : at-spi2-core  atk  avahi  cairo  dbus-glib  dconf  desktop-file-utils  enchant  gdk-pixbuf2  gettext  girara  glib-networking  glibmm  gobject-introspection-runtime  graphene  gsettings-desktop-schemas  gstreamer  harfbuzz  json-glib  libass  libcroco  libgudev  libgusb  libibus  liblqr  libmm-glib  libnm  libplist  libsecret  libsoup  libwacom  perf  playerctl  polkit  python-dbus  rest  shared-mime-info
+Required By     : at-spi2-core  atk  avahi  cairo  dbus-glib  dconf  desktop-file-utils  enchant  gdk-pixbuf2  gettext  girara  glib-networking  glibmm  gobject-introspection-runtime  graphene  gsettings-desktop-schemas  gstreamer  harfbuzz  json-glib  lib32-glib2  libass  libcroco  libdbusmenu-glib  libgudev  libgusb  libibus  liblqr  libmm-glib  libnm  libplist  libsecret  libsoup  libwacom  perf  playerctl  polkit  python-dbus  rest  shared-mime-info
 Optional For    : libproxy
 Conflicts With  : None
 Replaces        : None
@@ -2938,7 +2938,7 @@ Groups          : None
 Provides        : None
 Depends On      : gcc-libs  sh
 Optional Deps   : None
-Required By     : coreutils  ffmpeg  ghc-libs  guile  guile2.0  mpfr  nettle
+Required By     : coreutils  ffmpeg  ghc-libs  guile  guile2.0  lib32-gmp  mpfr  nettle
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -2984,7 +2984,7 @@ Groups          : None
 Provides        : None
 Depends On      : gcc-libs  libtasn1  readline  zlib  nettle  p11-kit  libidn2  libidn2.so=0-64  libunistring
 Optional Deps   : guile: for use with Guile bindings [installed]
-Required By     : ffmpeg  glib-networking  gnupg  libcups  libimobiledevice  libzip  pkcs11-helper  vlc  wget
+Required By     : ffmpeg  glib-networking  gnupg  lib32-gnutls  libcups  libimobiledevice  libzip  pkcs11-helper  vlc  wget
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -3383,7 +3383,7 @@ Provides        : None
 Depends On      : atk  pango  libxcursor  libxinerama  libxrandr  libxi  libxcomposite  libxdamage  shared-mime-info  cairo  libcups  gtk-update-icon-cache  librsvg  desktop-file-utils
 Optional Deps   : gnome-themes-standard: Default widget theme
                   adwaita-icon-theme: Default icon theme [installed]
-Required By     : gtkmm  lxappearance
+Required By     : gtkmm  lib32-gtk2  libdbusmenu-gtk2  libindicator-gtk2  lxappearance
 Optional For    : avahi  jre-openjdk  jre11-openjdk  jre8-openjdk  lv2  mlt  perf  pinentry  suil
 Conflicts With  : None
 Replaces        : None
@@ -3484,14 +3484,14 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : gvim
-Version         : 8.1.1776-1
+Version         : 8.1.1906-1
 Description     : Vi Improved, a highly configurable, improved version of the vi text editor (with advanced features, such as a GUI)
 Architecture    : x86_64
 URL             : https://www.vim.org
 Licenses        : custom:vim
 Groups          : None
-Provides        : vim=8.1.1776-1  xxd
-Depends On      : vim-runtime=8.1.1776-1  gpm  libxt  gtk3  glibc  libgcrypt  pcre  zlib  libffi  libcanberra
+Provides        : vim=8.1.1906-1  xxd
+Depends On      : vim-runtime=8.1.1906-1  gpm  libxt  gtk3  glibc  libgcrypt  pcre  zlib  libffi  libcanberra
 Optional Deps   : python2: Python 2 language support [installed]
                   python: Python 3 language support [installed]
                   ruby: Ruby language support
@@ -3504,8 +3504,8 @@ Conflicts With  : vim-minimal  vim
 Replaces        : gvim-python3
 Installed Size  : 3.85 MiB
 Packager        : Levente Polyak <anthraxx@archlinux.org>
-Build Date      : Mon 29 Jul 2019 01:38:53 PM PDT
-Install Date    : Tue 30 Jul 2019 12:58:14 AM PDT
+Build Date      : Wed 21 Aug 2019 11:00:45 AM PDT
+Install Date    : Wed 21 Aug 2019 09:58:23 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -3533,7 +3533,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : harfbuzz
-Version         : 2.6.0-1
+Version         : 2.6.1-1
 Description     : OpenType text shaping engine
 Architecture    : x86_64
 URL             : https://www.freedesktop.org/wiki/Software/HarfBuzz
@@ -3542,20 +3542,20 @@ Groups          : None
 Provides        : None
 Depends On      : glib2  freetype2  graphite
 Optional Deps   : cairo: hb-view program [installed]
-Required By     : chromium  freetype2  harfbuzz-icu  libass  pango  vlc
+Required By     : chromium  freetype2  harfbuzz-icu  lib32-harfbuzz  libass  pango  vlc
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 4.35 MiB
 Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
-Build Date      : Wed 14 Aug 2019 01:15:15 AM PDT
-Install Date    : Wed 14 Aug 2019 01:33:36 PM PDT
+Build Date      : Thu 22 Aug 2019 11:50:12 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:38 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : harfbuzz-icu
-Version         : 2.6.0-1
+Version         : 2.6.1-1
 Description     : OpenType text shaping engine (ICU integration)
 Architecture    : x86_64
 URL             : https://www.freedesktop.org/wiki/Software/HarfBuzz
@@ -3570,8 +3570,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 18.00 KiB
 Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
-Build Date      : Wed 14 Aug 2019 01:15:15 AM PDT
-Install Date    : Wed 14 Aug 2019 01:33:36 PM PDT
+Build Date      : Thu 22 Aug 2019 11:50:12 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -3643,7 +3643,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-asn1-encoding
-Version         : 0.9.5-99
+Version         : 0.9.5-100
 Description     : ASN1 data reader and writer in RAW, BER and DER forms
 Architecture    : x86_64
 URL             : https://github.com/vincenthz/hs-asn1
@@ -3658,14 +3658,14 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 452.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 31 Jul 2019 10:10:46 PM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 10:00:55 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-asn1-parse
-Version         : 0.9.4-110
+Version         : 0.9.4-111
 Description     : Simple monadic parser for ASN1 stream types.
 Architecture    : x86_64
 URL             : https://github.com/vincenthz/hs-asn1
@@ -3680,14 +3680,14 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 67.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 31 Jul 2019 10:11:42 PM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 10:01:42 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-asn1-types
-Version         : 0.3.3-7
+Version         : 0.3.3-8
 Description     : ASN.1 types
 Architecture    : x86_64
 URL             : https://github.com/vincenthz/hs-asn1
@@ -3702,8 +3702,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 444.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 31 Jul 2019 10:09:50 PM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 10:00:11 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -4061,7 +4061,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-connection
-Version         : 0.3.0-15
+Version         : 0.3.0-16
 Description     : Simple and easy network connections API
 Architecture    : x86_64
 URL             : https://github.com/vincenthz/hs-connection
@@ -4076,8 +4076,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 260.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Thu 01 Aug 2019 02:00:54 AM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 10:00:15 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -4105,7 +4105,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-cryptonite
-Version         : 0.26-11
+Version         : 0.26-12
 Description     : Cryptography Primitives sink
 Architecture    : x86_64
 URL             : https://github.com/vincenthz/cryptonite
@@ -4120,8 +4120,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 9.80 MiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 31 Jul 2019 10:13:36 PM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 10:03:27 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -4369,7 +4369,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-haddock-library
-Version         : 1.7.0-59
+Version         : 1.7.0-60
 Description     : A documentation-generation tool for Haskell libraries
 Architecture    : x86_64
 URL             : https://www.haskell.org/haddock/
@@ -4384,8 +4384,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 1085.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Tue 06 Aug 2019 07:09:52 AM PDT
-Install Date    : Tue 06 Aug 2019 05:11:37 PM PDT
+Build Date      : Thu 22 Aug 2019 08:50:28 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -4435,7 +4435,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-hslua
-Version         : 1.0.3.1-14
+Version         : 1.0.3.2-1
 Description     : A Lua language interpreter embedding in Haskell
 Architecture    : x86_64
 URL             : https://hackage.haskell.org/package/hslua
@@ -4448,16 +4448,16 @@ Required By     : haskell-hslua-module-system  haskell-hslua-module-text  pandoc
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1216.00 KiB
+Installed Size  : 1220.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 31 Jul 2019 08:42:48 PM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Wed 21 Aug 2019 10:49:45 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-hslua-module-system
-Version         : 0.2.1-8
+Version         : 0.2.1-9
 Description     : Lua module wrapper around Haskell's System module
 Architecture    : x86_64
 URL             : https://github.com/hslua/hslua-module-system
@@ -4472,14 +4472,14 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 141.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 31 Jul 2019 08:44:02 PM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Wed 21 Aug 2019 10:51:29 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-hslua-module-text
-Version         : 0.2.1-17
+Version         : 0.2.1-18
 Description     : Lua module for text
 Architecture    : x86_64
 URL             : https://github.com/hslua/hslua-module-test
@@ -4494,8 +4494,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 60.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 31 Jul 2019 08:44:52 PM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Wed 21 Aug 2019 10:53:57 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -4523,7 +4523,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-http
-Version         : 4000.3.14-19
+Version         : 4000.3.14-20
 Description     : A library for client-side HTTP
 Architecture    : x86_64
 URL             : https://hackage.haskell.org/package/HTTP
@@ -4536,16 +4536,16 @@ Required By     : pandoc
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1722.00 KiB
+Installed Size  : 1718.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 14 Aug 2019 08:31:58 PM PDT
-Install Date    : Thu 15 Aug 2019 09:35:56 PM PDT
+Build Date      : Thu 22 Aug 2019 09:20:22 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-http-client
-Version         : 0.6.4-21
+Version         : 0.6.4-22
 Description     : An HTTP client engine
 Architecture    : x86_64
 URL             : https://github.com/snoyberg/http-client
@@ -4558,16 +4558,16 @@ Required By     : haskell-http-client-tls  pandoc
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1828.00 KiB
+Installed Size  : 1824.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Thu 01 Aug 2019 12:29:09 AM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 08:32:06 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-http-client-tls
-Version         : 0.3.5.3-132
+Version         : 0.3.5.3-133
 Description     : http-client backend using the connection package and tls library
 Architecture    : x86_64
 URL             : https://github.com/snoyberg/http-client
@@ -4582,14 +4582,14 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 210.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Thu 01 Aug 2019 02:02:11 AM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 10:01:00 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-http-types
-Version         : 0.12.3-24
+Version         : 0.12.3-25
 Description     : Generic HTTP types for Haskell (for both client and server code).
 Architecture    : x86_64
 URL             : https://hackage.haskell.org/package/http-types
@@ -4604,8 +4604,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 653.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 31 Jul 2019 10:04:56 PM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 09:53:50 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -4721,7 +4721,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-ipynb
-Version         : 0.1-57
+Version         : 0.1-60
 Description     : Data structure for working with Jupyter notebooks (ipynb)
 Architecture    : x86_64
 URL             : https://github.com/jgm/ipynb
@@ -4736,8 +4736,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 721.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 14 Aug 2019 10:22:54 PM PDT
-Install Date    : Thu 15 Aug 2019 09:35:56 PM PDT
+Build Date      : Fri 23 Aug 2019 11:13:10 AM PDT
+Install Date    : Sat 24 Aug 2019 06:29:49 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -4787,7 +4787,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-memory
-Version         : 0.14.18-30
+Version         : 0.14.18-31
 Description     : memory and related abstraction stuff
 Architecture    : x86_64
 URL             : https://github.com/vincenthz/hs-memory
@@ -4802,8 +4802,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 1229.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 31 Jul 2019 10:08:50 PM PDT
-Install Date    : Fri 02 Aug 2019 09:19:35 PM PDT
+Build Date      : Thu 22 Aug 2019 09:59:16 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -4831,7 +4831,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-network
-Version         : 2.8.0.0-19
+Version         : 2.8.0.0-20
 Description     : Low-level networking interface
 Architecture    : x86_64
 URL             : https://hackage.haskell.org/package/network
@@ -4844,10 +4844,10 @@ Required By     : haskell-connection  haskell-http  haskell-http-client  haskell
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1458.00 KiB
+Installed Size  : 1454.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 31 Jul 2019 10:19:36 PM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 10:08:30 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -4941,7 +4941,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-pem
-Version         : 0.2.4-56
+Version         : 0.2.4-57
 Description     : Privacy Enhanced Mail (PEM) format reader and writer.
 Architecture    : x86_64
 URL             : https://hackage.haskell.org/package/pem
@@ -4956,8 +4956,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 88.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 31 Jul 2019 10:39:59 PM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 10:27:17 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -5205,7 +5205,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-socks
-Version         : 0.6.0-12
+Version         : 0.6.0-13
 Description     : Socks proxy (version 5) implementation.
 Architecture    : x86_64
 URL             : https://github.com/vincenthz/hs-socks
@@ -5220,8 +5220,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 845.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Thu 01 Aug 2019 12:21:15 AM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 08:25:38 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -5271,7 +5271,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-streaming-commons
-Version         : 0.2.1.1-7
+Version         : 0.2.1.1-8
 Description     : Common lower-level functions needed by various streaming data libraries
 Architecture    : x86_64
 URL             : https://github.com/fpco/streaming-commons
@@ -5286,8 +5286,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 972.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Thu 01 Aug 2019 12:24:36 AM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 08:28:30 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -5447,7 +5447,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-tls
-Version         : 1.4.1-80
+Version         : 1.4.1-81
 Description     : TLS/SSL protocol native implementation (Server and Client)
 Architecture    : x86_64
 URL             : https://github.com/vincenthz/hs-tls
@@ -5460,10 +5460,10 @@ Required By     : haskell-connection  haskell-http-client-tls
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 4.29 MiB
+Installed Size  : 4.30 MiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Thu 01 Aug 2019 01:59:29 AM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 09:59:06 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -5601,7 +5601,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-x509
-Version         : 1.7.5-28
+Version         : 1.7.5-29
 Description     : X509 reader and writer
 Architecture    : x86_64
 URL             : https://github.com/vincenthz/hs-certificate
@@ -5616,14 +5616,14 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 1532.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Thu 01 Aug 2019 01:53:47 AM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 09:54:43 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-x509-store
-Version         : 1.6.7-27
+Version         : 1.6.7-28
 Description     : X.509 collection accessing and storing methods
 Architecture    : x86_64
 URL             : https://github.com/vincenthz/hs-certificate
@@ -5638,14 +5638,14 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 119.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Thu 01 Aug 2019 01:56:38 AM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 09:56:50 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-x509-system
-Version         : 1.6.6-95
+Version         : 1.6.6-96
 Description     : Handle per-operating-system X.509 accessors and storage
 Architecture    : x86_64
 URL             : https://github.com/vincenthz/hs-certificate
@@ -5660,14 +5660,14 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 60.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Thu 01 Aug 2019 01:57:33 AM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 09:57:30 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : haskell-x509-validation
-Version         : 1.6.11-27
+Version         : 1.6.11-28
 Description     : X.509 Certificate and CRL validation
 Architecture    : x86_64
 URL             : https://github.com/vincenthz/hs-certificate
@@ -5682,8 +5682,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 302.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Thu 01 Aug 2019 01:58:28 AM PDT
-Install Date    : Fri 02 Aug 2019 09:19:36 PM PDT
+Build Date      : Thu 22 Aug 2019 09:58:11 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -5852,7 +5852,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : hugo
-Version         : 0.57.0-1
+Version         : 0.57.2-1
 Description     : Fast and Flexible Static Site Generator in Go
 Architecture    : x86_64
 URL             : https://gohugo.io/
@@ -5867,8 +5867,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 49.58 MiB
 Packager        : Jaroslav Lichtblau <svetlemodry@archlinux.org>
-Build Date      : Thu 15 Aug 2019 10:15:03 AM PDT
-Install Date    : Thu 15 Aug 2019 09:35:57 PM PDT
+Build Date      : Sun 18 Aug 2019 01:47:40 AM PDT
+Install Date    : Sun 18 Aug 2019 04:35:35 AM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -6127,7 +6127,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : imagemagick
-Version         : 7.0.8.59-1
+Version         : 7.0.8.62-1
 Description     : An image viewing/manipulation program
 Architecture    : x86_64
 URL             : https://www.imagemagick.org/
@@ -6153,8 +6153,8 @@ Conflicts With  : imagemagick6
 Replaces        : imagemagick6  libmagick
 Installed Size  : 9.79 MiB
 Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 04 Aug 2019 09:19:09 AM PDT
-Install Date    : Sun 11 Aug 2019 09:24:56 PM PDT
+Build Date      : Sat 24 Aug 2019 01:22:48 PM PDT
+Install Date    : Sat 24 Aug 2019 06:29:49 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -6787,7 +6787,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : kaccounts-integration
-Version         : 19.04.3-1
+Version         : 19.08.0-1
 Description     : Small system to administer web accounts for the sites and services across the KDE desktop, including: Google, Facebook, Owncloud, IMAP, Jabber and others
 Architecture    : x86_64
 URL             : https://www.kde.org/applications/internet/
@@ -6801,15 +6801,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 440.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Tue 09 Jul 2019 12:28:52 AM PDT
-Install Date    : Thu 11 Jul 2019 10:08:30 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Sun 11 Aug 2019 10:00:11 PM PDT
+Install Date    : Sat 24 Aug 2019 06:29:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : karchive
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Qt 5 addon providing access to numerous types of archives
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -6823,15 +6823,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 736.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:28:15 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:28:55 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:49 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kauth
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Abstraction to system policy and authentication features
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -6845,9 +6845,9 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 875.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:30:15 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:32:06 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -6875,7 +6875,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : kbookmarks
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Support for bookmarks and the XBEL format
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -6888,16 +6888,16 @@ Required By     : kio
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1049.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:42:50 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Installed Size  : 1048.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:56:41 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kcmutils
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Utilities for interacting with KCModules
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -6910,16 +6910,16 @@ Required By     : kaccounts-integration
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1669.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:59:29 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Installed Size  : 1665.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 08:22:29 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kcodecs
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Provide a collection of methods to manipulate strings using various encodings
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -6932,16 +6932,16 @@ Required By     : kconfigwidgets  knotifications
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1040.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:30:57 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Installed Size  : 1041.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:33:07 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kcompletion
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Text completion helpers and widgets
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -6955,15 +6955,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 1337.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:33:53 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:39:02 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kconfig
-Version         : 5.60.0-2
+Version         : 5.61.0-1
 Description     : Configuration system
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -6977,15 +6977,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 3.01 MiB
-Packager        : Evangelos Foutras <evangelos@foutrelis.com>
-Build Date      : Wed 07 Aug 2019 11:02:41 AM PDT
-Install Date    : Fri 09 Aug 2019 03:37:35 AM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:34:02 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kconfigwidgets
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Widgets for KConfig
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -6998,16 +6998,16 @@ Required By     : kiconthemes
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 2.47 MiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:35:13 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Installed Size  : 2.46 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:40:52 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kcoreaddons
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Addons to QtCore
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7020,16 +7020,16 @@ Required By     : kauth  kcrash  kfilemetadata  kjobwidgets  knotifications  kpa
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 3.29 MiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:27:27 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Installed Size  : 3.30 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:26:11 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:49 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kcrash
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Support for application crash analysis and bug report from apps
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7043,15 +7043,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 218.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:36:42 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:43:38 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kdbusaddons
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Addons to QtDBus
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7065,15 +7065,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 468.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:37:09 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:44:36 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kdeclarative
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Provides integration of QML and KDE Frameworks
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7086,23 +7086,23 @@ Required By     : kcmutils
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1324.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:49:24 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Installed Size  : 1336.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 08:14:19 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kdenlive
-Version         : 19.04.3-1
+Version         : 19.08.0-2
 Description     : A non-linear video editor for Linux using the MLT video framework
 Architecture    : x86_64
 URL             : https://www.kdenlive.org/
 Licenses        : GPL
 Groups          : kde-applications  kdemultimedia
 Provides        : None
-Depends On      : knewstuff  knotifyconfig  kfilemetadata  purpose  mlt  qt5-quickcontrols  qt5-quickcontrols2  rttr  breeze-icons  frei0r-plugins
+Depends On      : knewstuff  knotifyconfig  kfilemetadata  purpose  mlt  rttr  breeze-icons  frei0r-plugins
 Optional Deps   : ffmpeg: for FFmpeg plugin [installed]
                   cdrtools: for creation of DVD ISO images
                   dvdauthor: for creation of DVD
@@ -7115,10 +7115,10 @@ Required By     : None
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 60.74 MiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Tue 09 Jul 2019 01:52:09 AM PDT
-Install Date    : Thu 11 Jul 2019 10:08:31 PM PDT
+Installed Size  : 62.29 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Tue 20 Aug 2019 03:40:48 AM PDT
+Install Date    : Sat 24 Aug 2019 06:29:51 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -7155,7 +7155,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc  sh
 Optional Deps   : None
-Required By     : krb5
+Required By     : krb5  lib32-keyutils
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -7168,7 +7168,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : kfilemetadata
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : A library for extracting file metadata
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7181,16 +7181,16 @@ Required By     : kdenlive
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1353.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 03:04:05 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Installed Size  : 1363.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 08:31:01 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kglobalaccel
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Add support for global workspace shortcuts
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7204,15 +7204,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 638.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:38:51 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:48:18 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kguiaddons
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Addons to QtGui
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7226,15 +7226,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 568.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Mon 08 Jul 2019 12:59:03 AM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:40:01 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : ki18n
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Advanced internationalization framework
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7248,16 +7248,16 @@ Required By     : kconfigwidgets  kfilemetadata  kpackage  krita  kservice
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 16.47 MiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:28:44 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Installed Size  : 16.45 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:29:40 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kiconthemes
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Support for icon themes
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7270,16 +7270,16 @@ Required By     : ktextwidgets  kwallet
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 906.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:40:18 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Installed Size  : 903.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:51:27 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kio
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Resource and network access abstraction
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7294,16 +7294,16 @@ Required By     : kdeclarative  knewstuff  knotifyconfig
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 24.53 MiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:46:22 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Installed Size  : 24.55 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 08:04:46 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kirigami2
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : A QtQuick based components set
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7316,16 +7316,16 @@ Required By     : purpose
 Optional For    : knewstuff
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1130.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 03:01:33 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Installed Size  : 1134.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 08:26:23 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kitemmodels
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Models for Qt Model/View system
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7339,15 +7339,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 1305.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 03:15:13 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 08:50:19 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kitemviews
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Widget addons for Qt Model/View
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7361,15 +7361,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 1231.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:39:31 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:49:43 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kjobwidgets
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Widgets for tracking KJob instances
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7383,9 +7383,9 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 782.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:44:14 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 08:00:52 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -7413,7 +7413,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : knewstuff
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Support for downloading application assets from the network
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7427,15 +7427,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 4.10 MiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 03:06:03 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 08:34:15 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : knotifications
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Abstraction for system notifications
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7449,15 +7449,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 905.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:44:56 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 08:01:56 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : knotifyconfig
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Configuration system for KNotify
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7470,16 +7470,16 @@ Required By     : kdenlive
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 512.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 03:15:52 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Installed Size  : 508.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 08:51:22 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kpackage
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Framework that lets applications manage user installable packages of non-binary assets
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7492,10 +7492,10 @@ Required By     : kdeclarative
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1090.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:48:49 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Installed Size  : 1088.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 08:13:20 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -7510,7 +7510,7 @@ Groups          : None
 Provides        : None
 Depends On      : e2fsprogs  libldap  keyutils
 Optional Deps   : None
-Required By     : audit  curl  libcups  libsoup  libtirpc  openssh  s-nail
+Required By     : audit  curl  lib32-krb5  libcups  libsoup  libtirpc  openssh  s-nail
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -7550,7 +7550,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : kservice
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Advanced plugin and service introspection
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7563,16 +7563,16 @@ Required By     : ktextwidgets  kwallet
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1752.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:38:15 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Installed Size  : 1744.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:46:59 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : ktextwidgets
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Advanced text editing widgets
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7585,16 +7585,16 @@ Required By     : kxmlgui
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1872.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:41:32 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Installed Size  : 1868.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:53:51 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kwallet
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Secure and unified container for user passwords
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7607,16 +7607,16 @@ Required By     : kio  signon-kwallet-extension
 Optional For    : chromium  vlc
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 2.30 MiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:45:32 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Installed Size  : 2.13 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 08:03:13 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kwidgetsaddons
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Addons to QtWidgets
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7629,16 +7629,16 @@ Required By     : kcompletion  kconfigwidgets  kjobwidgets
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 11.88 MiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:32:16 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Installed Size  : 11.96 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:36:12 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kwindowsystem
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Access to the windowing system
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7652,15 +7652,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 1395.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:36:07 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:42:26 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : kxmlgui
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : User configurable main windows
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -7674,9 +7674,9 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 4.40 MiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:42:09 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:55:05 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -7860,6 +7860,50 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
+Name            : lib32-atk
+Version         : 2.32.0-1
+Description     : The interface definitions of accessibility infrastructure (32-bit)
+Architecture    : x86_64
+URL             : https://git.gnome.org/browse/atk
+Licenses        : LGPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-glib2  atk
+Optional Deps   : None
+Required By     : lib32-gtk2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 254.00 KiB
+Packager        : Maxime Gauduin <alucryd@archlinux.org>
+Build Date      : Tue 19 Mar 2019 12:52:37 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-attr
+Version         : 2.4.48-1
+Description     : Extended attribute support library for ACL support (32-bit)
+Architecture    : x86_64
+URL             : https://savannah.nongnu.org/projects/attr
+Licenses        : LGPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-glibc  attr
+Optional Deps   : None
+Required By     : lib32-libcap
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 18.00 KiB
+Packager        : Christian Hesse <arch@eworm.de>
+Build Date      : Sun 24 Jun 2018 12:50:47 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
 Name            : lib32-bzip2
 Version         : 1.0.8-2
 Description     : A high-quality data compression program (32-bit)
@@ -7870,7 +7914,7 @@ Groups          : None
 Provides        : None
 Depends On      : lib32-glibc  bzip2
 Optional Deps   : None
-Required By     : lib32-libelf
+Required By     : lib32-freetype2  lib32-libelf
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -7878,6 +7922,50 @@ Installed Size  : 71.00 KiB
 Packager        : Antonio Rojas <arojas@archlinux.org>
 Build Date      : Mon 15 Jul 2019 05:01:36 AM PDT
 Install Date    : Sat 20 Jul 2019 12:24:48 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-cairo
+Version         : 1.17.2+17+g52a7c79fd-1
+Description     : 2D graphics library with support for multiple output devices (32-bit)
+Architecture    : x86_64
+URL             : https://cairographics.org/
+Licenses        : LGPL  MPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-libpng  lib32-libxrender  lib32-libxext  lib32-fontconfig  lib32-pixman  lib32-glib2  cairo
+Optional Deps   : None
+Required By     : lib32-gtk2  lib32-pango
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1687.00 KiB
+Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Build Date      : Fri 02 Aug 2019 07:45:37 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:43 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-e2fsprogs
+Version         : 1.45.3-1
+Description     : Ext2/3/4 filesystem libraries (32-bit)
+Architecture    : x86_64
+URL             : http://e2fsprogs.sourceforge.net
+Licenses        : GPL  LGPL  MIT
+Groups          : None
+Provides        : None
+Depends On      : lib32-util-linux  e2fsprogs
+Optional Deps   : None
+Required By     : lib32-krb5
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 533.00 KiB
+Packager        : Christian Hesse <arch@eworm.de>
+Build Date      : Mon 15 Jul 2019 12:01:05 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -7892,7 +7980,7 @@ Groups          : None
 Provides        : None
 Depends On      : expat  lib32-glibc
 Optional Deps   : None
-Required By     : lib32-wayland
+Required By     : lib32-fontconfig  lib32-wayland
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -7900,6 +7988,72 @@ Installed Size  : 170.00 KiB
 Packager        : Maxime Gauduin <alucryd@archlinux.org>
 Build Date      : Thu 27 Jun 2019 11:23:50 PM PDT
 Install Date    : Fri 28 Jun 2019 10:03:12 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-fontconfig
+Version         : 2:2.13.1+12+g5f5ec56-1
+Description     : A library for configuring and customizing font access (32-bit)
+Architecture    : x86_64
+URL             : https://www.freedesktop.org/wiki/Software/fontconfig/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-expat  lib32-freetype2  fontconfig
+Optional Deps   : None
+Required By     : lib32-cairo  lib32-libxft
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 313.00 KiB
+Packager        : Evangelos Foutras <evangelos@foutrelis.com>
+Build Date      : Thu 04 Oct 2018 09:53:10 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : Yes
+Validated By    : Signature
+
+Name            : lib32-freetype2
+Version         : 2.10.1-1
+Description     : TrueType font rendering library (32-bit)
+Architecture    : x86_64
+URL             : https://www.freetype.org/
+Licenses        : GPL
+Groups          : None
+Provides        : libfreetype.so=6-32
+Depends On      : lib32-zlib  lib32-bzip2  lib32-libpng  lib32-harfbuzz  freetype2
+Optional Deps   : None
+Required By     : lib32-fontconfig  lib32-harfbuzz
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 846.00 KiB
+Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Build Date      : Tue 02 Jul 2019 04:33:24 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-fribidi
+Version         : 1.0.5-1
+Description     : A Free Implementation of the Unicode Bidirectional Algorithm (32-bit)
+Architecture    : x86_64
+URL             : https://github.com/fribidi/fribidi/
+Licenses        : LGPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-glibc  fribidi
+Optional Deps   : None
+Required By     : lib32-pango
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 114.00 KiB
+Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Build Date      : Mon 30 Jul 2018 12:20:57 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:43 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -7914,7 +8068,7 @@ Groups          : multilib-devel
 Provides        : libgo.so=14-32  libgfortran.so=5-32  libubsan.so=1-32  libasan.so=5-32
 Depends On      : lib32-glibc>=2.27
 Optional Deps   : None
-Required By     : lib32-icu  lib32-llvm-libs  lib32-nvidia-utils  steam
+Required By     : lib32-gmp  lib32-icu  lib32-libtiff  lib32-llvm-libs  lib32-nvidia-utils  lib32-pcre  lib32-systemd  steam
 Optional For    : gcc
 Conflicts With  : None
 Replaces        : None
@@ -7922,6 +8076,50 @@ Installed Size  : 80.42 MiB
 Packager        : Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
 Build Date      : Sat 22 Jun 2019 12:52:05 PM PDT
 Install Date    : Tue 25 Jun 2019 03:13:24 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-gdk-pixbuf2
+Version         : 2.38.1-1
+Description     : An image loading library (32-bit)
+Architecture    : x86_64
+URL             : https://wiki.gnome.org/Projects/GdkPixbuf
+Licenses        : LGPL2.1
+Groups          : None
+Provides        : None
+Depends On      : lib32-glib2  lib32-libpng  lib32-libtiff  lib32-libjpeg  lib32-libx11  gdk-pixbuf2
+Optional Deps   : None
+Required By     : lib32-gtk2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 542.00 KiB
+Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Build Date      : Thu 28 Feb 2019 08:36:48 AM PST
+Install Date    : Fri 23 Aug 2019 09:31:43 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : Yes
+Validated By    : Signature
+
+Name            : lib32-glib2
+Version         : 2.60.6-1
+Description     : Low level core library (32-bit)
+Architecture    : x86_64
+URL             : https://wiki.gnome.org/Projects/GLib
+Licenses        : LGPL2.1
+Groups          : None
+Provides        : None
+Depends On      : lib32-pcre  lib32-libffi  lib32-util-linux  lib32-zlib  glib2
+Optional Deps   : None
+Required By     : lib32-atk  lib32-cairo  lib32-gdk-pixbuf2  lib32-harfbuzz  lib32-libdbusmenu-glib
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.57 MiB
+Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Build Date      : Wed 24 Jul 2019 04:58:05 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -7936,7 +8134,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc=2.29
 Optional Deps   : None
-Required By     : lib32-alsa-lib  lib32-bzip2  lib32-expat  lib32-gcc-libs  lib32-libffi  lib32-libpciaccess  lib32-libxau  lib32-libxdmcp  lib32-libxshmfence  lib32-lm_sensors  lib32-ncurses  lib32-readline  lib32-wayland  lib32-xz  lib32-zlib
+Required By     : lib32-alsa-lib  lib32-attr  lib32-bzip2  lib32-expat  lib32-fribidi  lib32-gcc-libs  lib32-keyutils  lib32-libdatrie  lib32-libffi  lib32-libgpg-error  lib32-libidn  lib32-libjpeg-turbo  lib32-libpciaccess  lib32-libtasn1  lib32-libxau  lib32-libxdmcp  lib32-libxshmfence  lib32-lm_sensors  lib32-lz4  lib32-ncurses  lib32-nspr  lib32-openssl  lib32-p11-kit  lib32-pixman  lib32-readline  lib32-sqlite  lib32-util-linux  lib32-wayland  lib32-xz  lib32-zlib
 Optional For    : valgrind
 Conflicts With  : None
 Replaces        : None
@@ -7944,6 +8142,94 @@ Installed Size  : 17.57 MiB
 Packager        : Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
 Build Date      : Tue 09 Jul 2019 10:14:29 PM PDT
 Install Date    : Wed 24 Jul 2019 12:40:25 AM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-gmp
+Version         : 6.1.2-2
+Description     : A free library for arbitrary precision arithmetic (32-bit)
+Architecture    : x86_64
+URL             : http://gmplib.org/
+Licenses        : LGPL3  GPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-gcc-libs  gmp
+Optional Deps   : None
+Required By     : lib32-nettle
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 771.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Nov 2018 02:48:42 PM PST
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-gnutls
+Version         : 3.6.9-1
+Description     : A library which provides a secure layer over a reliable transport layer (32-bit)
+Architecture    : x86_64
+URL             : https://gnutls.org/
+Licenses        : GPL3  LGPL2.1
+Groups          : None
+Provides        : None
+Depends On      : lib32-zlib  lib32-nettle  lib32-p11-kit  lib32-libtasn1  lib32-libidn  gnutls
+Optional Deps   : None
+Required By     : lib32-libcups
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 2.12 MiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Tue 30 Jul 2019 11:26:12 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-gtk2
+Version         : 2.24.32-1
+Description     : GObject-based multi-platform GUI toolkit (legacy) (32-bit)
+Architecture    : x86_64
+URL             : http://www.gtk.org/
+Licenses        : LGPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-atk>=1.30.0  lib32-pango>=1.28.0  lib32-cairo>=1.10.0  lib32-gdk-pixbuf2>=2.22.1  lib32-libcups>=1.4.4  lib32-libxcursor  lib32-libxrandr>=1.3  lib32-libxi>=1.3  lib32-libxinerama  lib32-libxcomposite  lib32-libxdamage  gtk2
+Optional Deps   : None
+Required By     : lib32-libdbusmenu-gtk2  lib32-libindicator-gtk2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 6.42 MiB
+Packager        : Eli Schwartz <eschwartz@archlinux.org>
+Build Date      : Mon 26 Feb 2018 11:33:07 AM PST
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : Yes
+Validated By    : Signature
+
+Name            : lib32-harfbuzz
+Version         : 2.6.1-1
+Description     : OpenType text shaping engine (32-bit)
+Architecture    : x86_64
+URL             : https://www.freedesktop.org/wiki/Software/HarfBuzz
+Licenses        : MIT
+Groups          : None
+Provides        : None
+Depends On      : lib32-glib2  lib32-freetype2  harfbuzz
+Optional Deps   : None
+Required By     : lib32-freetype2  lib32-pango
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1698.00 KiB
+Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Build Date      : Thu 22 Aug 2019 11:50:25 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -7966,6 +8252,182 @@ Installed Size  : 31.48 MiB
 Packager        : Antonio Rojas <arojas@archlinux.org>
 Build Date      : Sat 27 Apr 2019 01:39:04 AM PDT
 Install Date    : Tue 25 Jun 2019 03:13:24 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-keyutils
+Version         : 1.6-1
+Description     : Linux Key Management Utilities (32-bit)
+Architecture    : x86_64
+URL             : https://www.kernel.org/
+Licenses        : GPL2  LGPL2.1
+Groups          : None
+Provides        : None
+Depends On      : lib32-glibc  lib32-krb5  keyutils
+Optional Deps   : None
+Required By     : lib32-krb5
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 22.00 KiB
+Packager        : Christian Hesse <arch@eworm.de>
+Build Date      : Tue 20 Nov 2018 04:19:44 AM PST
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-krb5
+Version         : 1.17-1
+Description     : The Kerberos network authentication system (32-bit)
+Architecture    : x86_64
+URL             : https://web.mit.edu/kerberos/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-e2fsprogs  lib32-libldap  lib32-keyutils  krb5
+Optional Deps   : None
+Required By     : lib32-keyutils  lib32-libcups
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 2.58 MiB
+Packager        : Levente Polyak <anthraxx@archlinux.org>
+Build Date      : Mon 01 Jul 2019 01:41:13 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libappindicator-gtk2
+Version         : 12.10.0-10
+Description     : Allow applications to extend a menu via Ayatana indicators in Unity, KDE or Systray (32-bit) (GTK+ 2 library)
+Architecture    : x86_64
+URL             : https://launchpad.net/libappindicator
+Licenses        : LGPL2.1  GPL3
+Groups          : None
+Provides        : lib32-libappindicator
+Depends On      : lib32-libdbusmenu-gtk2  lib32-libindicator-gtk2
+Optional Deps   : None
+Required By     : steam
+Optional For    : None
+Conflicts With  : lib32-libappindicator
+Replaces        : None
+Installed Size  : 66.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sun 25 Nov 2018 07:40:23 AM PST
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libcap
+Version         : 2.27-1
+Description     : POSIX 1003.1e capabilities (32-bit)
+Architecture    : x86_64
+URL             : https://sites.google.com/site/fullycapable/
+Licenses        : GPL2
+Groups          : None
+Provides        : None
+Depends On      : lib32-attr  libcap
+Optional Deps   : None
+Required By     : lib32-systemd
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 22.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 10 May 2019 07:57:21 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libcups
+Version         : 2.2.11-1
+Description     : The CUPS Printing System - client libraries (32-bit)
+Architecture    : x86_64
+URL             : https://www.cups.org/
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-krb5  lib32-libtiff  lib32-libpng  lib32-gnutls  libcups
+Optional Deps   : None
+Required By     : lib32-gtk2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 611.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Wed 27 Mar 2019 02:08:43 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libdatrie
+Version         : 0.2.12-1
+Description     : Implementation of double-array structure for representing trie, as proposed by Junichi Aoe.
+Architecture    : x86_64
+URL             : https://linux.thai.net/projects/datrie
+Licenses        : LGPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-glibc  libdatrie
+Optional Deps   : None
+Required By     : lib32-libthai
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 46.00 KiB
+Packager        : Maxime Gauduin <alucryd@archlinux.org>
+Build Date      : Thu 21 Jun 2018 02:01:36 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libdbusmenu-glib
+Version         : 16.04.0-3
+Description     : Library for passing menus over DBus (32-bit)
+Architecture    : x86_64
+URL             : https://launchpad.net/libdbusmenu
+Licenses        : GPL3  LGPL2.1  LGPL3
+Groups          : None
+Provides        : None
+Depends On      : lib32-glib2  libdbusmenu-glib
+Optional Deps   : None
+Required By     : lib32-libdbusmenu-gtk2  steam
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 130.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Nov 2018 01:43:05 PM PST
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libdbusmenu-gtk2
+Version         : 16.04.0-3
+Description     : Library for passing menus over DBus (32-bit) (GTK+ 2 library)
+Architecture    : x86_64
+URL             : https://launchpad.net/libdbusmenu
+Licenses        : GPL3  LGPL2.1  LGPL3
+Groups          : None
+Provides        : None
+Depends On      : lib32-gtk2  lib32-libdbusmenu-glib  libdbusmenu-gtk2
+Optional Deps   : None
+Required By     : lib32-libappindicator-gtk2  steam
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 86.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Nov 2018 01:43:05 PM PST
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -8024,7 +8486,7 @@ Groups          : None
 Provides        : None
 Depends On      : lib32-glibc
 Optional Deps   : None
-Required By     : lib32-llvm-libs  lib32-wayland
+Required By     : lib32-glib2  lib32-llvm-libs  lib32-p11-kit  lib32-wayland
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -8032,6 +8494,28 @@ Installed Size  : 49.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
 Build Date      : Mon 04 Jun 2018 06:28:46 AM PDT
 Install Date    : Tue 25 Jun 2019 03:13:23 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libgcrypt
+Version         : 1.8.4-1
+Description     : General purpose cryptographic library based on the code from GnuPG (32-bit)
+Architecture    : x86_64
+URL             : https://www.gnupg.org
+Licenses        : LGPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-libgpg-error  libgcrypt
+Optional Deps   : None
+Required By     : lib32-systemd
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 886.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Fri 02 Nov 2018 11:54:12 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -8058,6 +8542,116 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
+Name            : lib32-libgpg-error
+Version         : 1.36-1
+Description     : Support library for libgcrypt (32-bit)
+Architecture    : x86_64
+URL             : https://www.gnupg.org
+Licenses        : LGPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-glibc  libgpg-error
+Optional Deps   : None
+Required By     : lib32-libgcrypt  steam
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 135.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 10 May 2019 08:01:22 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libidn
+Version         : 1.35-1
+Description     : Implementation of the Stringprep, Punycode and IDNA specifications (32 bit)
+Architecture    : x86_64
+URL             : https://www.gnu.org/software/libidn/
+Licenses        : GPL3  LGPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-glibc  libidn>=1.35
+Optional Deps   : None
+Required By     : lib32-gnutls
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 211.00 KiB
+Packager        : Evangelos Foutras <evangelos@foutrelis.com>
+Build Date      : Mon 10 Sep 2018 03:18:51 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libindicator-gtk2
+Version         : 12.10.1-7
+Description     : Set of symbols and convenience functions for Ayatana indicators (32-bit) (GTK+ 2 library)
+Architecture    : x86_64
+URL             : https://launchpad.net/libindicator
+Licenses        : GPL3
+Groups          : None
+Provides        : lib32-libindicator
+Depends On      : libindicator-gtk2  lib32-gtk2
+Optional Deps   : None
+Required By     : lib32-libappindicator-gtk2  steam
+Optional For    : None
+Conflicts With  : lib32-libindicator
+Replaces        : None
+Installed Size  : 76.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sun 25 Nov 2018 07:37:21 AM PST
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libjpeg-turbo
+Version         : 2.0.2-1
+Description     : libjpeg derivative with accelerated baseline JPEG compression and decompression (32-bit)
+Architecture    : x86_64
+URL             : https://libjpeg-turbo.org/
+Licenses        : custom
+Groups          : None
+Provides        : lib32-libjpeg=8.2.2  lib32-turbojpeg
+Depends On      : lib32-glibc  libjpeg-turbo
+Optional Deps   : None
+Required By     : lib32-gdk-pixbuf2  lib32-libtiff
+Optional For    : None
+Conflicts With  : lib32-libjpeg  lib32-turbojpeg
+Replaces        : lib32-libjpeg  lib32-turbojpeg
+Installed Size  : 1510.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Sat 16 Feb 2019 10:22:37 AM PST
+Install Date    : Fri 23 Aug 2019 09:31:43 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libldap
+Version         : 2.4.47-1
+Description     : Lightweight Directory Access Protocol (LDAP) client libraries (32-bit)
+Architecture    : x86_64
+URL             : http://www.openldap.org/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-openssl  libldap
+Optional Deps   : None
+Required By     : lib32-krb5
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 714.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Tue 22 Jan 2019 01:11:58 AM PST
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
 Name            : lib32-libpciaccess
 Version         : 0.16-1
 Description     : X11 PCI access library (32-bit
@@ -8080,6 +8674,94 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
+Name            : lib32-libpng
+Version         : 1.6.37-1
+Description     : A collection of routines used to create PNG format graphics files (32-bit)
+Architecture    : x86_64
+URL             : http://www.libpng.org/pub/png/libpng.html
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-zlib  libpng
+Optional Deps   : None
+Required By     : lib32-cairo  lib32-freetype2  lib32-gdk-pixbuf2  lib32-libcups
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 316.00 KiB
+Packager        : Christian Hesse <arch@eworm.de>
+Build Date      : Mon 15 Apr 2019 07:23:53 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libtasn1
+Version         : 4.14-1
+Description     : The ASN.1 library used in GNUTLS (32 bit)
+Architecture    : x86_64
+URL             : https://www.gnu.org/software/libtasn1/
+Licenses        : GPL3  LGPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-glibc  libtasn1
+Optional Deps   : None
+Required By     : lib32-gnutls  lib32-p11-kit
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 103.00 KiB
+Packager        : Laurent Carlier <lordheavym@gmail.com>
+Build Date      : Tue 30 Jul 2019 11:41:41 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libthai
+Version         : 0.1.28-1
+Description     : Thai language support routines
+Architecture    : x86_64
+URL             : https://linux.thai.net/projects/libthai
+Licenses        : LGPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-libdatrie
+Optional Deps   : None
+Required By     : lib32-pango
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 60.00 KiB
+Packager        : Maxime Gauduin <alucryd@archlinux.org>
+Build Date      : Sat 17 Nov 2018 08:13:43 AM PST
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libtiff
+Version         : 4.0.10-1
+Description     : Library for manipulation of TIFF images (32-bit)
+Architecture    : x86_64
+URL             : http://www.simplesystems.org/libtiff/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : libtiff  lib32-gcc-libs  lib32-libjpeg  lib32-zlib  lib32-xz  lib32-zstd
+Optional Deps   : None
+Required By     : lib32-gdk-pixbuf2  lib32-libcups
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 628.00 KiB
+Packager        : Levente Polyak <anthraxx@archlinux.org>
+Build Date      : Mon 19 Nov 2018 02:22:50 PM PST
+Install Date    : Fri 23 Aug 2019 09:31:43 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
 Name            : lib32-libx11
 Version         : 1.6.8-1
 Description     : X11 client-side library (32-bit)
@@ -8090,7 +8772,7 @@ Groups          : None
 Provides        : None
 Depends On      : lib32-libxcb  libx11
 Optional Deps   : None
-Required By     : lib32-libxext  lib32-libxfixes  steam
+Required By     : lib32-gdk-pixbuf2  lib32-libxext  lib32-libxfixes  lib32-libxrender  steam
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -8146,6 +8828,50 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
+Name            : lib32-libxcomposite
+Version         : 0.4.5-1
+Description     : X11 Composite extension library (32-bit)
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-libxfixes  libxcomposite
+Optional Deps   : None
+Required By     : lib32-gtk2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 14.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 27 Apr 2019 12:42:19 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libxcursor
+Version         : 1.2.0-1
+Description     : X cursor management library (32-bit)
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-libxfixes  lib32-libxrender  libxcursor
+Optional Deps   : None
+Required By     : lib32-gtk2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 46.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 27 Apr 2019 12:44:57 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
 Name            : lib32-libxdamage
 Version         : 1.1.5-1
 Description     : X11 damaged region extension library (32-bit)
@@ -8156,7 +8882,7 @@ Groups          : None
 Provides        : None
 Depends On      : lib32-libxfixes>=4.0.4  libxdamage
 Optional Deps   : None
-Required By     : lib32-mesa
+Required By     : lib32-gtk2  lib32-mesa
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -8200,7 +8926,7 @@ Groups          : None
 Provides        : None
 Depends On      : lib32-libx11  libxext
 Optional Deps   : None
-Required By     : lib32-libglvnd  lib32-libxss  lib32-libxxf86vm
+Required By     : lib32-cairo  lib32-libglvnd  lib32-libxi  lib32-libxinerama  lib32-libxrandr  lib32-libxss  lib32-libxxf86vm
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -8222,7 +8948,7 @@ Groups          : None
 Provides        : None
 Depends On      : lib32-libx11  libxfixes
 Optional Deps   : None
-Required By     : lib32-libxdamage
+Required By     : lib32-libxcomposite  lib32-libxcursor  lib32-libxdamage  lib32-libxi
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -8230,6 +8956,72 @@ Installed Size  : 26.00 KiB
 Packager        : Evangelos Foutras <evangelos@foutrelis.com>
 Build Date      : Fri 09 Nov 2018 03:31:20 PM PST
 Install Date    : Tue 25 Jun 2019 03:13:22 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libxft
+Version         : 2.3.3-1
+Description     : FreeType-based font drawing library for X (32-bit)
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-fontconfig  lib32-libxrender
+Optional Deps   : None
+Required By     : lib32-pango
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 94.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 27 Apr 2019 12:54:12 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:43 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libxi
+Version         : 1.7.9-2
+Description     : X11 Input extension library (32-bit)
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-libxext  lib32-libxfixes  inputproto  libxi
+Optional Deps   : None
+Required By     : lib32-gtk2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 75.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Nov 2018 03:27:26 PM PST
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libxinerama
+Version         : 1.1.4-1
+Description     : X11 Xinerama extension library (32-bit)
+Architecture    : x86_64
+URL             : http://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-libxext  libxinerama
+Optional Deps   : None
+Required By     : lib32-gtk2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 15.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Thu 13 Sep 2018 09:44:55 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -8252,6 +9044,50 @@ Installed Size  : 1534.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
 Build Date      : Fri 05 Apr 2019 07:49:12 AM PDT
 Install Date    : Tue 25 Jun 2019 03:13:24 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libxrandr
+Version         : 1.5.2-1
+Description     : X11 RandR extension library (32-bit)
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-libxext  lib32-libxrender  libxrandr
+Optional Deps   : None
+Required By     : lib32-gtk2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 54.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 27 Apr 2019 01:00:25 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-libxrender
+Version         : 0.9.10-2
+Description     : X Rendering Extension client library (32-bit)
+Architecture    : x86_64
+URL             : http://xorg.freedesktop.org/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-libx11>=1.3.4  libxrender
+Optional Deps   : None
+Required By     : lib32-cairo  lib32-libxcursor  lib32-libxft  lib32-libxrandr
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 51.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Nov 2018 12:55:05 PM PST
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -8366,6 +9202,28 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
+Name            : lib32-lz4
+Version         : 1.9.1-1
+Description     : Extremely fast compression algorithm (32-bit)
+Architecture    : x86_64
+URL             : https://www.lz4.org/
+Licenses        : GPL2
+Groups          : None
+Provides        : None
+Depends On      : lz4  lib32-glibc
+Optional Deps   : None
+Required By     : lib32-zstd
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 146.00 KiB
+Packager        : Levente Polyak <anthraxx@archlinux.org>
+Build Date      : Wed 22 May 2019 02:30:30 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:43 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
 Name            : lib32-mesa
 Version         : 19.1.4-1
 Description     : An open-source implementation of the OpenGL specification (32-bit)
@@ -8411,6 +9269,72 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
+Name            : lib32-nettle
+Version         : 3.5.1-1
+Description     : A low-level cryptographic library (32-bit)
+Architecture    : x86_64
+URL             : https://www.lysator.liu.se/~nisse/nettle/
+Licenses        : GPL2
+Groups          : None
+Provides        : None
+Depends On      : lib32-gmp  nettle
+Optional Deps   : None
+Required By     : lib32-gnutls
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 468.00 KiB
+Packager        : Evangelos Foutras <evangelos@foutrelis.com>
+Build Date      : Sun 30 Jun 2019 02:36:29 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-nspr
+Version         : 4.21-1
+Description     : Netscape Portable Runtime (32-bit)
+Architecture    : x86_64
+URL             : https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR
+Licenses        : MPL  GPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-glibc  nspr
+Optional Deps   : None
+Required By     : lib32-nss
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 290.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Thu 14 Mar 2019 03:06:18 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-nss
+Version         : 3.45-1
+Description     : Network Security Services (32-bit)
+Architecture    : x86_64
+URL             : https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS
+Licenses        : MPL  GPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-nspr>=4.20  lib32-sqlite  lib32-zlib  lib32-p11-kit  nss
+Optional Deps   : None
+Required By     : steam
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.07 MiB
+Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Build Date      : Mon 08 Jul 2019 09:15:55 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
 Name            : lib32-nvidia-utils
 Version         : 430.40-1
 Description     : NVIDIA drivers utilities (32-bit)
@@ -8433,6 +9357,116 @@ Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
 
+Name            : lib32-openssl
+Version         : 1:1.1.1.c-1
+Description     : The Open Source toolkit for Secure Sockets Layer and Transport Layer Security (32-bit)
+Architecture    : x86_64
+URL             : https://www.openssl.org
+Licenses        : custom:BSD
+Groups          : None
+Provides        : None
+Depends On      : lib32-glibc  openssl
+Optional Deps   : ca-certificates [installed]
+Required By     : lib32-libldap
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 3.30 MiB
+Packager        : Pierre Schmitz <pierre@archlinux.de>
+Build Date      : Tue 28 May 2019 09:37:59 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-p11-kit
+Version         : 0.23.16.1-1
+Description     : Provides a way to load and enumerate PKCS#11 modules (32-bit)
+Architecture    : x86_64
+URL             : https://p11-glue.freedesktop.org
+Licenses        : BSD
+Groups          : None
+Provides        : None
+Depends On      : lib32-glibc  lib32-libtasn1  lib32-libffi  lib32-systemd  p11-kit
+Optional Deps   : None
+Required By     : lib32-gnutls  lib32-nss
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 2.88 MiB
+Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Build Date      : Thu 23 May 2019 05:50:34 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-pango
+Version         : 1:1.44.5-1
+Description     : A library for layout and rendering of text (32-bit)
+Architecture    : x86_64
+URL             : https://www.pango.org/
+Licenses        : LGPL
+Groups          : None
+Provides        : None
+Depends On      : lib32-libthai  lib32-cairo  lib32-libxft  lib32-harfbuzz  lib32-fribidi  pango
+Optional Deps   : None
+Required By     : lib32-gtk2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 500.00 KiB
+Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Build Date      : Wed 14 Aug 2019 11:19:18 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:43 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-pcre
+Version         : 8.43-1
+Description     : A library that implements Perl 5-style regular expressions (32-bit)
+Architecture    : x86_64
+URL             : https://www.pcre.org
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-gcc-libs  pcre
+Optional Deps   : None
+Required By     : lib32-glib2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1373.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Mon 11 Mar 2019 12:04:21 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-pixman
+Version         : 0.38.4-1
+Description     : Pixman library (32-bit)
+Architecture    : x86_64
+URL             : https://xorg.freedesktop.org
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-glibc  pixman
+Optional Deps   : None
+Required By     : lib32-cairo
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 694.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sat 27 Apr 2019 01:12:48 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:43 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
 Name            : lib32-readline
 Version         : 8.0.0-1
 Description     : GNU readline library (32-bit)
@@ -8451,6 +9485,72 @@ Installed Size  : 350.00 KiB
 Packager        : Evangelos Foutras <evangelos@foutrelis.com>
 Build Date      : Thu 10 Jan 2019 07:39:43 AM PST
 Install Date    : Tue 25 Jun 2019 03:13:23 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-sqlite
+Version         : 3.29.0-1
+Description     : A C library that implements an SQL database engine (32-bit)
+Architecture    : x86_64
+URL             : https://www.sqlite.org/
+Licenses        : custom
+Groups          : None
+Provides        : None
+Depends On      : lib32-glibc  sqlite
+Optional Deps   : None
+Required By     : lib32-nss
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1027.00 KiB
+Packager        : Laurent Carlier <lordheavym@gmail.com>
+Build Date      : Mon 15 Jul 2019 09:55:44 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-systemd
+Version         : 242.84-1
+Description     : system and service manager (32-bit)
+Architecture    : x86_64
+URL             : https://www.github.com/systemd/systemd
+Licenses        : GPL2  LGPL2.1
+Groups          : None
+Provides        : None
+Depends On      : lib32-gcc-libs  lib32-libcap  lib32-libgcrypt  lib32-xz  systemd
+Optional Deps   : None
+Required By     : lib32-p11-kit
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1879.00 KiB
+Packager        : Christian Hesse <arch@eworm.de>
+Build Date      : Sat 20 Jul 2019 01:11:16 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-util-linux
+Version         : 2.34-1
+Description     : Miscellaneous system utilities for Linux (32-bit)
+Architecture    : x86_64
+URL             : https://github.com/karelzak/util-linux
+Licenses        : GPL2
+Groups          : None
+Provides        : libuuid.so=1-32  libblkid.so=1-32  libfdisk.so=1-32  libmount.so=1-32  libsmartcols.so=1-32
+Depends On      : lib32-glibc  util-linux
+Optional Deps   : None
+Required By     : lib32-e2fsprogs  lib32-glib2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 1623.00 KiB
+Packager        : Christian Hesse <arch@eworm.de>
+Build Date      : Fri 14 Jun 2019 04:16:04 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -8487,7 +9587,7 @@ Groups          : None
 Provides        : None
 Depends On      : lib32-glibc  xz
 Optional Deps   : None
-Required By     : lib32-libxml2
+Required By     : lib32-libtiff  lib32-libxml2  lib32-systemd  lib32-zstd
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -8509,7 +9609,7 @@ Groups          : None
 Provides        : None
 Depends On      : lib32-glibc  zlib
 Optional Deps   : None
-Required By     : lib32-libelf  lib32-libxml2  lib32-llvm-libs  lib32-nvidia-utils
+Required By     : lib32-freetype2  lib32-glib2  lib32-gnutls  lib32-libelf  lib32-libpng  lib32-libtiff  lib32-libxml2  lib32-llvm-libs  lib32-nss  lib32-nvidia-utils  lib32-zstd
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -8517,6 +9617,28 @@ Installed Size  : 98.00 KiB
 Packager        : Evangelos Foutras <evangelos@foutrelis.com>
 Build Date      : Fri 09 Nov 2018 04:31:09 PM PST
 Install Date    : Tue 25 Jun 2019 03:13:22 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : lib32-zstd
+Version         : 1.4.2-1
+Description     : Zstandard - Fast real-time compression algorithm (32-bit)
+Architecture    : x86_64
+URL             : https://www.zstd.net/
+Licenses        : BSD  GPL2
+Groups          : None
+Provides        : None
+Depends On      : zstd  lib32-zlib  lib32-xz  lib32-lz4
+Optional Deps   : None
+Required By     : lib32-libtiff
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 680.00 KiB
+Packager        : Levente Polyak <anthraxx@archlinux.org>
+Build Date      : Thu 01 Aug 2019 02:31:56 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:43 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -8840,7 +9962,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc  attr
 Optional Deps   : None
-Required By     : avahi  coreutils  gstreamer  inetutils  iputils  libpulse  pinentry  systemd  systemd-libs
+Required By     : avahi  coreutils  gstreamer  inetutils  iputils  lib32-libcap  libpulse  pinentry  systemd  systemd-libs
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -8906,7 +10028,7 @@ Groups          : None
 Provides        : None
 Depends On      : gnutls  libtiff>=4.0.0  libpng>=1.5.7  krb5  avahi  libusb
 Optional Deps   : None
-Required By     : chromium  cups  cups-filters  ghostscript  gtk2  gtk3  qt5-base
+Required By     : chromium  cups  cups-filters  ghostscript  gtk2  gtk3  lib32-libcups  qt5-base
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -8950,7 +10072,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc
 Optional Deps   : None
-Required By     : libthai
+Required By     : lib32-libdatrie  libthai
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -8958,6 +10080,50 @@ Installed Size  : 66.00 KiB
 Packager        : Jan de Groot <jgc@archlinux.org>
 Build Date      : Tue 19 Jun 2018 02:59:31 PM PDT
 Install Date    : Mon 24 Jun 2019 03:37:51 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libdbusmenu-glib
+Version         : 16.04.0-3
+Description     : Library for passing menus over DBus
+Architecture    : x86_64
+URL             : https://launchpad.net/libdbusmenu
+Licenses        : GPL3  LGPL2.1  LGPL3
+Groups          : None
+Provides        : None
+Depends On      : glib2
+Optional Deps   : None
+Required By     : lib32-libdbusmenu-glib  libdbusmenu-gtk2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 331.00 KiB
+Packager        : Evangelos Foutras <evangelos@foutrelis.com>
+Build Date      : Fri 09 Nov 2018 03:03:21 PM PST
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
+Name            : libdbusmenu-gtk2
+Version         : 16.04.0-3
+Description     : Library for passing menus over DBus (GTK+ 2 library)
+Architecture    : x86_64
+URL             : https://launchpad.net/libdbusmenu
+Licenses        : GPL3  LGPL2.1  LGPL3
+Groups          : None
+Provides        : None
+Depends On      : libdbusmenu-glib  gtk2
+Optional Deps   : None
+Required By     : lib32-libdbusmenu-gtk2
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 128.00 KiB
+Packager        : Evangelos Foutras <evangelos@foutrelis.com>
+Build Date      : Fri 09 Nov 2018 03:03:21 PM PST
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -9280,7 +10446,7 @@ Groups          : None
 Provides        : None
 Depends On      : libgpg-error
 Optional Deps   : None
-Required By     : chromium  cryptsetup  gcr  gnupg  gvim  keepassxc  libsecret  libxslt  sudo  systemd  systemd-libs
+Required By     : chromium  gcr  gnupg  gvim  keepassxc  lib32-libgcrypt  libsecret  libxslt  sudo  systemd  systemd-libs
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -9324,7 +10490,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc  sh
 Optional Deps   : None
-Required By     : gnupg  gpgme  libassuan  libgcrypt  libksba
+Required By     : gnupg  gpgme  lib32-libgpg-error  libassuan  libgcrypt  libksba
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -9381,7 +10547,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : libibus
-Version         : 1.5.20-2
+Version         : 1.5.21-1
 Description     : IBus support library
 Architecture    : x86_64
 URL             : https://github.com/ibus/ibus/wiki
@@ -9394,10 +10560,10 @@ Required By     : sdl2
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 54.52 MiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sat 30 Mar 2019 02:15:45 AM PDT
-Install Date    : Mon 24 Jun 2019 04:41:51 PM PDT
+Installed Size  : 54.57 MiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 23 Aug 2019 08:42:19 PM PDT
+Install Date    : Sat 24 Aug 2019 06:29:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -9456,7 +10622,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc
 Optional Deps   : None
-Required By     : ghostscript  vlc
+Required By     : ghostscript  lib32-libidn  vlc
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -9534,6 +10700,28 @@ Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
+Name            : libindicator-gtk2
+Version         : 12.10.1-8
+Description     : Set of symbols and convenience functions for Ayatana indicators (GTK+ 2 library)
+Architecture    : x86_64
+URL             : https://launchpad.net/libindicator
+Licenses        : GPL3
+Groups          : None
+Provides        : libindicator
+Depends On      : gtk2
+Optional Deps   : None
+Required By     : lib32-libindicator-gtk2
+Optional For    : None
+Conflicts With  : libindicator
+Replaces        : None
+Installed Size  : 98.00 KiB
+Packager        : Antonio Rojas <arojas@archlinux.org>
+Build Date      : Sun 25 Nov 2018 07:28:01 AM PST
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : No
+Validated By    : Signature
+
 Name            : libinput
 Version         : 1.14.0-2
 Description     : Input device management and event handling library
@@ -9568,7 +10756,7 @@ Groups          : None
 Provides        : libjpeg=8.2.2
 Depends On      : None
 Optional Deps   : None
-Required By     : chromium  gdk-pixbuf2  ghostscript  gst-plugins-base  i3lock-color  imlib2  jasper  jre-openjdk-headless  jre11-openjdk-headless  libtiff  libwebp  maim  poppler  qpdf  qt5-base  v4l-utils  zathura-pdf-mupdf
+Required By     : chromium  gdk-pixbuf2  ghostscript  gst-plugins-base  i3lock-color  imlib2  jasper  jre-openjdk-headless  jre11-openjdk-headless  lib32-libjpeg-turbo  libtiff  libwebp  maim  poppler  qpdf  qt5-base  v4l-utils  zathura-pdf-mupdf
 Optional For    : vlc
 Conflicts With  : None
 Replaces        : None
@@ -9612,7 +10800,7 @@ Groups          : None
 Provides        : None
 Depends On      : libsasl  e2fsprogs
 Optional Deps   : None
-Required By     : gconf  krb5  sudo
+Required By     : gconf  krb5  lib32-libldap  sudo
 Optional For    : gnupg
 Conflicts With  : None
 Replaces        : None
@@ -10002,7 +11190,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : libnghttp2
-Version         : 1.39.1-1
+Version         : 1.39.2-1
 Description     : Framing layer of HTTP/2 is implemented as a reusable C library
 Architecture    : x86_64
 URL             : https://nghttp2.org/
@@ -10015,10 +11203,10 @@ Required By     : curl
 Optional For    : None
 Conflicts With  : nghttp2<1.20.0-2
 Replaces        : None
-Installed Size  : 344.00 KiB
-Packager        : Jan de Groot <jgc@archlinux.org>
-Build Date      : Sat 15 Jun 2019 03:26:28 PM PDT
-Install Date    : Sat 10 Aug 2019 03:35:54 PM PDT
+Installed Size  : 345.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 16 Aug 2019 06:56:17 PM PDT
+Install Date    : Sat 24 Aug 2019 06:29:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -10363,7 +11551,7 @@ Groups          : None
 Provides        : None
 Depends On      : zlib  sh
 Optional Deps   : None
-Required By     : aribb24  cairo  freetype2  gdk-pixbuf2  ghostscript  gst-plugins-base  imagemagick  imlib2  jbig2dec  libcups  libwebp  maim  openjpeg2  qrencode
+Required By     : aribb24  cairo  freetype2  gdk-pixbuf2  ghostscript  gst-plugins-base  imagemagick  imlib2  jbig2dec  lib32-libpng  libcups  libwebp  maim  openjpeg2  qrencode
 Optional For    : vlc
 Conflicts With  : None
 Replaces        : None
@@ -10469,7 +11657,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : libraw
-Version         : 0.19.4-1
+Version         : 0.19.5-1
 Description     : A library for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, and others)
 Architecture    : x86_64
 URL             : https://www.libraw.org/
@@ -10484,8 +11672,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 1986.00 KiB
 Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Mon 05 Aug 2019 04:46:39 AM PDT
-Install Date    : Mon 05 Aug 2019 03:21:13 PM PDT
+Build Date      : Sat 24 Aug 2019 01:16:30 PM PDT
+Install Date    : Sat 24 Aug 2019 06:29:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -10821,10 +12009,10 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : libsynctex
-Version         : 2019.51075-2
+Version         : 2019.51075-3
 Description     : Library for synchronization between TeX files and resulting file
 Architecture    : x86_64
-URL             : http://tug.org/texlive/
+URL             : https://tug.org/texlive/
 Licenses        : GPL
 Groups          : None
 Provides        : None
@@ -10836,8 +12024,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 148.00 KiB
 Packager        : Evangelos Foutras <evangelos@foutrelis.com>
-Build Date      : Sun 30 Jun 2019 02:47:16 AM PDT
-Install Date    : Tue 09 Jul 2019 08:20:14 PM PDT
+Build Date      : Fri 23 Aug 2019 12:06:36 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -10874,7 +12062,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc
 Optional Deps   : None
-Required By     : gnutls  p11-kit
+Required By     : gnutls  lib32-libtasn1  p11-kit
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -10962,7 +12150,7 @@ Groups          : None
 Provides        : None
 Depends On      : libjpeg  zlib  xz  zstd
 Optional Deps   : freeglut: for using tiffgt
-Required By     : djvulibre  gdk-pixbuf2  ghostscript  imlib2  lcms2  libcups  libwebp  openjpeg2
+Required By     : djvulibre  gdk-pixbuf2  ghostscript  imlib2  lcms2  lib32-libtiff  libcups  libwebp  openjpeg2
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -11173,7 +12361,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : libuv
-Version         : 1.30.1-1
+Version         : 1.31.0-1
 Description     : Multi-platform support library with a focus on asynchronous I/O
 Architecture    : x86_64
 URL             : https://github.com/libuv/libuv
@@ -11186,10 +12374,10 @@ Required By     : cmake
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 500.00 KiB
+Installed Size  : 507.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Tue 02 Jul 2019 05:34:38 PM PDT
-Install Date    : Tue 02 Jul 2019 11:08:46 PM PDT
+Build Date      : Fri 09 Aug 2019 11:12:13 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -11447,7 +12635,7 @@ Groups          : None
 Provides        : None
 Depends On      : libxfixes  compositeproto
 Optional Deps   : None
-Required By     : gtk2  gtk3  maim  qt5-webkit
+Required By     : gtk2  gtk3  lib32-libxcomposite  maim  qt5-webkit
 Optional For    : obs-studio
 Conflicts With  : None
 Replaces        : None
@@ -11469,7 +12657,7 @@ Groups          : None
 Provides        : None
 Depends On      : libxfixes  libxrender
 Optional Deps   : gnome-themes-standard: fallback icon theme
-Required By     : alacritty  gtk2  gtk3  sdl2
+Required By     : alacritty  gtk2  gtk3  lib32-libxcursor  sdl2
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -11623,7 +12811,7 @@ Groups          : None
 Provides        : None
 Depends On      : libxext  inputproto
 Optional Deps   : None
-Required By     : alacritty  glew  gtk2  gtk3  libxtst  qt5-base  unclutter  xorg-xinput
+Required By     : alacritty  glew  gtk2  gtk3  lib32-libxi  libxtst  qt5-base  unclutter  xorg-xinput
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -11645,7 +12833,7 @@ Groups          : None
 Provides        : None
 Depends On      : libxext  xineramaproto
 Optional Deps   : None
-Required By     : dmenu  gtk2  gtk3  obs-studio  vlc  xdotool  xorg-xinput
+Required By     : dmenu  gtk2  gtk3  lib32-libxinerama  obs-studio  vlc  xdotool  xorg-xinput
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -11821,7 +13009,7 @@ Groups          : None
 Provides        : None
 Depends On      : libxext  libxrender  randrproto
 Optional Deps   : None
-Required By     : alacritty  gtk2  gtk3  maim  xorg-xrandr
+Required By     : alacritty  gtk2  gtk3  lib32-libxrandr  maim  xorg-xrandr
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -11843,7 +13031,7 @@ Groups          : None
 Provides        : None
 Depends On      : libx11>=1.3.4  renderproto
 Optional Deps   : None
-Required By     : cairo  libxcursor  libxft  libxrandr  qt5-base  sdl  sdl2  slop
+Required By     : cairo  lib32-libxrender  libxcursor  libxft  libxrandr  qt5-base  sdl  sdl2  slop
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -12098,10 +13286,10 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : linux
-Version         : 5.2.8.arch1-1
+Version         : 5.2.9.arch1-1
 Description     : The Linux kernel and modules
 Architecture    : x86_64
-URL             : https://git.archlinux.org/linux.git/log/?h=v5.2.8-arch1
+URL             : https://git.archlinux.org/linux.git/log/?h=v5.2.9-arch1
 Licenses        : GPL2
 Groups          : base
 Provides        : None
@@ -12111,10 +13299,10 @@ Required By     : nvidia
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 77.65 MiB
+Installed Size  : 77.66 MiB
 Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
-Build Date      : Fri 09 Aug 2019 02:35:07 PM PDT
-Install Date    : Sat 10 Aug 2019 03:35:58 PM PDT
+Build Date      : Fri 16 Aug 2019 04:28:51 AM PDT
+Install Date    : Sun 18 Aug 2019 04:35:43 AM PDT
 Install Reason  : Explicitly installed
 Install Script  : Yes
 Validated By    : Signature
@@ -12142,7 +13330,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : linux-firmware
-Version         : 20190717.bf13a71-1
+Version         : 20190815.07b925b-1
 Description     : Firmware files for Linux
 Architecture    : any
 URL             : https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary
@@ -12155,16 +13343,16 @@ Required By     : linux
 Optional For    : None
 Conflicts With  : linux-firmware-git  kernel26-firmware  ar9170-fw  iwlwifi-1000-ucode  iwlwifi-3945-ucode  iwlwifi-4965-ucode  iwlwifi-5000-ucode  iwlwifi-5150-ucode  iwlwifi-6000-ucode  rt2870usb-fw  rt2x00-rt61-fw  rt2x00-rt71w-fw
 Replaces        : kernel26-firmware  ar9170-fw  iwlwifi-1000-ucode  iwlwifi-3945-ucode  iwlwifi-4965-ucode  iwlwifi-5000-ucode  iwlwifi-5150-ucode  iwlwifi-6000-ucode  rt2870usb-fw  rt2x00-rt61-fw  rt2x00-rt71w-fw
-Installed Size  : 462.72 MiB
+Installed Size  : 464.80 MiB
 Packager        : Laurent Carlier <lordheavym@gmail.com>
-Build Date      : Mon 22 Jul 2019 12:45:52 AM PDT
-Install Date    : Mon 22 Jul 2019 05:58:24 PM PDT
+Build Date      : Thu 15 Aug 2019 11:17:26 PM PDT
+Install Date    : Sun 18 Aug 2019 04:35:39 AM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
 
 Name            : llvm
-Version         : 8.0.1-2
+Version         : 8.0.1-3
 Description     : Collection of modular and reusable compiler and toolchain technologies
 Architecture    : x86_64
 URL             : https://llvm.org/
@@ -12179,14 +13367,14 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 207.19 MiB
 Packager        : Juergen Hoetzel <juergen@archlinux.org>
-Build Date      : Thu 15 Aug 2019 01:20:11 PM PDT
-Install Date    : Fri 16 Aug 2019 01:36:16 AM PDT
+Build Date      : Sat 17 Aug 2019 01:22:58 PM PDT
+Install Date    : Sat 24 Aug 2019 06:29:53 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : llvm-libs
-Version         : 8.0.1-2
+Version         : 8.0.1-3
 Description     : LLVM runtime libraries
 Architecture    : x86_64
 URL             : https://llvm.org/
@@ -12201,8 +13389,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 70.74 MiB
 Packager        : Juergen Hoetzel <juergen@archlinux.org>
-Build Date      : Thu 15 Aug 2019 01:20:11 PM PDT
-Install Date    : Fri 16 Aug 2019 01:36:14 AM PDT
+Build Date      : Sat 17 Aug 2019 01:22:58 PM PDT
+Install Date    : Sat 24 Aug 2019 06:29:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -12249,6 +13437,28 @@ Build Date      : Sat 08 Dec 2018 01:56:29 AM PST
 Install Date    : Mon 24 Jun 2019 02:08:06 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
+Validated By    : Signature
+
+Name            : lsb-release
+Version         : 1.4-15
+Description     : LSB version query program
+Architecture    : any
+URL             : http://www.linuxbase.org/
+Licenses        : GPL2
+Groups          : None
+Provides        : None
+Depends On      : bash
+Optional Deps   : None
+Required By     : steam
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 17.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Mon 04 Jun 2018 06:46:06 AM PDT
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
+Install Reason  : Installed as a dependency for another package
+Install Script  : Yes
 Validated By    : Signature
 
 Name            : lua
@@ -12352,7 +13562,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc
 Optional Deps   : None
-Required By     : libarchive  systemd  systemd-libs  zstd
+Required By     : lib32-lz4  libarchive  systemd  systemd-libs  zstd
 Optional For    : mkinitcpio
 Conflicts With  : None
 Replaces        : None
@@ -13015,7 +14225,7 @@ Replaces        : None
 Installed Size  : 4.28 MiB
 Packager        : schuay <jakob.gruber@gmail.com>
 Build Date      : Mon 13 May 2019 12:13:22 PM PDT
-Install Date    : Sat 17 Aug 2019 06:04:49 PM PDT
+Install Date    : Sun 18 Aug 2019 06:10:20 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : Yes
 Validated By    : Signature
@@ -13030,7 +14240,7 @@ Groups          : None
 Provides        : None
 Depends On      : gmp
 Optional Deps   : None
-Required By     : gnutls  xorg-server
+Required By     : gnutls  lib32-nettle  xorg-server
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -13278,7 +14488,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc  sh
 Optional Deps   : None
-Required By     : discord  nss
+Required By     : discord  lib32-nspr  nss
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -13300,7 +14510,7 @@ Groups          : None
 Provides        : None
 Depends On      : nspr>=4.20  sqlite  zlib  sh  p11-kit
 Optional Deps   : None
-Required By     : chromium  discord  jre-openjdk-headless  jre11-openjdk-headless  jre8-openjdk-headless  libnm  pkcs11-helper  poppler  volume_key
+Required By     : chromium  discord  jre-openjdk-headless  jre11-openjdk-headless  jre8-openjdk-headless  lib32-nss  libnm  pkcs11-helper  poppler  steam  volume_key
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -13335,7 +14545,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : nvidia
-Version         : 430.40-4
+Version         : 430.40-5
 Description     : NVIDIA drivers for linux
 Architecture    : x86_64
 URL             : http://www.nvidia.com/
@@ -13350,8 +14560,8 @@ Conflicts With  : None
 Replaces        : None
 Installed Size  : 12.98 MiB
 Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
-Build Date      : Fri 09 Aug 2019 03:11:00 PM PDT
-Install Date    : Sat 10 Aug 2019 03:35:58 PM PDT
+Build Date      : Fri 16 Aug 2019 05:11:20 AM PDT
+Install Date    : Sun 18 Aug 2019 04:35:43 AM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -13574,7 +14784,7 @@ Groups          : None
 Provides        : None
 Depends On      : perl
 Optional Deps   : ca-certificates [installed]
-Required By     : coreutils  curl  git  iputils  kmod  ldns  libarchive  libsasl  libssh  libssh2  libtorrent  libzip  openssh  openvpn  pkcs11-helper  python  python2  s-nail  wpa_supplicant  zathura-pdf-mupdf
+Required By     : coreutils  cryptsetup  curl  git  iputils  kmod  ldns  lib32-openssl  libarchive  libsasl  libssh  libssh2  libtorrent  libzip  openssh  openvpn  pkcs11-helper  python  python2  s-nail  wpa_supplicant  zathura-pdf-mupdf
 Optional For    : glib-networking
 Conflicts With  : None
 Replaces        : None
@@ -13610,7 +14820,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : opera-ffmpeg-codecs
-Version         : 75.0.3770.142-1
+Version         : 76.0.3809.100-1
 Description     : additional support for proprietary codecs for opera
 Architecture    : x86_64
 URL             : https://ffmpeg.org/
@@ -13623,10 +14833,10 @@ Required By     : discord
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 4.12 MiB
+Installed Size  : 4.13 MiB
 Packager        : BlackEagle <ike DOT devolder AT gmail DOT com>
-Build Date      : Wed 07 Aug 2019 07:54:13 AM PDT
-Install Date    : Fri 09 Aug 2019 03:37:32 AM PDT
+Build Date      : Tue 20 Aug 2019 02:23:26 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -13685,7 +14895,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc  libtasn1  libffi  systemd
 Optional Deps   : None
-Required By     : ca-certificates-utils  gcr  gnutls  nss
+Required By     : ca-certificates-utils  gcr  gnutls  lib32-p11-kit  nss
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -13721,7 +14931,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : pacman-mirrorlist
-Version         : 20190614-1
+Version         : 20190821-1
 Description     : Arch Linux mirror list for use by pacman
 Architecture    : any
 URL             : https://www.archlinux.org/mirrorlist/
@@ -13734,10 +14944,10 @@ Required By     : pacman
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 28.00 KiB
+Installed Size  : 29.00 KiB
 Packager        : Florian Pritz <bluewind@xinu.at>
-Build Date      : Fri 14 Jun 2019 08:05:16 AM PDT
-Install Date    : Mon 24 Jun 2019 02:08:08 PM PDT
+Build Date      : Wed 21 Aug 2019 02:08:46 AM PDT
+Install Date    : Wed 21 Aug 2019 09:58:23 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -13787,7 +14997,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : pandoc
-Version         : 2.7.3-24
+Version         : 2.7.3-28
 Description     : Conversion between markup formats
 Architecture    : x86_64
 URL             : https://pandoc.org
@@ -13802,10 +15012,10 @@ Required By     : None
 Optional For    : None
 Conflicts With  : haskell-pandoc
 Replaces        : haskell-pandoc
-Installed Size  : 43.02 MiB
+Installed Size  : 42.94 MiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Wed 14 Aug 2019 10:43:44 PM PDT
-Install Date    : Thu 15 Aug 2019 09:35:58 PM PDT
+Build Date      : Fri 23 Aug 2019 11:28:59 AM PDT
+Install Date    : Sat 24 Aug 2019 06:29:54 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -13820,7 +15030,7 @@ Groups          : None
 Provides        : None
 Depends On      : libthai  cairo  libxft  harfbuzz  fribidi
 Optional Deps   : None
-Required By     : girara  gst-plugins-base  gtk2  gtk3  i3-gaps  librsvg  pangomm
+Required By     : girara  gst-plugins-base  gtk2  gtk3  i3-gaps  lib32-pango  librsvg  pangomm
 Optional For    : imagemagick
 Conflicts With  : None
 Replaces        : None
@@ -13855,7 +15065,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : papirus-icon-theme
-Version         : 20190802-1
+Version         : 20190817-1
 Description     : Papirus icon theme
 Architecture    : any
 URL             : https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
@@ -13868,10 +15078,10 @@ Required By     : None
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 66.79 MiB
+Installed Size  : 66.56 MiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Fri 02 Aug 2019 09:38:52 AM PDT
-Install Date    : Fri 02 Aug 2019 09:19:43 PM PDT
+Build Date      : Sat 17 Aug 2019 05:28:17 AM PDT
+Install Date    : Sun 18 Aug 2019 04:35:47 AM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -13952,7 +15162,7 @@ Groups          : None
 Provides        : None
 Depends On      : gcc-libs  readline  zlib  bzip2  bash
 Optional Deps   : None
-Required By     : glib2  grep  gvim  haskell-regex-pcre  less  net-snmp  slang  sord
+Required By     : glib2  grep  gvim  haskell-regex-pcre  less  lib32-pcre  net-snmp  slang  sord
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -14053,7 +15263,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : perl-alien-build
-Version         : 1.79-1
+Version         : 1.83-1
 Description     : Build external dependencies for use in CPAN
 Architecture    : any
 URL             : https://metacpan.org/release/Alien-Build
@@ -14066,10 +15276,10 @@ Required By     : perl-alien-libxml2
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 616.00 KiB
+Installed Size  : 634.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Tue 16 Jul 2019 01:01:50 AM PDT
-Install Date    : Sun 11 Aug 2019 10:07:24 PM PDT
+Build Date      : Tue 20 Aug 2019 07:11:19 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -14229,7 +15439,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : perl-error
-Version         : 0.17027-2
+Version         : 0.17028-1
 Description     : Perl/CPAN Error module - Error/exception handling in an OO-ish way
 Architecture    : any
 URL             : http://search.cpan.org/dist/Error/
@@ -14242,10 +15452,10 @@ Required By     : git
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 44.00 KiB
-Packager        : Evangelos Foutras <evangelos@foutrelis.com>
-Build Date      : Sat 25 May 2019 02:26:58 AM PDT
-Install Date    : Mon 24 Jun 2019 02:27:26 PM PDT
+Installed Size  : 45.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 23 Aug 2019 08:44:30 PM PDT
+Install Date    : Sat 24 Aug 2019 06:29:54 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -14857,7 +16067,7 @@ Groups          : None
 Provides        : None
 Depends On      : glibc
 Optional Deps   : None
-Required By     : cairo  xorg-server
+Required By     : cairo  lib32-pixman  xorg-server
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -15005,7 +16215,7 @@ Install Script  : Yes
 Validated By    : None
 
 Name            : poppler
-Version         : 0.79.0-1
+Version         : 0.80.0-1
 Description     : PDF rendering library based on xpdf 3.0
 Architecture    : x86_64
 URL             : https://poppler.freedesktop.org/
@@ -15016,34 +16226,34 @@ Depends On      : libjpeg  gcc-libs  cairo  fontconfig  openjpeg2  lcms2  nss  c
 Optional Deps   : poppler-data: encoding data to display PDF documents containing CJK characters
 Required By     : cups-filters  poppler-qt5
 Optional For    : None
-Conflicts With  : poppler-qt3<0.79.0  poppler-qt4<0.79.0
+Conflicts With  : poppler-qt3<0.80.0  poppler-qt4<0.80.0
 Replaces        : None
-Installed Size  : 4.93 MiB
+Installed Size  : 4.91 MiB
 Packager        : Andreas Radke <andyrtr@archlinux.org>
-Build Date      : Tue 16 Jul 2019 11:16:37 PM PDT
-Install Date    : Sat 20 Jul 2019 12:24:48 PM PDT
+Build Date      : Thu 22 Aug 2019 11:30:45 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:39 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : poppler-qt5
-Version         : 0.79.0-1
+Version         : 0.80.0-1
 Description     : Poppler Qt5 bindings
 Architecture    : x86_64
 URL             : https://poppler.freedesktop.org/
 Licenses        : GPL
 Groups          : None
 Provides        : None
-Depends On      : poppler=0.79.0  qt5-base
+Depends On      : poppler=0.80.0  qt5-base
 Optional Deps   : None
 Required By     : kfilemetadata
 Optional For    : krita
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 680.00 KiB
+Installed Size  : 681.00 KiB
 Packager        : Andreas Radke <andyrtr@archlinux.org>
-Build Date      : Tue 16 Jul 2019 11:16:37 PM PDT
-Install Date    : Sat 20 Jul 2019 12:24:48 PM PDT
+Build Date      : Thu 22 Aug 2019 11:30:45 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:40 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -15203,7 +16413,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : purpose
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Framework for providing abstractions to get the developer's purposes fulfilled
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -15218,10 +16428,10 @@ Required By     : kdenlive
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 1505.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 03:34:50 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Installed Size  : 1513.00 KiB
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 09:14:46 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -15452,7 +16662,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : python-setuptools
-Version         : 1:41.0.1-1
+Version         : 1:41.2.0-1
 Description     : Easily download, build, install, upgrade, and uninstall Python packages
 Architecture    : any
 URL             : https://pypi.org/project/setuptools/
@@ -15465,10 +16675,10 @@ Required By     : meson  youtube-dl
 Optional For    : llvm  python
 Conflicts With  : None
 Replaces        : python-distribute
-Installed Size  : 1573.00 KiB
+Installed Size  : 1575.00 KiB
 Packager        : Felix Yan <felixonmars@archlinux.org>
-Build Date      : Tue 23 Apr 2019 03:15:43 AM PDT
-Install Date    : Mon 24 Jun 2019 05:36:30 PM PDT
+Build Date      : Wed 21 Aug 2019 07:24:57 PM PDT
+Install Date    : Wed 21 Aug 2019 09:58:23 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -15530,7 +16740,7 @@ Optional Deps   : tk: for IDLE
                   python2-setuptools
                   python2-pip
 Required By     : gconf
-Optional For    : alsa-lib  git  gvim  libnewt  libproxy  net-snmp
+Optional For    : git  gvim  libnewt  libproxy  net-snmp
 Conflicts With  : python<3
 Replaces        : None
 Installed Size  : 75.43 MiB
@@ -15716,7 +16926,7 @@ Groups          : qt  qt5
 Provides        : None
 Depends On      : qt5-declarative
 Optional Deps   : None
-Required By     : kdenlive  kirigami2
+Required By     : kirigami2
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -15738,7 +16948,7 @@ Groups          : qt  qt5
 Provides        : None
 Depends On      : qt5-declarative
 Optional Deps   : qt5-graphicaleffects: for the Material style [installed]
-Required By     : kdenlive  kirigami2
+Required By     : kirigami2
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
@@ -16438,7 +17648,7 @@ Install Script  : Yes
 Validated By    : Signature
 
 Name            : signon-kwallet-extension
-Version         : 19.04.3-1
+Version         : 19.08.0-1
 Description     : KWallet integration for signon framework
 Architecture    : x86_64
 URL             : https://kde.org
@@ -16452,9 +17662,9 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 79.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Tue 09 Jul 2019 12:28:17 AM PDT
-Install Date    : Thu 11 Jul 2019 10:08:30 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Sun 11 Aug 2019 09:59:34 PM PDT
+Install Date    : Sat 24 Aug 2019 06:29:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -16592,7 +17802,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : solid
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Hardware integration and detection
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -16606,15 +17816,15 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 2.46 MiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:43:28 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:10 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:58:01 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:51 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : sonnet
-Version         : 5.60.0-1
+Version         : 5.61.0-1
 Description     : Spelling framework for Qt5
 Architecture    : x86_64
 URL             : https://community.kde.org/Frameworks
@@ -16631,9 +17841,9 @@ Optional For    : None
 Conflicts With  : None
 Replaces        : None
 Installed Size  : 1980.00 KiB
-Packager        : Antonio Rojas <arojas@archlinux.org>
-Build Date      : Sun 07 Jul 2019 02:40:54 PM PDT
-Install Date    : Mon 15 Jul 2019 04:20:09 PM PDT
+Packager        : Felix Yan <felixonmars@archlinux.org>
+Build Date      : Fri 09 Aug 2019 07:52:28 AM PDT
+Install Date    : Tue 20 Aug 2019 07:39:50 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -16780,7 +17990,7 @@ Groups          : None
 Provides        : sqlite3=3.29.0
 Depends On      : readline  zlib
 Optional Deps   : None
-Required By     : colord  gnupg  libaccounts-glib  libsoup  nss  python2  qt5-base  zathura
+Required By     : colord  gnupg  lib32-sqlite  libaccounts-glib  libsoup  nss  python2  qt5-base  zathura
 Optional For    : python
 Conflicts With  : None
 Replaces        : sqlite3
@@ -16837,23 +18047,23 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : steam
-Version         : 1.0.0.61-1
+Version         : 1.0.0.61-3
 Description     : Valve's digital software delivery system
 Architecture    : x86_64
-URL             : http://steampowered.com/
+URL             : https://steampowered.com/
 Licenses        : custom
 Groups          : None
 Provides        : None
-Depends On      : bash  desktop-file-utils  hicolor-icon-theme  curl  dbus  freetype2  gdk-pixbuf2  ttf-font  zenity  lib32-libgl  lib32-gcc-libs  lib32-libx11  lib32-libxss  lib32-alsa-plugins
+Depends On      : bash  desktop-file-utils  hicolor-icon-theme  curl  dbus  freetype2  gdk-pixbuf2  ttf-font  zenity  lsb-release  nss  lib32-libgl  lib32-gcc-libs  lib32-libx11  lib32-libxss  lib32-alsa-plugins  lib32-libgpg-error  lib32-libappindicator-gtk2  lib32-libindicator-gtk2  lib32-libdbusmenu-glib  lib32-libdbusmenu-gtk2  lib32-nss
 Optional Deps   : steam-native-runtime: steam native runtime support
 Required By     : None
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 3.00 MiB
+Installed Size  : 2.99 MiB
 Packager        : Levente Polyak <anthraxx@archlinux.org>
-Build Date      : Wed 22 May 2019 02:57:47 PM PDT
-Install Date    : Tue 25 Jun 2019 03:13:26 PM PDT
+Build Date      : Wed 21 Aug 2019 03:08:51 PM PDT
+Install Date    : Fri 23 Aug 2019 09:31:44 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -16949,7 +18159,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : systemd
-Version         : 242.84-1
+Version         : 242.84-2
 Description     : system and service manager
 Architecture    : x86_64
 URL             : https://www.github.com/systemd/systemd
@@ -16962,14 +18172,14 @@ Optional Deps   : libmicrohttpd: remote journald capabilities
                   systemd-sysvcompat: symlink package to provide sysvinit binaries [installed]
                   polkit: allow administration as unprivileged user [installed]
                   curl: machinectl pull-tar and pull-raw [installed]
-Required By     : chromium  colord  cups  cups-filters  dhcpcd  libinput  libpulse  libwacom  media-player-info  mkinitcpio  netctl  p11-kit  polkit  rtkit  systemd-boot-pacman-hook  systemd-sysvcompat  upower
+Required By     : chromium  colord  cups  cups-filters  dhcpcd  lib32-systemd  libinput  libpulse  libwacom  media-player-info  mkinitcpio  netctl  p11-kit  polkit  rtkit  systemd-boot-pacman-hook  systemd-sysvcompat  upower
 Optional For    : None
 Conflicts With  : nss-myhostname  systemd-tools  udev
 Replaces        : nss-myhostname  systemd-tools  udev
 Installed Size  : 20.60 MiB
-Packager        : Christian Hesse <arch@eworm.de>
-Build Date      : Sat 20 Jul 2019 12:55:38 PM PDT
-Install Date    : Mon 22 Jul 2019 05:58:19 PM PDT
+Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Build Date      : Tue 13 Aug 2019 06:29:09 AM PDT
+Install Date    : Sun 18 Aug 2019 04:35:34 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : Yes
 Validated By    : Signature
@@ -16997,7 +18207,7 @@ Install Script  : No
 Validated By    : None
 
 Name            : systemd-libs
-Version         : 242.84-1
+Version         : 242.84-2
 Description     : systemd client libraries
 Architecture    : x86_64
 URL             : https://www.github.com/systemd/systemd
@@ -17011,15 +18221,15 @@ Optional For    : vlc
 Conflicts With  : libsystemd
 Replaces        : libsystemd
 Installed Size  : 1816.00 KiB
-Packager        : Christian Hesse <arch@eworm.de>
-Build Date      : Sat 20 Jul 2019 12:55:38 PM PDT
-Install Date    : Mon 22 Jul 2019 05:58:19 PM PDT
+Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Build Date      : Tue 13 Aug 2019 06:29:09 AM PDT
+Install Date    : Sun 18 Aug 2019 04:35:34 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : systemd-sysvcompat
-Version         : 242.84-1
+Version         : 242.84-2
 Description     : sysvinit compat for systemd
 Architecture    : x86_64
 URL             : https://www.github.com/systemd/systemd
@@ -17033,9 +18243,9 @@ Optional For    : systemd
 Conflicts With  : sysvinit
 Replaces        : None
 Installed Size  : 5.00 KiB
-Packager        : Christian Hesse <arch@eworm.de>
-Build Date      : Sat 20 Jul 2019 12:55:38 PM PDT
-Install Date    : Mon 22 Jul 2019 05:58:31 PM PDT
+Packager        : Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Build Date      : Tue 13 Aug 2019 06:29:09 AM PDT
+Install Date    : Sun 18 Aug 2019 04:35:47 AM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -17349,7 +18559,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : ttf-twemoji
-Version         : 11.3.0-2
+Version         : 12.1.2-1
 Description     : Twitter Emoji for everyone.
 Architecture    : any
 URL             : https://github.com/twitter/twemoji
@@ -17362,10 +18572,10 @@ Required By     : None
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 2.08 MiB
+Installed Size  : 2.64 MiB
 Packager        : Unknown Packager
-Build Date      : Tue 13 Aug 2019 11:13:18 PM PDT
-Install Date    : Tue 13 Aug 2019 11:13:20 PM PDT
+Build Date      : Fri 23 Aug 2019 09:32:12 PM PDT
+Install Date    : Fri 23 Aug 2019 09:32:14 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : Yes
 Validated By    : None
@@ -17604,7 +18814,7 @@ Provides        : rfkill
 Depends On      : pam  shadow  coreutils  systemd-libs  libcap-ng  libutil-linux
 Optional Deps   : python: python bindings to libmount [installed]
                   words: default dictionary for look
-Required By     : fakeroot  jfsutils  mkinitcpio  reiserfsprogs  systemd  zeromq
+Required By     : fakeroot  jfsutils  lib32-util-linux  mkinitcpio  reiserfsprogs  systemd  zeromq
 Optional For    : None
 Conflicts With  : rfkill
 Replaces        : rfkill
@@ -17729,7 +18939,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : vim-runtime
-Version         : 8.1.1776-1
+Version         : 8.1.1906-1
 Description     : Vi Improved, a highly configurable, improved version of the vi text editor (shared runtime)
 Architecture    : x86_64
 URL             : https://www.vim.org
@@ -17744,16 +18954,16 @@ Required By     : gvim
 Optional For    : None
 Conflicts With  : None
 Replaces        : None
-Installed Size  : 29.13 MiB
+Installed Size  : 29.17 MiB
 Packager        : Levente Polyak <anthraxx@archlinux.org>
-Build Date      : Mon 29 Jul 2019 01:38:53 PM PDT
-Install Date    : Tue 30 Jul 2019 12:58:14 AM PDT
+Build Date      : Wed 21 Aug 2019 11:00:45 AM PDT
+Install Date    : Wed 21 Aug 2019 09:58:23 PM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
 
 Name            : vlc
-Version         : 3.0.7.1-3
+Version         : 3.0.8-1
 Description     : Multi-platform MPEG, VCD/DVD, and DivX player
 Architecture    : x86_64
 URL             : https://www.videolan.org/vlc/
@@ -17828,10 +19038,10 @@ Required By     : phonon-qt5-vlc
 Optional For    : kdenlive  obs-studio
 Conflicts With  : vlc-plugin
 Replaces        : vlc-plugin
-Installed Size  : 59.82 MiB
+Installed Size  : 59.81 MiB
 Packager        : Levente Polyak <anthraxx@archlinux.org>
-Build Date      : Thu 08 Aug 2019 02:51:00 PM PDT
-Install Date    : Sat 10 Aug 2019 03:35:58 PM PDT
+Build Date      : Wed 21 Aug 2019 11:26:38 AM PDT
+Install Date    : Wed 21 Aug 2019 09:58:24 PM PDT
 Install Reason  : Explicitly installed
 Install Script  : No
 Validated By    : Signature
@@ -18484,7 +19694,7 @@ Install Script  : No
 Validated By    : Signature
 
 Name            : xf86-input-libinput
-Version         : 0.28.2-1
+Version         : 0.29.0-1
 Description     : Generic input driver for the X.Org server based on libinput
 Architecture    : x86_64
 URL             : http://xorg.freedesktop.org/
@@ -18498,9 +19708,9 @@ Optional For    : None
 Conflicts With  : xorg-server<1.19.0  X-ABI-XINPUT_VERSION<24  X-ABI-XINPUT_VERSION>=25
 Replaces        : None
 Installed Size  : 155.00 KiB
-Packager        : Andreas Radke <andyrtr@archlinux.org>
-Build Date      : Mon 04 Feb 2019 11:50:03 AM PST
-Install Date    : Mon 24 Jun 2019 03:39:05 PM PDT
+Packager        : Laurent Carlier <lordheavym@gmail.com>
+Build Date      : Mon 12 Aug 2019 11:26:57 AM PDT
+Install Date    : Sun 18 Aug 2019 04:35:43 AM PDT
 Install Reason  : Installed as a dependency for another package
 Install Script  : No
 Validated By    : Signature
@@ -18935,7 +20145,7 @@ Groups          : None
 Provides        : bigreqsproto  compositeproto  damageproto  dmxproto  dri2proto  dri3proto  fixesproto  fontsproto  glproto  inputproto  kbproto  presentproto  printproto  randrproto  recordproto  renderproto  resourceproto  scrnsaverproto  videoproto  xcmiscproto  xextproto  xf86dgaproto  xf86driproto  xf86miscproto  xf86vidmodeproto  xineramaproto  xproto
 Depends On      : None
 Optional Deps   : None
-Required By     : libice  libx11  libxau  libxcomposite  libxdamage  libxdmcp  libxext  libxfixes  libxfont2  libxi  libxinerama  libxrandr  libxrender  libxss  libxtst  libxv  libxxf86vm
+Required By     : lib32-libxi  libice  libx11  libxau  libxcomposite  libxdamage  libxdmcp  libxext  libxfixes  libxfont2  libxi  libxinerama  libxrandr  libxrender  libxss  libxtst  libxv  libxxf86vm
 Optional For    : None
 Conflicts With  : bigreqsproto  compositeproto  damageproto  dmxproto  dri2proto  dri3proto  fixesproto  fontsproto  glproto  inputproto  kbproto  presentproto  printproto  randrproto  recordproto  renderproto  resourceproto  scrnsaverproto  videoproto  xcmiscproto  xextproto  xf86dgaproto  xf86driproto  xf86miscproto  xf86vidmodeproto  xineramaproto  xproto
 Replaces        : bigreqsproto  compositeproto  damageproto  dmxproto  dri2proto  dri3proto  fixesproto  fontsproto  glproto  inputproto  kbproto  presentproto  printproto  randrproto  recordproto  renderproto  resourceproto  scrnsaverproto  videoproto  xcmiscproto  xextproto  xf86dgaproto  xf86driproto  xf86miscproto  xf86vidmodeproto  xineramaproto  xproto
@@ -19426,7 +20636,7 @@ Groups          : None
 Provides        : None
 Depends On      : zlib  xz  lz4
 Optional Deps   : None
-Required By     : btrfs-progs  libarchive  libtiff
+Required By     : btrfs-progs  lib32-zstd  libarchive  libtiff
 Optional For    : None
 Conflicts With  : None
 Replaces        : None

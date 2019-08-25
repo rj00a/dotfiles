@@ -1,0 +1,4 @@
+
+dashboard -layout source stack threads variables
+dashboard source -style height 30
+# vim: set syntax=gdb:

@@ -19,6 +19,8 @@ cfg alacritty.yml ~/.config/
 cfg vlcrc ~/.config/vlc/
 cfg .nethackrc ~/
 cfg .inputrc ~/
+cfg .gdbinit.d ~/
+cfg gdb-dashboard/.gdbinit ~/
 
 sudo systemctl enable NetworkManager
 sudo systemctl enable org.cups.cupsd

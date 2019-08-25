@@ -25,3 +25,6 @@
 [submodule "files/.vim/bundle/vim-vinegar"]
 	path = files/.vim/bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar
+[submodule "files/gdb-dashboard"]
+	path = files/gdb-dashboard
+	url = https://github.com/cyrus-and/gdb-dashboard.git
