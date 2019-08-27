@@ -8,13 +8,6 @@ shopt -s autocd
 # When the shell exits, append to the history file instead of overwriting it
 shopt -s histappend
 
-# After each command, append to the history file and reread it
-#export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-
-# After each command, append to the history file and reread it
-unset PROMPT_COMMAND
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-
 # Make autocomplete use colors
 bind 'set colored-stats on'
 
