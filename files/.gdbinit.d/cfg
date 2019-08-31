@@ -1,4 +1,5 @@
 
 dashboard -layout source stack threads variables
 dashboard source -style height 30
+set history save off
 # vim: set syntax=gdb:
