@@ -16,10 +16,8 @@ set formatoptions=q
 " Set column limit for formatting with 'gq'
 set textwidth=100
 
-" Do not put the cursor back at the first column when typing '#' in .c files
+" Do not move the cursor to the first column when typing '#' in .c files
 set cinkeys=0{,0},0),:,!^F,o,O,e
-
-" Note: The vim-cool plugin automatically disables hlsearch when you are done searching
 
 " Incremental Search
 " Jumps to the next match as you type
@@ -120,7 +118,11 @@ set listchars=tab:>\ ,space:\ ,trail:-
 "set expandtab
 
 " Set lisp mode for emacs lisp
-autocmd Filetype el setlocal lisp
+au Filetype el setlocal lisp
+
+" Save cursor position in buffer when switching buffers
+au BufLeave * let b:winview = winsaveview()
+au BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
 
 " Tabs appear 4 spaces wide
 set tabstop=4
@@ -135,7 +137,7 @@ set autoindent
 let g:zig_fmt_autosave = 0
 
 " Set expandtab for .zig files only
-autocmd FileType zig setlocal expandtab
+au FileType zig setlocal expandtab
 
 " Execute .vimrc file in current directory automatically
 set exrc
@@ -155,6 +157,12 @@ mapclear
 
 " Map Y to be consistent with C and D
 noremap Y y$
+
+" Disable search highlight when moving if not using a plugin like vim-cool.
+nnoremap <silent> h :noh<cr>h
+nnoremap <silent> k :noh<cr>k
+nnoremap <silent> j :noh<cr>j
+nnoremap <silent> l :noh<cr>l
 
 " Session slots
 " TODO: Proper directory on windows/macos?
@@ -226,61 +234,23 @@ syntax on
 "set guifont=Inconsolata\ 11.5
 set guifont=Ubuntu\ Mono\ 12
 
-" Colorschemes are located in ~/.vim/colors/
-let which_colo = 'alduin'
+"" Colorscheme
+" Darker background
+let g:alduin_Shout_Dragon_Aspect = 1
 
-if which_colo == 'alduin'
-	" Darker background
-	let g:alduin_Shout_Dragon_Aspect = 1
+" Use underline matchparens instead of block
+let g:alduin_Shout_Aura_Whisper = 1
 
-	" Use underline matchparens instead of block
-	let g:alduin_Shout_Aura_Whisper = 1
+" Disable string background highlight
+let g:alduin_Shout_Animal_Allegiance = 1
 
-	" Disable string background highlight
-	let g:alduin_Shout_Animal_Allegiance = 1
+colo alduin
 
-	colo alduin
+" Make the cursor number line the same as the others
+hi CursorLineNR guifg=#020202 guibg=#444444
 
-	" Make the cursor number line the same as the others
-	hi CursorLineNR guifg=#020202 guibg=#444444
-
-	" Black and white cursor in gvim
-	"hi Cursor guifg=#000000 guibg=#ffffff
-
-	" Yellow cursor in gvim
-	hi Cursor guifg=#ffff00 guibg=#af0000
-
-elseif which_colo == 'arcadia'
-	" Darker background
-	let g:arcadia_Twilight = 1
-
-	colo arcadia
-
-	" Use underline matchparens instead of block
-	hi MatchParen guifg=#eeeeee guibg=#1c1c1c gui=underline ctermfg=255 ctermbg=234 cterm=underline
-
-elseif which_colo == 'despacio'
-	" Darker background
-	let g:despacio_Twilight = 1
-
-	colo despacio
-
-	" Use underline matchparens instead of block
-	hi MatchParen guifg=#eeeeee guibg=#1c1c1c gui=underline ctermfg=255 ctermbg=234 cterm=underline
-
-elseif which_colo == 'sierra'
-	" Darker background
-	let g:sierra_Twilight = 1
-
-	" Use underline matchparens instead of block
-	let g:sierra_Nevada = 1
-
-	colo sierra
-
-elseif which_colo == 'hybrid'
-	colo elflord " Set this first to work around a bug
-	colo hybrid
-endif
+" Red and black cursor in gvim
+hi Cursor guifg=#000000 guibg=#ff0000
 
 " Load vim-pathogen
 execute pathogen#infect()
