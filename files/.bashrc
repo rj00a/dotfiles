@@ -1,6 +1,9 @@
 # Extended globbing. Lots of cool stuff
 shopt -s extglob
 
+# Include hidden items in globs
+shopt -s dotglob
+
 # Can change the working directory without using 'cd'
 # Annoyingly echoes to stdout though
 shopt -s autocd
@@ -23,6 +26,9 @@ export BROWSER=chromium
 # Ignore duplicate entries in command history
 export HISTCONTROL=ignoreboth:erasedups
 
+# Sets the timezone for the `date` command
+export TZ=America/Los_Angeles
+
 # Allows use of the 'z' command
 # Installed with the 'z' pacman package (community repo)
 source /usr/share/z/z.sh
@@ -34,13 +40,19 @@ alias nethack='nethack -d ~/games/nethack-playground'
 alias ls='ls -A --color=auto --group-directories-first'
 
 # List lots of stuff
-alias la='ls -oA --color=auto'
+alias la='ls -oA --block-size=MiB --color=auto'
+
+alias grep='grep --color=AUTO'
 
 alias view='vim -R'
 
 #alias fm='vifm'
 
+alias ds='du --summarize --human-readable'
+
 alias tra='trash'
+alias tra-clear='trash-clear'
+alias tra-empty='trash-empty'
 
 alias gv='gvim'
 
@@ -52,7 +64,7 @@ alias tou='touch'
 alias sm='mv -i'
 
 # Safe copy, prompt before overwriting
-alias sc='cp -i'
+alias sc='cp -ri'
 
 # BitTorrent Curses Interface
 alias rtor='rtorrent'
@@ -134,6 +146,19 @@ panv() {
 		return 2
 	fi
 	$BROWSER "$tmp"
+}
+
+# Open zathura on file, disown it, and quit.
+# Error out if file does not exit
+zath() {
+	# If file does not exist
+	if [ ! -f "$1" ]; then 
+		errcho "Unknown file $1"
+		return 1
+	fi
+	zathura "$1" &
+	disown
+	exit 0
 }
 
 # Run 'dd' with some sensible defaults and a confirmation prompt
