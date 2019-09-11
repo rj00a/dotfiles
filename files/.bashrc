@@ -156,8 +156,7 @@ zath() {
 		errcho "Unknown file $1"
 		return 1
 	fi
-	zathura "$1" &
-	disown
+	zathura "$1" & disown
 	exit 0
 }
 
@@ -167,12 +166,17 @@ ezdd() {
 		errcho "Expected two arguments (input and output file). Found $# arguments."
 		return 2
 	fi
-	read -r -n 1 -p "Are you sure you want to write \"$1\" to \"$2\"? [y/N] "
+	read -rn 1 -p "Are you sure you want to write \"$1\" to \"$2\"? [y/N] "
 	echo
 	if [[ "$REPLY" =~ ^[yY]$ ]]; then
 		sudo dd bs=1M if="$1" of="$2" status=progress
 	else
 		return 1
 	fi
+}
+
+# Run a program, disown it, send stdout and stderr to /dev/null
+runbg() {
+	"$1" </dev/null &>/dev/null $@ &
 }
 
