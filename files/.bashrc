@@ -177,6 +177,6 @@ ezdd() {
 
 # Run a program, disown it, send stdout and stderr to /dev/null
 runbg() {
-	"$1" </dev/null &>/dev/null $@ &
+	"$1" </dev/null &>/dev/null ${@:2} &
 }
 
