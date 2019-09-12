@@ -1,12 +1,8 @@
-# Extended globbing. Lots of cool stuff
+# Extended globbing.
 shopt -s extglob
 
 # Include hidden items in globs
 shopt -s dotglob
-
-# Can change the working directory without using 'cd'
-# Annoyingly echoes to stdout though
-shopt -s autocd
 
 # When the shell exits, append to the history file instead of overwriting it
 shopt -s histappend
