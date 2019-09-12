@@ -37,6 +37,7 @@ breeze-default-cursor-theme
 breeze-icons
 brotli
 btrfs-progs
+bubblewrap
 bzip2
 ca-certificates
 ca-certificates-mozilla
@@ -565,6 +566,7 @@ libvorbis
 libvpx
 libwacom
 libwebp
+libwpe
 libx11
 libxau
 libxcb
@@ -669,6 +671,7 @@ opera-ffmpeg-codecs
 opus
 orc
 p11-kit
+p7zip
 pacman
 pacman-mirrorlist
 pam
@@ -682,6 +685,7 @@ patch
 pciutils
 pcre
 pcre2
+peg
 perf
 perl
 perl-algorithm-diff
@@ -739,6 +743,7 @@ pulseaudio-alsa
 pulsemixer
 purpose
 pygobject-devel
+pypy3
 python
 python-appdirs
 python-attrs
@@ -782,6 +787,7 @@ rtkit
 rtorrent
 rttr
 run-parts
+rustup
 s-nail
 sbc
 sdl
@@ -821,7 +827,6 @@ systemd-libs
 systemd-sysvcompat
 taglib
 tar
-tcc
 tdb
 texinfo
 thin-provisioning-tools
@@ -830,7 +835,14 @@ tree
 tslib
 ttf-dejavu
 ttf-inconsolata
-ttf-ms-fonts
+ttf-ms-win10
+ttf-ms-win10-japanese
+ttf-ms-win10-korean
+ttf-ms-win10-other
+ttf-ms-win10-sea
+ttf-ms-win10-thai
+ttf-ms-win10-zh_cn
+ttf-ms-win10-zh_tw
 ttf-opensans
 ttf-roboto
 ttf-twemoji
@@ -866,6 +878,7 @@ wget
 which
 woff2
 wpa_supplicant
+wpebackend-fdo
 wxgtk-common
 wxgtk3
 x264
@@ -879,6 +892,7 @@ xcb-util-renderutil
 xcb-util-wm
 xcb-util-xrm
 xclip
+xdg-dbus-proxy
 xdg-utils
 xdotool
 xf86-input-libinput
