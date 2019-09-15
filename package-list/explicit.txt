@@ -115,7 +115,6 @@ psmisc
 pulseaudio
 pulseaudio-alsa
 pulsemixer
-pypy3
 reflector
 reiserfsprogs
 ripgrep
@@ -176,5 +175,4 @@ zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
 zathura-ps
-zig-git
 zip
