@@ -121,8 +121,8 @@ set listchars=tab:>\ ,space:\ ,trail:-
 au Filetype el setlocal lisp
 
 " Save cursor position in buffer when switching buffers
-au BufLeave * let b:winview = winsaveview()
-au BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
+"au BufLeave * let b:winview = winsaveview()
+"au BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
 
 " Tabs appear 4 spaces wide
 set tabstop=4
@@ -176,15 +176,18 @@ nnoremap <leader># :so ~/.vim/sessions/3.vim<cr>
 " Edit vimrc
 noremap <leader>- :e ~/.vim/vimrc<cr>
 
-" Copy line into command buffer and run it
+" Copy line (or selection) into command buffer and run it
 nnoremap <leader>= yy:<c-r>"<bs><cr>
 vnoremap <leader>= y:<c-r>"<cr>
 
 " Delete trailing whitespace in buffer
 nnoremap <leader>0 :%s/\s\+$//\|:noh<cr><c-o>
 
+" Toggle spell checking locally
+nnoremap <leader>9 :setlocal spell!<cr>
+
 " Run zig fmt on current file
-noremap <leader>9 :up\|!zig fmt %<cr>
+nnoremap <leader>8 :up\|!zig fmt %<cr>
 
 " Disable the annoying message in the command line when using Ctrl-c
 nnoremap <c-c> <silent> <c-c>
