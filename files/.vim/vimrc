@@ -1,3 +1,18 @@
+" Plugin management with vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf.vim'
+Plug 'tmhedberg/matchit'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'moll/vim-bbye'
+Plug 'romainl/vim-cool'
+Plug 'google/vim-searchindex'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+Plug 'ziglang/zig.vim'
+" TODO: try git plugin, rust plugin,
+call plug#end()
+
 " Clear search buffer when sourcing this file
 let @/ = ""
 
@@ -254,12 +269,6 @@ hi CursorLineNR guifg=#020202 guibg=#444444
 
 " Red and black cursor in gvim
 hi Cursor guifg=#000000 guibg=#ff0000
-
-" Load vim-pathogen
-execute pathogen#infect()
-
-" Load helptags
-Helptags
 
 " Search for file with fzf
 nnoremap <silent> <leader>f :Files<cr>

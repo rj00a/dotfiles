@@ -1,30 +1,6 @@
-[submodule "files/.vim/bundle/fzf.vim"]
-	path = files/.vim/bundle/fzf.vim
-	url = https://github.com/junegunn/fzf.vim
-[submodule "files/.vim/bundle/matchit"]
-	path = files/.vim/bundle/matchit
-	url = https://github.com/tmhedberg/matchit
-[submodule "files/.vim/bundle/vim-airline"]
-	path = files/.vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline
-[submodule "files/.vim/bundle/vim-airline-themes"]
-	path = files/.vim/bundle/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes
-[submodule "files/.vim/bundle/vim-bbye"]
-	path = files/.vim/bundle/vim-bbye
-	url = https://github.com/moll/vim-bbye
-[submodule "files/.vim/bundle/vim-surround"]
-	path = files/.vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround
-[submodule "files/.vim/bundle/zig.vim"]
-	path = files/.vim/bundle/zig.vim
-	url = https://github.com/ziglang/zig.vim
-[submodule "files/.vim/bundle/vim-vinegar"]
-	path = files/.vim/bundle/vim-vinegar
-	url = https://github.com/tpope/vim-vinegar
 [submodule "files/gdb-dashboard"]
 	path = files/gdb-dashboard
 	url = https://github.com/cyrus-and/gdb-dashboard.git
-[submodule "files/.vim/bundle/vim-searchindex"]
-	path = files/.vim/bundle/vim-searchindex
-	url = https://github.com/google/vim-searchindex
+[submodule "files/vim-plug"]
+	path = files/vim-plug
+	url = https://github.com/junegunn/vim-plug
