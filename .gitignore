@@ -4,6 +4,6 @@ files/.vim/plugged/
 files/.vim/autoload/plug.vim
 
 # Just in case
-*.pem
-*.bash_history
-*.netrwhist
+**/*.pem
+**/*.bash_history
+**/*.netrwhist

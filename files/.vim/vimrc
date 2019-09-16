@@ -10,6 +10,7 @@ Plug 'google/vim-searchindex'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'ziglang/zig.vim'
+Plug 'rust-lang/rust.vim'
 " TODO: try git plugin, rust plugin,
 call plug#end()
 
@@ -25,8 +26,9 @@ set numberwidth=2
 " Disable visual line wrap
 "set nowrap
 
-" Set formatoptions (see :help fo-table)
-set formatoptions=q
+" Set formatoptions (see :h fo-table)
+" formatoptions are being overwritten from somewhere, so I'm using an autocommand as a workaround
+autocmd BufNewFile,BufRead * setlocal formatoptions=q
 
 " Set column limit for formatting with 'gq'
 set textwidth=100
