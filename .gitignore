@@ -2,6 +2,7 @@ files/.vim/sessions
 files/.vim/netrwhist
 files/.vim/plugged/
 files/.vim/autoload/plug.vim
+files/.vim/view
 
 # Just in case
 **/*.pem
