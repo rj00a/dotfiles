@@ -103,13 +103,13 @@ set lazyredraw
 " Place backup, swap, and undo files in a dedicated 'temp' directory
 " instead of the same directory the file is located in
 if has("win32")
-	set directory=$TEMP,c:\tmp,c:\temp
-	set backupdir=$TEMP,c:\tmp,c:\temp
-	set undodir=$TEMP,c:\tmp,c:\temp
+    set directory=$TEMP,c:\tmp,c:\temp
+    set backupdir=$TEMP,c:\tmp,c:\temp
+    set undodir=$TEMP,c:\tmp,c:\temp
 else
-	set directory=~/tmp,/var/tmp,/tmp
-	set backupdir=~/tmp,/var/tmp,/tmp
-	set undodir=~/tmp,/var/tmp,/tmp
+    set directory=~/tmp,/var/tmp,/tmp
+    set backupdir=~/tmp,/var/tmp,/tmp
+    set undodir=~/tmp,/var/tmp,/tmp
 endif
 
 " Disable swap files, because we have version control anyway
@@ -131,9 +131,6 @@ set backspace=indent,eol,start
 set list
 set listchars=tab:>\ ,space:\ ,trail:-
 
-" Tab key inserts spaces instead of \t
-"set expandtab
-
 " Set lisp mode for emacs lisp
 au Filetype el setlocal lisp
 
@@ -141,11 +138,11 @@ au Filetype el setlocal lisp
 "au BufLeave * let b:winview = winsaveview()
 "au BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
 
-" Tabs appear 4 spaces wide
+" Pressing tab inserts four spaces
+" Hard tabs appear four spaces wide
 set tabstop=4
-
-" Tabs count as 4 spaces
 set shiftwidth=4
+set expandtab
 
 " Copy indent from current line when starting new line
 set autoindent
