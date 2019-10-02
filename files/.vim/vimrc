@@ -9,7 +9,7 @@ Plug 'romainl/vim-cool'
 Plug 'google/vim-searchindex'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
-Plug 'ziglang/zig.vim'
+"Plug 'ziglang/zig.vim'
 Plug 'rust-lang/rust.vim'
 " TODO: try git plugin, rust plugin,
 call plug#end()
@@ -150,9 +150,6 @@ set autoindent
 " Don't run zig fmt after saving
 let g:zig_fmt_autosave = 0
 
-" Set expandtab for .zig files only
-au FileType zig setlocal expandtab
-
 " Execute .vimrc file in current directory automatically
 set exrc
 
@@ -187,12 +184,15 @@ nnoremap <leader>@ :so ~/.vim/sessions/2.vim<cr>
 nnoremap <leader>3 :wa\|mksession! ~/.vim/sessions/3.vim<cr>
 nnoremap <leader># :so ~/.vim/sessions/3.vim<cr>
 
+" Source .vimrc
+nnoremap <leader>- :source $MYVIMRC\|AirlineToggle\|AirlineToggle<cr>
+
 " Edit vimrc
-noremap <leader>- :e ~/.vim/vimrc<cr>
+noremap <leader>= :e $MYVIMRC\|set ft=vim<cr>
 
 " Copy line (or selection) into command buffer and run it
-nnoremap <leader>= yy:<c-r>"<bs><cr>
-vnoremap <leader>= y:<c-r>"<cr>
+"nnoremap <leader>- yy:<c-r>"<bs><cr>
+"vnoremap <leader>- y:<c-r>"<cr>
 
 " Delete trailing whitespace in buffer
 nnoremap <leader>0 :%s/\s\+$//\|:noh<cr><c-o>
@@ -201,7 +201,7 @@ nnoremap <leader>0 :%s/\s\+$//\|:noh<cr><c-o>
 nnoremap <leader>9 :setlocal spell!<cr>
 
 " Run zig fmt on current file
-nnoremap <leader>8 :up\|!zig fmt %<cr>
+"nnoremap <leader>8 :up\|!zig fmt %<cr>
 
 " Disable the annoying message in the command line when using Ctrl-c
 nnoremap <c-c> <silent> <c-c>
@@ -213,7 +213,7 @@ noremap <silent> <leader>w :up<cr>
 " Open vertical terminal
 noremap <silent> <leader>t :vert term<cr>
 
-" Don't let the terminal interupt buffer switching
+" Don't let the integrated terminal interupt buffer switching
 tnoremap <silent> <c-j> <c-w>:bn<cr>
 tnoremap <silent> <c-k> <c-w>:bp<cr>
 
@@ -336,4 +336,5 @@ let g:fzf_colors =
 \ 'marker': ['fg', 'Keyword'],
 \ 'spinner': ['fg', 'Label'],
 \ 'header': ['fg', 'Comment'] }
+
 
