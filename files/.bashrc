@@ -36,9 +36,9 @@ alias nethack='nethack -d ~/games/nethack-playground'
 alias ls='ls -A --color=auto --group-directories-first'
 
 # List lots of stuff
-alias la='ls -oA --block-size=MiB --color=auto'
+alias la='ls -la --color=auto'
 
-alias grep='grep --color=AUTO'
+alias grep='grep --color=auto'
 
 alias view='vim -R'
 
