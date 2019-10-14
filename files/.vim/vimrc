@@ -11,7 +11,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 "Plug 'ziglang/zig.vim'
 Plug 'rust-lang/rust.vim'
-" TODO: try git plugin, rust plugin,
 call plug#end()
 
 " Clear search buffer when sourcing this file
@@ -25,10 +24,6 @@ set numberwidth=2
 
 " Disable visual line wrap
 "set nowrap
-
-" Set formatoptions (see :h fo-table)
-" formatoptions are being overwritten from somewhere, so I'm using an autocommand as a workaround
-autocmd BufNewFile,BufRead * setlocal formatoptions=q
 
 " Set column limit for formatting with 'gq'
 set textwidth=100
@@ -134,10 +129,6 @@ set listchars=tab:>\ ,space:\ ,trail:-
 " Set lisp mode for emacs lisp
 au Filetype el setlocal lisp
 
-" Save cursor position in buffer when switching buffers
-"au BufLeave * let b:winview = winsaveview()
-"au BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
-
 " Pressing tab inserts four spaces
 " Hard tabs appear four spaces wide
 set tabstop=4
@@ -195,7 +186,7 @@ noremap <leader>= :e $MYVIMRC\|set ft=vim<cr>
 "vnoremap <leader>- y:<c-r>"<cr>
 
 " Delete trailing whitespace in buffer
-nnoremap <leader>0 :%s/\s\+$//\|:noh<cr><c-o>
+nnoremap <leader>0 :%s/\s\+$//\|noh\|w<cr><c-o>
 
 " Toggle spell checking locally
 nnoremap <leader>9 :setlocal spell!<cr>
@@ -337,4 +328,34 @@ let g:fzf_colors =
 \ 'spinner': ['fg', 'Label'],
 \ 'header': ['fg', 'Comment'] }
 
+" Set formatoptions (see :h fo-table)
+" formatoptions are being overwritten from somewhere, so I'm using an autocommand as a workaround
+autocmd BufNewFile,BufRead * setlocal formatoptions=q
+
+" Save current view settings on a per-window, per-buffer basis.
+function! AutoSaveWinView()
+    if !exists("w:SavedBufView")
+        let w:SavedBufView = {}
+    endif
+    let w:SavedBufView[bufnr("%")] = winsaveview()
+endfunction
+
+" Restore current view settings.
+function! AutoRestoreWinView()
+    let buf = bufnr("%")
+    if exists("w:SavedBufView") && has_key(w:SavedBufView, buf)
+        let v = winsaveview()
+        let atStartOfFile = v.lnum == 1 && v.col == 0
+        if atStartOfFile && !&diff
+            call winrestview(w:SavedBufView[buf])
+        endif
+        unlet w:SavedBufView[buf]
+    endif
+endfunction
+
+" When switching buffers, preserve window view.
+if v:version >= 700
+    autocmd BufLeave * call AutoSaveWinView()
+    autocmd BufEnter * call AutoRestoreWinView()
+endif
 
