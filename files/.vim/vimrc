@@ -9,8 +9,9 @@ Plug 'romainl/vim-cool'
 Plug 'google/vim-searchindex'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
-"Plug 'ziglang/zig.vim'
+Plug 'ziglang/zig.vim'
 Plug 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml'
 call plug#end()
 
 " Clear search buffer when sourcing this file
