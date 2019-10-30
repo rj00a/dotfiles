@@ -42,8 +42,6 @@ alias grep='grep --color=auto'
 
 alias view='vim -R'
 
-#alias fm='vifm'
-
 alias ds='du --summarize --human-readable'
 
 alias tra='trash'
@@ -56,6 +54,8 @@ alias mkd='mkdir -p'
 
 alias tou='touch'
 
+alias tree='tree -C'
+
 # Safe move, prompt before overwriting
 alias sm='mv -i'
 
@@ -66,7 +66,7 @@ alias sc='cp -ri'
 alias rtor='rtorrent'
 
 # Update all packages and package repo
-alias syyu='yay -Syyu'
+alias syu='yay -Syu'
 
 # Import math, start REPL, hide copyright msg, and don't write .pyc files
 # Makes python more suitable as a calculator
@@ -171,8 +171,8 @@ ezdd() {
 	fi
 }
 
-# Run a program, disown it, send stdout and stderr to /dev/null
-runbg() {
+# Background run: disown it, send stdout and stderr to /dev/null
+bgr() {
 	"$1" </dev/null &>/dev/null ${@:2} & disown
 }
 
