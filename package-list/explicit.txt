@@ -4,7 +4,9 @@ adobe-source-code-pro-fonts
 aic94xx-firmware
 alacritty
 alsa-utils
+antlr4
 arc-gtk-theme
+ascii
 audacity
 autoconf
 automake
@@ -49,7 +51,6 @@ gvim
 gzip
 hplip
 htop
-hugo
 i3-gaps
 i3blocks
 i3lock-color
@@ -71,6 +72,7 @@ linux
 linux-firmware
 logrotate
 lua
+luajit
 lvm2
 lxappearance
 m4
@@ -104,7 +106,6 @@ pandoc
 papirus-icon-theme
 patch
 pciutils
-peg
 perf
 perl
 pkgconf
@@ -125,12 +126,14 @@ s-nail
 sed
 shadow
 steam
+strace
 sudo
 sxiv
 sysfsutils
 systemd-boot-pacman-hook
 systemd-sysvcompat
 tar
+tcc
 texinfo
 trash-cli
 tree
@@ -161,6 +164,7 @@ wd719x-firmware
 wget
 which
 wpa_supplicant
+wren
 xclip
 xdotool
 xfsprogs
@@ -175,4 +179,5 @@ zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
 zathura-ps
+zig-git
 zip
