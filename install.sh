@@ -22,6 +22,8 @@ l .inputrc ~/
 l .gdbinit.d ~/
 l gdb-dashboard/.gdbinit ~/
 l vim-plug/plug.vim ~/.vim/autoload/
+l fontconfig ~/.config/
+l zathura ~/.config/
 
 sudo systemctl enable NetworkManager
 sudo systemctl enable org.cups.cupsd
