@@ -240,7 +240,7 @@ noremap <silent> <leader>D :Bdelete!<cr>
 " Enable syntax highlighting
 syntax on
 
-"set guifont=Inconsolata\ 11.5
+" Font for gvim
 set guifont=Ubuntu\ Mono\ 12
 
 "" Colorscheme
@@ -258,8 +258,11 @@ colo alduin
 " Make the cursor number line the same as the others
 hi CursorLineNR guifg=#020202 guibg=#444444
 
-" Red and black cursor in gvim
-hi Cursor guifg=#000000 guibg=#ff0000
+" Red and black cursor
+hi Cursor guifg=#000000 guibg=#ff0000 ctermfg=0 ctermbg=9
+
+" Change match paren colors
+hi MatchParen guifg=#121212 guibg=#ff0000 ctermfg=233 ctermbg=9
 
 " Search for file with fzf
 nnoremap <silent> <leader>f :Files<cr>
