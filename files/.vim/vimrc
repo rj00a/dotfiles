@@ -52,6 +52,9 @@ set smartcase
 " Horizontal splits will put new windows above the current window
 set splitright
 
+" Enable mouse support
+set mouse+=a
+
 " In Gvim, remove the menu bar, toolbar, and scrollbar completely
 set guioptions=aegit
 
@@ -242,7 +245,6 @@ syntax on
 
 " The font for gvim
 set guifont=Inconsolata\ 12
-"set guifont=Ubuntu\ Mono\ 12
 
 "" Colorscheme
 " Darker background
@@ -259,8 +261,11 @@ colo alduin
 " Make the cursor number line the same as the others
 hi CursorLineNR guifg=#020202 guibg=#444444
 
-" Red and black cursor in gvim
-hi Cursor guifg=#000000 guibg=#ff0000
+" Red and black cursor
+hi Cursor guifg=#000000 guibg=#ff0000 ctermfg=0 ctermbg=9
+
+" Change match paren colors
+"hi MatchParen guifg=#121212 guibg=#ff0000 ctermfg=233 ctermbg=9
 
 " Search for file with fzf
 nnoremap <silent> <leader>f :Files<cr>
