@@ -52,6 +52,9 @@ set smartcase
 " Horizontal splits will put new windows above the current window
 set splitright
 
+" Enable mouse support
+set mouse+=a
+
 " In Gvim, remove the menu bar, toolbar, and scrollbar completely
 set guioptions=aegit
 
