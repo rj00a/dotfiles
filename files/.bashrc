@@ -98,7 +98,7 @@ ccd() {
 
 # Play something with vlc using fzf and exit
 play() {
-	local file="$(fzf)"
+	local file="$(find /mnt/sda1/ | fzf)"
 	if [ -z "$file" ]; then
 		return $?
 	fi
@@ -109,7 +109,7 @@ play() {
 # Open all files in a directory with vlc and exit
 # Useful for quickly playing albums
 playd() {
-	local file="$(fzf)"
+	local file="$(find /mnt/sda1/ | fzf)"
 	if [ -z "$file" ]; then
 		return $?
 	fi
@@ -171,8 +171,8 @@ ezdd() {
 	fi
 }
 
-# Background run: disown it, send stdout and stderr to /dev/null
-bgr() {
+# Run background: disown it, send stdout and stderr to /dev/null
+rbg() {
 	"$1" </dev/null &>/dev/null ${@:2} & disown
 }
 

@@ -240,8 +240,9 @@ noremap <silent> <leader>D :Bdelete!<cr>
 " Enable syntax highlighting
 syntax on
 
-"set guifont=Inconsolata\ 11.5
-set guifont=Ubuntu\ Mono\ 12
+" The font for gvim
+set guifont=Inconsolata\ 12
+"set guifont=Ubuntu\ Mono\ 12
 
 "" Colorscheme
 " Darker background
