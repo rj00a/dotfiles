@@ -206,3 +206,6 @@ exec --no-startup-id polybar example
 
 # Start the NetworkManager applet
 exec --no-startup-id nm-applet
+
+# Screen saver program
+exec --no-startup-id xscreensaver -nosplash

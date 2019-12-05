@@ -25,6 +25,7 @@ l vim-plug/plug.vim ~/.vim/autoload/
 l fontconfig ~/.config/
 l zathura ~/.config/
 l polybar ~/.config/
+l .xscreensaver ~/.xscreensaver
 
 sudo systemctl enable NetworkManager
 sudo systemctl enable org.cups.cupsd
