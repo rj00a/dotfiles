@@ -24,7 +24,7 @@ set number
 set numberwidth=2
 
 " Disable visual line wrap
-"set nowrap
+set nowrap
 
 " Set column limit for formatting with 'gq'
 set textwidth=100
