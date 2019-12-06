@@ -1,5 +1,5 @@
 
 ! For the 'sxiv' image viewer
-*background: #000000
-*font: Inconsolata 11.5
+Sxiv.background: #000000
+Sxiv.font: Inconsolata
 
