@@ -19,6 +19,7 @@ capitaine-cursors
 ccache
 cgdb
 chromium
+chromium-widevine
 cloc
 cmatrix
 colordiff
@@ -38,13 +39,16 @@ file
 filesystem
 findutils
 flex
+fortune-mod
 fzf
 gawk
 gcc
 gcc-libs
 gettext
+ghc
 git
 glibc
+gnu-netcat
 gperf
 grep
 gvim
@@ -71,6 +75,7 @@ licenses
 linux
 linux-firmware
 logrotate
+lsof
 lua
 luajit
 lvm2
@@ -92,6 +97,7 @@ nethack
 network-manager-applet
 networkmanager-openvpn
 nitrogen
+nmap
 noto-fonts
 noto-fonts-cjk
 noto-fonts-extra
@@ -154,6 +160,7 @@ unzip
 usbutils
 util-linux
 valgrind
+veracrypt
 vi
 vlc
 vulkan-headers
@@ -161,6 +168,7 @@ vulkan-icd-loader
 vulkan-tools
 vulkan-validation-layers
 wd719x-firmware
+weechat
 wget
 which
 wpa_supplicant
@@ -171,6 +179,7 @@ xfsprogs
 xorg-server
 xorg-xinit
 xorg-xinput
+xscreensaver
 yay
 youtube-dl
 z
