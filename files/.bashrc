@@ -86,6 +86,9 @@ alias fuck='sudo pkill -ie'
 # Grep for some installed packages
 alias paks='yay -Qq | rg -i'
 
+# Activate xscreensaver
+alias screensaver='xscreensaver-command -activate'
+
 # Echo to stderr
 errcho() {
 	>&2 echo $@

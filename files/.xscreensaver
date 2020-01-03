@@ -1,9 +1,9 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.43 for ryan on Thu Dec  5 16:05:01 2019.
+# Written by xscreensaver-demo 5.43 for ryan on Fri Jan  3 02:07:35 2020.
 # https://www.jwz.org/xscreensaver/
 
-timeout:	0:05:00
-cycle:		0:03:00
+timeout:	0:10:00
+cycle:		0:05:00
 lock:		False
 lockTimeout:	0:00:00
 passwdTimeout:	0:00:30
@@ -17,19 +17,19 @@ demoCommand:	xscreensaver-demo
 prefsCommand:	
 nice:		10
 memoryLimit:	0
-fade:		True
+fade:		False
 unfade:		False
 fadeSeconds:	0:00:03
 fadeTicks:	20
 captureStderr:	True
 ignoreUninstalledPrograms:False
 font:		Inconsolata 11.5
-dpmsEnabled:	False
+dpmsEnabled:	True
 dpmsQuickOff:	False
 dpmsStandby:	2:00:00
 dpmsSuspend:	2:00:00
 dpmsOff:	4:00:00
-grabDesktopImages:  True
+grabDesktopImages:  False
 grabVideoFrames:    False
 chooseRandomImages: False
 imageDirectory:	
@@ -57,12 +57,12 @@ programs:								      \
 				qix -root				    \n\
 -				rocks -root				    \n\
 				rorschach -root				    \n\
-				decayscreen -root -mode melt		    \n\
+-				decayscreen -root -mode melt		    \n\
 -				flame -root				    \n\
 -				halo -root -count 20			    \n\
 -				slidescreen -root			    \n\
 -				pedal -root				    \n\
-				bouboule -root -count 245 -ncolors 172	      \
+-				bouboule -root -count 245 -ncolors 172	      \
 				  -no-3d				    \n\
 -				braid -root				    \n\
 				coral -root				    \n\
@@ -71,7 +71,7 @@ programs:								      \
 				fadeplot -root				    \n\
 - Best: 			galaxy -root				    \n\
 				goop -root				    \n\
-				grav -root				    \n\
+-				grav -root				    \n\
 				ifs -root				    \n\
 - GL: 				jigsaw -root				    \n\
 				julia -root				    \n\
@@ -149,7 +149,7 @@ programs:								      \
 -				rotzoomer -root				    \n\
 -				speedmine -root				    \n\
 - GL: 				starwars -root				    \n\
-  GL: 				stonerview -root			    \n\
+- GL: 				stonerview -root			    \n\
 				vermiculate -root			    \n\
 -				whirlwindwarp -root			    \n\
 -				zoom -root				    \n\
@@ -185,8 +185,8 @@ programs:								      \
 -				eruption -root				    \n\
 - GL: 				flipflop -root				    \n\
 - GL: 				flyingtoasters -root			    \n\
-				fontglide -root				    \n\
-  GL: 				gleidescope -root			    \n\
+-				fontglide -root				    \n\
+- GL: 				gleidescope -root			    \n\
 - GL: 				glknots -root				    \n\
   GL: 				glmatrix -root				    \n\
 - GL: 				glslideshow -root			    \n\
@@ -198,7 +198,7 @@ programs:								      \
 - GL: 				polytopes -root				    \n\
 -				pong -root				    \n\
 -				popsquares -root			    \n\
-  GL: 				surfaces -root				    \n\
+- GL: 				surfaces -root				    \n\
 -				xanalogtv -root				    \n\
 				abstractile -root			    \n\
 -				anemotaxis -root			    \n\
@@ -256,12 +256,12 @@ programs:								      \
 - GL: 				cityflow -root				    \n\
 - GL: 				geodesicgears -root			    \n\
 - GL: 				projectiveplane -root			    \n\
-  GL: 				romanboy -root				    \n\
+- GL: 				romanboy -root				    \n\
 -				tessellimage -root			    \n\
 - GL: 				winduprobot -root			    \n\
 - GL: 				splitflap -root				    \n\
-  GL: 				cubestack -root				    \n\
-  GL: 				cubetwist -root				    \n\
+- GL: 				cubestack -root				    \n\
+- GL: 				cubetwist -root				    \n\
 - GL: 				discoball -root				    \n\
 - GL: 				dymaxionmap -root			    \n\
 - GL: 				energystream -root			    \n\
@@ -281,7 +281,7 @@ programs:								      \
 - GL: 				razzledazzle -root			    \n\
 -				vfeedback -root				    \n\
 - GL: 				deepstars -root				    \n\
-  GL: 				gravitywell -root			    \n\
+- GL: 				gravitywell -root			    \n\
 
 
 pointerPollTime:    0:00:05
