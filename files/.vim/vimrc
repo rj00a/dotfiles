@@ -155,8 +155,9 @@ set secure
 set noesckeys
 set timeoutlen=1000 ttimeoutlen=0
 
-" Keep the cursor centered at all times
-set scrolloff=999
+" Minimal number of screen lines to keep above and below the cursor
+" Set this to something big (999) to keep the cursor centered at all times.
+set scrolloff=1
 
 " Clear old mappings when sourcing this file
 mapclear

@@ -66,7 +66,7 @@ alias rtor='rtorrent'
 
 # Update the system and push changes to shared repo.
 update() {
-    sudo yay -Syu || return
+    yay -Syu || return
     cd ~/shared || return
     {
         sh gen-package-list.sh &&
