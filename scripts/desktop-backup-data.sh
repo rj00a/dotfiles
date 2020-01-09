@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
-backup_root=/mnt/sdc
 backup_drive=/dev/disk/by-label/Backup
+backup_root=/mnt/sdc
 
-if [ ! -e "$backup_drive" ]; then
-	>&2 echo "Error: \"$backup_drive\" does not exist (not mounted?)"
-	exit 1
-fi
+echo "Mounting $backup_drive to $backup_root"
+
+sudo mount "$backup_drive" "$backup_root" || exit $?
 
 t() {
 	"$@" | tee -a "$backup_root"/last-backup.txt
@@ -31,3 +30,6 @@ t rsync -a --delete --progress --stats /boot/ "$backup_root"/boot
 
 t echo '==== Done ===='
 
+echo "Unmounting $backup_root"
+
+sudo umount "$backup_root"
