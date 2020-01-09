@@ -65,8 +65,6 @@ alias sc='cp -ri'
 alias rtor='rtorrent'
 
 # Update the system and commit changes to shared repo.
-#alias update='yay -Syu && pushd -n ~/shared/ && ./gen-package-list.sh && ./update-submodules.sh && git add . && git status && git commit -m update && popd -n'
-
 update() {
     yay -Syu || return
     cd ~/shared || return
@@ -75,13 +73,14 @@ update() {
         sh update-submodules.sh &&
         git add . &&
         git status &&
-        git commit -m update
+        git commit -m update &&
+        git push origin master
     } || {
         local e=$?
-        cd -
+        cd - > /dev/null
         return $e
     }
-    cd -
+    cd - > /dev/null
 }
 
 # Import math, start REPL, hide copyright msg, and don't write .pyc files

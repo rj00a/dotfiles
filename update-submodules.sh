@@ -7,3 +7,5 @@ cd "$(dirname "$0")"
 git submodule update --init
 
 git submodule update --recursive --remote --jobs 10
+
+echo 'Updated submodules.'
