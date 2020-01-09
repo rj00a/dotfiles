@@ -114,6 +114,7 @@ patch
 pciutils
 perf
 perl
+perl6-readline
 pkgconf
 playerctl
 polybar
@@ -122,6 +123,7 @@ psmisc
 pulseaudio
 pulseaudio-alsa
 pulsemixer
+rakudo
 reflector
 reiserfsprogs
 ripgrep
@@ -171,6 +173,7 @@ wd719x-firmware
 weechat
 wget
 which
+woeusb
 wpa_supplicant
 wren
 xclip

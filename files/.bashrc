@@ -47,8 +47,7 @@ alias ds='du --summarize --human-readable'
 alias tra='trash'
 alias tra-clear='trash-clear'
 alias tra-empty='trash-empty'
-
-alias gv='gvim'
+alias tra-list='trash-list'
 
 alias mkd='mkdir -p'
 
@@ -65,8 +64,25 @@ alias sc='cp -ri'
 # BitTorrent Curses Interface
 alias rtor='rtorrent'
 
-# Update all packages and package repo
-alias syu='yay -Syu'
+# Update the system and commit changes to shared repo.
+#alias update='yay -Syu && pushd -n ~/shared/ && ./gen-package-list.sh && ./update-submodules.sh && git add . && git status && git commit -m update && popd -n'
+
+update() {
+    yay -Syu || return
+    cd ~/shared || return
+    {
+        sh gen-package-list.sh &&
+        sh update-submodules.sh &&
+        git add . &&
+        git status &&
+        git commit -m update
+    } || {
+        local e=$?
+        cd -
+        return $e
+    }
+    cd -
+}
 
 # Import math, start REPL, hide copyright msg, and don't write .pyc files
 # Makes python more suitable as a calculator
@@ -103,7 +119,7 @@ ccd() {
 play() {
 	local file="$(find /mnt/sda1/ | fzf)"
 	if [ -z "$file" ]; then
-		return $?
+		return
 	fi
 	vlc "$file" &
 	exit 0
@@ -114,7 +130,7 @@ play() {
 playd() {
 	local file="$(find /mnt/sda1/ | fzf)"
 	if [ -z "$file" ]; then
-		return $?
+		return
 	fi
 	vlc "$(dirname "$file")" &
 	echo "$(dirname "$file")"

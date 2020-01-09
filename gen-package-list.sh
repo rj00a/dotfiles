@@ -12,3 +12,4 @@ pacman -Qqe >> $explicit
 printf '==== Generated with "pacman -Q" ====\n\n' > $everything
 pacman -Q >> $everything
 
+echo "Finished updating package list."

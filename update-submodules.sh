@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# Because I always forget.
+
+set -e
+cd "$(dirname "$0")"
 
 # Required for new submodules
 git submodule update --init
