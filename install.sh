@@ -6,6 +6,8 @@ l () {
 	ln -sf $(pwd)/files/"$1" "$2"
 }
 
+sh update-submodules.sh
+
 l .vim/ ~/
 l i3/ ~/.config/
 l .bashrc ~/
@@ -21,6 +23,7 @@ l .nethackrc ~/
 l .inputrc ~/
 l .gdbinit.d ~/
 l gdb-dashboard/.gdbinit ~/
+mkdir -p ~/.vim/autoload/
 l vim-plug/plug.vim ~/.vim/autoload/
 l fontconfig ~/.config/
 l zathura ~/.config/
