@@ -64,14 +64,14 @@ alias sc='cp -ri'
 # BitTorrent Curses Interface
 alias rtor='rtorrent'
 
-# Update the system and commit changes to shared repo.
+# Update the system and push changes to shared repo.
 update() {
     yay -Syu || return
     cd ~/shared || return
     {
         sh gen-package-list.sh &&
         sh update-submodules.sh &&
-        git add . &&
+        git add -A &&
         git status &&
         git commit -m update &&
         git push origin master
