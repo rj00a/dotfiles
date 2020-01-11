@@ -157,7 +157,7 @@ set timeoutlen=1000 ttimeoutlen=0
 
 " Minimal number of screen lines to keep above and below the cursor
 " Set this to something big (999) to keep the cursor centered at all times.
-set scrolloff=1
+set scrolloff=999
 
 " Clear old mappings when sourcing this file
 mapclear
