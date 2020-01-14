@@ -297,6 +297,9 @@ let g:netrw_banner = 0
 " Changing the netrw directory also changes the CWD
 "let g:netrw_keepdir = 0
 
+" Close netrw after opening file
+let g:netrw_browse_split = 0
+
 " Show the list of open buffers and tabs at the top of the screen
 let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
