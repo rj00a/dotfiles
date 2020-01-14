@@ -86,7 +86,6 @@ make
 man-db
 man-pages
 mdadm
-meson
 multimc-git
 nano
 ncdu
@@ -175,7 +174,6 @@ wget
 which
 woeusb
 wpa_supplicant
-wren
 xclip
 xdotool
 xfsprogs
