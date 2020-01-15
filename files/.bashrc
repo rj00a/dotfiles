@@ -85,7 +85,7 @@ update() {
 
 # Import math, start REPL, hide copyright msg, and don't write .pyc files
 # Makes python more suitable as a calculator
-alias py="python3 -Bqic 'from math import *'"
+alias py="python3 -Bqic 'from math import *; from fractions import Fraction'"
 
 # Download youtube video
 alias yv='youtube-dl -iwcR infinite --add-metadata'

@@ -122,6 +122,7 @@ psmisc
 pulseaudio
 pulseaudio-alsa
 pulsemixer
+python-pip
 rakudo
 reflector
 reiserfsprogs
