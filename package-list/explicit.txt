@@ -113,7 +113,6 @@ patch
 pciutils
 perf
 perl
-perl6-readline
 pkgconf
 playerctl
 polybar
