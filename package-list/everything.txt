@@ -285,7 +285,7 @@ haskell-zlib 0.6.2.1-1
 hicolor-icon-theme 0.17-1
 hplip 1:3.19.12-1
 hspell 1.4-2
-htop 2.2.0-2
+htop 2.2.0-3
 hunspell 1.7.0-2
 hwids 20191025-2
 hwloc 2.1.0-2
@@ -375,7 +375,7 @@ lcms2 2.9-2
 ldns 1.7.1-2
 less 551-3
 lhasa 0.3.1-2
-lib32-alsa-lib 1.2.1.2-1
+lib32-alsa-lib 1.2.1.2-2
 lib32-alsa-plugins 1.2.1-1
 lib32-atk 2.34.1-1
 lib32-attr 2.4.48-1
@@ -453,7 +453,7 @@ lib32-pixman 0.38.4-1
 lib32-readline 8.0.0-1
 lib32-sqlite 3.30.1-1
 lib32-systemd 244.1-1
-lib32-util-linux 2.34-1
+lib32-util-linux 2.35-1
 lib32-wayland 1.17.0-1
 lib32-xz 5.2.4-1
 lib32-zlib 1.2.11-2
@@ -585,7 +585,7 @@ libunwind 1.3.1-1
 libupnp 1.6.25-1
 libusb 1.0.23-2
 libusbmuxd 2.0.0-2
-libutil-linux 2.34-8
+libutil-linux 2.35-1
 libuv 1.34.1-1
 libva 2.6.1-1
 libvdpau 1.3-1
@@ -734,7 +734,7 @@ perl-dbi 1.642-3
 perl-devel-globaldestruction 0.14-5
 perl-encode-locale 1.05-5
 perl-error 0.17028-1
-perl-ffi-checklib 0.25-1
+perl-ffi-checklib 0.26-1
 perl-file-chdir 0.1011-3
 perl-file-listing 6.04-6
 perl-file-which 1.23-2
@@ -764,7 +764,7 @@ perl-sub-exporter 0.987-5
 perl-sub-exporter-progressive 0.001013-5
 perl-sub-install 0.928-5
 perl-sub-quote 2.006003-2
-perl-timedate 2.30-6
+perl-timedate 2.31-1
 perl-try-tiny 0.30-3
 perl-uri 1.76-2
 perl-www-robotrules 6.02-6
@@ -814,7 +814,7 @@ python-idna 2.8-3
 python-imagesize 1.2.0-1
 python-jinja 2.10.3-3
 python-lxml 4.4.2-1
-python-mako 1.1.0-1
+python-mako 1.1.1-1
 python-markdown 3.1.1-4
 python-markupsafe 1.1.1-3
 python-mpmath 1.1.0-3
@@ -836,7 +836,7 @@ python-sphinxcontrib-jsmath 1.0.1-4
 python-sphinxcontrib-qthelp 1.0.2-4
 python-sphinxcontrib-serializinghtml 1.1.3-4
 python-sympy 1.5.1-1
-python-urllib3 1.25.7-1
+python-urllib3 1.25.8-1
 python-xerox 0.4.1-2
 python2 2.7.17-1
 qpdf 9.1.0-1
@@ -872,7 +872,7 @@ rtkit 0.12-1
 rtorrent 0.9.8-1
 rttr 0.9.6-2
 run-parts 4.8.6.1-2
-rustup 1.21.1-1
+rustup 1.21.1-2
 s-nail 14.9.16-2
 sbc 1.4-1
 sdl 1.2.15-13
@@ -944,7 +944,7 @@ unzip 6.0-13
 upower 0.99.11-1
 usbmuxd 1.1.0+66+g9af2b12-1
 usbutils 012-2
-util-linux 2.34-8
+util-linux 2.35-1
 v4l-utils 1.18.0-1
 valgrind 3.15.0-1
 vamp-plugin-sdk 2.9.0-1
@@ -961,7 +961,7 @@ vulkan-validation-layers 1.1.130-1
 wayland 1.17.0-1
 wayland-protocols 1.18-1
 wd719x-firmware 1-5
-webkit2gtk 2.26.2-2
+webkit2gtk 2.26.3-1
 webrtc-audio-processing 0.3.1-1
 weechat 2.7-2
 wget 1.20.3-2

@@ -67,20 +67,25 @@ alias rtor='rtorrent'
 # Update the system and push changes to shared repo.
 update() {
     yay -Syu || return
-    cd ~/shared || return
+    local dir=$(pwd)
     {
+        cd ~/shared
         sh gen-package-list.sh &&
         sh update-submodules.sh &&
         git add -A &&
         git status &&
         git commit -m update &&
+        git push origin master &&
+        cd /mnt/sdb1 &&
+        git add -A &&
+        git commit -m update &&
         git push origin master
     } || {
         local e=$?
-        cd - > /dev/null
+        cd "$dir"
         return $e
     }
-    cd - > /dev/null
+    cd "$dir"
 }
 
 # Import math, start REPL, hide copyright msg, and don't write .pyc files
