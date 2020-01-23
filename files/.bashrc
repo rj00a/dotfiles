@@ -29,7 +29,7 @@ export TZ=America/Los_Angeles
 # Installed with the 'z' pacman package (community repo)
 source /usr/share/z/z.sh
 
-alias backup-data='~/programs/backup-data.sh'
+alias backup='sh ~/shared/scripts/desktop-backup-data.sh'
 
 alias nethack='nethack -d ~/games/nethack-playground'
 
@@ -42,7 +42,7 @@ alias grep='grep --color=auto'
 
 alias view='vim -R'
 
-alias ds='du --summarize --human-readable'
+alias ds='du -sh'
 
 alias tra='trash'
 alias tra-clear='trash-clear'
