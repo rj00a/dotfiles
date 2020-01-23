@@ -76,8 +76,8 @@ update() {
         git status &&
         git commit -m update &&
         git push origin master &&
-        cd /mnt/sdb1 &&
-        echo '(in /mnt/sdb1)' &&
+        cd /mnt/sdb1/keepass &&
+        echo "(in $(pwd))" &&
         git add -A &&
         git commit -m update &&
         git push origin master
