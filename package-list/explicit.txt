@@ -20,6 +20,7 @@ ccache
 cgdb
 chromium
 chromium-widevine
+cifs-utils
 cloc
 cmatrix
 colordiff
@@ -132,6 +133,7 @@ rustup
 s-nail
 sed
 shadow
+smbclient
 steam
 strace
 sudo
@@ -141,6 +143,7 @@ systemd-boot-pacman-hook
 systemd-sysvcompat
 tar
 tcc
+testdisk
 texinfo
 trash-cli
 tree
@@ -168,6 +171,7 @@ vulkan-headers
 vulkan-icd-loader
 vulkan-tools
 vulkan-validation-layers
+wavemon
 wd719x-firmware
 weechat
 wget
