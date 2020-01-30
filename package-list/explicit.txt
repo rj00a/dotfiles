@@ -20,6 +20,7 @@ ccache
 cgdb
 chromium
 chromium-widevine
+cifs-utils
 cloc
 cmatrix
 colordiff
@@ -113,7 +114,6 @@ patch
 pciutils
 perf
 perl
-perl6-readline
 pkgconf
 playerctl
 polybar
@@ -122,7 +122,7 @@ psmisc
 pulseaudio
 pulseaudio-alsa
 pulsemixer
-python-pip
+python-sympy
 rakudo
 reflector
 reiserfsprogs
@@ -133,6 +133,7 @@ rustup
 s-nail
 sed
 shadow
+smbclient
 steam
 strace
 sudo
@@ -142,6 +143,7 @@ systemd-boot-pacman-hook
 systemd-sysvcompat
 tar
 tcc
+testdisk
 texinfo
 trash-cli
 tree
@@ -169,6 +171,7 @@ vulkan-headers
 vulkan-icd-loader
 vulkan-tools
 vulkan-validation-layers
+wavemon
 wd719x-firmware
 weechat
 wget

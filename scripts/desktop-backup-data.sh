@@ -5,10 +5,15 @@ backup_root=/mnt/sdc
 
 echo "Mounting $backup_drive to $backup_root"
 
-sudo mount "$backup_drive" "$backup_root" || exit $?
+sudo mount "$backup_drive" "$backup_root" || return
+
+last_backup="$backup_root"/last-backup.txt
+
+# Clear last backup file
+> "$last_backup"
 
 t() {
-	"$@" | tee -a "$backup_root"/last-backup.txt
+	"$@" | tee -a "$last_backup"
 }
 
 t echo '==== Copying home directory ===='

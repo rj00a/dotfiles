@@ -29,7 +29,7 @@ export TZ=America/Los_Angeles
 # Installed with the 'z' pacman package (community repo)
 source /usr/share/z/z.sh
 
-alias backup-data='~/programs/backup-data.sh'
+alias backup='sh ~/shared/scripts/desktop-backup-data.sh'
 
 alias nethack='nethack -d ~/games/nethack-playground'
 
@@ -42,7 +42,8 @@ alias grep='grep --color=auto'
 
 alias view='vim -R'
 
-alias ds='du --summarize --human-readable'
+# Print usage information about the current filesystem
+alias ds="df -B GiB . | tr -s ' ' | cut -d ' ' -f 3,4,5 | column -t"
 
 alias tra='trash'
 alias tra-clear='trash-clear'
@@ -52,8 +53,6 @@ alias tra-list='trash-list'
 alias mkd='mkdir -p'
 
 alias tou='touch'
-
-alias tree='tree -C'
 
 # Safe move, prompt before overwriting
 alias sm='mv -i'
@@ -69,38 +68,46 @@ alias syu='yay -Syu'
 # Update the system and push changes to shared repo.
 update() {
     yay -Syu || return
-    cd ~/shared || return
+    local dir=$(pwd)
     {
+        cd ~/shared
         sh gen-package-list.sh &&
         sh update-submodules.sh &&
         git add -A &&
         git status &&
         git commit -m update &&
+        git push origin master &&
+        cd /mnt/sdb1/keepass &&
+        echo "(in $(pwd))" &&
+        git add -A &&
+        git commit -m update &&
         git push origin master
     } || {
         local e=$?
-        cd - > /dev/null
+        cd "$dir"
         return $e
     }
-    cd - > /dev/null
+    cd "$dir"
 }
 
-# Import math, start REPL, hide copyright msg, and don't write .pyc files
+# Import math and fractions, start REPL, hide copyright msg, and don't write .pyc files
 # Makes python more suitable as a calculator
 alias py="python3 -Bqic 'from math import *; from fractions import Fraction'"
 
 # Download youtube video
 alias yv='youtube-dl -iwcR infinite --add-metadata'
+
 # Download youtube audio only
 alias ya='youtube-dl -xwicR infinite -f bestaudio --audio-quality 0 --add-metadata'
 
+# Open link in clipboard with vlc.
 # Useful for youtube videos, twitch streams, etc.
 alias vlcx='vlc "$(xclip -o)"'
 
-# Self explanatory
+# Kill process by name
 alias fuck='sudo pkill -ie'
 
-# Grep for some installed packages
+# Grep for installed packages
 alias paks='yay -Qq | rg -i'
 
 # Activate xscreensaver
@@ -185,14 +192,9 @@ ezdd() {
 	read -rn 1 -p "Are you sure you want to write \"$1\" to \"$2\"? [y/N] "
 	echo
 	if [[ "$REPLY" =~ ^[yY]$ ]]; then
-		sudo dd bs=1M if="$1" of="$2" status=progress
+		sudo dd bs=16M if="$1" of="$2" status=progress
 	else
 		return 1
 	fi
-}
-
-# Run background: disown it, send stdout and stderr to /dev/null
-rbg() {
-	"$1" </dev/null &>/dev/null ${@:2} & disown
 }
 
