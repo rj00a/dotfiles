@@ -7,6 +7,7 @@ alsa-utils
 antlr4
 arc-gtk-theme
 ascii
+atom
 audacity
 autoconf
 automake
@@ -48,6 +49,7 @@ gcc-libs
 gettext
 ghc
 git
+glances
 glibc
 gnu-netcat
 gperf
