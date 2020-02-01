@@ -63,6 +63,8 @@ alias sc='cp -ri'
 # BitTorrent Curses Interface
 alias rtor='rtorrent'
 
+alias syu='yay -Syu'
+
 # Update the system and push changes to shared repo.
 update() {
     yay -Syu || return
