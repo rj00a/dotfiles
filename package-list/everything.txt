@@ -140,7 +140,7 @@ ghc 8.6.5-1
 ghc-libs 8.6.5-1
 ghostscript 9.50-2
 giflib 5.2.1-1
-girara 0.3.3-1
+girara 0.3.4-1
 git 2.25.0-1
 glances 3.1.3-2
 glew 2.1.0-1
@@ -304,7 +304,7 @@ i3status 2.13-2
 iana-etc 20191231-1
 icu 65.1-2
 ijs 0.35-2
-imagemagick 7.0.9.20-1
+imagemagick 7.0.9.21-1
 imlib2 1.6.1-1
 inetutils 1.9.4-8
 intel-gmmlib 19.4.1-1
@@ -351,7 +351,7 @@ kcrash 5.66.0-1
 kdbusaddons 5.66.0-1
 kdeclarative 5.66.0-1
 kdenlive 19.12.1-3
-keepassxc 2.5.2-1
+keepassxc 2.5.3-1
 keyutils 1.6.1-3
 kfilemetadata 5.66.0-1
 kglobalaccel 5.66.0-1
@@ -461,7 +461,7 @@ lib32-pixman 0.38.4-1
 lib32-readline 8.0.0-1
 lib32-sqlite 3.31.1-1
 lib32-systemd 244.1-1
-lib32-util-linux 2.35-1
+lib32-util-linux 2.35.1-1
 lib32-wayland 1.17.0-1
 lib32-xz 5.2.4-1
 lib32-zlib 1.2.11-2
@@ -595,7 +595,7 @@ libunwind 1.3.1-1
 libupnp 1.6.25-1
 libusb 1.0.23-2
 libusbmuxd 2.0.0-2
-libutil-linux 2.35-1
+libutil-linux 2.35.1-1
 libuv 1.34.2-1
 libva 2.6.1-1
 libvdpau 1.3-1
@@ -730,7 +730,7 @@ pambase 20190105.1-2
 pandoc 2.8-14
 pango 1:1.44.7-1
 pangomm 2.42.0-1
-papirus-icon-theme 20200102-1
+papirus-icon-theme 20200201-1
 parted 3.3-1
 patch 2.7.6-8
 pciutils 3.6.2-2
@@ -745,7 +745,7 @@ perl-capture-tiny 0.48-2
 perl-class-method-modifiers 2.12-5
 perl-clone 0.43-1
 perl-data-optlist 0.110-5
-perl-dbi 1.642-3
+perl-dbi 1.643-1
 perl-devel-globaldestruction 0.14-5
 perl-encode-locale 1.05-5
 perl-error 0.17029-1
@@ -818,8 +818,8 @@ python-attrs 19.3.0-3
 python-babel 2.8.0-4
 python-beaker 1.11.0-3
 python-chardet 3.0.4-4
-python-dbus 1.2.14-1
-python-dbus-common 1.2.14-1
+python-dbus 1.2.16-1
+python-dbus-common 1.2.16-1
 python-distro 1.4.0-3
 python-docopt 0.6.2-7
 python-docutils 0.14-4
@@ -923,7 +923,7 @@ sratom 0.6.4-1
 startup-notification 0.12-6
 steam 1.0.0.61-3
 strace 5.4-1
-sudo 1.8.30-1
+sudo 1.8.31-1
 suil 0.10.6-2
 sxiv 25-1
 sysfsutils 2.1.0-11
@@ -967,7 +967,7 @@ unzip 6.0-13
 upower 0.99.11-1
 usbmuxd 1.1.0+66+g9af2b12-1
 usbutils 012-2
-util-linux 2.35-1
+util-linux 2.35.1-1
 v4l-utils 1.18.0-1
 valgrind 3.15.0-1
 vamp-plugin-sdk 2.9.0-1
@@ -1046,14 +1046,14 @@ yubico-c 1.13-5
 yubico-c-client 2.15-4
 yubikey-personalization 1.20.0-1
 z 1.11-1
-zathura 0.4.4-1
+zathura 0.4.5-1
 zathura-cb 0.1.8-1
-zathura-djvu 0.2.8-1
+zathura-djvu 0.2.9-1
 zathura-pdf-mupdf 0.3.5-2
 zathura-ps 0.2.6-1
 zenity 3.32.0+17+gfb0938f-1
 zeromq 4.3.2-1
-zig-git 0.5.0.r1114.g27b290f31-1
+zig-git 0.5.0.r1446.g958f00f1c-1
 zip 3.0-8
 zita-alsa-pcmi 0.3.2-2
 zita-resampler 1.6.2-2

@@ -65,31 +65,6 @@ alias rtor='rtorrent'
 
 alias syu='yay -Syu'
 
-# Update the system and push changes to shared repo.
-update() {
-    yay -Syu || return
-    local dir=$(pwd)
-    {
-        cd ~/shared
-        sh gen-package-list.sh &&
-        sh update-submodules.sh &&
-        git add -A &&
-        git status &&
-        git commit -m update &&
-        git push origin master &&
-        cd /mnt/sdb1/keepass &&
-        echo "(in $(pwd))" &&
-        git add -A &&
-        git commit -m update &&
-        git push origin master
-    } || {
-        local e=$?
-        cd "$dir"
-        return $e
-    }
-    cd "$dir"
-}
-
 # Import math and fractions, start REPL, hide copyright msg, and don't write .pyc files
 # Makes python more suitable as a calculator
 alias py="python3 -Bqic 'from math import *; from fractions import Fraction'"
@@ -113,9 +88,43 @@ alias paks='yay -Qq | rg -i'
 # Activate xscreensaver
 alias screensaver='xscreensaver-command -activate'
 
-# Echo to stderr
+# Echo stdin to stderr
 errcho() {
 	>&2 echo $@
+}
+
+# Run command in the background
+rbg() {
+    if [[ -z "$@" ]]; then
+        errcho 'Expected argument(s)'
+        return 1
+    fi
+    ("$@" &) &> /dev/null
+}
+
+# Update the system and push changes to shared repo.
+update() {
+    yay -Syu || return
+    local dir=$(pwd)
+    {
+        cd ~/shared
+        sh gen-package-list.sh &&
+        sh update-submodules.sh &&
+        git add -A &&
+        git status &&
+        git commit -m update &&
+        git push origin master &&
+        cd /mnt/sdb1/keepass &&
+        echo "(in $(pwd))" &&
+        git add -A &&
+        git commit -m update &&
+        git push origin master
+    } || {
+        local e=$?
+        cd "$dir"
+        return $e
+    }
+    cd "$dir"
 }
 
 # Make directory if not exist and cd into it
@@ -147,8 +156,8 @@ playd() {
 
 # Pipe stdout and stderr of command to less
 le() {
-	if [ -z "$1" ]; then
-		errcho 'Expected at least one argument'
+	if [ -z "$@" ]; then
+        errcho 'Expected argument(s)'
 		return 1
 	fi
 	"$@" |& less -r --
