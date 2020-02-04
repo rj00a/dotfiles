@@ -1,0 +1,24 @@
+# Not actually using atom, but might as well save the config in case I come around to it.
+
+"*":
+  "autocomplete-plus":
+    confirmCompletion: "tab"
+  core:
+    autoHideMenuBar: true
+    projectHome: "/home/ryan/projects"
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    fontFamily: "Ubuntu Mono, Consolas, DejaVu Sans Mono, monospace"
+    fontSize: 15
+    invisibles: {}
+    lineHeight: 1
+  "exception-reporting":
+    userId: "c99a6b11-76cd-4d07-b74e-5d3352898328"
+  "vim-mode-plus":
+    keymapYToYankToLastCharacterOfLine: true
+  welcome:
+    showOnStartup: false

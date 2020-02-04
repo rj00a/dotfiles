@@ -7,7 +7,6 @@ alsa-utils
 antlr4
 arc-gtk-theme
 ascii
-atom
 audacity
 autoconf
 automake
