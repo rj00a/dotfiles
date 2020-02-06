@@ -53,7 +53,7 @@ set smartcase
 set splitright
 
 " Enable mouse support
-set mouse+=a
+"set mouse+=a
 
 " In Gvim, remove the menu bar, toolbar, and scrollbar completely
 set guioptions=aegit

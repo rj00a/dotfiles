@@ -35,7 +35,7 @@ avahi 0.7+18+g1b5f401-3
 bash 5.0.011-2
 bc 1.07.1-3
 binutils 2.33.1-2
-bison 3.5-1
+bison 3.5.1-1
 bluez-libs 5.52-2
 boost-libs 1.72.0-1
 breeze-default-cursor-theme 2.0-3
@@ -54,13 +54,13 @@ capitaine-cursors 3-2
 ccache 3.7.7-1
 cdparanoia 10.2-7
 cgdb 0.7.1-1
-chromium 79.0.3945.130-2
+chromium 80.0.3987.87-1
 chromium-widevine 1:4.10.1610.0-1
 chrpath 0.16-2
 cifs-utils 6.10-1
 clang 9.0.1-1
 cloc 1.84-1
-cmake 3.16.3-1
+cmake 3.16.4-1
 cmark-gfm 0.29.0.gfm.0-1
 cmatrix 2.0-1
 colord 1.4.4+9+g1ce26da-1
@@ -112,7 +112,7 @@ findutils 4.7.0-2
 flac 1.3.3-1
 flex 2.6.4-3
 fontconfig 2:2.13.91+24+g75eadca-2
-foomatic-db-engine 4:4.0.13-1
+foomatic-db-engine 4:20200206-1
 fortune-mod 2.12.0-1
 freetype2 2.10.1-1
 frei0r-plugins 1.7.0-1
@@ -151,7 +151,7 @@ gmp 6.1.2-3
 gnome-common 3.18.0-3
 gnu-netcat 0.7.1-7
 gnupg 2.2.19-1
-gnutls 3.6.11.1-1
+gnutls 3.6.12-1
 go 2:1.13.7-1
 gobject-introspection 1.62.0-3
 gobject-introspection-runtime 1.62.0-3
@@ -296,7 +296,7 @@ i3-gaps 4.17.1-1
 i3blocks 1.5-3
 i3lock-color 2.12.c-1
 i3status 2.13-2
-iana-etc 20191231-1
+iana-etc 20200117-1
 icu 65.1-2
 ijs 0.35-2
 imagemagick 7.0.9.21-1
@@ -386,7 +386,7 @@ lib32-bzip2 1.0.8-2
 lib32-cairo 1.17.2+17+g52a7c79fd-2
 lib32-e2fsprogs 1.45.5-1
 lib32-expat 2.2.9-1
-lib32-fontconfig 2:2.13.91+24+g75eadca-1
+lib32-fontconfig 2:2.13.91+24+g75eadca-2
 lib32-freetype2 2.10.1-1
 lib32-fribidi 1.0.8-1
 lib32-gcc-libs 9.2.0-4
@@ -418,7 +418,7 @@ lib32-libjpeg-turbo 2.0.4-1
 lib32-libldap 2.4.48-1
 lib32-libpciaccess 0.16-1
 lib32-libpng 1.6.37-2
-lib32-libtasn1 4.15.0-1
+lib32-libtasn1 4.16.0-1
 lib32-libthai 0.1.28-1
 lib32-libtiff 4.1.0-1
 lib32-libx11 1.6.9-1
@@ -577,7 +577,7 @@ libssh 0.9.3-1
 libssh2 1.9.0-2
 libsynctex 2019.51075-6
 libtar 1.2.20-4
-libtasn1 4.15.0-1
+libtasn1 4.16.0-1
 libteam 1.30-1
 libthai 0.1.28-1
 libtheora 1.1.1-4
@@ -635,7 +635,7 @@ libyaml 0.2.2-1
 libzip 1.5.2-2
 licenses 20191011-2
 lilv 0.24.6-2
-linux 5.5.1.arch1-1
+linux 5.5.2.arch1-1
 linux-api-headers 5.3.1-2
 linux-firmware 20200122.1eb2408-1
 llvm 9.0.1-1
@@ -654,7 +654,7 @@ lz4 1:1.9.2-2
 lzo 2.10-3
 m4 1.4.18-3
 maim 5.5.3-2
-make 4.2.1-4
+make 4.3-1
 mallard-ducktype 1.0.2-3
 man-db 2.9.0-1
 man-pages 5.04-2
@@ -697,7 +697,7 @@ nspr 4.24-1
 nss 3.49.2-3
 ntfs-3g 2017.3.23-3
 numactl 2.0.13-1
-nvidia 440.59-1
+nvidia 440.59-3
 nvidia-settings 440.59-1
 nvidia-utils 440.59-1
 obs-studio 24.0.5-2
@@ -817,7 +817,7 @@ python-docopt 0.6.2-7
 python-docutils 0.14-4
 python-evdev 1.3.0-1
 python-future 0.18.2-2
-python-gmpy2 2.1.0b1-3
+python-gmpy2 2.1.0b3-1
 python-gobject 3.34.0-3
 python-idna 2.8-3
 python-imagesize 1.2.0-1
@@ -883,7 +883,7 @@ rtorrent 0.9.8-1
 rttr 0.9.6-2
 run-parts 4.8.6.1-2
 rustup 1.21.1-3
-s-nail 14.9.16-2
+s-nail 14.9.17-1
 sbc 1.4-1
 sdl 1.2.15-13
 sdl2 2.0.10-1
@@ -891,7 +891,7 @@ sdl_ttf 2.0.11-5
 sed 4.8-1
 serd 0.30.2-1
 shaderc 2019.0-4
-shadow 4.8-1
+shadow 4.8.1-1
 shared-mime-info 1.15-2
 signon-kwallet-extension 19.12.1-1
 signon-plugin-oauth2 0.24-2
@@ -1004,7 +1004,7 @@ xdg-utils 1.1.3+18+g0547886-4
 xdotool 3.20160805.1-2
 xf86-input-libinput 0.29.0-1
 xfsprogs 5.4.0-1
-xkeyboard-config 2.28-1
+xkeyboard-config 2.29-1
 xmlrpc-c 1:1.43.08-2
 xorg-appres 1.0.5-1
 xorg-bdftopcf 1.1-1
