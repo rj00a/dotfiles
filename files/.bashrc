@@ -114,12 +114,12 @@ update() {
         git add -A &&
         git status &&
         git commit -m update &&
+        (paplay files/bell.ogg &) &&
         git push origin master &&
         cd /mnt/sdb1/keepass &&
         echo "(in $(pwd))" &&
-        (paplay files/bell.ogg &) &&
-        #git add -A &&
-        #git commit -m update &&
+        git add -A &&
+        git commit -m update &&
         git push origin master
     } || {
         local e=$?
