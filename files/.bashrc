@@ -103,7 +103,7 @@ rbg() {
 }
 
 # Update the system and push changes to shared repo.
-# Plays a bell sound when changes are ready to be pushed.
+# Plays a sound when changes are ready to be pushed.
 update() {
     yay -Syu || return
     local dir=$(pwd)

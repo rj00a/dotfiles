@@ -58,14 +58,12 @@ chromium 80.0.3987.87-2
 chromium-widevine 1:4.10.1610.0-1
 chrpath 0.16-2
 cifs-utils 6.10-1
-clang 9.0.1-1
 cloc 1.84-1
 cmake 3.16.4-1
 cmark-gfm 0.29.0.gfm.0-1
 cmatrix 2.0-1
 colord 1.4.4+9+g1ce26da-1
 colordiff 1.0.18-2
-compiler-rt 9.0.1-1
 confuse 3.2.2-1
 convertlit 1.8-8
 coreutils 8.31-3
@@ -639,7 +637,6 @@ lilv 0.24.6-2
 linux 5.5.2.arch1-1
 linux-api-headers 5.3.1-2
 linux-firmware 20200122.1eb2408-1
-llvm 9.0.1-1
 llvm-libs 9.0.1-1
 lm_sensors 3.6.0-1
 lmdb 0.9.24-1
@@ -1042,7 +1039,6 @@ zathura-pdf-mupdf 0.3.5-2
 zathura-ps 0.2.6-1
 zenity 3.32.0+17+gfb0938f-1
 zeromq 4.3.2-1
-zig-git 0.5.0.r1446.g958f00f1c-1
 zip 3.0-8
 zita-alsa-pcmi 0.3.2-2
 zita-resampler 1.6.2-2

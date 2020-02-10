@@ -193,5 +193,4 @@ zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
 zathura-ps
-zig-git
 zip
