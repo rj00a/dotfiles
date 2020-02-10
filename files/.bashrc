@@ -103,6 +103,7 @@ rbg() {
 }
 
 # Update the system and push changes to shared repo.
+# Plays a bell sound when changes are ready to be pushed.
 update() {
     yay -Syu || return
     local dir=$(pwd)
@@ -116,8 +117,9 @@ update() {
         git push origin master &&
         cd /mnt/sdb1/keepass &&
         echo "(in $(pwd))" &&
-        git add -A &&
-        git commit -m update &&
+        (paplay files/bell.ogg &) &&
+        #git add -A &&
+        #git commit -m update &&
         git push origin master
     } || {
         local e=$?

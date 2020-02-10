@@ -934,7 +934,7 @@ tree 1.8.0-1
 tslib 1.21-1
 ttf-dejavu 2.37-2
 ttf-inconsolata 1:2.0.0.1-3
-ttf-liberation 2.00.5-2
+ttf-liberation 2.1.0-1
 ttf-ms-win10 10.0.18362.116-1
 ttf-ms-win10-japanese 10.0.18362.116-1
 ttf-ms-win10-korean 10.0.18362.116-1
