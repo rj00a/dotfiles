@@ -124,7 +124,6 @@ pulseaudio
 pulseaudio-alsa
 pulsemixer
 python-sympy
-rakudo
 reflector
 reiserfsprogs
 ripgrep
