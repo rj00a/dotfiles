@@ -172,40 +172,6 @@ bindsym Print exec --no-startup-id maim -u -s ~/last-screenshot.png
 # Take a screenshot of the current window and save it to ~/last-screenshot.png
 bindsym shift+Print exec --no-startup-id maim -u -i "$(xdotool getactivewindow)" ~/last-screenshot.png
 
-# Pass clipboard content to vlc
-bindsym $mod+Shift+v exec --no-startup-id vlc "$(xclip -o)"
+# Pass clipboard content to mpv
+bindsym $mod+Shift+v exec --no-startup-id mpv "$(xclip -o)"
 
-#################### STARTUP PROGRAMS ####################
-
-exec --no-startup-id xrdb ~/.Xresources
-
-# swap caps and escape
-exec --no-startup-id setxkbmap -option "caps:swapescape"
-
-# Adjust mouse pointer speed
-# NOTE: Modifying the Coordinate Transformation Matrix caused some buggy behavior. Do this instead.
-# '14' is the mouse pointer ID, '297' is the property ID, and '-0.5' is the acceleration factor.
-# This is proabably different depending on the hardware setup.
-exec --no-startup-id xinput set-prop 14 297 -0.45
-
-# set keyboard repeat delay and rate
-exec --no-startup-id xset r rate 250 40
-
-# load .Xresources
-exec --no-startup-id xrdb ~/.Xresouces
-
-# load the saved desktop background from nitrogen
-exec --no-startup-id nitrogen --restore
-
-# Unclutter hides the mouse cursor when you don't need it
-# Useful for tiling window managers
-exec --no-startup-id unclutter
-
-# Start polybar with the specified bar
-exec --no-startup-id polybar example
-
-# Start the NetworkManager applet
-exec --no-startup-id nm-applet
-
-# Screen saver program
-exec --no-startup-id xscreensaver -nosplash

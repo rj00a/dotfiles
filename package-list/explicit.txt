@@ -68,7 +68,6 @@ iproute2
 iputils
 jdk-openjdk
 jfsutils
-kdenlive
 keepassxc
 krita
 less
@@ -167,7 +166,6 @@ util-linux
 valgrind
 veracrypt
 vi
-vlc
 vulkan-headers
 vulkan-icd-loader
 vulkan-tools
