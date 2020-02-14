@@ -88,6 +88,7 @@ make
 man-db
 man-pages
 mdadm
+mpv
 multimc-git
 nano
 ncdu
