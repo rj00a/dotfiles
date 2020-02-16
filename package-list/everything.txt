@@ -28,7 +28,7 @@ autoconf 2.69-7
 autoconf-archive 1:2019.01.06-1
 automake 1.16.1-2
 avahi 0.7+18+g1b5f401-3
-bash 5.0.011-2
+bash 5.0.016-1
 bc 1.07.1-3
 binutils 2.34-1
 bison 3.5.1-1
@@ -623,7 +623,7 @@ mujs 1.0.6-1
 multimc-git 0.6.8.r0.gd58481e0-1
 nano 4.8-1
 ncdu 1.14.2-1
-ncurses 6.1-7
+ncurses 6.2-1
 neofetch 6.1.0-1
 net-snmp 5.8-4
 net-tools 1.60.20181103git-2
@@ -802,7 +802,7 @@ qt5-tools 5.14.1-1
 qt5-x11extras 5.14.1-1
 quazip 0.8.1-2
 re2 20200101-1
-readline 8.0.001-2
+readline 8.0.004-1
 recode 3.7.6-1
 reflector 2019.10-2
 reiserfsprogs 3.6.27-3

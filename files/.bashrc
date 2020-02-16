@@ -104,8 +104,17 @@ rbg() {
 
 # Update the system and push changes to shared repo.
 # Plays a sound when changes are ready to be pushed.
-update() {
-    local dir=$(pwd)
+update() (
+    # Note that this is running in a subshell
+    gitupdate() {
+        {
+            git add -A
+            git status
+        } || return
+        # If there is nothing to push, don't try to push anything
+        git commit -m update || git push origin master
+        return 0
+    }
     {
         cd ~/shared &&
         echo "==== in $(pwd) ====" &&
@@ -113,28 +122,16 @@ update() {
         sh gen-package-list.sh &&
         sh update-submodules.sh &&
         vim -c 'PlugInstall|PlugUpdate|qa' &&
-        (paplay files/bell.ogg &) &&
-        git add -A &&
-        git status &&
-        git commit -m update &&
-        git push origin master &&
+        (paplay files/bell.ogg &)
+        gitupdate &&
         cd /mnt/sdb1/keepass &&
         echo "==== in $(pwd) ====" &&
-        git add -A &&
-        git commit -m update &&
-        git push origin master &&
+        gitupdate &&
         cd ~/school/ &&
         echo "==== in $(pwd) ====" &&
-        git add -A &&
-        git commit -m update &&
-        git push origin master
-    } || {
-        local e=$?
-        cd "$dir"
-        return $e
-    }
-    cd "$dir"
-}
+        gitupdate
+    } || exit
+)
 
 # Make directory if not exist and cd into it
 ccd() {
