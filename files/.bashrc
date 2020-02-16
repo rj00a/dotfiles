@@ -75,9 +75,9 @@ alias yv='youtube-dl -iwcR infinite --add-metadata'
 # Download youtube audio only
 alias ya='youtube-dl -xwicR infinite -f bestaudio --audio-quality 0 --add-metadata'
 
-# Open link in clipboard with vlc.
+# Open link in clipboard with mpv.
 # Useful for youtube videos, twitch streams, etc.
-alias vlcx='vlc "$(xclip -o)"'
+alias mpvx='mpv --fs "$(xclip -o)"'
 
 # Kill process by name
 alias fuck='sudo pkill -ie'
@@ -134,24 +134,24 @@ ccd() {
 	mkdir -p "$1" && cd "$1"
 }
 
-# Play something with vlc using fzf and exit
+# Play something with mpv using fzf and exit
 play() {
 	local file="$(find /mnt/sda1/ | fzf)"
 	if [ -z "$file" ]; then
 		return
 	fi
-	vlc "$file" &
+	mpv "$file" &
 	exit 0
 }
 
-# Open all files in a directory with vlc and exit
-# Useful for quickly playing albums
+# Open all files in a directory with mpv and exit
+# Useful for playing albums
 playd() {
 	local file="$(find /mnt/sda1/ | fzf)"
 	if [ -z "$file" ]; then
 		return
 	fi
-	vlc "$(dirname "$file")" &
+	mpv "$(dirname "$file")" &
 	echo "$(dirname "$file")"
 	exit 0
 }
