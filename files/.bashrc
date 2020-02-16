@@ -22,7 +22,7 @@ export BROWSER=chromium
 # Ignore duplicate entries in command history
 export HISTCONTROL=ignoreboth:erasedups
 
-# Sets the timezone for the `date` command
+# Sets the timezone for the 'date' command
 export TZ=America/Los_Angeles
 
 # Allows use of the 'z' command
@@ -90,7 +90,7 @@ alias screensaver='xscreensaver-command -activate'
 
 # Echo stdin to stderr
 errcho() {
-	>&2 echo $@
+    >&2 echo $@
 }
 
 # Run command in the background
@@ -105,19 +105,26 @@ rbg() {
 # Update the system and push changes to shared repo.
 # Plays a sound when changes are ready to be pushed.
 update() {
-    yay -Syu || return
     local dir=$(pwd)
     {
-        cd ~/shared
+        cd ~/shared &&
+        echo "==== in $(pwd) ====" &&
+        yay -Syu &&
         sh gen-package-list.sh &&
         sh update-submodules.sh &&
+        vim -c 'PlugInstall|PlugUpdate|qa' &&
+        (paplay files/bell.ogg &) &&
         git add -A &&
         git status &&
         git commit -m update &&
-        (paplay files/bell.ogg &) &&
         git push origin master &&
         cd /mnt/sdb1/keepass &&
-        echo "(in $(pwd))" &&
+        echo "==== in $(pwd) ====" &&
+        git add -A &&
+        git commit -m update &&
+        git push origin master &&
+        cd ~/school/ &&
+        echo "==== in $(pwd) ====" &&
         git add -A &&
         git commit -m update &&
         git push origin master
@@ -131,81 +138,85 @@ update() {
 
 # Make directory if not exist and cd into it
 ccd() {
-	mkdir -p "$1" && cd "$1"
+    if [ -z "$1" ]; then
+        errcho 'Expected one argument'
+        return 1
+    fi
+    mkdir -p "$1" && cd "$1"
 }
 
 # Play something with mpv using fzf and exit
 play() {
-	local file="$(find /mnt/sda1/ | fzf)"
-	if [ -z "$file" ]; then
-		return
-	fi
-	mpv "$file" &
-	exit 0
+    local file="$(find /mnt/sda1/ | fzf)"
+    if [ -z "$file" ]; then
+        return
+    fi
+    mpv "$file" &
+    exit 0
 }
 
 # Open all files in a directory with mpv and exit
 # Useful for playing albums
 playd() {
-	local file="$(find /mnt/sda1/ | fzf)"
-	if [ -z "$file" ]; then
-		return
-	fi
-	mpv "$(dirname "$file")" &
-	echo "$(dirname "$file")"
-	exit 0
+    local file="$(find /mnt/sda1/ | fzf)"
+    if [ -z "$file" ]; then
+        return
+    fi
+    mpv "$(dirname "$file")" &
+    echo "$(dirname "$file")"
+    exit 0
 }
 
 # Pipe stdout and stderr of command to less
 le() {
-	if [ -z "$@" ]; then
+    if [ -z "$@" ]; then
         errcho 'Expected argument(s)'
-		return 1
-	fi
-	"$@" |& less -r --
+        return 1
+    fi
+    "$@" |& less -r --
 }
 
 # Run pandoc on a file and convert it to HTML, then open it in a browser
 panv() {
-	if [ $# != 1 ]; then
-		errcho 'Expected exactly one argument'
-		return 1
-	fi
-	local tmp=`mktemp`.html
-	pandoc "$1" > "$tmp"
-	cat "$tmp"
-	echo ========================================
-	if [ -z "$BROWSER" ]; then
-		errcho '$BROWSER is unset'
-		return 2
-	fi
-	$BROWSER "$tmp"
+    if [ $# != 1 ]; then
+        errcho 'Expected exactly one argument'
+        return 1
+    fi
+    local tmp=`mktemp`.html
+    pandoc "$1" > "$tmp"
+    cat "$tmp"
+    echo ========================================
+    if [ -z "$BROWSER" ]; then
+        errcho '$BROWSER is unset'
+        return 2
+    fi
+    $BROWSER "$tmp"
 }
 
 # Open zathura on file, disown it, and quit.
 # Error out if file does not exit
 zath() {
-	# If file does not exist
-	if [ ! -f "$1" ]; then 
-		errcho "Unknown file $1"
-		return 1
-	fi
-	zathura "$1" & disown
-	exit 0
+    # If file does not exist
+    if [ ! -f "$1" ]; then 
+        errcho "Unknown file $1"
+        return 1
+    fi
+    zathura "$1" & disown
+    exit 0
 }
 
 # Run 'dd' with some sensible defaults and a confirmation prompt
 ezdd() {
-	if [ $# != 2 ]; then
-		errcho "Expected two arguments (input and output file). Found $# arguments."
-		return 2
-	fi
-	read -rn 1 -p "Are you sure you want to write \"$1\" to \"$2\"? [y/N] "
-	echo
-	if [[ "$REPLY" =~ ^[yY]$ ]]; then
-		sudo dd bs=16M if="$1" of="$2" status=progress
-	else
-		return 1
-	fi
+    if [ $# != 2 ]; then
+        errcho "Expected two arguments (input and output file). Found $# arguments."
+        return 2
+    fi
+    read -rn 1 -p "Are you sure you want to write \"$1\" to \"$2\"? [y/N] "
+    echo
+    if [[ "$REPLY" =~ ^[yY]$ ]]; then
+        sudo dd bs=16M if="$1" of="$2" status=progress
+    else
+        return 1
+    fi
 }
 

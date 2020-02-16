@@ -172,6 +172,3 @@ bindsym Print exec --no-startup-id maim -u -s ~/last-screenshot.png
 # Take a screenshot of the current window and save it to ~/last-screenshot.png
 bindsym shift+Print exec --no-startup-id maim -u -i "$(xdotool getactivewindow)" ~/last-screenshot.png
 
-# Pass clipboard content to mpv
-bindsym $mod+Shift+v exec --no-startup-id mpv "$(xclip -o)"
-
