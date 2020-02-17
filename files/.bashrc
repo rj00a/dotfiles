@@ -112,7 +112,9 @@ update() (
             git status
         } || return
         # If there is nothing to push, don't try to push anything
-        git commit -m update || git push origin master
+        [[ -z "$(git status --porcelain)" ]] && {
+            git commit -m update || git push origin master
+        }
         return 0
     }
     {
