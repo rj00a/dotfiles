@@ -654,7 +654,7 @@ openexr 2.4.0-7
 openjpeg2 2.3.1-1
 openmpi 4.0.2-3
 openresolv 3.10.0-1
-openssh 8.2p1-1
+openssh 8.2p1-3
 openssl 1.1.1.d-2
 openvpn 2.4.8-4
 opera-ffmpeg-codecs 79.0.3945.130-1

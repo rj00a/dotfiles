@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 backup_drive=/dev/disk/by-label/Backup
-backup_root=/mnt/sdc
+backup_root="$(mktemp -d)"
 
 echo "Mounting $backup_drive to $backup_root"
 
-sudo mount "$backup_drive" "$backup_root" || return
+sudo mount "$backup_drive" "$backup_root" || exit
 
 last_backup="$backup_root"/last-backup.txt
 
@@ -13,19 +13,19 @@ last_backup="$backup_root"/last-backup.txt
 > "$last_backup"
 
 t() {
-	"$@" | tee -a "$last_backup"
+    "$@" | tee -a "$last_backup"
 }
 
 t echo '==== Copying home directory ===='
 t rsync -a --delete --progress --stats /home/ryan/ "$backup_root"/homedir \
-	--exclude=.ccache \
-	--exclude=.local/share/Trash \
-	--exclude=.cache/chromium
+    --exclude=.ccache \
+    --exclude=.local/share/Trash \
+    --exclude=.cache/chromium
 
 t echo '==== Copying sda1 (bulk storage) ===='
 t rsync -a --delete --progress --stats /mnt/sda1/ "$backup_root"/sda1 \
-	--exclude=lost+found \
-	--exclude=.Trash-1000
+    --exclude=lost+found \
+    --exclude=.Trash-1000
 
 t echo '==== Copying sdb1 (Windows shared data) ===='
 t rsync -a --delete --progress --stats /mnt/sdb1/ "$backup_root"/sdb1

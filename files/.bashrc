@@ -29,7 +29,7 @@ export TZ=America/Los_Angeles
 # Installed with the 'z' pacman package (community repo)
 source /usr/share/z/z.sh
 
-alias backup='sh ~/shared/scripts/desktop-backup-data.sh'
+alias backup='bash ~/shared/scripts/backup-data.bash'
 
 alias nethack='nethack -d ~/games/nethack-playground'
 
@@ -119,8 +119,8 @@ update() (
         cd ~/shared &&
         echo "==== in $(pwd) ====" &&
         yay -Syu &&
-        sh gen-package-list.sh &&
-        sh update-submodules.sh &&
+        bash gen-package-list.bash &&
+        bash update-submodules.bash &&
         vim -c 'PlugInstall|PlugUpdate|qa' &&
         (paplay files/bell.ogg &) &&
         gitupdate &&
