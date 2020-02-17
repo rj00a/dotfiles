@@ -102,16 +102,14 @@ rbg() {
     ("$@" &) &> /dev/null
 }
 
-# Update the system and push changes to shared repo.
-# Plays a sound when changes are ready to be pushed.
+# Updates various things on the system
 update() (
     # Note that this is running in a subshell
     gitupdate() {
         {
-            git add -A
-            git status
+            git add -A && git status
         } || return
-        # If there is nothing to push, don't try to push anything
+        # If there is nothing to push, don't try to push anything (it might prompt for a password)
         [[ ! -z "$(git status --porcelain)" ]] &&
         git commit -m update &&
         git push origin master
@@ -124,7 +122,7 @@ update() (
         sh gen-package-list.sh &&
         sh update-submodules.sh &&
         vim -c 'PlugInstall|PlugUpdate|qa' &&
-        (paplay files/bell.ogg &)
+        (paplay files/bell.ogg &) &&
         gitupdate &&
         cd /mnt/sdb1/keepass &&
         echo "==== in $(pwd) ====" &&

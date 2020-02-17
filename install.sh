@@ -30,10 +30,12 @@ l polybar ~/.config/
 l .xscreensaver ~/.xscreensaver
 l mpv ~/.config/
 
-# TODO: check if these are already running
+[[ "$(systemctl is-enabled NetworkManager)" == 'disabled' ]] &&
 sudo systemctl enable NetworkManager
+
+[[ "$(systemctl is-enabled org.cups.cupsd)" == 'disabled' ]] &&
 sudo systemctl enable org.cups.cupsd
 
 # Run `nitrogen ~/shared/` to configure wallpaper.
 
-# TODO: print diff of installed pacman packages and the ones in this repo
+# TODO: print diff of installed pacman packages?
