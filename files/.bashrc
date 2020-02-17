@@ -95,10 +95,10 @@ errcho() {
 
 # Run command in the background
 rbg() {
-    if [[ -z "$@" ]]; then
+    [[ -z "$@" ]] && {
         errcho 'Expected argument(s)'
         return 1
-    fi
+    }
     ("$@" &) &> /dev/null
 }
 
@@ -135,58 +135,44 @@ update() (
 
 # Make directory if not exist and cd into it
 ccd() {
-    if [ -z "$1" ]; then
+    [[ -z "$1" ]] && {
         errcho 'Expected one argument'
         return 1
-    fi
+    }
     mkdir -p "$1" && cd "$1"
 }
 
 # Play something with mpv using fzf and exit
 play() {
-    local file="$(find /mnt/sda1/ | fzf)"
-    if [ -z "$file" ]; then
-        return
-    fi
-    mpv "$file" &
-    exit 0
-}
-
-# Open all files in a directory with mpv and exit
-# Useful for playing albums
-playd() {
-    local file="$(find /mnt/sda1/ | fzf)"
-    if [ -z "$file" ]; then
-        return
-    fi
-    mpv "$(dirname "$file")" &
-    echo "$(dirname "$file")"
+    # Pipe stderr to null to hide annoying error messages like "lost+found permission denied"
+    local file="$(find /mnt/sda1/ 2> /dev/null | fzf)"
+    [[ -z "$file" ]] && return
+    # pseudo-gui causes mpv to display a gui even when there is no video (playing music for example)
+    mpv --player-operation-mode=pseudo-gui "$file" &
     exit 0
 }
 
 # Pipe stdout and stderr of command to less
 le() {
-    if [ -z "$@" ]; then
+    [[ -z "$@" ]] && {
         errcho 'Expected argument(s)'
         return 1
-    fi
+    }
     "$@" |& less -r --
 }
 
 # Run pandoc on a file and convert it to HTML, then open it in a browser
 panv() {
-    if [ $# != 1 ]; then
+    [[ $# != 1 ]] && {
         errcho 'Expected exactly one argument'
         return 1
-    fi
+    }
     local tmp=`mktemp`.html
     pandoc "$1" > "$tmp"
-    cat "$tmp"
-    echo ========================================
-    if [ -z "$BROWSER" ]; then
+    [[ -z "$BROWSER" ]] && {
         errcho '$BROWSER is unset'
         return 2
-    fi
+    }
     $BROWSER "$tmp"
 }
 
@@ -194,26 +180,26 @@ panv() {
 # Error out if file does not exit
 zath() {
     # If file does not exist
-    if [ ! -f "$1" ]; then 
+    [[ ! -f "$1" ]] && {
         errcho "Unknown file $1"
         return 1
-    fi
+    }
     zathura "$1" & disown
     exit 0
 }
 
 # Run 'dd' with some sensible defaults and a confirmation prompt
 ezdd() {
-    if [ $# != 2 ]; then
+    [[ $# != 2 ]] && {
         errcho "Expected two arguments (input and output file). Found $# arguments."
-        return 2
-    fi
+        return 1
+    }
     read -rn 1 -p "Are you sure you want to write \"$1\" to \"$2\"? [y/N] "
     echo
     if [[ "$REPLY" =~ ^[yY]$ ]]; then
         sudo dd bs=16M if="$1" of="$2" status=progress
     else
-        return 1
+        return 2
     fi
 }
 

@@ -3,7 +3,8 @@
 cd "$(dirname "$0")"
 
 l () {
-	ln -sf $(pwd)/files/"$1" "$2"
+    mkdir -p $(dirname "$2")
+    ln -sf $(pwd)/files/"$1" "$2"
 }
 
 sh update-submodules.sh
@@ -18,20 +19,21 @@ l .gtkrc-2.0 ~/
 l .Xresources ~/
 l .gitconfig ~/
 l alacritty.yml ~/.config/
-l vlcrc ~/.config/vlc/
 l .nethackrc ~/
 l .inputrc ~/
 l .gdbinit.d ~/
 l gdb-dashboard/.gdbinit ~/
-mkdir -p ~/.vim/autoload/
 l vim-plug/plug.vim ~/.vim/autoload/
 l fontconfig ~/.config/
 l zathura ~/.config/
 l polybar ~/.config/
 l .xscreensaver ~/.xscreensaver
+l mpv ~/.config/
 
+# TODO: check if these are already running
 sudo systemctl enable NetworkManager
 sudo systemctl enable org.cups.cupsd
 
 # Run `nitrogen ~/shared/` to configure wallpaper.
 
+# TODO: print diff of installed pacman packages and the ones in this repo
