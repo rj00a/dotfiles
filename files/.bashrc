@@ -109,8 +109,8 @@ update() (
         {
             git add -A && git status
         } || return
-        # If there is nothing to push, don't try to push anything (it might prompt for a password)
-        [[ ! -z "$(git status --porcelain)" ]] &&
+        # Don't try to commit and push if there aren't any changes.
+        [[ -n "$(git status --porcelain)" ]] &&
         git commit -m update &&
         git push origin master
         return 0
