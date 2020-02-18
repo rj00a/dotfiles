@@ -20,7 +20,7 @@ bindsym $mod+Return exec --no-startup-id WINIT_HIDPI_FACTOR=1.0 i3-sensible-term
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -fn Ubuntu-Mono -nb '#121212' -sf '#121212' -sb '#af5f5f' -nf '#af5f5f'
 
 # change focus
 bindsym $mod+h focus left

@@ -26,7 +26,7 @@ nitrogen --restore &
 unclutter &
 
 # Start polybar with the specified bar
-polybar example &
+polybar main &
 
 # Start the NetworkManager applet
 nm-applet &
