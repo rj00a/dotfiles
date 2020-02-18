@@ -32,7 +32,7 @@ polybar main &
 nm-applet &
 
 # Start xscreensaver without the splash screen
-xscreensaver -nosplash &
+#xscreensaver -nosplash &
 
 # start i3
 exec i3

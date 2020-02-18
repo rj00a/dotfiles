@@ -27,7 +27,6 @@ l vim-plug/plug.vim ~/.vim/autoload/
 l fontconfig ~/.config/
 l zathura ~/.config/
 l polybar ~/.config/
-l .xscreensaver ~/.xscreensaver
 l mpv ~/.config/
 l polybar ~/.config
 
@@ -37,8 +36,10 @@ sudo systemctl enable NetworkManager
 [[ "$(systemctl is-enabled org.cups.cupsd)" == 'disabled' ]] &&
 sudo systemctl enable org.cups.cupsd
 
-# Run `nitrogen ~/shared/` to configure wallpaper.
+[[ "$(systemctl is-enabled ntpd)" == 'disabled' ]] &&
+sudo systemctl enable ntpd
 
-# TODO: print diff of installed pacman packages?
+# Run `nitrogen ~/shared/` to configure wallpaper.
+# Don't forget to install graphics drivers specific for your system.
 
 exit 0

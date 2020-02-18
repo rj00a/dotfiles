@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.43 for ryan on Fri Jan  3 02:07:35 2020.
+# Written by xscreensaver-demo 5.43 for ryan on Tue Feb 18 01:42:04 2020.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -137,7 +137,7 @@ programs:								      \
 - GL: 				gflux -root				    \n\
 -				nerverot -root				    \n\
 				xrayswarm -root				    \n\
--				xspirograph -root			    \n\
+				xspirograph -root			    \n\
 - GL: 				circuit -root				    \n\
 - GL: 				dangerball -root			    \n\
 - GL: 				dnalogo -root				    \n\
