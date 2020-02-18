@@ -20,7 +20,7 @@ xinput set-prop 14 297 -0.45 &
 xset r rate 250 40 &
 
 # Load desktop wallpaper
-feh --bg-fill ~/shared/wallpaper.jpg
+feh --no-fehbg --bg-fill ~/shared/wallpaper.jpg &
 
 # Unclutter hides the mouse cursor when it hasn't been used in a while.
 unclutter &
