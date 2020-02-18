@@ -7,7 +7,7 @@ l () {
     ln -sf $(pwd)/files/"$1" "$2"
 }
 
-sh update-submodules.sh
+bash update-submodules.bash
 
 l .vim/ ~/
 l i3/ ~/.config/
@@ -29,6 +29,7 @@ l zathura ~/.config/
 l polybar ~/.config/
 l .xscreensaver ~/.xscreensaver
 l mpv ~/.config/
+l polybar ~/.config
 
 [[ "$(systemctl is-enabled NetworkManager)" == 'disabled' ]] &&
 sudo systemctl enable NetworkManager
@@ -39,3 +40,5 @@ sudo systemctl enable org.cups.cupsd
 # Run `nitrogen ~/shared/` to configure wallpaper.
 
 # TODO: print diff of installed pacman packages?
+
+exit 0
