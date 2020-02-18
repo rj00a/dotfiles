@@ -19,8 +19,8 @@ xinput set-prop 14 297 -0.45 &
 # '40' is the repeat rate.
 xset r rate 250 40 &
 
-# Load the saved desktop background from nitrogen
-nitrogen --restore &
+# Load desktop wallpaper
+feh --bg-fill ~/shared/wallpaper.jpg
 
 # Unclutter hides the mouse cursor when it hasn't been used in a while.
 unclutter &

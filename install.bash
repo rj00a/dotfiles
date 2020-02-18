@@ -39,7 +39,6 @@ sudo systemctl enable org.cups.cupsd
 [[ "$(systemctl is-enabled ntpd)" == 'disabled' ]] &&
 sudo systemctl enable ntpd
 
-# Run `nitrogen ~/shared/` to configure wallpaper.
 # Don't forget to install graphics drivers specific for your system.
 
 exit 0

@@ -36,6 +36,7 @@ dmenu
 e2fsprogs
 em-keyboard
 fakeroot
+feh
 file
 filesystem
 findutils
@@ -98,11 +99,11 @@ netctl
 nethack
 network-manager-applet
 networkmanager-openvpn
-nitrogen
 nmap
 noto-fonts
 noto-fonts-cjk
 noto-fonts-extra
+ntp
 nvidia
 nvidia-settings
 obs-studio
@@ -184,7 +185,6 @@ xfsprogs
 xorg-server
 xorg-xinit
 xorg-xinput
-xscreensaver
 yay
 youtube-dl
 z
