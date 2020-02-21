@@ -29,6 +29,7 @@ l zathura ~/.config/
 l polybar ~/.config/
 l mpv ~/.config/
 l polybar ~/.config
+l .haskeline ~/
 
 [[ "$(systemctl is-enabled NetworkManager)" == 'disabled' ]] &&
 sudo systemctl enable NetworkManager
