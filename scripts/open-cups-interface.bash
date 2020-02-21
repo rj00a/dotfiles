@@ -1,2 +1,2 @@
-#/usr/bin/env sh
-$BROWSER http://localhost:631/
+#!/usr/bin/env bash
+$BROWSER 'http://localhost:631/'

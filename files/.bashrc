@@ -1,3 +1,5 @@
+#!/usr/env bash
+
 # Extended globbing.
 shopt -s extglob
 
@@ -90,7 +92,7 @@ alias screensaver='xscreensaver-command -activate'
 
 # Echo stdin to stderr
 errcho() {
-    >&2 echo $@
+    >&2 echo "$@"
 }
 
 # Run command in the background
@@ -167,10 +169,10 @@ panv() {
         errcho 'Expected exactly one argument'
         return 1
     }
-    local tmp=`mktemp`.html
+    local tmp="$(mktemp).html"
     pandoc "$1" > "$tmp"
     [[ -z "$BROWSER" ]] && {
-        errcho '$BROWSER is unset'
+        errcho 'BROWSER is unset'
         return 2
     }
     $BROWSER "$tmp"

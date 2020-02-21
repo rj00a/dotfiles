@@ -135,6 +135,7 @@ rustup
 s-nail
 sed
 shadow
+shellcheck
 smbclient
 steam
 strace

@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "$0")"
+cd "$(dirname "$0")" || exit
 
 l () {
-    mkdir -p $(dirname "$2")
-    ln -sf $(pwd)/files/"$1" "$2"
+    mkdir -p "$(dirname "$2")"
+    ln -sf "$(pwd)"/files/"$1" "$2"
 }
 
 bash update-submodules.bash
