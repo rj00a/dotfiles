@@ -5,7 +5,6 @@ Plug 'tmhedberg/matchit'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'moll/vim-bbye'
-Plug 'romainl/vim-cool'
 Plug 'google/vim-searchindex'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
@@ -165,12 +164,6 @@ mapclear
 " Map Y to be consistent with C and D
 noremap Y y$
 
-" Disable search highlight when moving if not using a plugin like vim-cool.
-nnoremap <silent> h :noh<cr>h
-nnoremap <silent> k :noh<cr>k
-nnoremap <silent> j :noh<cr>j
-nnoremap <silent> l :noh<cr>l
-
 " Session slots
 " TODO: Proper directory on windows/macos?
 nnoremap <leader>1 :wa\|mksession! ~/.vim/sessions/1.vim<cr>
@@ -240,6 +233,9 @@ inoremap <silent> <c-j> <esc>:bn<cr>
 " Provided by the vim-bbye plugin
 noremap <silent> <leader>d :up\|Bdelete<cr>
 noremap <silent> <leader>D :Bdelete!<cr>
+
+" Clear search buffer in normal mode when pressing escape<cr>
+nnoremap <silent> <esc> :noh<cr><esc>
 
 " Enable syntax highlighting
 syntax on
