@@ -1,5 +1,4 @@
 #!/usr/env bash
-
 # Extended globbing.
 shopt -s extglob
 
@@ -27,9 +26,12 @@ export HISTCONTROL=ignoreboth:erasedups
 # Sets the timezone for the 'date' command
 export TZ=America/Los_Angeles
 
+# Make python write .pyc files to this dir instead of cwd or wherever
+export PYTHONPYCACHEPREFIX="$HOME/.cache/cpython/"
+
 # Allows use of the 'z' command
 # Installed with the 'z' pacman package (community repo)
-source /usr/share/z/z.sh
+. /usr/share/z/z.sh
 
 alias backup='bash ~/shared/scripts/backup-data.bash'
 
@@ -84,11 +86,13 @@ alias mpvx='mpv --fs "$(xclip -o)"'
 # Kill process by name
 alias fuck='sudo pkill -ie'
 
-# Grep for installed packages
-alias paks='yay -Qq | rg -i'
+# Search for files interactively in this directory
+alias search='find . | fzf'
 
-# Activate xscreensaver
-alias screensaver='xscreensaver-command -activate'
+# Grep for installed packages
+paks() {
+    yay -Qq | rg -i "$@"
+}
 
 # Echo stdin to stderr
 errcho() {
@@ -97,7 +101,7 @@ errcho() {
 
 # Run command in the background
 rbg() {
-    [[ -z "$@" ]] && {
+    [[ -z $# ]] && {
         errcho 'Expected argument(s)'
         return 1
     }
@@ -147,10 +151,25 @@ ccd() {
 # Play something with mpv using fzf and exit
 play() {
     # Pipe stderr to null to hide annoying error messages like "lost+found permission denied"
-    local file="$(find /mnt/sda1/ 2> /dev/null | fzf)"
+    local file="$(find /mnt/sda1/music/ 2> /dev/null | fzf)"
     [[ -z "$file" ]] && return
     # pseudo-gui causes mpv to display a gui even when there is no video (playing music for example)
     mpv --player-operation-mode=pseudo-gui "$file" &
+    exit 0
+}
+
+# Play a directory of audio files with mpv, but play them in proper album order.
+playd() {
+    local dir="$(find /mnt/sda1/music/ -type d 2> /dev/null | fzf)"
+    [[ -z "$dir" ]] && return
+    local tmp=$(mktemp)
+    # Return early if trackord.py fails
+    { python -B ~/shared/scripts/trackord.py "$dir"/* || return; } > "$tmp"
+    local args=()
+    # Read each line into an array so that it can be expanded as arguments to mpv
+    # `readarray` seems to only work if stdin comes from a file
+    readarray -t args < "$tmp"
+    mpv --player-operation-mode=pseudo-gui "${args[@]}" &
     exit 0
 }
 
