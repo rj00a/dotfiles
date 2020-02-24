@@ -3,3 +3,5 @@
 Sxiv.background: #000000
 Sxiv.font: Inconsolata
 
+! Set mouse cursor size
+Xcursor.size: 24

@@ -13,8 +13,9 @@ Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
 call plug#end()
 
-" Clear search buffer when sourcing this file
-let @/ = ""
+" Don't move the cursor back one character when leaving insert mode
+autocmd InsertLeave * :normal `^
+set virtualedit=onemore
 
 " Enable line numbers
 set number
