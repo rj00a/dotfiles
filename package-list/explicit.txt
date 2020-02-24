@@ -135,6 +135,7 @@ rustup
 s-nail
 sed
 shadow
+shellcheck
 smbclient
 steam
 strace
@@ -172,7 +173,6 @@ vulkan-headers
 vulkan-icd-loader
 vulkan-tools
 vulkan-validation-layers
-wavemon
 wd719x-firmware
 weechat
 wget

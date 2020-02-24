@@ -10,7 +10,7 @@ sudo mount "$backup_drive" "$backup_root" || exit
 last_backup="$backup_root"/last-backup.txt
 
 # Clear last backup file
-> "$last_backup"
+: > "$last_backup"
 
 t() {
     "$@" | tee -a "$last_backup"
