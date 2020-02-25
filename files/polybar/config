@@ -23,7 +23,7 @@ alert = #bd2c40
 pseudo-transparency = true
 
 [bar/main]
-modules-left = pulseaudio xbacklight temperature memory cpu
+modules-left = pulseaudio backlight temperature memory cpu
 modules-right = battery date
 bottom = true
 background = ${colors.background}
