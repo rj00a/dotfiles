@@ -114,7 +114,7 @@ label-maxlen = 50
 [module/xbacklight]
 type = internal/xbacklight
 format = <label> <bar>
-label = Lght %percentage%%
+label = Lgt %percentage%%
 bar-width = 10
 bar-indicator = |
 bar-indicator-foreground = #fff
