@@ -14,8 +14,8 @@ Plug 'cespare/vim-toml'
 call plug#end()
 
 " Don't move the cursor back one character when leaving insert mode
-autocmd InsertLeave * :normal `^
-set virtualedit=onemore
+"autocmd InsertLeave * :normal `^
+"set virtualedit=onemore
 
 " Enable line numbers
 set number
