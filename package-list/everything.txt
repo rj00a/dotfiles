@@ -106,7 +106,7 @@ freetype2 2.10.1-2
 fribidi 1.0.8-1
 fuse-common 3.9.0-1
 fuse2 2.9.9-3
-fzf 0.20.0-1
+fzf 0.20.0-3
 gawk 5.0.1-2
 gc 8.0.4-3
 gcc 9.2.1+20200130-2
@@ -154,7 +154,7 @@ gsm 1.0.18-1
 gst-plugins-base 1.16.2-1
 gst-plugins-base-libs 1.16.2-1
 gstreamer 1.16.2-1
-gtk-doc 1.32-2
+gtk-doc 1.32+37+gefc3644-1
 gtk-update-icon-cache 1:3.24.14+9+g429a6287e0-1
 gtk2 2.24.32-2
 gtk3 1:3.24.14+9+g429a6287e0-1
@@ -944,7 +944,7 @@ xorgproto 2019.2-2
 xvidcore 1.3.7-1
 xz 5.2.4-2
 yajl 2.1.0-2
-yay 9.4.4-1
+yay 9.4.5-1
 yelp-tools 3.32.2-1
 yelp-xsl 3.34.2-1
 youtube-dl 2020.02.16-1
