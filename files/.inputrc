@@ -1,5 +1,8 @@
 set editing-mode vi
 
+# Make autocomplete use colors
+set colored-stats on
+
 set keymap vi-command
 Control-l: clear-screen
 # Unmap the 'v' keybinding
@@ -14,7 +17,6 @@ set vi-ins-mode-string \1\e[6 q\2
 set vi-cmd-mode-string \1\e[2 q\2
 
 set show-all-if-ambiguous on
-TAB:menu-complete
 
 # Remove the insert mode -> normal mode delay
 set keyseq-timeout 0

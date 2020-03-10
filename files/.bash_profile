@@ -1,7 +1,7 @@
 # bash_profile: This file runs on login
 
 # Source bashrc if it exists
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+#[[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # Start i3 if it's not already running and we are on tty1
 # This causes ~/.xinitrc to run, which actually starts i3

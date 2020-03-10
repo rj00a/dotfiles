@@ -1,22 +1,132 @@
-function fish_greeting
-	set cmd (shuf -en 1 cowsay cowthink)
-	#fortune -a; printf \n
-	#fortune -a | $cmd -(shuf -en 1 b d g p s t w y) -f (shuf -en 1 /usr/share/cows/*.cow)
+#TODO: Change the cursor shape in insert mode
+#TODO: Make ctrl+e finish the current autocompletion.
+#TODO: Make 'u' in normal mode undo?
+#TODO: Port various scripts to fish.
+
+# 
+
+# Set the normal and visual mode cursors to a block
+set fish_cursor_default block
+
+# Set the insert mode cursor to a line
+set fish_cursor_insert line
+
+# Set the replace mode cursor to an underscore
+set fish_cursor_replace_one underscore
+
+# The following variable can be used to configure cursor shape in
+# visual mode, but due to fish_cursor_default, is redundant here
+set fish_cursor_visual block
+
+set -x EDITOR nvim
+set -x VISUAL nvim
+set -x BROWSER chromium
+
+# Make python write .pyc files to this dir instead of cwd for wherever
+set -x PYTHONCACHEPREFIX "$HOME/.cache/cpython/"
+
+# Set the timezone for 'date'
+set -x TZ 'America/Los_Angeles'
+
+alias vim='nvim'
+alias nethack='nethack -d ~/games/nethack-playground'
+alias ls='ls -A --color=auto --group-directories-first'
+alias view='nvim -R'
+
+# Print usage information about the current filesystem
+alias ds="df -B GiB . | tr -s ' ' | cut -d ' ' -f 3,4,5 | column -t"
+
+alias tra='trash'
+alias tra-clear='trash-clear'
+alias tra-empty='trash-empty'
+alias tra-list='trash-list'
+
+alias mkd='mkdir -p'
+
+# Prompt before overwriting
+alias sm='mv -i'
+alias sc='cp -ri'
+
+alias rtor='rtorrent'
+
+alias syu='yay -Syu'
+
+# Import math and fractions, start REPL, hide copyright msg, and don't write .pyc files
+# Makes python more suitable as a calculator
+alias py="python3 -Bqic 'from math import *; from fractions import Fraction'"
+
+# Kill process by name
+alias fuck='sudo pkill -ie'
+
+# Search for files interactively in this directory
+alias sear='find . | fzf'
+
+# Grep for installed packages
+alias paks='pacman -Qq | grep -i'
+
+# Download video
+alias dlv='youtube-dl -iwcR infinite --add-metadata'
+
+# Download audio
+alias dla='youtube-dl -xwicR infinite -f bestaudio --audio-quality 0 --add-metadata'
+
+function ytv -d 'Play a youtube video using arguments as the search terms'
+    if test (count $argv) -gt 0
+        mpv --ytdl-format=bestvideo+bestaudio "ytdl://ytsearch:$argv" &
+        disown
+    end
 end
 
-fish_vi_key_bindings
+function yta -d 'Play a youtube video (audio only) using arguments as the search terms'
+    if test (count $argv) -gt 0
+        mpv --ytdl-format=bestaudio "ytdl://ytsearch:$argv" &
+        disown
+    end
+end
 
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
+function errcho -d 'echo to stderr'
+    echo $argv > /dev/stderr
+end
+
+function ccd -d 'Make a directory and cd into it'
+    mkdir -p $argv[1] && cd $argv[1]
+end
+
+function play -d 'Play something with mpv using fzf and exit'
+    set file (find /mnt/sda1/music/ -type f 2> /dev/null | fzf)
+    if test "$file"
+        mpv --player-operation-mode=pseudo-gui "$file" &
+        disown
+        exit 0
+    end
+end
+
+function playd -d 'Play a directory of audio files with mpv in proper album order'
+    set dir (find /mnt/sda1/music/ -type d 2> /dev/null | fzf)
+    if ! test "$dir"
+        return
+    end
+    set trax (python -B ~/shared/scripts/trackord.py "$dir"/*)
+    if ! test "$trax"
+        return
+    end
+    mpv --player-operation-mode=pseudo-gui $trax &
+    disown
+    exit 0
+end
+
+function zath -d 'Open zathura on file and close terminal'
+    if ! test "$argv"
+        return
+    end
+    zathura $argv &
+    disown
+    exit 0
+end
 
 # Start X at login
 if status is-login
-	if test -z "$DISPLAY" -a $XDG_VTNR = 1
-		exec startx -- -keeptty
-	end
-end
-
-function ccd
-	set d "$argv[1]"
-	mkdir -p $d && cd $d
+    if test -z "$DISPLAY" -a $XDG_VTNR = 1
+        exec startx -- -keeptty
+    end
 end

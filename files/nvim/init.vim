@@ -11,6 +11,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'ziglang/zig.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
+Plug 'dag/vim-fish'
 call plug#end()
 
 " Don't move the cursor back one character when leaving insert mode

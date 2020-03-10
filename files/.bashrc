@@ -8,9 +8,6 @@ shopt -s dotglob
 # When the shell exits, append to the history file instead of overwriting it
 shopt -s histappend
 
-# Make autocomplete use colors
-bind 'set colored-stats on'
-
 # A generated PS1 from http://bashrcgenerator.com
 # It looks something like this: [ryan@rjpc 0 ~]$
 export PS1="\[\033[38;5;7m\][\[$(tput sgr0)\]\[\033[38;5;13m\]\u\[$(tput sgr0)\]\[\033[38;5;7m\]@\[$(tput sgr0)\]\[\033[38;5;14m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;7m\]\$?\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;7m\]\w]\[$(tput sgr0)\]\[\033[38;5;8m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
@@ -39,10 +36,10 @@ alias backup='bash ~/shared/scripts/backup-data.bash'
 
 alias nethack='nethack -d ~/games/nethack-playground'
 
-alias ls='ls -hA --color=auto --group-directories-first'
+alias ls='ls -A --color=auto --group-directories-first'
 
 # List lots of stuff
-alias la='ls -la --color=auto'
+alias la='ls -lha --color=auto'
 
 alias grep='grep --color=auto'
 

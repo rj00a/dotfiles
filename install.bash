@@ -9,11 +9,10 @@ l () {
 
 bash update-submodules.bash
 
+l fish ~/.config/
 l nvim ~/.config/
 l plug.vim ~/.local/share/nvim/site/autoload/
 l i3/ ~/.config/
-l .bashrc ~/
-l .bash_profile ~/
 l .xinitrc ~/
 l gtk-3.0 ~/.config/
 l .gtkrc-2.0 ~/
