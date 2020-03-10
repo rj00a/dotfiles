@@ -16,8 +16,8 @@ bind 'set colored-stats on'
 export PS1="\[\033[38;5;7m\][\[$(tput sgr0)\]\[\033[38;5;13m\]\u\[$(tput sgr0)\]\[\033[38;5;7m\]@\[$(tput sgr0)\]\[\033[38;5;14m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;7m\]\$?\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;7m\]\w]\[$(tput sgr0)\]\[\033[38;5;8m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
 # Preferred Programs
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 export BROWSER=chromium
 
 # Ignore duplicate entries in command history
@@ -33,6 +33,8 @@ export PYTHONPYCACHEPREFIX="$HOME/.cache/cpython/"
 # Installed with the 'z' pacman package (community repo)
 . /usr/share/z/z.sh
 
+alias nv='nvim'
+
 alias backup='bash ~/shared/scripts/backup-data.bash'
 
 alias nethack='nethack -d ~/games/nethack-playground'
@@ -44,7 +46,7 @@ alias la='ls -la --color=auto'
 
 alias grep='grep --color=auto'
 
-alias view='vim -R'
+alias view='nvim -R'
 
 # Print usage information about the current filesystem
 alias ds="df -B GiB . | tr -s ' ' | cut -d ' ' -f 3,4,5 | column -t"
@@ -127,7 +129,7 @@ update() (
         yay -Syu &&
         bash gen-package-list.bash &&
         bash update-submodules.bash &&
-        vim -c 'PlugInstall|PlugUpdate|qa' &&
+        nvim -c 'PlugUpgrade|PlugUpdate|PlugClean!|qa' &&
         (paplay files/bell.ogg &) &&
         gitupdate &&
         cd /mnt/sdb1/keepass &&

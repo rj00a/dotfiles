@@ -1,9 +1,17 @@
 set editing-mode vi
-$if mode=vi
-    set keymap vi-command
-    Control-l: clear-screen
 
-    set keymap vi-insert
-    Control-l: clear-screen
-$endif
+set keymap vi-command
+Control-l: clear-screen
+# Unmap the 'v' keybinding
+v: ""
 
+set keymap vi-insert
+Control-l: clear-screen
+
+# Block cursor in normal mode, line cursor in insert mode
+set show-mode-in-prompt on
+set vi-ins-mode-string \1\e[6 q\2
+set vi-cmd-mode-string \1\e[2 q\2
+
+# Remove the insert mode -> normal mode delay
+set keyseq-timeout 0

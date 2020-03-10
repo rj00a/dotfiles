@@ -1,5 +1,5 @@
 " Plugin management with vim-plug
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 Plug 'junegunn/fzf.vim'
 Plug 'tmhedberg/matchit'
 Plug 'vim-airline/vim-airline'
@@ -99,18 +99,6 @@ set novisualbell
 " Good for performance
 set lazyredraw
 
-" Place backup, swap, and undo files in a dedicated 'temp' directory
-" instead of the same directory the file is located in
-if has("win32")
-    set directory=$TEMP,c:\tmp,c:\temp
-    set backupdir=$TEMP,c:\tmp,c:\temp
-    set undodir=$TEMP,c:\tmp,c:\temp
-else
-    set directory=~/tmp,/var/tmp,/tmp
-    set backupdir=~/tmp,/var/tmp,/tmp
-    set undodir=~/tmp,/var/tmp,/tmp
-endif
-
 " Disable swap files, because we have version control anyway
 set noswapfile
 
@@ -152,8 +140,8 @@ set exrc
 set secure
 
 " Removes the delay after pressing escape in insert mode, hopefully
-set noesckeys
-set timeoutlen=1000 ttimeoutlen=0
+"set noesckeys
+"set timeoutlen=1000 ttimeoutlen=0
 
 " Minimal number of screen lines to keep above and below the cursor
 " Set this to something big (999) to keep the cursor centered at all times.
@@ -204,8 +192,11 @@ noremap <silent> <leader>w :up<cr>
 noremap <silent> <leader>t :vert term<cr>
 
 " Don't let the integrated terminal interupt buffer switching
-tnoremap <silent> <c-j> <c-w>:bn<cr>
-tnoremap <silent> <c-k> <c-w>:bp<cr>
+tnoremap <silent> <c-j> <c-\><c-n>:bn<cr>
+tnoremap <silent> <c-k> <c-\><c-n>:bp<cr>
+
+" Press ESC twice to exit terminal mode
+tnoremap <silent> <esc><esc> <esc><c-\><c-n>
 
 " Ctrl+backspace deletes whole word
 inoremap <c-bs> <c-w>
@@ -219,10 +210,6 @@ cnoremap <c-s-bs> <c-w>
 vnoremap K <nop>
 noremap K m0i<cr><esc>'0
 
-" Delete WORD using ctrl-w in insert mode
-" (Doesn't work because reasons)
-"inoremap <c-s-w> <esc>BdWa
-
 " Switch between buffers
 noremap <silent> <c-k> :bp<cr>
 inoremap <silent> <c-k> <esc>:bp<cr>
@@ -232,8 +219,7 @@ inoremap <silent> <c-j> <esc>:bn<cr>
 " Closes the current buffer without closing the window
 " Also doesn't leave any [New File]s around
 " Provided by the vim-bbye plugin
-noremap <silent> <leader>d :up\|Bdelete<cr>
-noremap <silent> <leader>D :Bdelete!<cr>
+noremap <silent> <leader>d :up\|Bdelete!<cr>
 
 " Clear search buffer in normal mode when pressing escape<cr>
 nnoremap <silent> <esc> :noh<cr><esc>
@@ -288,12 +274,15 @@ command! HardWrapToggle if &fo =~ 't' | set fo-=t | echo 'Hard line wrap disable
 
 noremap <leader>8 :HardWrapToggle<cr>
 
-" Disable the abomination called netrw
+" Disable the abomination known as netrw
 let g:loaded_netrwPlugin = 1
 
 " Show the list of open buffers and tabs at the top of the screen
 let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+
+" Modify the default ignored buffer names so that neovim's terminal shows up in the tabline
+let g:airline#extensions#tabline#ignore_bufadd_pat = 'defx|gundo|nerd_tree|startify|tagbar|undotree|vimfiler'
 
 " Make the bufferline prettier
 let g:airline#extensions#bufferline#left_sep = ' '
@@ -360,3 +349,5 @@ if v:version >= 700
     autocmd BufEnter * call AutoRestoreWinView()
 endif
 
+" Keep this
+:noh

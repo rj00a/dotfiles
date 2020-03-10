@@ -4,16 +4,17 @@ cd "$(dirname "$0")" || exit
 
 l () {
     mkdir -p "$(dirname "$2")"
-    ln -sf "$(pwd)"/files/"$1" "$2"
+    ln -sf "$(pwd)/files/$1" "$2"
 }
 
 bash update-submodules.bash
 
-l .vim/ ~/
+l nvim ~/.config/
+l plug.vim ~/.local/share/nvim/site/autoload/
 l i3/ ~/.config/
 l .bashrc ~/
 l .bash_profile ~/
-l .xinitrc ~/.xinitrc
+l .xinitrc ~/
 l gtk-3.0 ~/.config/
 l .gtkrc-2.0 ~/
 l .Xresources ~/
@@ -40,6 +41,6 @@ sudo systemctl enable org.cups.cupsd
 [[ "$(systemctl is-enabled ntpd)" == 'disabled' ]] &&
 sudo systemctl enable ntpd
 
-# Don't forget to install graphics drivers specific for your system.
+# Don't forget to install graphics drivers specific for your hardware.
 
 exit 0
