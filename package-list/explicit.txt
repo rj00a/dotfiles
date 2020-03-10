@@ -40,6 +40,7 @@ feh
 file
 filesystem
 findutils
+fish
 flex
 fontpreview
 fortune-mod
@@ -55,7 +56,6 @@ glibc
 gnu-netcat
 gperf
 grep
-gvim
 gzip
 hplip
 htop
@@ -94,6 +94,7 @@ multimc-git
 nano
 ncdu
 neofetch
+neovim
 net-tools
 netctl
 nethack

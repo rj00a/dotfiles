@@ -3,7 +3,7 @@
 cd "$(dirname "$0")" || exit
 
 l () {
-    mkdir -p "$(dirname "$2")"
+    mkdir -p "$2"
     ln -sf "$(pwd)/files/$1" "$2"
 }
 
@@ -24,7 +24,6 @@ l .nethackrc ~/
 l .inputrc ~/
 l .gdbinit.d ~/
 l gdb-dashboard/.gdbinit ~/
-l vim-plug/plug.vim ~/.vim/autoload/
 l fontconfig ~/.config/
 l zathura ~/.config/
 l polybar ~/.config/

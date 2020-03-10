@@ -39,7 +39,7 @@ alias backup='bash ~/shared/scripts/backup-data.bash'
 
 alias nethack='nethack -d ~/games/nethack-playground'
 
-alias ls='ls -A --color=auto --group-directories-first'
+alias ls='ls -hA --color=auto --group-directories-first'
 
 # List lots of stuff
 alias la='ls -la --color=auto'

@@ -195,8 +195,8 @@ noremap <silent> <leader>t :vert term<cr>
 tnoremap <silent> <c-j> <c-\><c-n>:bn<cr>
 tnoremap <silent> <c-k> <c-\><c-n>:bp<cr>
 
-" Press ESC twice to exit terminal mode
-tnoremap <silent> <esc><esc> <esc><c-\><c-n>
+" Exit terminal mode easier
+tnoremap <c-q> <c-\><c-n>
 
 " Ctrl+backspace deletes whole word
 inoremap <c-bs> <c-w>
