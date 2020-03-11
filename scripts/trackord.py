@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+# trackord.py
+# Given a list of music files, print them back to stdout in album-order.
+
 from subprocess import run
 from re import search
 from sys import argv

@@ -3,8 +3,7 @@
 #TODO: Make 'u' in normal mode undo?
 #TODO: Port various scripts to fish.
 
-# 
-
+fish_vi_key_bindings
 # Set the normal and visual mode cursors to a block
 set fish_cursor_default block
 
@@ -28,7 +27,7 @@ set -x PYTHONCACHEPREFIX "$HOME/.cache/cpython/"
 # Set the timezone for 'date'
 set -x TZ 'America/Los_Angeles'
 
-alias vim='nvim'
+alias nv='nvim'
 alias nethack='nethack -d ~/games/nethack-playground'
 alias ls='ls -A --color=auto --group-directories-first'
 alias view='nvim -R'
@@ -78,7 +77,7 @@ function ytv -d 'Play a youtube video using arguments as the search terms'
 end
 
 function yta -d 'Play a youtube video (audio only) using arguments as the search terms'
-    if test (count $argv) -gt 0
+    if [ (count $argv) -gt 0 ]
         mpv --ytdl-format=bestaudio "ytdl://ytsearch:$argv" &
         disown
     end
@@ -94,7 +93,7 @@ end
 
 function play -d 'Play something with mpv using fzf and exit'
     set file (find /mnt/sda1/music/ -type f 2> /dev/null | fzf)
-    if test "$file"
+    if [ -n "$file" ]
         mpv --player-operation-mode=pseudo-gui "$file" &
         disown
         exit 0
@@ -103,11 +102,11 @@ end
 
 function playd -d 'Play a directory of audio files with mpv in proper album order'
     set dir (find /mnt/sda1/music/ -type d 2> /dev/null | fzf)
-    if ! test "$dir"
+    if [ -z "$dir" ]
         return
     end
     set trax (python -B ~/shared/scripts/trackord.py "$dir"/*)
-    if ! test "$trax"
+    if [ -z "$trax" ]
         return
     end
     mpv --player-operation-mode=pseudo-gui $trax &
@@ -116,12 +115,11 @@ function playd -d 'Play a directory of audio files with mpv in proper album orde
 end
 
 function zath -d 'Open zathura on file and close terminal'
-    if ! test "$argv"
-        return
+    if [ -n "$argv" ]
+        zathura $argv &
+        disown
+        exit 0
     end
-    zathura $argv &
-    disown
-    exit 0
 end
 
 # Start X at login

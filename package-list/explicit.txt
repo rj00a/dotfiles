@@ -91,7 +91,6 @@ man-pages
 mdadm
 mpv
 multimc-git
-nano
 ncdu
 neofetch
 neovim
@@ -169,13 +168,11 @@ usbutils
 util-linux
 valgrind
 veracrypt
-vi
 vulkan-headers
 vulkan-icd-loader
 vulkan-tools
 vulkan-validation-layers
 wd719x-firmware
-weechat
 wget
 which
 woeusb
@@ -189,7 +186,6 @@ xorg-xinit
 xorg-xinput
 yay
 youtube-dl
-z
 zathura
 zathura-cb
 zathura-djvu
