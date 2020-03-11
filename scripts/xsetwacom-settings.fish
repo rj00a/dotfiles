@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
 # Map the tablet to the main monitor
 # The other monitors would be HEAD-1, HEAD-2, etc.

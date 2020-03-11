@@ -1,20 +1,20 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
-backup_drive=/dev/disk/by-label/Backup
-backup_root="$(mktemp -d)"
+set backup_drive /dev/disk/by-label/Backup
+set backup_root (mktemp -d)
 
 echo "Mounting $backup_drive to $backup_root"
 
 sudo mount "$backup_drive" "$backup_root" || exit
 
-last_backup="$backup_root"/last-backup.txt
+set last_backup "$backup_root"/last_backup.txt
 
 # Clear last backup file
 : > "$last_backup"
 
-t() {
-    "$@" | tee -a "$last_backup"
-}
+function t
+    $argv | tee -a "$last_backup"
+end
 
 t echo '==== Copying home directory ===='
 t rsync -a --delete --progress --stats /home/ryan/ "$backup_root"/homedir \

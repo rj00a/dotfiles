@@ -1,13 +1,13 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
-cd "$(dirname "$0")" || exit
+cd (dirname (status --filename)) || exit
 
-l () {
-    mkdir -p "$2"
-    ln -sf "$(pwd)/files/$1" "$2"
-}
+function l
+    mkdir -p $argv[2]
+    ln -sf (pwd)/files/$argv[1] $argv[2]
+end
 
-bash update-submodules.bash
+fish update-submodules.fish
 
 l fish ~/.config/
 l nvim ~/.config/
@@ -28,17 +28,17 @@ l zathura ~/.config/
 l polybar ~/.config/
 l mpv ~/.config/
 l polybar ~/.config
-l .haskeline ~/
 
-[[ "$(systemctl is-enabled NetworkManager)" == 'disabled' ]] &&
-sudo systemctl enable NetworkManager
+if [ (systemctl is-enabled NetworkManager) = disabled ]
+    sudo systemctl enable NetworkManager
+end
 
-[[ "$(systemctl is-enabled org.cups.cupsd)" == 'disabled' ]] &&
-sudo systemctl enable org.cups.cupsd
+if [ (systemctl is-enabled org.cups.cupsd) = disabled ]
+    sudo systemctl enable org.cups.cupsd
+end
 
-[[ "$(systemctl is-enabled ntpd)" == 'disabled' ]] &&
-sudo systemctl enable ntpd
+if [ (systemctl is-enabled ntpd) = disabled ]
+    sudo systemctl enable ntpd
+end
 
 # Don't forget to install graphics drivers specific for your hardware.
-
-exit 0
