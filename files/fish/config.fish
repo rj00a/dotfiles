@@ -36,9 +36,11 @@ alias view='nvim -R'
 alias ds="df -B GiB . | tr -s ' ' | cut -d ' ' -f 3,4,5 | column -t"
 
 alias tra='trash'
-alias tra-clear='trash-clear'
 alias tra-empty='trash-empty'
 alias tra-list='trash-list'
+alias tra-put='trash-put'
+alias tra-restore='trash-restore'
+alias tra-rm='trash-rm'
 
 alias mkd='mkdir -p'
 
@@ -79,6 +81,13 @@ end
 function yta -d 'Play a youtube video (audio only) using arguments as the search terms'
     if [ (count $argv) -gt 0 ]
         mpv --ytdl-format=bestaudio "ytdl://ytsearch:$argv" &
+        disown
+    end
+end
+
+function rbg -d 'Run program in the background'
+    $argv > /dev/null 2>&1 &
+    if jobs -q
         disown
     end
 end
