@@ -1,17 +1,19 @@
+" TODO: install LanguageClient-neovim and bind the actions to the function keys.
+
 " Plugin management with vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'junegunn/fzf.vim'
-Plug 'tmhedberg/matchit'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'moll/vim-bbye'
-Plug 'google/vim-searchindex'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar'
-Plug 'ziglang/zig.vim'
-Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
+Plug 'google/vim-searchindex'
+Plug 'junegunn/fzf.vim'
+Plug 'moll/vim-bbye'
+Plug 'rust-lang/rust.vim'
+Plug 'tmhedberg/matchit'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ziglang/zig.vim'
 call plug#end()
 
 " Don't move the cursor back one character when leaving insert mode
@@ -174,7 +176,7 @@ noremap <leader>= :e $MYVIMRC\|set ft=vim<cr>
 "vnoremap <leader>- y:<c-r>"<cr>
 
 " Delete trailing whitespace in buffer
-nnoremap <leader>0 :%s/\s\+$//\|noh\|w<cr><c-o>
+nnoremap <leader>0 :%s/\s\+$//e\|noh\|up<cr>
 
 " Toggle spell checking locally
 nnoremap <leader>9 :setlocal spell!<cr>
@@ -319,9 +321,9 @@ let g:fzf_colors =
 \ 'spinner': ['fg', 'Label'],
 \ 'header': ['fg', 'Comment'] }
 
-" Set formatoptions (see :h fo-table)
-" formatoptions are being overwritten from somewhere, so I'm using an autocommand as a workaround
-autocmd BufNewFile,BufRead * setlocal formatoptions=q
+" Language plugins like to set formatoptions, but I don't want them doing that
+" (See :h fo-table)
+autocmd BufNewFile,BufRead * setlocal fo=q
 
 " Save current view settings on a per-window, per-buffer basis.
 function! AutoSaveWinView()

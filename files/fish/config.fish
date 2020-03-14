@@ -1,7 +1,6 @@
 #TODO: Change the cursor shape in insert mode
 #TODO: Make ctrl+e finish the current autocompletion.
 #TODO: Make 'u' in normal mode undo?
-#TODO: Port various scripts to fish.
 
 fish_vi_key_bindings
 # Set the normal and visual mode cursors to a block
@@ -29,7 +28,7 @@ set -x TZ 'America/Los_Angeles'
 
 alias nv='nvim'
 alias nethack='nethack -d ~/games/nethack-playground'
-alias ls='ls -A --color=auto --group-directories-first'
+alias ls='ls -aA --color=auto --group-directories-first'
 alias view='nvim -R'
 
 # Print usage information about the current filesystem
@@ -131,7 +130,34 @@ function zath -d 'Open zathura on file and close terminal'
     end
 end
 
-# Start X at login
+function git-update
+    begin
+        git add -A && git commit -m update
+    end || return
+    # Only push if we need to.
+    if git status | grep 'ahead of' -q
+        git push origin master
+    end
+end
+
+function update -d 'Update system packages and push changes to shared repos.'
+    ~/shared &&
+    echo '==== in '(pwd)' ====' &&
+    yay -Syu &&
+    fish gen-package-list.fish &&
+    fish update-submodules.fish &&
+    nvim -c 'PlugUpgrade|PlugUpdate|PlugClean!|qa' &&
+    fish -c 'paplay files/bell.ogg' &&
+    git-update &&
+    /mnt/sdb1/keepass &&
+    echo '==== in '(pwd)' ====' &&
+    git-update &&
+    ~/school &&
+    echo '==== in '(pwd)' ====' &&
+    git-update
+end
+
+# Start X at login (Keep this at the end of the script)
 if status is-login
     if test -z "$DISPLAY" -a $XDG_VTNR = 1
         exec startx -- -keeptty
