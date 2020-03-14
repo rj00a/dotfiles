@@ -141,6 +141,8 @@ function git-update
 end
 
 function update -d 'Update system packages and push changes to shared repos.'
+    pushd .
+    # ====
     ~/shared &&
     echo '==== in '(pwd)' ====' &&
     yay -Syu &&
@@ -155,7 +157,8 @@ function update -d 'Update system packages and push changes to shared repos.'
     ~/school &&
     echo '==== in '(pwd)' ====' &&
     git-update
-    cd
+    # ====
+    popd
 end
 
 # Start X at login (Keep this at the end of the script)
