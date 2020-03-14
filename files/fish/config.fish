@@ -133,7 +133,7 @@ end
 function git-update
     begin
         git add -A && git commit -m update
-    end || return
+    end || return 0
     # Only push if we need to.
     if git status | grep 'ahead of' -q
         git push origin master
@@ -155,6 +155,7 @@ function update -d 'Update system packages and push changes to shared repos.'
     ~/school &&
     echo '==== in '(pwd)' ====' &&
     git-update
+    cd
 end
 
 # Start X at login (Keep this at the end of the script)
