@@ -11,8 +11,9 @@ fish update-submodules.fish
 
 l fish ~/.config/
 l nvim ~/.config/
+l bspwm ~/.config/
+l sxhkd ~/.config/
 l plug.vim ~/.local/share/nvim/site/autoload/
-l i3/ ~/.config/
 l .xinitrc ~/
 l gtk-3.0 ~/.config/
 l .gtkrc-2.0 ~/

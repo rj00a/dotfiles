@@ -1,11 +1,10 @@
-" TODO: install LanguageClient-neovim and bind the actions to the function keys.
-
 " Plugin management with vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'cespare/vim-toml'
-Plug 'dag/vim-fish'
+Plug 'kmarius/vim-fish'
 Plug 'google/vim-searchindex'
 Plug 'junegunn/fzf.vim'
+Plug 'kovetskiy/sxhkd-vim'
 Plug 'moll/vim-bbye'
 Plug 'rust-lang/rust.vim'
 Plug 'tmhedberg/matchit'
@@ -181,14 +180,26 @@ nnoremap <leader>0 :%s/\s\+$//e\|noh\|up<cr>
 " Toggle spell checking locally
 nnoremap <leader>9 :setlocal spell!<cr>
 
-" Run zig fmt on current file
-"nnoremap <leader>8 :up\|!zig fmt %<cr>
+" Toggle hard line wrapping
+command! HardWrapToggle if &fo =~ 't' | set fo-=t | echo 'Hard line wrap disabled' | else | set fo+=t | echo 'Hard line wrap enabled' | endif
+nnoremap <leader>8 :HardWrapToggle<cr>
+
+" Run rustfmt
+nnoremap <leader>7 :up\|RustFmt<cr>
 
 " Disable the annoying message in the command line when using Ctrl-c
 nnoremap <c-c> <silent> <c-c>
 
+" Closes the current buffer without closing the window
+" Also doesn't leave any [New File]s around
+" Provided by the vim-bbye plugin
+noremap <silent> <leader>d :up\|Bdelete!<cr>
+
+" Save and quit everything
+noremap <leader>q :wqa<cr>
+
 " Write file with sudo permissions
-nnoremap <leader>W :w !sudo tee %<cr>
+noremap <leader>W :w !sudo tee %<cr>
 noremap <silent> <leader>w :up<cr>
 
 " Open vertical terminal
@@ -218,11 +229,6 @@ noremap <silent> <c-k> :bp<cr>
 inoremap <silent> <c-k> <esc>:bp<cr>
 noremap <silent> <c-j> :bn<cr>
 inoremap <silent> <c-j> <esc>:bn<cr>
-
-" Closes the current buffer without closing the window
-" Also doesn't leave any [New File]s around
-" Provided by the vim-bbye plugin
-noremap <silent> <leader>d :up\|Bdelete!<cr>
 
 " Clear search buffer in normal mode when pressing escape<cr>
 nnoremap <silent> <esc> :noh<cr><esc>
@@ -261,21 +267,19 @@ nnoremap <silent> <leader>f :Files<cr>
 nnoremap <silent> <leader>s :Rg<cr>
 
 " Search for open buffer
-noremap <silent> <leader>b :Buffers<cr>
+nnoremap <silent> <leader>b :Buffers<cr>
 
 " Search marks
-noremap <silent> <leader>m :Marks<cr>
+nnoremap <silent> <leader>m :Marks<cr>
 
 " Search lines in open buffers
-noremap <silent> <leader>l :Lines<cr>
+nnoremap <silent> <leader>l :Lines<cr>
 
 " Search v:oldfiles and open buffers
-noremap <silent> <leader>h :History<cr>
+nnoremap <silent> <leader>h :History<cr>
 
-" Toggle hard line wrapping in format options
-command! HardWrapToggle if &fo =~ 't' | set fo-=t | echo 'Hard line wrap disabled' | else | set fo+=t | echo 'Hard line wrap enabled' | endif
-
-noremap <leader>8 :HardWrapToggle<cr>
+" Display context menu for language client
+nnoremap <f5> :call LanguageClient_contextMenu()<cr>
 
 " Disable the abomination known as netrw
 let g:loaded_netrwPlugin = 1

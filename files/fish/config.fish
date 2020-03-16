@@ -1,20 +1,20 @@
-#TODO: Change the cursor shape in insert mode
-#TODO: Make ctrl+e finish the current autocompletion.
-#TODO: Make 'u' in normal mode undo?
+#TODO: Change the cursor shape in different modes (should be working already, bugged with alacritty?)
+#TODO: Make 'u' in normal mode undo (instead of command history).
+#TODO: change colors to match vim colorscheme.
 
-fish_vi_key_bindings
-# Set the normal and visual mode cursors to a block
-set fish_cursor_default block
+# No fish greeting
+set fish_greeting
 
-# Set the insert mode cursor to a line
-set fish_cursor_insert line
+function hybrid_key_bindings -d "Vi bindings that inherit emacs bindings in all modes."
+    for mode in default insert visual
+        fish_default_key_bindings -M $mode
+    end
+    fish_vi_key_bindings --no-erase
+end
+set -g fish_key_bindings hybrid_key_bindings
 
-# Set the replace mode cursor to an underscore
-set fish_cursor_replace_one underscore
-
-# The following variable can be used to configure cursor shape in
-# visual mode, but due to fish_cursor_default, is redundant here
-set fish_cursor_visual block
+# Disable the mode indicator
+set fish_mode_prompt
 
 set -x EDITOR nvim
 set -x VISUAL nvim
@@ -100,7 +100,7 @@ function ccd -d 'Make a directory and cd into it'
 end
 
 function play -d 'Play something with mpv using fzf and exit'
-    set file (find /mnt/sda1/music/ -type f 2> /dev/null | fzf)
+    set file (find /mnt/sda1/{music/, films/} -type f 2> /dev/null | fzf)
     if [ -n "$file" ]
         mpv --player-operation-mode=pseudo-gui "$file" &
         disown

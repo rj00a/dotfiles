@@ -14,10 +14,10 @@ bash
 binutils
 bison
 breeze-default-cursor-theme
+bspwm
 bzip2
 capitaine-cursors
 ccache
-cgdb
 chromium
 chromium-widevine
 cifs-utils
@@ -47,6 +47,7 @@ fzf
 gawk
 gcc
 gcc-libs
+gdb
 gettext
 git
 glances
@@ -57,10 +58,6 @@ grep
 gzip
 hplip
 htop
-i3-gaps
-i3blocks
-i3lock-color
-i3status
 inetutils
 intel-ucode
 iotop
@@ -98,6 +95,7 @@ nethack
 network-manager-applet
 networkmanager-openvpn
 nmap
+nodejs
 noto-fonts
 noto-fonts-cjk
 noto-fonts-extra
@@ -122,6 +120,7 @@ psmisc
 pulseaudio
 pulseaudio-alsa
 pulsemixer
+python-pynvim
 python-sympy
 reflector
 reiserfsprogs
@@ -136,6 +135,7 @@ smbclient
 steam
 strace
 sudo
+sxhkd
 sxiv
 sysfsutils
 systemd-boot-pacman-hook
@@ -179,6 +179,7 @@ xclip
 xdotool
 xfsprogs
 xorg-server
+xorg-xev
 xorg-xinit
 xorg-xinput
 yay

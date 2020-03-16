@@ -31,8 +31,8 @@ polybar main &
 # Start the NetworkManager applet
 nm-applet &
 
-# Start xscreensaver without the splash screen
-#xscreensaver -nosplash &
+# Start the Simple X hotkey daemon
+sxhkd &
 
-# start i3
-exec i3
+# start bspwm
+exec bspwm

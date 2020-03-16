@@ -23,8 +23,8 @@ alert = #bd2c40
 pseudo-transparency = true
 
 [bar/main]
-modules-left = pulseaudio backlight temperature memory cpu
-modules-right = battery date
+modules-left = date bspwm title
+modules-right = cpu temperature memory pulseaudio backlight battery
 bottom = true
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -33,14 +33,20 @@ height = 20
 font-0 = fixed:pixelsize=10;3
 padding-left = 2
 padding-right = 2
-tray-position = right
+tray-position = left
 tray-padding = 2
 ;override-redirect = true
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
 cursor-click = pointer
 ;border-size = 1
 ;border-color = #707070
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+[module/bspwm]
+type = internal/bspwm
+
+[module/title]
+type = internal/xwindow
 
 [module/date]
 type = internal/date
@@ -100,16 +106,11 @@ type = internal/memory
 interval = 1
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-; Swp %percentage_swap_used%% %gb_swap_used%
-label = Mem %percentage_used%% %gb_used%
+label = Mem %percentage_used%% %gb_used%    Swp %percentage_swap_used%% %gb_swap_used%
 
 [module/temperature]
 type = internal/temperature
 format = Tmp <label>
-
-[module/title]
-type = internal/xwindow
-label-maxlen = 50
 
 [module/xbacklight]
 type = internal/xbacklight
