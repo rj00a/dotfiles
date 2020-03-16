@@ -31,21 +31,25 @@ super + {_,shift + }{h,j,k,l}
 super + {_,shift + }q
     bspc node -{c,k}
 
+# Focus the next/previous node in the current desktop
+super + {_,shift + }n
+    bspc node -f {next,prev}.local
+
 # Focus the older or newer node in the focus history
 super + {o,i}
     bspc wm -h off; \
     bspc node {older,newer} -f; \
     bspc wm -h on
 
+# Swap the current node and the biggest node
+super + g
+    bspc node -s biggest
+
 #######################################################################
 
 # send the newest marked node to the newest preselected node
 super + y
     bspc node newest.marked.local -n newest.!automatic.local
-
-# swap the current node and the biggest node
-super + g
-    bspc node -s biggest
 
 #
 # state/flags
@@ -62,10 +66,6 @@ super + ctrl + {m,x,y,z}
 # focus the node for the given path jump
 super + {p,b,comma,period}
     bspc node -f @{parent,brother,first,second}
-
-# focus the next/previous node in the current desktop
-super + {_,shift + }c
-    bspc node -f {next,prev}.local
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
