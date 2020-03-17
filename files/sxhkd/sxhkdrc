@@ -12,11 +12,11 @@ super + Return
     alacritty
 
 # Volume control
-{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
+XF86Audio{RaiseVolume,LowerVolume,Mute}
     amixer sset 'Master' {4%+,4%-,toggle}
 
 # Media player controls
-{XF86AudioPlay,XF86AudioPause,XF86AudioNext,XF86AudioPrev}
+XF86Audio{Play,Pause,Next,Prev}
     playerctl {play,pause,next,previous}
 
 # Screen brightness controls
@@ -25,9 +25,9 @@ super + Return
 
 # Screenshot controls
 # Not holding shift lets you select an area
-#TODO: shift is broken
-{_,shift +}Print
-    maim -u -{s,i "(xdotool getactivewindow)"} ~/last-screenshot.png
+#TODO: shift + Print is broken
+{_,shift + }Print
+    maim -u -{s,i (xdotool getactivewindow)} ~/last-screenshot.png
 
 # Run dmenu
 super + d
@@ -37,9 +37,9 @@ super + d
 super + m
     bspc desktop -l next
 
-# Set the window state
+# Toggle window states from tiled to some other state
 super + {t,shift + t,s,f}
-    bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+    bspc node -t ~{tiled,pseudo_tiled,floating,fullscreen}
 
 # Focus/move the node in the given direction
 super + {_,shift + }{h,j,k,l}
@@ -62,6 +62,10 @@ super + {o,i}
     bspc wm -h off; \
     bspc node {older,newer} -f; \
     bspc wm -h on
+
+# Focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+    bspc {desktop -f,node -d} '^{1-9,10}'
 
 #######################################################################
 
@@ -92,10 +96,6 @@ super + bracket{left,right}
 # focus the last node/desktop
 super + {grave,Tab}
     bspc {node,desktop} -f last
-
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-    bspc {desktop -f,node -d} '^{1-9,10}'
 
 #
 # preselect

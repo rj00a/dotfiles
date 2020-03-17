@@ -15,15 +15,15 @@ background = #121212
 ;background = #000000
 foreground = #dfdfdf
 foreground-alt = #444444
-primary = #af5f5f
-secondary = #ffdf87
+yellowish = #dfdfaf
+reddish = #af5f5f
 alert = #bd2c40
 
 [settings]
 pseudo-transparency = true
 
 [bar/main]
-modules-left = date bspwm title
+modules-left = date title
 modules-right = cpu temperature memory pulseaudio backlight battery
 bottom = true
 background = ${colors.background}
@@ -42,11 +42,9 @@ cursor-click = pointer
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
-[module/bspwm]
-type = internal/bspwm
-
 [module/title]
 type = internal/xwindow
+format-foreground = ${colors.reddish}
 
 [module/date]
 type = internal/date
