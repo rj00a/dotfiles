@@ -71,7 +71,7 @@ alias dlv='youtube-dl -iwcR infinite --add-metadata'
 alias dla='youtube-dl -xwicR infinite -f bestaudio --audio-quality 0 --add-metadata'
 
 function ytv -d 'Play a youtube video using arguments as the search terms'
-    if test (count $argv) -gt 0
+    if [ (count $argv) -gt 0 ]
         mpv --ytdl-format=bestvideo+bestaudio "ytdl://ytsearch:$argv" &
         disown
     end
@@ -161,9 +161,24 @@ function update -d 'Update system packages and push changes to shared repos.'
     popd
 end
 
+function ezdd -d "'dd' with confirmation prompt and good arguments."
+    set numargs (count $argv)
+    if [ $numargs != 2 ]
+        errcho "Expected 2 arguments (input and output file). Found $numargs arguments."
+        return 1
+    end
+    set reply (read -n 1 -P "Are you sure you want to write \"$argv[1]\" to \"$argv[2]\"? [y/N] ")
+    echo
+    if [ "$reply" = y ]; or [ "$reply" = Y ]
+        sudo dd bs=16M if="$argv[1]" of="$argv[2]" status=progress
+    else
+        return 2
+    end
+end
+
 # Start X at login (Keep this at the end of the script)
 if status is-login
-    if test -z "$DISPLAY" -a $XDG_VTNR = 1
+    if [ -z "$DISPLAY" -a $XDG_VTNR = 1 ]
         exec startx -- -keeptty
     end
 end
