@@ -34,8 +34,12 @@ super + d
     dmenu_run -fn Ubuntu-Mono -nb '#121212' -sf '#121212' -sb '#af5f5f' -nf '#af5f5f'
 
 # Switch between tiled and monocle layout
-super + m
+super + space
     bspc desktop -l next
+
+# Focus the next/previous node in the current desktop
+super + {n,m}
+    bspc node -f {prev,next}.local
 
 # Toggle window states from tiled to some other state
 super + {t,shift + t,s,f}
@@ -44,10 +48,6 @@ super + {t,shift + t,s,f}
 # Focus/move the node in the given direction
 super + {_,shift + }{h,j,k,l}
     bspc node -{f,s} {west,south,north,east}
-
-# Focus the next/previous node in the current desktop
-super + {_,shift + }n
-    bspc node -f {next,prev}.local
 
 # Close or kill
 super + {_,shift + }q
@@ -64,8 +64,8 @@ super + {o,i}
     bspc wm -h on
 
 # Focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-    bspc {desktop -f,node -d} '^{1-9,10}'
+super + {_,shift + }{1-6}
+    bspc {desktop -f,node -d} '{1-6}'
 
 #######################################################################
 

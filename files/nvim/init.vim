@@ -156,13 +156,13 @@ mapclear
 noremap Y y$
 
 " Session slots
-" TODO: Proper directory on windows/macos?
-nnoremap <leader>1 :wa\|mksession! ~/.vim/sessions/1.vim<cr>
-nnoremap <leader>! :so ~/.vim/sessions/1.vim<cr>
-nnoremap <leader>2 :wa\|mksession! ~/.vim/sessions/2.vim<cr>
-nnoremap <leader>@ :so ~/.vim/sessions/2.vim<cr>
-nnoremap <leader>3 :wa\|mksession! ~/.vim/sessions/3.vim<cr>
-nnoremap <leader># :so ~/.vim/sessions/3.vim<cr>
+"TODO: predefined veriable representing the nvim directory?
+nnoremap <leader>1 :wa\|mksession! ~/.config/nvim/sessions/1.vim<cr>
+nnoremap <leader>! :so ~/.config/nvim/sessions/1.vim<cr>
+nnoremap <leader>2 :wa\|mksession! ~/.config/sessions/2.vim<cr>
+nnoremap <leader>@ :so ~/.config/nvim/sessions/2.vim<cr>
+nnoremap <leader>3 :wa\|mksession! ~/.config/nvim/sessions/3.vim<cr>
+nnoremap <leader># :so ~/.config/nvim/sessions/3.vim<cr>
 
 " Source .vimrc
 nnoremap <leader>- :source $MYVIMRC\|AirlineToggle\|AirlineToggle<cr>
