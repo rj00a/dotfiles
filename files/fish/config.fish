@@ -176,6 +176,13 @@ function ezdd -d "'dd' with confirmation prompt and good arguments."
     end
 end
 
+function em -d 'Fuzzy find an emoji and copy it to the clipboard'
+    set res (fzf < ~/shared/files/emojis.txt)
+    if [ $status = 0 ]
+        echo $res | cut -f 2 -d ' ' | xclip -selection clipboard
+    end
+end
+
 # Start X at login (Keep this at the end of the script)
 if status is-login
     if [ -z "$DISPLAY" -a $XDG_VTNR = 1 ]

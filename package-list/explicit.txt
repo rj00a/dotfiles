@@ -33,7 +33,6 @@ diffutils
 discord
 dmenu
 e2fsprogs
-em-keyboard
 fakeroot
 feh
 file

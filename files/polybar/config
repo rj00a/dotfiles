@@ -45,6 +45,7 @@ scroll-down = bspwm-deskprev
 [module/title]
 type = internal/xwindow
 format-foreground = ${colors.reddish}
+label-maxlen = 70
 
 [module/date]
 type = internal/date
