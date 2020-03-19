@@ -25,7 +25,6 @@ bspc config pointer_modifier mod4
 # ==== Colors ==== #
 
 bspc config normal_border_color '#444444'
-#bspc config focused_border_color '#af5f5f'
-bspc config focused_border_color '#009000'
+bspc config focused_border_color '#af5f5f'
 bspc config urgent_border_color '#bd2c40'
 
