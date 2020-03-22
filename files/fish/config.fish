@@ -31,6 +31,8 @@ alias nethack='nethack -d ~/games/nethack-playground'
 alias ls='ls -aA --color=auto --group-directories-first'
 alias view='nvim -R'
 
+alias backup='fish ~/shared/scripts/backup-data.fish'
+
 # Print usage information about the current filesystem
 alias ds="df -B GiB . | tr -s ' ' | cut -d ' ' -f 3,4,5 | column -t"
 

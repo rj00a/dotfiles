@@ -51,7 +51,7 @@ chromium 80.0.3987.149-1
 chromium-widevine 1:4.10.1610.0-1
 chrpath 0.16-2
 cifs-utils 6.10-1
-cmake 3.16.5-1
+cmake 3.17.0-1
 cmatrix 2.0-1
 colord 1.4.4+9+g1ce26da-1
 colordiff 1.0.18-2
@@ -59,7 +59,7 @@ coreutils 8.31-3
 cracklib 2.9.7-2
 cryptsetup 2.3.1-1
 cups 2.3.1-1
-cups-filters 1.27.2-1
+cups-filters 1.27.3-1
 curl 7.69.1-1
 dav1d 0.5.2-1
 db 5.3.28-5
@@ -102,7 +102,7 @@ foomatic-db-engine 4:20200206-1
 fortune-mod 2.12.0-1
 freetype2 2.10.1-2
 fribidi 1.0.9-1
-fuse-common 3.9.0-1
+fuse-common 3.9.1-1
 fuse2 2.9.9-3
 fzf 0.21.0.1-1
 gawk 5.0.1-2
@@ -117,7 +117,7 @@ gdbm 1.18.1-3
 gdk-pixbuf2 2.40.0-2
 gettext 0.20.1-3
 ghc-libs 8.8.3-1
-ghostscript 9.51-1
+ghostscript 9.52-1
 giflib 5.2.1-1
 girara 0.3.4-1
 git 2.25.2-1
@@ -134,7 +134,7 @@ gnome-common 3.18.0-3
 gnu-netcat 0.7.1-7
 gnupg 2.2.19-1
 gnutls 3.6.12-1
-go 2:1.14-1
+go 2:1.14.1-1
 gobject-introspection 1.64.0-1
 gobject-introspection-runtime 1.64.0-1
 gperf 3.1-2
@@ -163,7 +163,7 @@ harfbuzz-icu 2.6.4-2
 haskell-lexer 1.1-3
 haskell-pretty-show 1.10-2
 hicolor-icon-theme 0.17-1
-hplip 1:3.20.3-1
+hplip 1:3.20.3-2
 hspell 1.4-2
 htop 2.2.0-3
 hunspell 1.7.0-2
@@ -173,7 +173,7 @@ hyphen 2.8.8-2
 iana-etc 20200311-1
 icu 65.1-3
 ijs 0.35-2
-imagemagick 7.0.10.1-1
+imagemagick 7.0.10.2-2
 imlib2 1.6.1-1
 inetutils 1.9.4-8
 intel-gmmlib 19.4.1-1
@@ -245,7 +245,7 @@ lib32-gcc-libs 9.3.0-1
 lib32-gdk-pixbuf2 2.40.0-1
 lib32-glib2 2.64.1-1
 lib32-glibc 2.31-2
-lib32-gmp 6.1.2-2
+lib32-gmp 6.2.0-1
 lib32-gnutls 3.6.12-1
 lib32-gtk2 2.24.32-1
 lib32-harfbuzz 2.6.4-2
@@ -263,7 +263,7 @@ lib32-libelf 0.177-1
 lib32-libffi 3.2.1-2
 lib32-libgcrypt 1.8.5-1
 lib32-libglvnd 1.3.1-1
-lib32-libgpg-error 1.36-1
+lib32-libgpg-error 1.37-1
 lib32-libidn 1.35-1
 lib32-libindicator-gtk2 12.10.1-8
 lib32-libjpeg-turbo 2.0.4-1
@@ -275,7 +275,7 @@ lib32-libthai 0.1.28-1
 lib32-libtiff 4.1.0-1
 lib32-libx11 1.6.9-1
 lib32-libxau 1.0.9-1
-lib32-libxcb 1.13.1-1
+lib32-libxcb 1.14-1
 lib32-libxcomposite 0.4.5-1
 lib32-libxcursor 1.2.0-1
 lib32-libxdamage 1.1.5-1
@@ -295,7 +295,7 @@ lib32-llvm-libs 9.0.1-1
 lib32-lm_sensors 3.6.0-1
 lib32-lz4 1.9.2-1
 lib32-mesa 19.3.4-3
-lib32-ncurses 6.1-4
+lib32-ncurses 6.2-1
 lib32-nettle 3.5.1-1
 lib32-nspr 4.25-1
 lib32-nss 3.51-1
@@ -307,7 +307,7 @@ lib32-pcre 8.44-1
 lib32-pixman 0.38.4-1
 lib32-readline 8.0.0-1
 lib32-sqlite 3.31.1-1
-lib32-systemd 245-1
+lib32-systemd 245.2-1
 lib32-util-linux 2.35.1-1
 lib32-wayland 1.18.0-1
 lib32-xz 5.2.4-1
@@ -321,7 +321,7 @@ libassuan 2.5.3-2
 libasyncns 0.8+3+g68cd5af-2
 libatomic_ops 7.6.10-1
 libavc1394 0.5.4-3
-libbluray 1.1.2-1
+libbluray 1.2.0-1
 libbsd 0.10.0-1
 libcaca 0.99.beta19-2
 libcanberra 0.30+2+gc0620e4-2
@@ -338,12 +338,12 @@ libdbusmenu-glib 16.04.0-4
 libdbusmenu-gtk2 16.04.0-4
 libdbusmenu-gtk3 16.04.0-4
 libdrm 2.4.100-1
-libdvdnav 6.0.1-1
-libdvdread 6.0.2-1
+libdvdnav 6.1.0-1
+libdvdread 6.1.0-1
 libedit 20191231_3.1-1
 libelf 0.178-2
 libepoxy 1.5.4-1
-libev 4.31-1
+libev 4.33-1
 libevdev 1.9.0-1
 libexif 0.6.21-3
 libffi 3.2.1-4
@@ -474,10 +474,10 @@ libxv 1.0.11-3
 libxxf86vm 1.1.4-3
 licenses 20191011-2
 lilv 0.24.6-2
-linux 5.5.9.arch1-2
+linux 5.5.10.arch1-1
 linux-api-headers 5.4.17-1
 linux-firmware 20200224.efcfa03-1
-llvm-libs 9.0.1-1
+llvm-libs 9.0.1-2
 lm_sensors 3.6.0-1
 lmdb 0.9.24-1
 logrotate 3.16.0-1
@@ -496,7 +496,7 @@ maim 5.5.3-2
 make 4.3-1
 mallard-ducktype 1.0.2-3
 man-db 2.9.1-1
-man-pages 5.05-1
+man-pages 5.05-2
 mbedtls 2.16.5-1
 md4c 0.4.3-1
 mdadm 4.1-2
@@ -535,10 +535,10 @@ nss 3.51-1
 ntfs-3g 2017.3.23-4
 ntp 4.2.8.p14-1
 numactl 2.0.13-2
-nvidia 440.64-4
+nvidia 440.64-5
 nvidia-settings 440.64-1
 nvidia-utils 440.64-2
-obs-studio 24.0.6-1
+obs-studio 25.0.1-1
 openal 1.20.1-2
 opencore-amr 0.1.5-3
 openexr 2.4.1-2
@@ -566,8 +566,8 @@ pcre 8.44-1
 pcre2 10.34-3
 perf 5.5-1
 perl 5.30.1-1
-perl-alien-build 2.15-1
-perl-alien-libxml2 0.14-1
+perl-alien-build 2.17-1
+perl-alien-libxml2 0.15-1
 perl-capture-tiny 0.48-2
 perl-clone 0.43-1
 perl-dbi 1.643-1
@@ -650,7 +650,7 @@ python-pynvim 0.4.1-1
 python-pyparsing 2.4.6-1
 python-pytz 2019.3-3
 python-requests 2.23.0-1
-python-setuptools 1:46.0.0-1
+python-setuptools 1:46.1.1-1
 python-six 1.14.0-1
 python-snowballstemmer 2.0.0-3
 python-sphinx 2.4.4-1
@@ -663,7 +663,7 @@ python-sphinxcontrib-qthelp 1.0.3-1
 python-sphinxcontrib-serializinghtml 1.1.4-1
 python-sympy 1.5.1-1
 python-urllib3 1.25.8-2
-python2 2.7.17-1
+python2 2.7.17-2
 qpdf 9.1.1-1
 qrencode 4.0.2-1
 qt5-base 5.14.1-3
@@ -677,7 +677,7 @@ quazip 0.8.1-2
 re2 1:20200303-1
 readline 8.0.004-1
 recode 3.7.6-1
-reflector 2020.3-1
+reflector 2020.3.21.2-1
 reiserfsprogs 3.6.27-3
 rest 0.8.1-1
 rhash 1.3.9-1
@@ -719,10 +719,10 @@ suil 0.10.6-2
 sxhkd 0.6.1-1
 sxiv 26-1
 sysfsutils 2.1.0-11
-systemd 245-3
+systemd 245.2-2
 systemd-boot-pacman-hook 2-1
-systemd-libs 245-3
-systemd-sysvcompat 245-3
+systemd-libs 245.2-2
+systemd-sysvcompat 245.2-2
 talloc 2.3.1-1
 tar 1.32-3
 tcc 0.9.27-3
@@ -731,12 +731,12 @@ testdisk 7.1-1
 tevent 1:0.9.39-4
 texinfo 6.7-2
 thin-provisioning-tools 0.8.5-3
-tokei 10.1.2-1
+tokei 11.0.0-1
 trash-cli 0.17.1.14-5
 tree 1.8.0-1
 tslib 1.21-1
 ttf-dejavu 2.37-2
-ttf-inconsolata 1:2.0.0.1-3
+ttf-inconsolata 1:3.000-1
 ttf-liberation 2.1.0-1
 ttf-ms-win10 10.0.18362.116-1
 ttf-ms-win10-japanese 10.0.18362.116-1
@@ -764,10 +764,10 @@ valgrind 3.15.0-1
 vamp-plugin-sdk 2.9.0-1
 veracrypt 1.24.update4-1
 vid.stab 1.1-2
-vulkan-headers 1:1.2.133-1
-vulkan-icd-loader 1.2.132-1
-vulkan-tools 1.2.131.1-1
-vulkan-validation-layers 1.2.132-1
+vulkan-headers 1:1.2.135-1
+vulkan-icd-loader 1.2.135-1
+vulkan-tools 1.2.135-1
+vulkan-validation-layers 1.2.133-1
 wayland 1.18.0-1
 wayland-protocols 1.20-1
 wd719x-firmware 1-5
@@ -797,7 +797,7 @@ xclip 0.13-2
 xdg-dbus-proxy 0.1.2-1
 xdg-utils 1.1.3+19+g9816ebb-1
 xdotool 3.20160805.1-2
-xf86-input-libinput 0.29.0-1
+xf86-input-libinput 0.29.0-2
 xfsprogs 5.4.0-1
 xkeyboard-config 2.29-1
 xmlrpc-c 1:1.51.06-1
@@ -821,7 +821,7 @@ xorg-xrdb 1.2.0-1
 xorg-xset 1.2.4-1
 xorgproto 2019.2-2
 xvidcore 1.3.7-1
-xz 5.2.4-2
+xz 5.2.5-1
 yay 9.4.6-2
 yelp-tools 3.32.2-1
 yelp-xsl 3.36.0-1
