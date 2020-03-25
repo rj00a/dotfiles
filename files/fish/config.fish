@@ -181,7 +181,7 @@ end
 function em -d 'Fuzzy find an emoji and copy it to the clipboard'
     set res (fzf < ~/shared/files/emojis.txt)
     if [ $status = 0 ]
-        echo $res | cut -f 2 -d ' ' | xclip -selection clipboard
+        echo $res | cut -f 1 -d ' ' | xclip -selection clipboard
     end
 end
 
