@@ -1,5 +1,5 @@
-#TODO: Change the cursor shape in different modes (should be working already, bugged with alacritty?)
-#TODO: Make 'u' in normal mode undo (instead of command history).
+#TODO: Change the cursor shape in different modes (should be working already; bugged with alacritty?)
+#TODO: Make 'u' in normal mode undo (instead of command history)?
 #TODO: change colors to match vim colorscheme.
 
 # No fish greeting
@@ -23,14 +23,22 @@ set -x BROWSER chromium
 # Make python write .pyc files to this dir instead of cwd for wherever
 set -x PYTHONCACHEPREFIX "$HOME/.cache/cpython/"
 
-# Set the timezone for 'date'
+# Run this file on startup
+set -x PYTHONSTARTUP ~/shared/files/.pythonrc
+
+# Make less not write to ~/.lesshst
+set -x LESSHISTFILE -
+
+# Set the timezone for 'date' command
 set -x TZ 'America/Los_Angeles'
 
 alias nv='nvim'
+
+# Save data is located in nethack-playground
 alias nethack='nethack -d ~/games/nethack-playground'
+
 alias ls='ls -aA --color=auto --group-directories-first'
 alias view='nvim -R'
-
 alias backup='fish ~/shared/scripts/backup-data.fish'
 
 # Print usage information about the current filesystem

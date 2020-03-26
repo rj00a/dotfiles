@@ -1,0 +1,4 @@
+import readline
+
+# Prevent python from creating or writing to ~/.python_history
+readline.write_history_file = lambda *args: None

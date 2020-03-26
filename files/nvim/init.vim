@@ -236,6 +236,9 @@ nnoremap <silent> <esc> :noh<cr><esc>
 " Enable syntax highlighting
 syntax on
 
+" Detect filetype
+filetype on
+
 " The font for gvim
 set guifont=Inconsolata\ 12
 
