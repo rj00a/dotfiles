@@ -63,6 +63,7 @@ iproute2
 iputils
 jdk-openjdk
 jfsutils
+kakoune
 keepassxc
 krita
 less
@@ -71,6 +72,7 @@ licenses
 linux
 linux-firmware
 logrotate
+lshw
 lsof
 lua
 luajit
