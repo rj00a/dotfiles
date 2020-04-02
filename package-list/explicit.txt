@@ -63,6 +63,7 @@ iproute2
 iputils
 jdk-openjdk
 jfsutils
+jq
 kakoune
 keepassxc
 krita
