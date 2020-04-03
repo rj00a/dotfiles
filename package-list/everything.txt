@@ -508,7 +508,6 @@ nss 3.51-1
 ntfs-3g 2017.3.23-4
 ntp 4.2.8.p14-1
 numactl 2.0.13-2
-numix-gtk-theme 2.6.7-1
 nvidia 440.64-9
 nvidia-settings 440.64-1
 nvidia-utils 440.64-2

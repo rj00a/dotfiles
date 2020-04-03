@@ -99,7 +99,6 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-extra
 ntp
-numix-gtk-theme
 nvidia
 nvidia-settings
 obs-studio
