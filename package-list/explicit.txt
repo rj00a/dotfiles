@@ -13,7 +13,6 @@ automake
 bash
 binutils
 bison
-breeze-default-cursor-theme
 bspwm
 bzip2
 capitaine-cursors
@@ -78,7 +77,6 @@ lsof
 lua
 luajit
 lvm2
-lxappearance
 m4
 maim
 make

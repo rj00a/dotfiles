@@ -28,6 +28,7 @@ l fontconfig ~/.config/
 l zathura ~/.config/
 l polybar ~/.config/
 l mpv ~/.config/
+l index.theme ~/.icons/default/
 l polybar ~/.config
 
 if [ (systemctl is-enabled NetworkManager) = disabled ]

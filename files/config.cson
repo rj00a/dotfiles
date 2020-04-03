@@ -1,5 +1,3 @@
-# Not actually using atom, but might as well save the config in case I come around to it.
-
 "*":
   "autocomplete-plus":
     confirmCompletion: "tab"
