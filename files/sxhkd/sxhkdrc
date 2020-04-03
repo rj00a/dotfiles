@@ -7,6 +7,10 @@ super + shift + k
 super + shift + r
     bspc wm -r
 
+# Log out
+super + shift + q
+    bspc quit
+
 # Run alacritty
 super + Return
     alacritty

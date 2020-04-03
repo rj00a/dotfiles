@@ -1,3 +1,6 @@
+# Change the default X shaped cursor
+xsetroot -cursor_name left_ptr &
+
 # Load xresources
 xrdb -merge ~/.Xresources &
 

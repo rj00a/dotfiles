@@ -5,7 +5,7 @@ aic94xx-firmware
 alacritty
 alsa-utils
 antlr4
-arc-gtk-theme
+arc-gtk-theme-jnsh-git
 ascii
 audacity
 autoconf
@@ -99,6 +99,7 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-extra
 ntp
+numix-gtk-theme
 nvidia
 nvidia-settings
 obs-studio
@@ -182,6 +183,7 @@ xorg-server
 xorg-xev
 xorg-xinit
 xorg-xinput
+xorg-xsetroot
 xwallpaper
 yay
 youtube-dl
