@@ -83,6 +83,7 @@ make
 man-db
 man-pages
 mdadm
+mlton
 mpv
 multimc-git
 ncdu
@@ -132,6 +133,7 @@ s-nail
 sed
 shadow
 smbclient
+smlnj
 steam
 strace
 sudo
