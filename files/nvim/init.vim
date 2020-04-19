@@ -129,6 +129,9 @@ au BufNewFile,BufRead *.sml setlocal ft=sml
 " Python for .py files
 au BufNewFile,BufRead *.py setlocal ft=python
 
+" Haskell for .hs files
+au BufNewFile,BufRead *.hs setlocal ft=haskell
+
 " Pressing tab inserts four spaces
 " Hard tabs appear four spaces wide
 set tabstop=4
