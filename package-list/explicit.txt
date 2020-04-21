@@ -127,7 +127,6 @@ reflector
 reiserfsprogs
 ripgrep
 rsync
-rtorrent
 rustup
 s-nail
 sed
@@ -146,6 +145,7 @@ tcc
 testdisk
 texinfo
 tokei
+transmission-gtk
 trash-cli
 tree
 ttf-dejavu

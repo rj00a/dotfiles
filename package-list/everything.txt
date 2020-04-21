@@ -64,7 +64,7 @@ dbus 1.12.16-5
 dconf 0.36.0-1
 desktop-file-utils 0.24-2
 device-mapper 2.02.187-1
-dhcpcd 8.1.7-1
+dhcpcd 9.0.1-2
 dialog 1:1.3_20200327-1
 diffutils 3.7-3
 discord 0.0.10-2
@@ -113,7 +113,7 @@ ghc-libs 8.8.3-2
 ghostscript 9.52-1
 giflib 5.2.1-1
 girara 0.3.4-1
-git 2.26.1-1
+git 2.26.2-1
 glances 3.1.3-2
 glew 2.1.0-1
 glib-networking 2.64.2-1
@@ -160,7 +160,7 @@ i3-wm 4.18-1
 iana-etc 20200327-1
 icu 65.1-3
 ijs 0.35-2
-imagemagick 7.0.10.6-1
+imagemagick 7.0.10.7-1
 imlib2 1.6.1-1
 inetutils 1.9.4-8
 intel-gmmlib 20.1.1-1
@@ -324,6 +324,7 @@ libelf 0.178-2
 libepoxy 1.5.4-1
 libev 4.33-1
 libevdev 1.9.0-1
+libevent 2.1.11-5
 libexif 0.6.21-3
 libffi 3.3-3
 libfontenc 1.1.4-1
@@ -345,7 +346,7 @@ libksba 1.3.5-2
 libldap 2.4.49-1
 liblouis 3.13.0-1
 liblqr 0.4.2-2
-libluv 1.34.2-1
+libluv 1.36.0-1
 libmad 0.15.1b-8
 libmfx 20.1.0-1
 libmicrohttpd 0.9.70-1
@@ -386,7 +387,7 @@ librsvg 2:2.48.3-1
 libsamplerate 0.1.9-3
 libsasl 2.1.27-2
 libseccomp 2.4.2-1
-libsecret 0.20.2-1
+libsecret 0.20.3-1
 libsm 1.2.3-1
 libsndfile 1.0.28-3
 libsodium 1.0.18-1
@@ -404,13 +405,12 @@ libtheora 1.1.1-4
 libtiff 4.1.0-1
 libtirpc 1.2.6-1
 libtool 2.4.6+42+gb88cebd5-11
-libtorrent 0.13.8-1
 libunistring 0.9.10-2
 libunwind 1.3.1-1
 libusb 1.0.23-2
 libutil-linux 2.35.1-2
-libuv 1.36.0-1
-libva 2.7.0-1
+libuv 1.37.0-1
+libva 2.7.1-1
 libvdpau 1.3-1
 libvisual 0.4.0-7
 libvoikko 4.3-1
@@ -452,7 +452,7 @@ libxv 1.0.11-3
 libxxf86vm 1.1.4-3
 licenses 20191011-2
 lilv 0.24.6-2
-linux 5.6.4.arch1-1
+linux 5.6.5.arch3-1
 linux-api-headers 5.4.17-1
 linux-firmware 20200316.8eb0b28-1
 llvm-libs 10.0.0-1
@@ -511,11 +511,11 @@ nss 3.51.1-1
 ntfs-3g 2017.3.23-4
 ntp 4.2.8.p14-1
 numactl 2.0.13-3
-nvidia 440.82-3
+nvidia 440.82-6
 nvidia-settings 440.82-1
 nvidia-utils 440.82-1
 obs-studio 25.0.4-1
-oniguruma 6.9.4-1
+oniguruma 6.9.5-1
 openal 1.20.1-2
 opencore-amr 0.1.5-3
 openexr 2.4.1-2
@@ -636,7 +636,6 @@ rhash 1.3.9-1
 ripgrep 12.0.1-1
 rsync 3.1.3-3
 rtkit 0.13-1
-rtorrent 0.9.8-2
 rubberband 1.8.2-3
 run-parts 4.8.6.1-2
 rustup 1.21.1-4
@@ -682,6 +681,7 @@ tevent 1:0.10.2-1
 texinfo 6.7-2
 thin-provisioning-tools 0.8.5-3
 tokei 11.1.0-1
+transmission-gtk 2.94-2
 trash-cli 0.17.1.14-5
 tree 1.8.0-1
 tslib 1.21-1
@@ -747,7 +747,6 @@ xdotool 3.20160805.1-2
 xf86-input-libinput 0.29.0-2
 xfsprogs 5.6.0-1
 xkeyboard-config 2.29-1
-xmlrpc-c 1:1.51.06-1
 xorg-fonts-encodings 1.0.5-1
 xorg-mkfontscale 1.2.1-2
 xorg-server 1.20.8-1
