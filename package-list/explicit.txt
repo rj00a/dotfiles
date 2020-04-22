@@ -187,6 +187,7 @@ xorg-xsetroot
 xwallpaper
 yay
 youtube-dl
+z
 zathura
 zathura-cb
 zathura-djvu

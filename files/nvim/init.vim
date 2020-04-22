@@ -1,7 +1,7 @@
 " Plugin management with vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'cespare/vim-toml'
-Plug 'kmarius/vim-fish'
+Plug 'dag/vim-fish'
 Plug 'google/vim-searchindex'
 Plug 'junegunn/fzf.vim'
 Plug 'kovetskiy/sxhkd-vim'
@@ -14,10 +14,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ziglang/zig.vim'
 call plug#end()
-
-" Don't move the cursor back one character when leaving insert mode
-"autocmd InsertLeave * :normal `^
-"set virtualedit=onemore
 
 " Enable line numbers
 set number
@@ -120,18 +116,6 @@ set backspace=indent,eol,start
 set list
 set listchars=tab:>\ ,space:\ ,trail:-
 
-" Set lisp mode for emacs lisp
-au Filetype el setlocal lisp
-
-" Standard ML for .sml files
-au BufNewFile,BufRead *.sml setlocal ft=sml
-
-" Python for .py files
-au BufNewFile,BufRead *.py setlocal ft=python
-
-" Haskell for .hs files
-au BufNewFile,BufRead *.hs setlocal ft=haskell
-
 " Pressing tab inserts four spaces
 " Hard tabs appear four spaces wide
 set tabstop=4
@@ -177,7 +161,7 @@ nnoremap <leader># :so ~/.config/nvim/sessions/3.vim<cr>
 nnoremap <leader>- :source $MYVIMRC\|AirlineToggle\|AirlineToggle<cr>
 
 " Edit vimrc
-noremap <leader>= :e $MYVIMRC\|set ft=vim<cr>
+noremap <leader>= :e $MYVIMRC<cr>
 
 " Copy line (or selection) into command buffer and run it
 "nnoremap <leader>- yy:<c-r>"<bs><cr>
@@ -246,7 +230,7 @@ nnoremap <silent> <esc> :noh<cr><esc>
 syntax on
 
 " Detect filetype
-filetype on
+filetype plugin indent on
 
 " The font for gvim
 set guifont=Inconsolata\ 12

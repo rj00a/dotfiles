@@ -16,6 +16,15 @@ set -g fish_key_bindings hybrid_key_bindings
 # Disable the mode indicator
 set fish_mode_prompt
 
+# Show the full path of the cwd in the prompt.
+set fish_prompt_pwd_dir_length 0
+
+# Initialize z
+source ~/shared/files/z.fish
+z --add "$CWD"
+
+set -x XDG_DOWNLOAD_DIR ~/dl/
+
 set -x EDITOR nvim
 set -x VISUAL nvim
 set -x BROWSER chromium
@@ -40,6 +49,9 @@ alias nethack='nethack -d ~/games/nethack-playground'
 alias ls='ls -aA --color=auto --group-directories-first'
 alias view='nvim -R'
 alias backup='fish ~/shared/scripts/backup-data.fish'
+
+# Don't let sxiv cache files for privacy reasons.
+alias sxiv='sxiv -p'
 
 # Print usage information about the current filesystem
 alias ds="df -B GiB . | tr -s ' ' | cut -d ' ' -f 3,4,5 | column -t"
