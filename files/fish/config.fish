@@ -106,7 +106,7 @@ function yta -d 'Play a youtube video (audio only) using arguments as the search
     end
 end
 
-function rbg -d 'Run program in the background'
+function rbg -d 'Run program in the background and disown'
     $argv > /dev/null 2>&1 &
     if jobs -q
         disown

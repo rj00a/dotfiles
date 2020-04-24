@@ -61,6 +61,10 @@ super + {_,shift + }q
 super + g
     bspc node -s biggest
 
+# Rotate children
+super + r
+    bspc node -f @parent && bspc node -R 90 && bspc node -f last
+
 # Focus the older or newer node in the focus history
 super + {o,i}
     bspc wm -h off; \
