@@ -166,7 +166,7 @@ imlib2 1.6.1-1
 inetutils 1.9.4-8
 intel-gmmlib 20.1.1-1
 intel-media-driver 20.1.1-1
-intel-media-sdk 20.1.0-1
+intel-media-sdk 20.1.1-1
 intel-ucode 20191115-3
 iotop 0.6-7
 iproute2 5.6.0-1
@@ -278,7 +278,7 @@ lib32-libxxf86vm 1.1.4-2
 lib32-llvm-libs 10.0.0-1
 lib32-lm_sensors 3.6.0-1
 lib32-lz4 1.9.2-1
-lib32-mesa 20.0.4-2
+lib32-mesa 20.0.5-1
 lib32-ncurses 6.2-1
 lib32-nettle 3.5.1-1
 lib32-nspr 4.25-1
@@ -349,7 +349,7 @@ liblouis 3.13.0-1
 liblqr 0.4.2-2
 libluv 1.36.0-1
 libmad 0.15.1b-8
-libmfx 20.1.0-1
+libmfx 20.1.1-1
 libmicrohttpd 0.9.70-1
 libmm-glib 1.12.8-1
 libmnl 1.0.4-3
@@ -658,7 +658,7 @@ soundtouch 2.1.2-1
 source-highlight 3.1.9-2
 speex 1.2.0-2
 speexdsp 1.2.0-1
-spirv-tools 2019.5-2
+spirv-tools 2020.2-1
 sqlite 3.31.1-1
 sratom 0.6.4-1
 srt 1.4.1-1
@@ -670,10 +670,10 @@ suil 0.10.6-2
 sxhkd 0.6.1-1
 sxiv 26-1
 sysfsutils 2.1.0-11
-systemd 245.5-1
+systemd 245.5-2
 systemd-boot-pacman-hook 2-1
-systemd-libs 245.5-1
-systemd-sysvcompat 245.5-1
+systemd-libs 245.5-2
+systemd-sysvcompat 245.5-2
 talloc 2.3.1-1
 tar 1.32-3
 tcc 0.9.27-3
@@ -705,7 +705,7 @@ uchardet 0.0.7-1
 unclutter 1:1.5-1
 unibilium 2.1.0-1
 unrar 1:5.9.2-1
-unzip 6.0-13
+unzip 6.0-14
 usbutils 012-2
 util-linux 2.35.1-2
 v4l-utils 1.18.0-1
@@ -720,7 +720,7 @@ vulkan-validation-layers 1.2.135-1
 wayland 1.18.0-2
 wayland-protocols 1.20-1
 wd719x-firmware 1-6
-webkit2gtk 2.28.1-1
+webkit2gtk 2.28.2-1
 webrtc-audio-processing 0.3.1-1
 wget 1.20.3-2
 which 2.21-5
@@ -783,7 +783,7 @@ zathura-pdf-mupdf 0.3.5-3
 zathura-ps 0.2.6-1
 zenity 3.32.0+17+gfb0938f-1
 zeromq 4.3.2-1
-zip 3.0-8
+zip 3.0-9
 zita-alsa-pcmi 0.3.2-2
 zita-resampler 1.6.2-2
 zlib 1:1.2.11-4
