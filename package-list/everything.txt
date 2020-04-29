@@ -454,7 +454,7 @@ libxt 1.2.0-1
 libxtst 1.2.3-3
 libxv 1.0.11-3
 libxxf86vm 1.1.4-3
-licenses 20191011-2
+licenses 20200427-1
 lilv 0.24.8-1
 linux 5.6.7.arch1-1
 linux-api-headers 5.4.17-1
@@ -567,7 +567,7 @@ perl-xml-sax-base 1.09-3
 pinentry 1.1.0-5
 pixman 0.40.0-1
 pkcs11-helper 1.26.0-1
-pkgconf 1.6.3-3
+pkgconf 1.6.3-4
 playerctl 2.1.1-1
 polkit 0.116-5
 polybar 3.4.2-2
@@ -716,7 +716,7 @@ vamp-plugin-sdk 2.9.0-1
 veracrypt 1.24.update4-1
 vi 1:070224-4
 vid.stab 1.1-2
-vulkan-headers 1:1.2.137-1
+vulkan-headers 1:1.2.139-1
 vulkan-icd-loader 1.2.135-1
 vulkan-tools 1.2.135-1
 vulkan-validation-layers 1.2.135-1
