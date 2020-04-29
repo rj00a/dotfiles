@@ -16,6 +16,12 @@ set -g fish_key_bindings hybrid_key_bindings
 # Disable the mode indicator
 set fish_mode_prompt
 
+# Set the cursor shapes for the different vi modes.
+set fish_cursor_default block blink
+set fish_cursor_insert line blink
+set fish_cursor_replace_one underscore blink
+set fish_cursor_visual block
+
 # Show the full path of the cwd in the prompt.
 set fish_prompt_pwd_dir_length 0
 
@@ -25,8 +31,7 @@ z --add "$CWD"
 
 set -x XDG_DOWNLOAD_DIR ~/dl/
 
-set -x EDITOR nvim
-set -x VISUAL nvim
+set -x VISUAL vi
 set -x BROWSER chromium
 
 # Make python write .pyc files to this dir instead of cwd for wherever
@@ -41,13 +46,10 @@ set -x LESSHISTFILE -
 # Set the timezone for 'date' command
 set -x TZ 'America/Los_Angeles'
 
-alias nv='nvim'
-
 # Save data is located in nethack-playground
 alias nethack='nethack -d ~/games/nethack-playground'
 
 alias ls='ls -aA --color=auto --group-directories-first'
-alias view='nvim -R'
 alias backup='fish ~/shared/scripts/backup-data.fish'
 
 # Don't let sxiv cache files for privacy reasons.
@@ -170,7 +172,6 @@ function update -d 'Update system packages and push changes to shared repos.'
     yay -Syu &&
     fish gen-package-list.fish &&
     fish update-submodules.fish &&
-    nvim -c 'PlugUpgrade|PlugUpdate|PlugClean!|qa' &&
     fish -c 'paplay files/bell.ogg' &&
     git-update &&
     /mnt/sdb1/keepass &&

@@ -350,9 +350,8 @@ libksba 1.3.5-2
 libldap 2.4.49-1
 liblouis 3.13.0-1
 liblqr 0.4.2-2
-libluv 1.36.0-1
 libmad 0.15.1b-8
-libmagick6 6.9.11.9-1
+libmagick6 6.9.11.10-1
 libmfx 20.1.1-1
 libmicrohttpd 0.9.70-1
 libmm-glib 1.12.8-1
@@ -405,7 +404,6 @@ libssh2 1.9.0-2
 libsynctex 2019.51075-8
 libtasn1 4.16.0-1
 libteam 1.30-1
-libtermkey 0.22-1
 libthai 0.1.28-1
 libtheora 1.1.1-4
 libtiff 4.1.0-1
@@ -422,7 +420,6 @@ libvisual 0.4.0-7
 libvoikko 4.3-1
 libvorbis 1.3.6-1
 libvpx 1.8.2-1
-libvterm 0.1.git5.4a5fa43-1
 libwacom 1.3-1
 libwbclient 4.11.3-3
 libwebp 1.1.0-1
@@ -492,14 +489,12 @@ mkinitcpio-busybox 1.31.1-1
 mobile-broadband-provider-info 20190618-1
 mpfr 4.0.2-2
 mpv 1:0.32.0-3
-msgpack-c 3.2.1-1
 mtdev 1.1.6-1
 mujs 1.0.6-1
 multimc-git 0.6.11.r1.g21ac860e-1
 ncdu 1.14.2-1
 ncurses 6.2-1
 neofetch 7.0.0-1
-neovim 0.4.3-3
 net-snmp 5.8-4
 net-tools 1.60.20181103git-2
 netctl 1.21-2
@@ -711,7 +706,6 @@ twolame 0.4.0-2
 tzdata 2020a-1
 uchardet 0.0.7-1
 unclutter 1:1.5-1
-unibilium 2.1.0-1
 unrar 1:5.9.2-1
 unzip 6.0-14
 usbutils 012-2
@@ -720,6 +714,7 @@ v4l-utils 1.18.0-1
 valgrind 3.15.0-1
 vamp-plugin-sdk 2.9.0-1
 veracrypt 1.24.update4-1
+vi 1:070224-4
 vid.stab 1.1-2
 vulkan-headers 1:1.2.137-1
 vulkan-icd-loader 1.2.135-1

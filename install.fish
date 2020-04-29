@@ -10,7 +10,6 @@ end
 fish update-submodules.fish
 
 l fish ~/.config/
-l nvim ~/.config/
 l bspwm ~/.config/
 l sxhkd ~/.config/
 l plug.vim ~/.local/share/nvim/site/autoload/
