@@ -7,6 +7,7 @@ alsa-utils
 antlr4
 arc-gtk-theme-jnsh-git
 ascii
+aspell-en
 ats2-postiats
 audacity
 autoconf
@@ -33,6 +34,7 @@ diffutils
 discord
 dmenu
 e2fsprogs
+emacs
 fakeroot
 file
 filesystem

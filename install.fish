@@ -23,6 +23,8 @@ l alacritty.yml ~/.config/
 l .nethackrc ~/
 l .inputrc ~/
 l .gdbinit.d ~/
+l .haskeline ~/
+l init.el ~/.emacs.d/
 l gdb-dashboard/.gdbinit ~/
 l fontconfig ~/.config/
 l zathura ~/.config/

@@ -32,5 +32,8 @@ nm-applet &
 # Start the Simple X hotkey daemon
 sxhkd &
 
+# Force emacs to open in tiled mode.
+bspc rule -a Emacs state=tiled &
+
 # start bspwm
 exec bspwm
