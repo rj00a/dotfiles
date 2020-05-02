@@ -1,6 +1,7 @@
 ;; TODO: Rust mode stuff
 ;; TODO: Try solarized-wombat-dark-theme.el
 ;; TODO: Customize gdb?
+;; TODO: eshell-previous-input, eshell-next-input
 
 ;; Enable the MELPA package repo
 (require 'package)
@@ -17,14 +18,17 @@
         evil-leader
         centered-cursor-mode
         gruvbox-theme
+        solarized-theme
         hl-todo
         evil-collection
         powerline
-        fish-mode))
+        fish-mode
+        magit
+        evil-magit))
 
 ;; Must be set before require
-(setq evil-want-C-u-scroll t)
-(setq evil-want-keybinding nil)
+(setq evil-want-C-u-scroll t
+      evil-want-keybinding nil)
 
 ;; Load and require the list of packages.
 (dolist (pkg my-packages)
@@ -33,7 +37,7 @@
   (require pkg))
 
 ;; Load theme without asking for confirmation
-(load-theme 'gruvbox t)
+(load-theme 'solarized-wombat-dark t)
 
 ;; Set the default font
 (set-face-attribute 'default nil
@@ -55,11 +59,13 @@
 (global-evil-leader-mode 1)
 
 (evil-leader/set-key
-  "k" 'kill-current-buffer
   "f" 'ido-find-file
   "d" 'ido-dired
-  "b" 'ido-display-buffer
+  "D" 'cd
+  "b" 'ido-switch-buffer
   "l" 'buffer-menu
+  "k" 'kill-current-buffer
+  "K" 'ido-kill-buffer
   "w" 'evil-write
   "W" 'save-some-buffers
   "r" 'revert-buffer
@@ -75,11 +81,10 @@
 ;; Enable evil mode.
 (evil-mode 1)
 
+(setq evil-collection-setup-minibuffer t)
+
 ;; Set all of the evil-collection bindings as once.
 (evil-collection-init)
-
-;; Enter inserts a newline, regardless of the mode.
-(define-key evil-motion-state-map (kbd "RET") nil)
 
 ;; Make searching with / or ? not wrap around.
 (setq evil-search-wrap nil)
@@ -118,6 +123,15 @@
 
 ;; Highlight TODOs and similar keywords.
 (global-hl-todo-mode 1)
+
+;; Get whitespace mode to show only the important stuff.
+(setq whitespace-style
+      '(tabs
+        tab-mark
+        trailing
+        space-after-tab
+        space-before-tab))
+(global-whitespace-mode 1)
 
 ;; For consistency with evil.
 ;; Might cause issues, idk.
@@ -188,7 +202,7 @@
     ("b89ae2d35d2e18e4286c8be8aaecb41022c1a306070f64a66fd114310ade88aa" "c684e64b79a2fa042fa912b70ba14cd8da0a7175c06ac6791efee57b3209da50" default)))
  '(package-selected-packages
    (quote
-    (fish-mode powerline powerline-theme evil-collection gruvbox-theme evil-leader centered-cursor-mode))))
+    (solarized-theme evil-magit magit fish-mode powerline powerline-theme evil-collection gruvbox-theme evil-leader centered-cursor-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

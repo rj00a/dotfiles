@@ -3,7 +3,7 @@
 # ==== Monitors ==== #
 
 #TODO: use `hostname` to conditionally configure?
-# Use `xrandr` to get monitor name.
+#TODO: use `xrandr` to get monitor name.
 bspc monitor DVI-D-0 -d 1 2 3
 bspc monitor HDMI-0 -d 4 5 6
 
@@ -27,4 +27,43 @@ bspc config pointer_modifier mod4
 bspc config normal_border_color '#444444'
 bspc config focused_border_color '#af5f5f'
 bspc config urgent_border_color '#bd2c40'
+
+# ==== Startup Programs ==== #
+
+# Change the default X shaped cursor
+xsetroot -cursor_name left_ptr &
+
+# Load xresources
+xrdb -merge ~/.Xresources &
+
+# Swap caps lock and escape keys
+setxkbmap -option 'caps:swapescape' &
+
+# Adjust mouse pointer speed
+# '14' is the mouse pointer ID, '297' is the property ID, and '-0.5' is the acceleration factor.
+# You can identify devices by running 'xinput' without any arguments.
+xinput set-prop 14 297 -0.45 &
+
+# set keyboard repeat delay and rate.
+# '250' is the delay before autorepeat begins.
+# '40' is the repeat rate.
+xset r rate 250 40 &
+
+# Load desktop wallpaper
+xwallpaper --zoom ~/shared/files/wallpaper.jpg &
+
+# Unclutter hides the mouse cursor when it hasn't been used in a while.
+unclutter &
+
+# Start polybar with the specified bar
+polybar main &
+
+# Start the NetworkManager applet
+nm-applet &
+
+# Start the Simple X hotkey daemon
+sxhkd &
+
+# Force emacs to open in tiled mode.
+bspc rule -a Emacs state=tiled
 

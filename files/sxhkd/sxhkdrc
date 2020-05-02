@@ -1,4 +1,3 @@
-
 # Make sxhkd reload its configuration files
 super + shift + k
     pkill -USR1 -x sxhkd
