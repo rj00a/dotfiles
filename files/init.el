@@ -1,7 +1,9 @@
 ;; TODO: Rust mode stuff
 ;; TODO: language server?
+;; TODO: emacs server?
 ;; TODO: Customize gdb?
-;; TODO: eshell-previous-input, eshell-next-input
+;; TODO: eshell-previous-input, eshell-next-input?
+;; TODO: Press escape to clear search highlight (and exit minibuffer?)
 
 ;; Enable the MELPA package repo
 (require 'package)
@@ -24,9 +26,12 @@
         magit
         evil-magit))
 
-;; Must be set before require
-(setq evil-want-C-u-scroll t
-      evil-want-keybinding nil)
+;; Evil tweaks
+(setq evil-want-keybinding nil
+      evil-want-C-u-scroll t
+      evil-want-Y-yank-to-eol t
+      evil-want-C-w-in-emacs-state t
+      evil-want-minibuffer t)
 
 ;; Load and require the list of packages.
 (dolist (pkg my-packages)
@@ -102,25 +107,8 @@
 ;; When isearching, don't delay before highlighting all matches.
 (setq lazy-highlight-initial-delay 0)
 
-;(evil-define-key nil 
-;  (kbd "ESC") 'evil-ex-nohilight)
-
-;(global-set-key (kbd "<escape>") 'evil-ex-nohighlight)
-
-(evil-global-set-key
- 'evil-normal-state-map
- (kbd "<escape>")
- 'evil-ex-nohighlight)
-
 ;; Change '/' to use evil's search, instead of being a wrapper around isearch.
 (evil-select-search-module 'evil-search-module 'evil-search)
-
-;; Make evil treat emacs symbols as words.
-;; For example, "foo-bar" is a symbol in lisp, and "foo_bar" is a symbol in C.
-;(with-eval-after-load 'evil
-;    (defalias #'forward-evil-word #'forward-evil-symbol)
-;    ;; make evil-search-word look for symbol rather than word boundaries
-;    (setq-default evil-symbol-word-search t))
 
 (defalias #'forward-evil-word #'forward-evil-symbol)
 ;; make evil-search-word look for symbol rather than word boundaries
@@ -130,10 +118,8 @@
 (global-centered-cursor-mode 1)
 
 ;; Eable Ido mode
-;; Don't use (setq ido-everywhere t) because I want find-file to do
-;; its usual thing and make it easier to create new files.
 (setq ido-enable-flex-matching t
-      ;;ido-everywhere t
+      ido-everywhere t
       ido-cannot-complete-command 'ido-next-match)
 (ido-mode 1)
 
@@ -141,13 +127,13 @@
 (tool-bar-mode -1)
 
 ;; Disable menu bar.
-(menu-bar-mode -1)
+;(menu-bar-mode -1)
 
 ;; Disable scroll bar.
 (toggle-scroll-bar -1)
 
 ;; Enables line numbers.
-;(global-linum-mode 1)
+(global-linum-mode 1)
 
 ;; Highlight TODOs and similar keywords.
 (global-hl-todo-mode 1)
@@ -170,25 +156,51 @@
         space-before-tab))
 (global-whitespace-mode 1)
 
-;; For consistency with evil.
-;; Might cause issues, idk.
-;; (This is the same as C-g)
-(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+;; Dired: Disable warning on use.
+(put 'dired-find-alternate-file 'disabled nil)
 
-;; Dired tweaks
-(put 'dired-find-alternate-file 'disabled nil) ;; Disable warning on use.
-(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ;; Make 'RET' an alias for 'a'
-(define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file ".."))) ;; Don't create a new buffer with '^'
+; ;;; esc quits
+; (defun minibuffer-keyboard-quit ()
+;   "Abort recursive edit.
+; In Delete Selection mode, if the mark is active, just deactivate it;
+; then it takes a second \\[keyboard-quit] to abort the minibuffer."
+;   (interactive)
+;   (if (and delete-selection-mode transient-mark-mode mark-active)
+;       (setq deactivate-mark  t)
+;     (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
+;     (abort-recursive-edit)))
+; (define-key evil-normal-state-map [escape] 'keyboard-quit)
+; (define-key evil-visual-state-map [escape] 'keyboard-quit)
+; (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
+; (define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
+; (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
+; (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
+; (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+
+;; Move by visual lines instead of physical lines
+;; (Makes a difference with word wrapping)
+(evil-define-key nil evil-normal-state-map
+  "j" 'evil-next-visual-line
+  "k" 'evil-previous-visual-line)
+
+;; Disable the active search highlight with escape.
+(evil-define-key nil evil-normal-state-map
+  (kbd "<escape>") 'evil-ex-nohighlight)
 
 ;; Show matching paren on hover, with no delay (must be in this order)
 (setq show-paren-delay 0)
 
+;; Show matching parenthesis when under cursor
+;; Make the matching parenthesis underlined.
 (show-paren-mode 1)
-;(require 'paren)
 (set-face-background 'show-paren-match (face-background 'default))
 (set-face-foreground 'show-paren-match "#def")
 (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 (set-face-underline 'show-paren-match t)
+;; Fixes an issue where the line numbers themselves became bold and
+;; underlined when adjacent to a character that had those qualities.
+(set-face-underline-p 'linum nil)
+(set-face-bold-p 'linum nil)
 
 ;; Change the C formatting style for c-like languages.
 ;; I would rather shoot myself than use the default GNU style.
