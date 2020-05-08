@@ -4,7 +4,7 @@
 # Given a list of music files, print them back to stdout in album-order.
 
 from subprocess import run
-from re import search
+from re import search, IGNORECASE
 from sys import argv
 
 # A dict of "Album -> (Track -> TrackNum)"
@@ -19,8 +19,8 @@ for filename in argv:
         continue
 
     info = res.stderr.decode('utf-8')
-    album_name_match = search(r'album\s*: (.+)', info)
-    track_num_match = search(r'track\s*: (\d+)', info)
+    album_name_match = search(r'album\s*: (.+)$', info, IGNORECASE)
+    track_num_match = search(r'track\s*: (\d+)$', info, IGNORECASE)
 
     if not album_name_match or not track_num_match:
         orphans.append(filename)
