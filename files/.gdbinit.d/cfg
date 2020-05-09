@@ -1,5 +1,9 @@
-
-dashboard -layout source stack threads variables
+dashboard -layout variables breakpoints stack threads
+dashboard -style compact_values False
+dashboard -style syntax_highlighting 'perldoc'
 dashboard source -style height 30
+dashboard variables -style compact False
+dashboard variables -style align True
 set history save off
+
 # vim: set syntax=gdb:

@@ -1,4 +1,5 @@
 " TODO: Explore airline customizations.
+" TODO: Termdebug function key mappings.
 
 " Plugin management with vim-plug.
 call plug#begin('~/.local/share/nvim/plugged')
@@ -11,8 +12,8 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'moll/vim-bbye'
 Plug 'rust-lang/rust.vim'
 Plug 'tmhedberg/matchit'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vmchale/ats-vim'
@@ -126,7 +127,7 @@ set secure
 
 " Keep the cursor centered.
 set scrolloff=69420
-set sidescrolloff=69420
+"set sidescrolloff=69420
 
 " Clear old mappings when sourcing this file.
 mapclear
@@ -136,25 +137,26 @@ noremap Y y$
 
 " Session slots.
 "TODO: predefined veriable representing the nvim directory?
-nnoremap <leader>1 :wa\|mksession! ~/.config/nvim/sessions/1.vim<cr>
-nnoremap <leader>! :so ~/.config/nvim/sessions/1.vim<cr>
-nnoremap <leader>2 :wa\|mksession! ~/.config/sessions/2.vim<cr>
-nnoremap <leader>@ :so ~/.config/nvim/sessions/2.vim<cr>
-nnoremap <leader>3 :wa\|mksession! ~/.config/nvim/sessions/3.vim<cr>
-nnoremap <leader># :so ~/.config/nvim/sessions/3.vim<cr>
+noremap <leader>1 <esc>:wa\|mksession! ~/.config/nvim/sessions/1.vim<cr>
+noremap <leader>! <esc>:so ~/.config/nvim/sessions/1.vim<cr>
+noremap <leader>2 <esc>:wa\|mksession! ~/.config/sessions/2.vim<cr>
+noremap <leader>@ <esc>:so ~/.config/nvim/sessions/2.vim<cr>
+noremap <leader>3 <esc>:wa\|mksession! ~/.config/nvim/sessions/3.vim<cr>
+noremap <leader># <esc>:so ~/.config/nvim/sessions/3.vim<cr>
 
 " Source vimrc.
-nnoremap <leader>- :source $MYVIMRC\|AirlineToggle\|AirlineToggle<cr>
+noremap <leader>- <esc>:source $MYVIMRC\|AirlineToggle\|AirlineToggle<cr>
 
 " Edit vimrc.
-noremap <leader>= :e $MYVIMRC<cr>
+noremap <leader>= <esc>:e $MYVIMRC<cr>
 
 " Copy line (or selection) into command buffer and run it.
 "nnoremap <leader>- yy:<c-r>"<bs><cr>
 "vnoremap <leader>- y:<c-r>"<cr>
 
-" Delete trailing whitespace in buffer.
+" Delete trailing whitespace in buffer. (Or selection).
 nnoremap <leader>0 :%s/\s\+$//e\|noh\|up<cr>
+vnoremap <leader>0 :s/\s\+$//e\|noh\|up<cr>
 
 " Toggle spell checking locally.
 nnoremap <leader>9 :setlocal spell!<cr>
@@ -191,11 +193,8 @@ tnoremap <silent> <c-k> <c-\><c-n>:bp<cr>
 
 " Exit terminal mode easier.
 tnoremap <c-q> <c-\><c-n>
-
-" Ctrl+backspace deletes whole word.
-inoremap <c-bs> <c-w>
-cnoremap <c-bs> <c-w>
-vnoremap <c-bs> b
+"tnoremap <esc><esc> <c-\><c-n>
+tnoremap <s-esc> <c-\><c-n>
 
 " Rebind K to be a complement to J.
 vnoremap K <esc>i<cr><esc>k$
@@ -237,31 +236,32 @@ hi CursorLineNR guifg=#020202 guibg=#444444
 " Red and black cursor.
 hi Cursor guifg=#000000 guibg=#ff0000 ctermfg=0 ctermbg=9
 
-" Change match paren colors.
-"hi MatchParen guifg=#121212 guibg=#ff0000 ctermfg=233 ctermbg=9
+" Load the GDB debugger integration plugin that comes with vim.
+packadd termdebug
 
 " Search for file with fzf.
-nnoremap <silent> <leader>f :Files<cr>
+noremap <leader>f :Files<cr>
 
 " Grep for string using ripgrep.
-nnoremap <silent> <leader>s :Rg<cr>
+noremap <leader>s :Rg<cr>
 
 " Search for open buffer.
-nnoremap <silent> <leader>b :Buffers<cr>
+noremap <leader>b :Buffers<cr>
 
 " Search marks.
-nnoremap <silent> <leader>m :Marks<cr>
+noremap <leader>m :Marks<cr>
 
 " Search lines in open buffers.
-nnoremap <silent> <leader>l :Lines<cr>
+noremap <leader>l :Lines<cr>
 
 " Search v:oldfiles and open buffers.
-nnoremap <silent> <leader>h :History<cr>
+noremap <leader>h :History<cr>
 
-" Display context menu for language client.
-nnoremap <f5> :call LanguageClient_contextMenu()<cr>
+" Prompt for binary to start debugging.
+noremap <leader>g <esc>:Termdebug<space>
+noremap <leader>G <esc>:TermdebugCommand<space>
 
-" How long to show highlighted yanked text (millis)
+" How long to show highlighted yanked text (millis).
 let g:highlightedyank_highlight_duration = 150
 
 " Make the yanked region color the same as the alduin search color.

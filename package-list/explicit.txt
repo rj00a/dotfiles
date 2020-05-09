@@ -35,7 +35,6 @@ discord
 dmenu
 e2fsprogs
 fakeroot
-fd
 file
 filesystem
 findutils
