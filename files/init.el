@@ -1,3 +1,4 @@
+
 ;; TODO: Rust mode stuff
 ;; TODO: language server?
 ;; TODO: emacs server?
@@ -20,7 +21,7 @@
         centered-cursor-mode
         hl-todo
         evil-collection
-        nord-theme
+        dracula-theme
         powerline
         fish-mode
         magit
@@ -40,7 +41,7 @@
   (require pkg))
 
 ;; Load theme without asking for confirmation
-(load-theme 'nord t)
+(load-theme 'dracula t)
 
 ;; Set the default font
 (set-face-attribute 'default nil
@@ -79,6 +80,7 @@
   "s" 'eshell
   "c" 'calculator
   "e" 'eval-expression
+  "q" 'auto-fill-mode
   "0" 'delete-trailing-whitespace
   "9" (lambda () ;; Toggle flyspell
         (interactive)
@@ -90,8 +92,7 @@
   "i" (lambda () ;; Open init.el
         (interactive)
         (find-file user-init-file))
-  "I" 'eval-buffer
-  "Q" 'kill-emacs)
+  "I" 'eval-buffer)
 
 ;; Enable evil mode.
 (evil-mode 1)
@@ -111,13 +112,17 @@
 (evil-select-search-module 'evil-search-module 'evil-search)
 
 (defalias #'forward-evil-word #'forward-evil-symbol)
+
 ;; make evil-search-word look for symbol rather than word boundaries
 (setq-default evil-symbol-word-search t)
+
+;; Keep cursor centered, even at the beginning/end of the buffer
+(setq ccm-recenter-at-end-of-file t)
 
 ;; Enable centered-cursor-mode globally
 (global-centered-cursor-mode 1)
 
-;; Eable Ido mode
+;; Enable Ido mode
 (setq ido-enable-flex-matching t
       ido-everywhere t
       ido-cannot-complete-command 'ido-next-match)
@@ -207,6 +212,9 @@
 (setq c-default-style "linux"
       c-basic-offset 4)
 
+;; Set the column limit for fill-paragraph ('gq' in evil)
+(setq-default fill-column 100)
+
 ;; Set the default powerline theme
 (powerline-default-theme)
 
@@ -252,3 +260,17 @@
              (let ((buffer "*Completions*"))
                (and (get-buffer buffer)
                     (kill-buffer buffer)))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (dracula-theme solarized-theme powerline nord-theme naysayer-theme hl-todo gruvbox-theme fish-mode evil-magit evil-leader evil-collection emojify centered-cursor-mode))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

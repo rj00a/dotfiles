@@ -13,6 +13,7 @@ l fish ~/.config/
 l bspwm ~/.config/
 l sxhkd ~/.config/
 l plug.vim ~/.local/share/nvim/site/autoload/
+l nvim/ ~/.config/
 l .xinitrc ~/
 l gtk-3.0 ~/.config/
 l .gtkrc-2.0 ~/
@@ -23,7 +24,6 @@ l .nethackrc ~/
 l .inputrc ~/
 l .gdbinit.d ~/
 l .haskeline ~/
-l init.el ~/.emacs.d/
 l gdb-dashboard/.gdbinit ~/
 l fontconfig ~/.config/
 l zathura ~/.config/

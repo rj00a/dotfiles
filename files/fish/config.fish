@@ -43,6 +43,9 @@ set -x PYTHONSTARTUP ~/shared/files/.pythonrc
 # Make less not write to ~/.lesshst
 set -x LESSHISTFILE -
 
+# Config directory for DOOM Emacs.
+set -x DOOMDIR ~/shared/files/.doom.d/
+
 # Set the timezone for 'date' command
 set -x TZ 'America/Los_Angeles'
 
@@ -172,6 +175,7 @@ function update -d 'Update system packages and push changes to shared repos.'
     yay -Syu &&
     fish gen-package-list.fish &&
     fish update-submodules.fish &&
+    nvim -c 'PlugUpdate|PlugInstall|qa' &&
     fish -c 'paplay files/bell.ogg' &&
     git-update &&
     /mnt/sdb1/keepass &&

@@ -1,10 +1,13 @@
-" Plugin management with vim-plug
+" TODO: Explore airline customizations.
+
+" Plugin management with vim-plug.
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
 Plug 'google/vim-searchindex'
 Plug 'junegunn/fzf.vim'
 Plug 'kovetskiy/sxhkd-vim'
+Plug 'machakann/vim-highlightedyank'
 Plug 'moll/vim-bbye'
 Plug 'rust-lang/rust.vim'
 Plug 'tmhedberg/matchit'
@@ -16,140 +19,122 @@ Plug 'vmchale/ats-vim'
 Plug 'ziglang/zig.vim'
 call plug#end()
 
-" Enable line numbers
+" Enable line numbers.
 set number
 
-" Line numbers are close to the edge of the window
+" Line numbers are close to the edge of the window.
 set numberwidth=2
 
-" Disable visual line wrap
+" Disable visual line wrap.
 set nowrap
 
-" Set column limit for formatting with 'gq'
+" Set column limit for formatting with 'gq'.
 set textwidth=100
 
-" Do not move the cursor to the first column when typing '#' in .c files
+" Do not move the cursor to the first column when typing '#' in .c files.
 set cinkeys=0{,0},0),:,!^F,o,O,e
 
-" Incremental Search
-" Jumps to the next match as you type
+" Incremental Search.
+" Jumps to the next match as you type.
 set incsearch
 
-" Highlight search results
+" Highlight search results.
 set hlsearch
 
-" Disable case sensitive searches
+" Disable case sensitive searches.
 set ignorecase
 
-" Become case sensitive while searching only if search string contains at least one capital letter
+" Become case sensitive while searching only if search string contains at least one capital letter.
 set smartcase
 
-" Save when lose focus, and ignore warnings when it fails
-"au FocusLost * silent! wa
-
-" Vertical splits will put new windows right of the current window
-" Horizontal splits will put new windows above the current window
+" Vertical splits will put new windows right of the current window.
+" Horizontal splits will put new windows above the current window.
 set splitright
 
-" Enable mouse support
-"set mouse+=a
+" Enable mouse support.
+set mouse+=a
 
-" In Gvim, remove the menu bar, toolbar, and scrollbar completely
+" In Gvim, remove the menu bar, toolbar, and scrollbar completely.
 set guioptions=aegit
 
-" Hide the tab line
+" Hide the tab line.
 set showtabline=0
 
-" Treat octal numbers like decimal numbers, becuase that's what they are most of the time
+" Treat octal numbers like decimal numbers, becuase that's what they are most of the time.
 set nrformats=bin,hex
 
-" I don't even know
+" Don't insert two spaces after sentence-ending punctuation with a join command.
 set nojoinspaces
 
-" Disable cursor blinking
-"set guicursor+=a:blinkon0
-
-" Only blink cursor in insert mode
-"set guicursor+=n-v-c:blinkon0
-
-" Hide the startup message
+" Hide the startup message.
 set shortmess=I
 
-" Share with system clipboard
+" Share with system clipboard.
 set clipboard^=unnamedplus
 
-" Automatically reload files when they are modified externally
+" Automatically reload files when they are modified externally.
 set autoread
 
-" Make history greater than default
+" Make history greater than default.
 set history=500
 
-" Always show the stuff at the bottom
+" Always show the stuff at the bottom.
 set ruler
 
-" Less backslashes needed in regular expressions by default
+" Less backslashes needed in regular expressions by default.
 set magic
 
-" Disable annoying error sounds
+" Disable annoying error sounds.
 set noerrorbells
 set novisualbell
 
-" Don't redraw screen while executing macro
-" Good for performance
+" Don't redraw screen while executing macro.
+" Good for performance.
 set lazyredraw
 
-" Disable swap files, because we have version control anyway
+" Disable swap files, because we have version control anyway.
 set noswapfile
 
-" Shows a menu on the status line with autocomplete options when pressing tab
+" Shows a vertial completion menu when pressing <tab> in the command buffer.
 set wildmenu
+set wildmode=longest:full,full
 
-" Shows the input of an incomplete command
+" Shows the input of an incomplete command.
 set showcmd
 
-" Allows switching between multiple unsaved buffers
+" Allows switching between multiple unsaved buffers.
 set hidden
 
-" Backspace unconditionally works against auto indentation and more
+" Backspace unconditionally works against auto indentation and more.
 set backspace=indent,eol,start
 
-" Render tabs and trailing spaces, and non-breaking space
+" Render tabs, trailing spaces, and non-breaking spaces.
 set list
 set listchars=tab:>\ ,space:\ ,trail:-
 
-" Pressing tab inserts four spaces
-" Hard tabs appear four spaces wide
+" Pressing tab inserts four spaces.
+" Hard tabs appear four spaces wide.
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" Copy indent from current line when starting new line
+" Copy indent from current line when starting new line.
 set autoindent
 
-" Don't run zig fmt after saving
-let g:zig_fmt_autosave = 0
-
-" Execute .vimrc file in current directory automatically
-set exrc
-
-" Prevents exrc and other stuff from running potentially dangerous shell commands
+" Prevents exrc and other stuff from running potentially dangerous shell commands.
 set secure
 
-" Removes the delay after pressing escape in insert mode, hopefully
-"set noesckeys
-"set timeoutlen=1000 ttimeoutlen=0
+" Keep the cursor centered.
+set scrolloff=69420
+set sidescrolloff=69420
 
-" Minimal number of screen lines to keep above and below the cursor
-" Set this to something big (999) to keep the cursor centered at all times.
-set scrolloff=999
-
-" Clear old mappings when sourcing this file
+" Clear old mappings when sourcing this file.
 mapclear
 
-" Map Y to be consistent with C and D
+" Map Y to be consistent with C and D.
 noremap Y y$
 
-" Session slots
+" Session slots.
 "TODO: predefined veriable representing the nvim directory?
 nnoremap <leader>1 :wa\|mksession! ~/.config/nvim/sessions/1.vim<cr>
 nnoremap <leader>! :so ~/.config/nvim/sessions/1.vim<cr>
@@ -158,155 +143,162 @@ nnoremap <leader>@ :so ~/.config/nvim/sessions/2.vim<cr>
 nnoremap <leader>3 :wa\|mksession! ~/.config/nvim/sessions/3.vim<cr>
 nnoremap <leader># :so ~/.config/nvim/sessions/3.vim<cr>
 
-" Source .vimrc
+" Source vimrc.
 nnoremap <leader>- :source $MYVIMRC\|AirlineToggle\|AirlineToggle<cr>
 
-" Edit vimrc
+" Edit vimrc.
 noremap <leader>= :e $MYVIMRC<cr>
 
-" Copy line (or selection) into command buffer and run it
+" Copy line (or selection) into command buffer and run it.
 "nnoremap <leader>- yy:<c-r>"<bs><cr>
 "vnoremap <leader>- y:<c-r>"<cr>
 
-" Delete trailing whitespace in buffer
+" Delete trailing whitespace in buffer.
 nnoremap <leader>0 :%s/\s\+$//e\|noh\|up<cr>
 
-" Toggle spell checking locally
+" Toggle spell checking locally.
 nnoremap <leader>9 :setlocal spell!<cr>
 
-" Toggle hard line wrapping
+" Toggle hard line wrapping.
 command! HardWrapToggle if &fo =~ 't' | set fo-=t | echo 'Hard line wrap disabled' | else | set fo+=t | echo 'Hard line wrap enabled' | endif
 nnoremap <leader>8 :HardWrapToggle<cr>
 
-" Run rustfmt
+" Run rustfmt.
 nnoremap <leader>7 :up\|RustFmt<cr>
 
-" Disable the annoying message in the command line when using Ctrl-c
+" Disable the annoying message in the command line when using Ctrl-c.
 nnoremap <c-c> <silent> <c-c>
 
-" Closes the current buffer without closing the window
-" Also doesn't leave any [New File]s around
-" Provided by the vim-bbye plugin
-noremap <silent> <leader>d :up\|Bdelete!<cr>
+" Closes the current buffer without closing the window.
+" Also doesn't leave any [New File]s around.
+" Provided by the vim-bbye plugin.
+noremap <silent> <leader>d :up\|Bdelete<cr>
+noremap <silent> <leader>D :Bdelete!<cr>
 
-" Save and quit everything
+" Save and quit everything.
 noremap <leader>q :wqa<cr>
 
-" Write file with sudo permissions
+" Write file with sudo permissions.
 noremap <leader>W :w !sudo tee %<cr>
 noremap <silent> <leader>w :up<cr>
 
-" Open vertical terminal
+" Open vertical terminal.
 noremap <silent> <leader>t :vert term<cr>
 
-" Don't let the integrated terminal interupt buffer switching
+" Don't let the integrated terminal interrupt buffer switching.
 tnoremap <silent> <c-j> <c-\><c-n>:bn<cr>
 tnoremap <silent> <c-k> <c-\><c-n>:bp<cr>
 
-" Exit terminal mode easier
+" Exit terminal mode easier.
 tnoremap <c-q> <c-\><c-n>
 
-" Ctrl+backspace deletes whole word
+" Ctrl+backspace deletes whole word.
 inoremap <c-bs> <c-w>
 cnoremap <c-bs> <c-w>
 vnoremap <c-bs> b
 
-inoremap <c-s-bs> <esc>vBda
-cnoremap <c-s-bs> <c-w>
+" Rebind K to be a complement to J.
+vnoremap K <esc>i<cr><esc>k$
+noremap K i<cr><esc>k$
 
-" Rebind the open man page on symbol binding
-vnoremap K <nop>
-noremap K m0i<cr><esc>'0
-
-" Switch between buffers
+" Switch between buffers.
 noremap <silent> <c-k> :bp<cr>
 inoremap <silent> <c-k> <esc>:bp<cr>
 noremap <silent> <c-j> :bn<cr>
 inoremap <silent> <c-j> <esc>:bn<cr>
 
-" Clear search buffer in normal mode when pressing escape<cr>
+" Clear search buffer in normal mode when pressing escape<cr>.
 nnoremap <silent> <esc> :noh<cr><esc>
 
-" Enable syntax highlighting
+" Enable syntax highlighting.
 syntax on
 
-" Detect filetype
+" Detect filetype.
 filetype plugin indent on
 
-" The font for gvim
+" The font for gvim.
 set guifont=Inconsolata\ 12
 
 "" Colorscheme
-" Darker background
+" Darker background.
 let g:alduin_Shout_Dragon_Aspect = 1
 
-" Use underline matchparens instead of block
+" Use underline matchparens instead of block.
 let g:alduin_Shout_Aura_Whisper = 1
 
-" Disable string background highlight
+" Disable string background highlight.
 let g:alduin_Shout_Animal_Allegiance = 1
 
 colo alduin
 
-" Make the cursor number line the same as the others
+" Make the cursor number line the same as the others.
 hi CursorLineNR guifg=#020202 guibg=#444444
 
-" Red and black cursor
+" Red and black cursor.
 hi Cursor guifg=#000000 guibg=#ff0000 ctermfg=0 ctermbg=9
 
-" Change match paren colors
+" Change match paren colors.
 "hi MatchParen guifg=#121212 guibg=#ff0000 ctermfg=233 ctermbg=9
 
-" Search for file with fzf
+" Search for file with fzf.
 nnoremap <silent> <leader>f :Files<cr>
 
-" Grep for string using ripgrep
+" Grep for string using ripgrep.
 nnoremap <silent> <leader>s :Rg<cr>
 
-" Search for open buffer
+" Search for open buffer.
 nnoremap <silent> <leader>b :Buffers<cr>
 
-" Search marks
+" Search marks.
 nnoremap <silent> <leader>m :Marks<cr>
 
-" Search lines in open buffers
+" Search lines in open buffers.
 nnoremap <silent> <leader>l :Lines<cr>
 
-" Search v:oldfiles and open buffers
+" Search v:oldfiles and open buffers.
 nnoremap <silent> <leader>h :History<cr>
 
-" Display context menu for language client
+" Display context menu for language client.
 nnoremap <f5> :call LanguageClient_contextMenu()<cr>
 
-" Disable the abomination known as netrw
+" How long to show highlighted yanked text (millis)
+let g:highlightedyank_highlight_duration = 150
+
+" Make the yanked region color the same as the alduin search color.
+hi HighlightedyankRegion guifg=#dfdfaf guibg=#875f5f gui=NONE ctermfg=187 ctermbg=95 cterm=NONE
+
+" Don't run zig fmt after saving.
+let g:zig_fmt_autosave = 0
+
+" Disable the abomination known as netrw.
 let g:loaded_netrwPlugin = 1
 
-" Show the list of open buffers and tabs at the top of the screen
+" Show the list of open buffers and tabs at the top of the screen.
 let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 
-" Modify the default ignored buffer names so that neovim's terminal shows up in the tabline
+" Modify the default ignored buffer names so that neovim's terminal shows up in the bufferline.
 let g:airline#extensions#tabline#ignore_bufadd_pat = 'defx|gundo|nerd_tree|startify|tagbar|undotree|vimfiler'
 
-" Make the bufferline prettier
+" Make the bufferline prettier.
 let g:airline#extensions#bufferline#left_sep = ' '
 let g:airline#extensions#bufferline#right_sep = ' '
 let g:airline#extensions#bufferline#left_alt_sep = ' '
 let g:airline#extensions#bufferline#right_alt_sep = ' '
 
-"Make the tabline prettier
+"Make the tabline prettier.
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#right_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = ' '
 let g:airline#extensions#tabline#right_alt_sep = ' '
 
-" On the tabline, only show the file name with the full path on the right
+" On the tabline, only show the file name with the full path on the right.
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-" Set Airline theme with the vim-airline-themes plugin
+" Set Airline theme with the vim-airline-themes plugin.
 let g:airline_theme = 'atomic'
 
-" Make fzf match the color scheme (Doesn't fully work for :Rg)
+" Make fzf match the color scheme (Doesn't fully work for :Rg).
 let g:fzf_colors =
 \ { 'fg': ['fg', 'Normal'],
 \ 'bg': ['bg', 'Normal'],
@@ -322,7 +314,7 @@ let g:fzf_colors =
 \ 'spinner': ['fg', 'Label'],
 \ 'header': ['fg', 'Comment'] }
 
-" Language plugins like to set formatoptions, but I don't want them doing that
+" Language plugins like to set formatoptions, but I don't want them doing that.
 " (See :h fo-table)
 autocmd BufNewFile,BufRead * setlocal fo=q
 
@@ -353,5 +345,6 @@ if v:version >= 700
     autocmd BufEnter * call AutoRestoreWinView()
 endif
 
-" Keep this
+" Keep this.
 :noh
+

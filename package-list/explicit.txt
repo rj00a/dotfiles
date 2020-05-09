@@ -34,8 +34,8 @@ diffutils
 discord
 dmenu
 e2fsprogs
-emacs
 fakeroot
+fd
 file
 filesystem
 findutils
@@ -91,6 +91,7 @@ mpv
 multimc-git
 ncdu
 neofetch
+neovim
 net-tools
 netctl
 nethack
@@ -162,7 +163,6 @@ usbutils
 util-linux
 valgrind
 veracrypt
-vi
 vulkan-headers
 vulkan-icd-loader
 vulkan-tools
