@@ -192,9 +192,7 @@ tnoremap <silent> <c-j> <c-\><c-n>:bn<cr>
 tnoremap <silent> <c-k> <c-\><c-n>:bp<cr>
 
 " Exit terminal mode easier.
-tnoremap <c-q> <c-\><c-n>
-"tnoremap <esc><esc> <c-\><c-n>
-tnoremap <s-esc> <c-\><c-n>
+tnoremap <c-q> <c-\><c-n><c-w>
 
 " Rebind K to be a complement to J.
 vnoremap K <esc>i<cr><esc>k$

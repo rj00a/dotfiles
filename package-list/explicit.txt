@@ -66,7 +66,6 @@ iputils
 jdk-openjdk
 jfsutils
 jq
-kakoune
 keepassxc
 krita
 less
@@ -189,4 +188,5 @@ zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
 zathura-ps
+zig
 zip

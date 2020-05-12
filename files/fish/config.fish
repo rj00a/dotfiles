@@ -136,7 +136,7 @@ function play -d 'Play something with mpv using fzf and exit'
 end
 
 function playd -d 'Play a directory of audio files with mpv in proper album order'
-    set dir (find /mnt/sda1/music/ -type d 2> /dev/null | fzf)
+    set dir (find /mnt/sda1/{music,films}/ -type d 2> /dev/null | fzf)
     if [ -z "$dir" ]
         return
     end
