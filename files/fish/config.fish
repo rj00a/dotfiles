@@ -178,12 +178,9 @@ function update -d 'Update system packages and push changes to shared repos.'
     nvim -c 'PlugUpdate|PlugInstall|qa' &&
     fish -c 'paplay files/bell.ogg' &&
     git-update &&
-    /mnt/sdb1/keepass &&
+    /mnt/sdb1/private &&
     echo '==== in '(pwd)' ====' &&
     git-update &&
-    ~/school &&
-    echo '==== in '(pwd)' ====' &&
-    git-update
     # ====
     popd
 end
