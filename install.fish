@@ -31,17 +31,22 @@ l polybar ~/.config/
 l mpv ~/.config/
 l index.theme ~/.icons/default/
 l polybar ~/.config
+l htoprc ~/.config/htop/
 
 if [ (systemctl is-enabled NetworkManager) = disabled ]
     sudo systemctl enable NetworkManager
 end
 
-if [ (systemctl is-enabled org.cups.cupsd) = disabled ]
-    sudo systemctl enable org.cups.cupsd
+if [ (systemctl is-enabled org.cups.cupsd.service) = disabled ]
+    sudo systemctl enable org.cups.cupsd.service
 end
 
 if [ (systemctl is-enabled ntpd) = disabled ]
     sudo systemctl enable ntpd
 end
 
-# Don't forget to install graphics drivers specific for your hardware.
+if [ (systemctl is-enabled avahi-daemon.service) = disabled ]
+    sudo systemctl enable avahi-daemon.service
+end
+
+# Don't forget to install graphics drivers

@@ -55,6 +55,7 @@ glibc
 gnu-netcat
 gperf
 grep
+gzdoom
 gzip
 hplip
 htop

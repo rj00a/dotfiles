@@ -76,6 +76,9 @@ set clipboard^=unnamedplus
 " Automatically reload files when they are modified externally.
 set autoread
 
+" checktime makes autoread actually do what it's supposed to do.
+au CursorHold * checktime
+
 " Make history greater than default.
 set history=500
 
