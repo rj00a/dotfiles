@@ -1,26 +1,25 @@
-#TODO: Change the cursor shape in different modes (should be working already; bugged with alacritty?)
-#TODO: Make 'u' in normal mode undo (instead of command history)?
 #TODO: change colors to match vim colorscheme.
+#TODO: Bind <c-h> and <c-l> to move a full word left and right.
 
 # No fish greeting
 set fish_greeting
 
-function hybrid_key_bindings -d "Vi bindings that inherit emacs bindings in all modes."
-    for mode in default insert visual
-        fish_default_key_bindings -M $mode
-    end
-    fish_vi_key_bindings --no-erase
-end
-set -g fish_key_bindings hybrid_key_bindings
-
-# Disable the mode indicator
-set fish_mode_prompt
-
-# Set the cursor shapes for the different vi modes.
-set fish_cursor_default block blink
-set fish_cursor_insert line blink
-set fish_cursor_replace_one underscore blink
-set fish_cursor_visual block
+# function hybrid_key_bindings -d "Vi bindings that inherit emacs bindings in all modes."
+#     for mode in default insert visual
+#         fish_default_key_bindings -M $mode
+#     end
+#     fish_vi_key_bindings --no-erase
+# end
+# set -g fish_key_bindings hybrid_key_bindings
+# 
+# # Disable the mode indicator
+# set fish_mode_prompt
+# 
+# # Set the cursor shapes for the different vi modes.
+# set fish_cursor_default block blink
+# set fish_cursor_insert line blink
+# set fish_cursor_replace_one underscore blink
+# set fish_cursor_visual block
 
 # Show the full path of the cwd in the prompt.
 set fish_prompt_pwd_dir_length 0

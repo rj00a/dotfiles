@@ -1,4 +1,4 @@
-dashboard -layout variables breakpoints stack threads
+dashboard -layout source variables breakpoints stack threads
 dashboard -style compact_values False
 dashboard -style syntax_highlighting 'perldoc'
 dashboard source -style height 30

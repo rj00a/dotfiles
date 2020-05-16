@@ -1,4 +1,5 @@
-set editing-mode vi
+# Enable vi mode
+#set editing-mode vi
 
 # Make autocomplete use colors
 set colored-stats on

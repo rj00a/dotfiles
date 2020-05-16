@@ -26,9 +26,6 @@ set number
 " Line numbers are close to the edge of the window.
 set numberwidth=2
 
-" Disable visual line wrap.
-"set nowrap
-
 " Set column limit for formatting with 'gq'.
 set textwidth=100
 
@@ -128,10 +125,6 @@ set autoindent
 " Prevents exrc and other stuff from running potentially dangerous shell commands.
 set secure
 
-" Set scrolloff to a high value to keep the cursor centered.
-set scrolloff=15
-"set sidescrolloff=
-
 " Enable syntax highlighting.
 syntax on
 
@@ -160,7 +153,7 @@ hi CursorLineNR guifg=#020202 guibg=#444444
 hi Cursor guifg=#000000 guibg=#ff0000 ctermfg=0 ctermbg=9
 
 " Load the GDB debugger integration plugin that comes with vim.
-packadd termdebug
+"packadd termdebug
 
 " Clear old mappings when sourcing this file.
 mapclear
@@ -175,12 +168,11 @@ nnoremap <c-c> <silent> <c-c>
 noremap <c-a> +
 noremap <c-x> -
 
-
 " Closes the current buffer without closing the window.
 " Also doesn't leave any [New File]s around.
-" Provided by the vim-bbye plugin.
-noremap <silent> <leader>d :up\|Bdelete<cr>
-noremap <silent> <leader>D :Bdelete!<cr>
+" Provided vim-bbye.
+noremap <silent> <leader>k :up\|Bdelete<cr>
+noremap <silent> <leader>K :Bdelete!<cr>
 
 " Save and quit everything.
 noremap <leader>q :wqa<cr>
@@ -196,12 +188,26 @@ noremap <silent> <leader>t :vert term<cr>
 tnoremap <silent> <c-j> <c-\><c-n>:bn<cr>
 tnoremap <silent> <c-k> <c-\><c-n>:bp<cr>
 
-" Exit terminal mode easier.
-tnoremap <c-q> <c-\><c-n><c-w>
+" Exit terminal mode.
+tnoremap <esc> <c-\><c-n>
+
+" Exit fzf with escape. (Takes precedence over exiting terminal mode).
+autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
 
 " Rebind K to be a complement to J.
 vnoremap K <esc>i<cr><esc>k$
 noremap K i<cr><esc>k$
+
+" Forward delete in insert mode, like Emacs.
+inoremap <c-d> <del>
+
+" Keep the cursor centered at all times, even near the end of the buffer.
+" This behavior is different from 
+
+" Center the cursor with 'zz' whenever the cursor moves.
+" This has an effect different from ':set so=999' because the cursor is centered even at the bottom
+" of the buffer.
+autocmd! CursorMoved * :normal zz
 
 " Switch between buffers.
 noremap <silent> <c-k> :bp<cr>
@@ -263,15 +269,31 @@ noremap <leader>l :Lines<cr>
 " Search v:oldfiles and open buffers.
 noremap <leader>h :History<cr>
 
-" Prompt for binary to start debugging.
-noremap <leader>g <esc>:Termdebug<space>
-noremap <leader>G <esc>:TermdebugCommand<space>
+" Prompt for name of binary to start debugging.
+"noremap <leader>g <esc>:Termdebug<space>
+"noremap <leader>G <esc>:TermdebugCommand<space>
+
+" For emacs bindings in the command line.
+" See :help emacs-keys.
+cnoremap <c-a> <home>
+cnoremap <c-b> <left>
+cnoremap <c-d> <del>
+cnoremap <c-e> <end>
+cnoremap <c-f> <right>
+cnoremap <c-n> <down>
+cnoremap <c-p> <up>
+" My own idea.
+cnoremap <c-h> <s-left>
+cnoremap <c-l> <s-right>
 
 " How long to show highlighted yanked text (millis).
 let g:highlightedyank_highlight_duration = 150
 
 " Make the yanked region color the same as the alduin search color.
 hi HighlightedyankRegion guifg=#dfdfaf guibg=#875f5f gui=NONE ctermfg=187 ctermbg=95 cterm=NONE
+
+" Change the fzf layout to a popup instead of the default split.
+let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.85 } }
 
 " Don't run zig fmt after saving.
 let g:zig_fmt_autosave = 0
@@ -322,7 +344,7 @@ let g:fzf_colors =
 
 " Language plugins like to set formatoptions, but I don't want them doing that.
 " (See :h fo-table)
-autocmd BufNewFile,BufRead * setlocal fo=q
+autocmd! BufNewFile,BufRead * setlocal fo=q
 
 " Save current view settings on a per-window, per-buffer basis.
 function! AutoSaveWinView()
@@ -347,10 +369,10 @@ endfunction
 
 " When switching buffers, preserve window view.
 if v:version >= 700
-    autocmd BufLeave * call AutoSaveWinView()
-    autocmd BufEnter * call AutoRestoreWinView()
+    autocmd! BufLeave * call AutoSaveWinView()
+    autocmd! BufEnter * call AutoRestoreWinView()
 endif
 
 " Keep this.
-:noh
+noh
 
