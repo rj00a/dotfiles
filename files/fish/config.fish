@@ -101,6 +101,7 @@ function ytv -d 'Play a youtube video using arguments as the search terms'
         mpv --ytdl-format=bestvideo+bestaudio "ytdl://ytsearch:$argv" &
         disown
     end
+    exit
 end
 
 function yta -d 'Play a youtube video (audio only) using arguments as the search terms'
@@ -108,6 +109,7 @@ function yta -d 'Play a youtube video (audio only) using arguments as the search
         mpv --ytdl-format=bestaudio "ytdl://ytsearch:$argv" &
         disown
     end
+    exit
 end
 
 function rbg -d 'Run program in the background and disown'

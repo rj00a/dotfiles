@@ -191,23 +191,12 @@ tnoremap <silent> <c-k> <c-\><c-n>:bp<cr>
 " Exit terminal mode.
 tnoremap <esc> <c-\><c-n>
 
-" Exit fzf with escape. (Takes precedence over exiting terminal mode).
-autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
-
 " Rebind K to be a complement to J.
 vnoremap K <esc>i<cr><esc>k$
 noremap K i<cr><esc>k$
 
 " Forward delete in insert mode, like Emacs.
 inoremap <c-d> <del>
-
-" Keep the cursor centered at all times, even near the end of the buffer.
-" This behavior is different from 
-
-" Center the cursor with 'zz' whenever the cursor moves.
-" This has an effect different from ':set so=999' because the cursor is centered even at the bottom
-" of the buffer.
-autocmd! CursorMoved * :normal zz
 
 " Switch between buffers.
 noremap <silent> <c-k> :bp<cr>
@@ -342,9 +331,28 @@ let g:fzf_colors =
 \ 'spinner': ['fg', 'Label'],
 \ 'header': ['fg', 'Comment'] }
 
+" Exit fzf with escape. (Takes precedence over exiting terminal mode).
+autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
+
+" Get the cursor to stay in the center of the screen at all times, except when at the top of the
+" buffer.
+" In other words, the cursor should never be in the bottom half of the screen.
+" This is a different effect from just doing :set so=999
+" CursorMovedI could not be used due to some unintended behavior with `zz` in insert mode.
+autocmd! CursorMoved * :normal zz
+autocmd! InsertEnter * :normal zz
+inoremap <cr> <cr><c-o>zz
+
 " Language plugins like to set formatoptions, but I don't want them doing that.
 " (See :h fo-table)
 autocmd! BufNewFile,BufRead * setlocal fo=q
+
+" Open help buffers as a right split.
+autocmd! BufEnter *.txt if &buftype == 'help' | wincmd L | endif
+
+" When switching buffers, preserve window view.
+autocmd! BufLeave * call AutoSaveWinView()
+autocmd! BufEnter * call AutoRestoreWinView()
 
 " Save current view settings on a per-window, per-buffer basis.
 function! AutoSaveWinView()
@@ -354,7 +362,7 @@ function! AutoSaveWinView()
     let w:SavedBufView[bufnr("%")] = winsaveview()
 endfunction
 
-" Restore current view settings.
+" Restore current view settings when switching buffers.
 function! AutoRestoreWinView()
     let buf = bufnr("%")
     if exists("w:SavedBufView") && has_key(w:SavedBufView, buf)
@@ -367,12 +375,5 @@ function! AutoRestoreWinView()
     endif
 endfunction
 
-" When switching buffers, preserve window view.
-if v:version >= 700
-    autocmd! BufLeave * call AutoSaveWinView()
-    autocmd! BufEnter * call AutoRestoreWinView()
-endif
-
-" Keep this.
 noh
 
