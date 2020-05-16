@@ -27,7 +27,7 @@ set number
 set numberwidth=2
 
 " Disable visual line wrap.
-set nowrap
+"set nowrap
 
 " Set column limit for formatting with 'gq'.
 set textwidth=100
@@ -128,9 +128,39 @@ set autoindent
 " Prevents exrc and other stuff from running potentially dangerous shell commands.
 set secure
 
-" Keep the cursor centered.
-set scrolloff=69420
-"set sidescrolloff=69420
+" Set scrolloff to a high value to keep the cursor centered.
+set scrolloff=15
+"set sidescrolloff=
+
+" Enable syntax highlighting.
+syntax on
+
+" Detect filetype.
+filetype plugin indent on
+
+" The font for gvim.
+set guifont=Inconsolata\ 12
+
+"" Colorscheme
+" Darker background.
+let g:alduin_Shout_Dragon_Aspect = 1
+
+" Use underline matchparens instead of block.
+let g:alduin_Shout_Aura_Whisper = 1
+
+" Disable string background highlight.
+let g:alduin_Shout_Animal_Allegiance = 1
+
+colo alduin
+
+" Make the cursor number line the same as the others.
+hi CursorLineNR guifg=#020202 guibg=#444444
+
+" Red and black cursor.
+hi Cursor guifg=#000000 guibg=#ff0000 ctermfg=0 ctermbg=9
+
+" Load the GDB debugger integration plugin that comes with vim.
+packadd termdebug
 
 " Clear old mappings when sourcing this file.
 mapclear
@@ -138,41 +168,13 @@ mapclear
 " Map Y to be consistent with C and D.
 noremap Y y$
 
-" Session slots.
-"TODO: predefined veriable representing the nvim directory?
-noremap <leader>1 <esc>:wa\|mksession! ~/.config/nvim/sessions/1.vim<cr>
-noremap <leader>! <esc>:so ~/.config/nvim/sessions/1.vim<cr>
-noremap <leader>2 <esc>:wa\|mksession! ~/.config/sessions/2.vim<cr>
-noremap <leader>@ <esc>:so ~/.config/nvim/sessions/2.vim<cr>
-noremap <leader>3 <esc>:wa\|mksession! ~/.config/nvim/sessions/3.vim<cr>
-noremap <leader># <esc>:so ~/.config/nvim/sessions/3.vim<cr>
-
-" Source vimrc.
-noremap <leader>- <esc>:source $MYVIMRC\|AirlineToggle\|AirlineToggle<cr>
-
-" Edit vimrc.
-noremap <leader>= <esc>:e $MYVIMRC<cr>
-
-" Copy line (or selection) into command buffer and run it.
-"nnoremap <leader>- yy:<c-r>"<bs><cr>
-"vnoremap <leader>- y:<c-r>"<cr>
-
-" Delete trailing whitespace in buffer. (Or selection).
-nnoremap <leader>0 :%s/\s\+$//e\|noh\|up<cr>
-vnoremap <leader>0 :s/\s\+$//e\|noh\|up<cr>
-
-" Toggle spell checking locally.
-nnoremap <leader>9 :setlocal spell!<cr>
-
-" Toggle hard line wrapping.
-command! HardWrapToggle if &fo =~ 't' | set fo-=t | echo 'Hard line wrap disabled' | else | set fo+=t | echo 'Hard line wrap enabled' | endif
-nnoremap <leader>8 :HardWrapToggle<cr>
-
-" Run rustfmt.
-nnoremap <leader>7 :up\|RustFmt<cr>
-
 " Disable the annoying message in the command line when using Ctrl-c.
 nnoremap <c-c> <silent> <c-c>
+
+" Remap increment/decrement number to something more intuitive
+noremap <c-a> +
+noremap <c-x> -
+
 
 " Closes the current buffer without closing the window.
 " Also doesn't leave any [New File]s around.
@@ -210,35 +212,38 @@ inoremap <silent> <c-j> <esc>:bn<cr>
 " Clear search buffer in normal mode when pressing escape<cr>.
 nnoremap <silent> <esc> :noh<cr><esc>
 
-" Enable syntax highlighting.
-syntax on
+" Session slots.
+"TODO: predefined veriable representing the nvim directory?
+noremap <leader>1 <esc>:wa\|mksession! ~/.config/nvim/sessions/1.vim<cr>
+noremap <leader>! <esc>:so ~/.config/nvim/sessions/1.vim<cr>
+noremap <leader>2 <esc>:wa\|mksession! ~/.config/sessions/2.vim<cr>
+noremap <leader>@ <esc>:so ~/.config/nvim/sessions/2.vim<cr>
+noremap <leader>3 <esc>:wa\|mksession! ~/.config/nvim/sessions/3.vim<cr>
+noremap <leader># <esc>:so ~/.config/nvim/sessions/3.vim<cr>
 
-" Detect filetype.
-filetype plugin indent on
+" Source vimrc.
+noremap <leader>- <esc>:source $MYVIMRC\|AirlineToggle\|AirlineToggle<cr>
 
-" The font for gvim.
-set guifont=Inconsolata\ 12
+" Edit vimrc.
+noremap <leader>= <esc>:e $MYVIMRC<cr>
 
-"" Colorscheme
-" Darker background.
-let g:alduin_Shout_Dragon_Aspect = 1
+" Copy line (or selection) into command buffer and run it.
+"nnoremap <leader>- yy:<c-r>"<bs><cr>
+"vnoremap <leader>- y:<c-r>"<cr>
 
-" Use underline matchparens instead of block.
-let g:alduin_Shout_Aura_Whisper = 1
+" Delete trailing whitespace in buffer. (Or selection).
+nnoremap <leader>0 :%s/\s\+$//e\|noh\|up<cr>
+vnoremap <leader>0 :s/\s\+$//e\|noh\|up<cr>
 
-" Disable string background highlight.
-let g:alduin_Shout_Animal_Allegiance = 1
+" Toggle spell checking locally.
+nnoremap <leader>9 :setlocal spell!<cr>
 
-colo alduin
+" Toggle hard line wrapping.
+command! HardWrapToggle if &fo =~ 't' | set fo-=t | echo 'Hard line wrap disabled' | else | set fo+=t | echo 'Hard line wrap enabled' | endif
+nnoremap <leader>8 :HardWrapToggle<cr>
 
-" Make the cursor number line the same as the others.
-hi CursorLineNR guifg=#020202 guibg=#444444
-
-" Red and black cursor.
-hi Cursor guifg=#000000 guibg=#ff0000 ctermfg=0 ctermbg=9
-
-" Load the GDB debugger integration plugin that comes with vim.
-packadd termdebug
+" Run rustfmt.
+nnoremap <leader>7 :up\|RustFmt<cr>
 
 " Search for file with fzf.
 noremap <leader>f :Files<cr>
