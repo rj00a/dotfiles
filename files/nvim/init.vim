@@ -158,6 +158,9 @@ hi Cursor guifg=#000000 guibg=#ff0000 ctermfg=0 ctermbg=9
 " Clear old mappings when sourcing this file.
 mapclear
 
+" Set the leader key to space
+let mapleader = " "
+
 " Map Y to be consistent with C and D.
 noremap Y y$
 

@@ -185,7 +185,7 @@ iptables 1:1.8.4-1
 iputils 20190709-2
 iso-codes 4.4-1
 jack 0.125.0-9
-jansson 2.12-2
+jansson 2.13.1-1
 jasper 2.0.16-1
 java-environment-common 3-2
 java-runtime-common 3-2
