@@ -1,6 +1,3 @@
-" TODO: Explore airline customizations.
-" TODO: Termdebug function key mappings.
-
 " Plugin management with vim-plug.
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'cespare/vim-toml'
@@ -10,6 +7,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'moll/vim-bbye'
+Plug 'preservim/nerdtree'
 Plug 'rust-lang/rust.vim'
 Plug 'tmhedberg/matchit'
 Plug 'tpope/vim-fugitive'
@@ -50,7 +48,7 @@ set smartcase
 set splitright
 
 " Enable mouse support.
-set mouse+=a
+"set mouse+=a
 
 " In Gvim, remove the menu bar, toolbar, and scrollbar completely.
 set guioptions=aegit
@@ -152,12 +150,6 @@ hi CursorLineNR guifg=#020202 guibg=#444444
 " Red and black cursor.
 hi Cursor guifg=#000000 guibg=#ff0000 ctermfg=0 ctermbg=9
 
-" Load the GDB debugger integration plugin that comes with vim.
-"packadd termdebug
-
-" Clear old mappings when sourcing this file.
-mapclear
-
 " Set the leader key to space
 let mapleader = " "
 
@@ -167,7 +159,7 @@ noremap Y y$
 " Disable the annoying message in the command line when using Ctrl-c.
 nnoremap <c-c> <silent> <c-c>
 
-" Remap increment/decrement number to something more intuitive
+" Remap increment/decrement number to something more intuitive.
 noremap <c-a> +
 noremap <c-x> -
 
@@ -212,18 +204,18 @@ nnoremap <silent> <esc> :noh<cr><esc>
 
 " Session slots.
 "TODO: predefined veriable representing the nvim directory?
-noremap <leader>1 <esc>:wa\|mksession! ~/.config/nvim/sessions/1.vim<cr>
-noremap <leader>! <esc>:so ~/.config/nvim/sessions/1.vim<cr>
-noremap <leader>2 <esc>:wa\|mksession! ~/.config/sessions/2.vim<cr>
-noremap <leader>@ <esc>:so ~/.config/nvim/sessions/2.vim<cr>
-noremap <leader>3 <esc>:wa\|mksession! ~/.config/nvim/sessions/3.vim<cr>
-noremap <leader># <esc>:so ~/.config/nvim/sessions/3.vim<cr>
+nnoremap <leader>1 <esc>:wa\|mksession! ~/.config/nvim/sessions/1.vim<cr>
+nnoremap <leader>! <esc>:so ~/.config/nvim/sessions/1.vim<cr>
+nnoremap <leader>2 <esc>:wa\|mksession! ~/.config/sessions/2.vim<cr>
+nnoremap <leader>@ <esc>:so ~/.config/nvim/sessions/2.vim<cr>
+nnoremap <leader>3 <esc>:wa\|mksession! ~/.config/nvim/sessions/3.vim<cr>
+nnoremap <leader># <esc>:so ~/.config/nvim/sessions/3.vim<cr>
 
 " Source vimrc.
-noremap <leader>- <esc>:source $MYVIMRC\|AirlineToggle\|AirlineToggle<cr>
+nnoremap <leader>- <esc>:source $MYVIMRC\|AirlineToggle\|AirlineToggle<cr>
 
 " Edit vimrc.
-noremap <leader>= <esc>:e $MYVIMRC<cr>
+nnoremap <leader>= <esc>:e $MYVIMRC<cr>
 
 " Copy line (or selection) into command buffer and run it.
 "nnoremap <leader>- yy:<c-r>"<bs><cr>
@@ -244,22 +236,28 @@ nnoremap <leader>8 :HardWrapToggle<cr>
 nnoremap <leader>7 :up\|RustFmt<cr>
 
 " Search for file with fzf.
-noremap <leader>f :Files<cr>
+nnoremap <leader>f :Files<cr>
 
 " Grep for string using ripgrep.
-noremap <leader>s :Rg<cr>
+nnoremap <leader>s :Rg<cr>
 
 " Search for open buffer.
-noremap <leader>b :Buffers<cr>
+nnoremap <leader>b :Buffers<cr>
 
 " Search marks.
-noremap <leader>m :Marks<cr>
+nnoremap <leader>m :Marks<cr>
 
 " Search lines in open buffers.
-noremap <leader>l :Lines<cr>
+nnoremap <leader>l :Lines<cr>
 
 " Search v:oldfiles and open buffers.
-noremap <leader>h :History<cr>
+nnoremap <leader>h :History<cr>
+
+" Toggle the NERDTree buffer.
+nnoremap <leader>d :NERDTreeToggle<cr>
+
+" Open the NERDTree buffer and change the root to the CWD.
+nnoremap <leader>c :NERDTreeCWD<cr>
 
 " Prompt for name of binary to start debugging.
 "noremap <leader>g <esc>:Termdebug<space>
@@ -277,6 +275,15 @@ cnoremap <c-p> <up>
 " My own idea.
 cnoremap <c-h> <s-left>
 cnoremap <c-l> <s-right>
+
+" Disable help text.
+let g:NERDTreeMinimalUI = 1
+
+" Show hidden files.
+let g:NERDTreeShowHidden = 1
+
+" Don't hijack the netrw commands, because it opens an unkillable buffer which is annoying.
+let g:NERDTreeHijackNetrw = 0
 
 " How long to show highlighted yanked text (millis).
 let g:highlightedyank_highlight_duration = 150
@@ -356,6 +363,13 @@ autocmd! BufEnter *.txt if &buftype == 'help' | wincmd L | endif
 " When switching buffers, preserve window view.
 autocmd! BufLeave * call AutoSaveWinView()
 autocmd! BufEnter * call AutoRestoreWinView()
+
+" Start NERDTree when opening vim on a directory.
+autocmd! StdinReadPre * let s:std_in=1
+autocmd! VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+
+" Close Vim when the NERDTree buffer is the only one left.
+autocmd! BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Save current view settings on a per-window, per-buffer basis.
 function! AutoSaveWinView()

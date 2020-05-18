@@ -50,7 +50,6 @@ gdb
 gettext
 ghc
 git
-glances
 glibc
 gnu-netcat
 gperf
