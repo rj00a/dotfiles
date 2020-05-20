@@ -1,23 +1,23 @@
-# Enable vi mode
-#set editing-mode vi
-
-# Make autocomplete use colors
-set colored-stats on
-
-set keymap vi-command
-Control-l: clear-screen
-# Unmap the 'v' keybinding
-v: ""
-
-set keymap vi-insert
-Control-l: clear-screen
-
-# Block cursor in normal mode, line cursor in insert mode
-set show-mode-in-prompt on
-set vi-ins-mode-string \1\e[6 q\2
-set vi-cmd-mode-string \1\e[2 q\2
-
-set show-all-if-ambiguous on
-
-# Remove the insert mode -> normal mode delay
-set keyseq-timeout 0
+# # Enable vi mode
+# set editing-mode vi
+# 
+# # Make autocomplete use colors
+# set colored-stats on
+# 
+# set keymap vi-command
+# Control-l: clear-screen
+# # Unmap the 'v' keybinding
+# v: ""
+# 
+# set keymap vi-insert
+# Control-l: clear-screen
+# 
+# # Block cursor in normal mode, line cursor in insert mode
+# set show-mode-in-prompt on
+# set vi-ins-mode-string \1\e[6 q\2
+# set vi-cmd-mode-string \1\e[2 q\2
+# 
+# set show-all-if-ambiguous on
+# 
+# # Remove the insert mode -> normal mode delay
+# set keyseq-timeout 0

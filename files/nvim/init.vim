@@ -71,9 +71,6 @@ set clipboard^=unnamedplus
 " Automatically reload files when they are modified externally.
 set autoread
 
-" checktime makes autoread actually do what it's supposed to do.
-au CursorHold * checktime
-
 " Make history greater than default.
 set history=500
 
@@ -123,6 +120,9 @@ set autoindent
 " Prevents exrc and other stuff from running potentially dangerous shell commands.
 set secure
 
+" Keep the cursor centered.
+set scrolloff=999
+
 " Enable syntax highlighting.
 syntax on
 
@@ -155,6 +155,16 @@ let mapleader = " "
 
 " Map Y to be consistent with C and D.
 noremap Y y$
+
+" Move display lines up/down, rather than actual lines.
+" Useful for wrapping lines.
+nnoremap j gj
+vnoremap j gj
+nnoremap k gk
+vnoremap k gk
+
+" Clear search buffer.
+nnoremap <silent> <esc> :noh<cr><esc>
 
 " Disable the annoying message in the command line when using Ctrl-c.
 nnoremap <c-c> <silent> <c-c>
@@ -190,17 +200,11 @@ tnoremap <esc> <c-\><c-n>
 vnoremap K <esc>i<cr><esc>k$
 noremap K i<cr><esc>k$
 
-" Forward delete in insert mode, like Emacs.
-inoremap <c-d> <del>
-
 " Switch between buffers.
 noremap <silent> <c-k> :bp<cr>
 inoremap <silent> <c-k> <esc>:bp<cr>
 noremap <silent> <c-j> :bn<cr>
 inoremap <silent> <c-j> <esc>:bn<cr>
-
-" Clear search buffer in normal mode when pressing escape<cr>.
-nnoremap <silent> <esc> :noh<cr><esc>
 
 " Session slots.
 "TODO: predefined veriable representing the nvim directory?
@@ -229,14 +233,16 @@ vnoremap <leader>0 :s/\s\+$//e\|noh\|up<cr>
 nnoremap <leader>9 :setlocal spell!<cr>
 
 " Toggle hard line wrapping.
-command! HardWrapToggle if &fo =~ 't' | set fo-=t | echo 'Hard line wrap disabled' | else | set fo+=t | echo 'Hard line wrap enabled' | endif
-nnoremap <leader>8 :HardWrapToggle<cr>
+nnoremap <leader>8 :call ToggleHardLineWrap()<cr>
 
 " Run rustfmt.
 nnoremap <leader>7 :up\|RustFmt<cr>
 
 " Search for file with fzf.
 nnoremap <leader>f :Files<cr>
+
+" List files in git repo.
+nnoremap <leader>F :GFiles<cr>
 
 " Grep for string using ripgrep.
 nnoremap <leader>s :Rg<cr>
@@ -253,11 +259,26 @@ nnoremap <leader>l :Lines<cr>
 " Search v:oldfiles and open buffers.
 nnoremap <leader>h :History<cr>
 
+" Search Search history.
+nnoremap <leader>/ :History/<cr>
+
+" Search command history
+nnoremap <leader>: :History:<cr>
+
 " Toggle the NERDTree buffer.
 nnoremap <leader>d :NERDTreeToggle<cr>
 
 " Open the NERDTree buffer and change the root to the CWD.
 nnoremap <leader>c :NERDTreeCWD<cr>
+
+" List files from `git status`.
+nnoremap <leader>gf :GFiles?<cr>
+
+" List git commits for current buffer.
+nnoremap <leader>gc :BCommits<cr>
+
+" List git commits.
+nnoremap <leader>gC :Commits<cr>
 
 " Prompt for name of binary to start debugging.
 "noremap <leader>g <esc>:Termdebug<space>
@@ -349,9 +370,15 @@ autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
 " In other words, the cursor should never be in the bottom half of the screen.
 " This is a different effect from just doing :set so=999
 " CursorMovedI could not be used due to some unintended behavior with `zz` in insert mode.
-autocmd! CursorMoved * :normal zz
-autocmd! InsertEnter * :normal zz
-inoremap <cr> <cr><c-o>zz
+"autocmd! CursorMoved * :normal zz
+"autocmd! InsertEnter * :normal zz
+"inoremap <cr> <cr><c-o>zz
+"inoremap <bs> <bs><c-o>zz
+"inoremap <c-w> <c-w><esc>zza
+"inoremap <c-u> <c-u><esc>zza
+
+" checktime makes autoread actually do what it's supposed to do.
+autocmd! CursorHold * checktime
 
 " Language plugins like to set formatoptions, but I don't want them doing that.
 " (See :h fo-table)
@@ -360,9 +387,8 @@ autocmd! BufNewFile,BufRead * setlocal fo=q
 " Open help buffers as a right split.
 autocmd! BufEnter *.txt if &buftype == 'help' | wincmd L | endif
 
-" When switching buffers, preserve window view.
-autocmd! BufLeave * call AutoSaveWinView()
-autocmd! BufEnter * call AutoRestoreWinView()
+" Disable scrolloff when inside terminal buffers.
+"autocmd! BufEnter * if &buftype == 'terminal' | set so=1 | else | set so=999 | endif
 
 " Start NERDTree when opening vim on a directory.
 autocmd! StdinReadPre * let s:std_in=1
@@ -370,6 +396,13 @@ autocmd! VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_i
 
 " Close Vim when the NERDTree buffer is the only one left.
 autocmd! BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Occasionally refresh the NERDTree file listing.
+autocmd CursorHold,CursorHoldI * call NERDTreeFocus() | call g:NERDTree.ForCurrentTab().getRoot().refresh() | call g:NERDTree.ForCurrentTab().render() | wincmd w
+
+" When switching buffers, preserve window view.
+autocmd! BufLeave * call AutoSaveWinView()
+autocmd! BufEnter * call AutoRestoreWinView()
 
 " Save current view settings on a per-window, per-buffer basis.
 function! AutoSaveWinView()
@@ -389,6 +422,16 @@ function! AutoRestoreWinView()
             call winrestview(w:SavedBufView[buf])
         endif
         unlet w:SavedBufView[buf]
+    endif
+endfunction
+
+function! ToggleHardLineWrap()
+    if &fo =~ 't'
+        set fo-=t
+        echo 'Hard line wrap disabled'
+    else
+        set fo+=t
+        echo 'Hard line wrap enabled'
     endif
 endfunction
 
