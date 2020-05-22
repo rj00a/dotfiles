@@ -397,9 +397,6 @@ autocmd! VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_i
 " Close Vim when the NERDTree buffer is the only one left.
 autocmd! BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Occasionally refresh the NERDTree file listing.
-autocmd CursorHold,CursorHoldI * call NERDTreeFocus() | call g:NERDTree.ForCurrentTab().getRoot().refresh() | call g:NERDTree.ForCurrentTab().render() | wincmd w
-
 " When switching buffers, preserve window view.
 autocmd! BufLeave * call AutoSaveWinView()
 autocmd! BufEnter * call AutoRestoreWinView()
