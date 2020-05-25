@@ -170,7 +170,6 @@ wget
 which
 woeusb
 wpa_supplicant
-wren
 xclip
 xdotool
 xfsprogs
