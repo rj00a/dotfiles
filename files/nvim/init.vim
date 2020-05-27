@@ -265,19 +265,19 @@ nnoremap <leader>/ :History/<cr>
 nnoremap <leader>: :History:<cr>
 
 " Toggle the NERDTree buffer.
-nnoremap <leader>d :NERDTreeToggle<cr>
+nnoremap <silent> <leader>d :NERDTreeToggle<cr>
 
 " Open the NERDTree buffer and change the root to the CWD.
-nnoremap <leader>c :NERDTreeCWD<cr>
+nnoremap <silent> <leader>c :NERDTreeCWD<cr>
 
 " List files from `git status`.
-nnoremap <leader>gf :GFiles?<cr>
+nnoremap <silent> <leader>gf :GFiles?<cr>
 
 " List git commits for current buffer.
-nnoremap <leader>gc :BCommits<cr>
+nnoremap <silent> <leader>gc :BCommits<cr>
 
 " List git commits.
-nnoremap <leader>gC :Commits<cr>
+nnoremap <silent> <leader>gC :Commits<cr>
 
 " Prompt for name of binary to start debugging.
 "noremap <leader>g <esc>:Termdebug<space>
