@@ -19,8 +19,8 @@ for filename in argv:
         continue
 
     info = res.stderr.decode('utf-8')
-    album_name_match = search(r'album\s*: (.+)$', info, IGNORECASE)
-    track_num_match = search(r'track\s*: (\d+)$', info, IGNORECASE)
+    album_name_match = search(r'album\s*: (.+)', info, IGNORECASE)
+    track_num_match = search(r'track\s*: (\d+)', info, IGNORECASE)
 
     if not album_name_match or not track_num_match:
         orphans.append(filename)

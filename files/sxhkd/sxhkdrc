@@ -41,7 +41,7 @@ super + space
     bspc desktop -l next
 
 # Focus the next/previous node in the current desktop
-super + {n,m}
+super + {n,p}
     bspc node -f {prev,next}.local
 
 # Toggle window states from tiled to some other state

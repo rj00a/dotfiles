@@ -56,6 +56,7 @@ gperf
 grep
 gzdoom
 gzip
+haskell-base-prelude
 hplip
 htop
 inetutils

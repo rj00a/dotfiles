@@ -9,29 +9,30 @@ end
 
 fish update-submodules.fish
 
-l fish ~/.config/
-l bspwm ~/.config/
-l sxhkd ~/.config/
-l plug.vim ~/.local/share/nvim/site/autoload/
-l nvim/ ~/.config/
-l .xinitrc ~/
-l gtk-3.0 ~/.config/
-l .gtkrc-2.0 ~/
 l .Xresources ~/
-l .gitconfig ~/
-l alacritty.yml ~/.config/
-l .nethackrc ~/
-l .inputrc ~/
 l .gdbinit.d ~/
+l .gitconfig ~/
+l .gtkrc-2.0 ~/
 l .haskeline ~/
-l gdb-dashboard/.gdbinit ~/
+l .inputrc ~/
+l .nethackrc ~/
+l .xinitrc ~/
+l alacritty.yml ~/.config/
+l bspwm ~/.config/
+l fish ~/.config/
 l fontconfig ~/.config/
-l zathura ~/.config/
-l polybar ~/.config/
-l mpv ~/.config/
-l index.theme ~/.icons/default/
-l polybar ~/.config
+l gdb-dashboard/.gdbinit ~/
+l gtk-3.0 ~/.config/
+l gzdoom.ini ~/.config/gzdoom/
 l htoprc ~/.config/htop/
+l index.theme ~/.icons/default/
+l mpv ~/.config/
+l nvim/ ~/.config/
+l plug.vim ~/.local/share/nvim/site/autoload/
+l polybar ~/.config
+l polybar ~/.config/
+l sxhkd ~/.config/
+l zathura ~/.config/
 
 if [ (systemctl is-enabled NetworkManager) = disabled ]
     sudo systemctl enable NetworkManager

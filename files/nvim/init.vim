@@ -234,9 +234,6 @@ nnoremap <leader>9 :setlocal spell!<cr>
 " Toggle hard line wrapping.
 nnoremap <leader>8 :call ToggleHardLineWrap()<cr>
 
-" Run rustfmt.
-nnoremap <leader>7 :up\|RustFmt<cr>
-
 " Search for file with fzf.
 nnoremap <leader>f :Files<cr>
 
@@ -265,10 +262,10 @@ nnoremap <leader>/ :History/<cr>
 nnoremap <leader>: :History:<cr>
 
 " Toggle the NERDTree buffer.
-nnoremap <silent> <leader>d :NERDTreeToggle<cr>
+nnoremap <silent> <leader>d :NERDTreeToggle<cr><c-w>=
 
 " Open the NERDTree buffer and change the root to the CWD.
-nnoremap <silent> <leader>c :NERDTreeCWD<cr>
+nnoremap <silent> <leader>c :NERDTreeCWD<cr><c-w>=
 
 " List files from `git status`.
 nnoremap <silent> <leader>gf :GFiles?<cr>
