@@ -168,10 +168,6 @@ nnoremap <silent> <esc> :noh<cr><esc>
 " Disable the annoying message in the command line when using Ctrl-c.
 nnoremap <c-c> <silent> <c-c>
 
-" Remap increment/decrement number to something more intuitive.
-noremap <c-a> +
-noremap <c-x> -
-
 " Closes the current buffer without closing the window.
 " Also doesn't leave any [New File]s around.
 " Provided vim-bbye.

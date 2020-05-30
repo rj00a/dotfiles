@@ -136,7 +136,7 @@ function play -d 'Play something with mpv using fzf and exit'
     end
 end
 
-function playd -d 'Play a directory of audio files with mpv in proper album order'
+function playa -d 'Play a directory of audio files with mpv in proper album order'
     set dir (find /mnt/sda1/{music,films}/ -type d 2> /dev/null | fzf)
     if [ -z "$dir" ]
         return
@@ -146,6 +146,16 @@ function playd -d 'Play a directory of audio files with mpv in proper album orde
         return
     end
     mpv --player-operation-mode=pseudo-gui $trax &
+    disown
+    exit 0
+end
+
+function playshuf -d 'Play a directory of audio files with mpv in random order'
+    set dir (find /mnt/sda1/{music,films}/ -type d 2> /dev/null | fzf)
+    if [ -z "$dir" ]
+        return
+    end
+    mpv --player-operation-mode=pseudo-gui (shuf -e "$dir"/*) &
     disown
     exit 0
 end

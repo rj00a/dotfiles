@@ -62,7 +62,7 @@ colordiff 1.0.18-2
 compiler-rt 10.0.0-1
 coreutils 8.32-1
 cracklib 2.9.7-2
-cryptsetup 2.3.2-2
+cryptsetup 2.3.3-1
 cups 2.3.3-1
 cups-filters 1.27.4-1
 curl 7.70.0-1
@@ -83,6 +83,7 @@ dnssec-anchors 20190629-2
 dosfstools 4.1-3
 double-conversion 3.1.5-2
 e2fsprogs 1.45.6-2
+easytag 2.4.3-3
 egl-wayland 1.1.5-1
 eglexternalplatform 1.1-2
 elfutils 0.179-1
@@ -126,7 +127,7 @@ giflib 5.2.1-2
 girara 0.3.4-2
 git 2.26.2-1
 glew 2.2.0-2
-glib-networking 2.64.2-1
+glib-networking 2.64.3-1
 glib2 2.64.3-2
 glibc 2.31-5
 glibmm 2.64.2-1
@@ -175,8 +176,9 @@ hyphen 2.8.8-3
 i3-wm 4.18.1-1
 iana-etc 20200511-1
 icu 67.1-1
+id3lib 3.8.3-18
 ijs 0.35-3
-imagemagick 7.0.10.14-1
+imagemagick 7.0.10.15-1
 imlib2 1.6.1-2
 inetutils 1.9.4-8
 inkscape 1.0-4
@@ -370,7 +372,7 @@ liblouis 3.13.0-1
 liblqr 0.4.2-3
 libluv 1.36.0-1
 libmad 0.15.1b-9
-libmagick6 6.9.11.13-1
+libmagick6 6.9.11.14-1
 libmfx 20.1.1-1
 libmicrohttpd 0.9.70-3
 libmm-glib 1.12.10-1
@@ -388,7 +390,7 @@ libnfs 4.0.0-3
 libnftnl 1.1.6-1
 libnghttp2 1.40.0-1
 libnl 3.5.0-2
-libnm 1.24.0-1
+libnm 1.24.2-1
 libnma 1.8.28-1
 libnotify 0.7.9-1
 libnsl 1.2.0-2
@@ -409,7 +411,7 @@ libraqm 0.7.0-2
 libraw 0.19.5-3
 libraw1394 2.1.2-3
 librevenge 0.0.4-3
-librsvg 2:2.48.4-1
+librsvg 2:2.48.5-1
 libsamplerate 0.1.9-3
 libsasl 2.1.27-3
 libsass 3.6.4-1
@@ -485,9 +487,9 @@ libxv 1.0.11-4
 libxxf86vm 1.1.4-4
 licenses 20200427-1
 lilv 0.24.8-1
-linux 5.6.14.arch1-1
+linux 5.6.15.arch1-1
 linux-api-headers 5.6.11-1
-linux-firmware 20200421.78c0348-1
+linux-firmware 20200519.8ba6fa6-1
 lld 10.0.0-2
 llvm-libs 10.0.0-2
 lm_sensors 3.6.0-2
@@ -509,7 +511,7 @@ man-db 2.9.1-2
 man-pages 5.06-2
 mariadb-libs 10.4.13-1
 mbedtls 2.16.5-1
-md4c 0.4.3-1
+md4c 0.4.4-1
 mdadm 4.1-2
 mesa 20.0.7-3
 minizip 1:1.2.11-4
@@ -523,7 +525,7 @@ msgpack-c 3.2.1-1
 mtdev 1.1.6-1
 mujs 1.0.7-1
 multimc-git 0.6.11.r1.g21ac860e-1
-ncdu 1.14.2-1
+ncdu 1.15-1
 ncurses 6.2-1
 neofetch 7.0.0-1
 neovim 0.4.3-3
@@ -533,7 +535,7 @@ netctl 1.23-1
 nethack 3.6.6-1
 nettle 3.6-1
 network-manager-applet 1.16.0-1
-networkmanager 1.24.0-1
+networkmanager 1.24.2-1
 networkmanager-openvpn 1.8.12-1
 nm-connection-editor 1.16.0-1
 nmap 7.80-2
@@ -547,7 +549,7 @@ nss 3.52.1-2
 ntfs-3g 2017.3.23-4
 ntp 4.2.8.p14-1
 numactl 2.0.13-3
-nvidia 440.82-17
+nvidia 440.82-18
 nvidia-settings 440.82-1
 nvidia-utils 440.82-1
 obs-studio 25.0.8-1
@@ -564,6 +566,7 @@ openvpn 2.4.9-2
 opera-ffmpeg-codecs 81.0.4044.138-1
 optipng 0.7.7-2
 opus 1.3.1-2
+opusfile 0.11-2
 orc 0.4.31-2
 p11-kit 0.23.20-5
 p7zip 16.02-6
@@ -644,7 +647,7 @@ python-pynvim 0.4.1-1
 python-pyparsing 2.4.7-1
 python-pytz 2020.1-1
 python-requests 2.23.0-1
-python-setuptools 1:47.1.0-1
+python-setuptools 1:47.1.1-1
 python-six 1.15.0-1
 python-snowballstemmer 2.0.0-3
 python-sphinx 3.0.4-1
@@ -719,6 +722,7 @@ systemd 245.5-2
 systemd-boot-pacman-hook 2-1
 systemd-libs 245.5-2
 systemd-sysvcompat 245.5-2
+taglib 1.11.1-4
 talloc 2.3.1-2
 tar 1.32-3
 tcc 0.9.27-3
@@ -756,12 +760,13 @@ veracrypt 1.24.update4-1
 vid.stab 1.1-3
 virglrenderer 0.8.2-1
 vmaf 1.5.1-1
-vte-common 0.60.2-2
-vte3 0.60.2-2
+vte-common 0.60.3-1
+vte3 0.60.3-1
 vulkan-headers 1:1.2.141-1
 vulkan-icd-loader 1.2.140-1
 vulkan-tools 1.2.140-1
 vulkan-validation-layers 1.2.140-1
+wavpack 5.3.0-1
 wayland 1.18.0-2
 wayland-protocols 1.20-1
 wd719x-firmware 1-6
@@ -815,7 +820,7 @@ xwallpaper 0.6.5-1
 xz 5.2.5-1
 yajl 2.1.0-3
 yay 9.4.7-1
-youtube-dl 2020.05.08-1
+youtube-dl 2020.05.29-1
 yubico-c 1.13-5
 yubico-c-client 2.15-5
 yubikey-personalization 1.20.0-3

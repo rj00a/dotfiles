@@ -34,6 +34,7 @@ diffutils
 discord
 dmenu
 e2fsprogs
+easytag
 fakeroot
 file
 filesystem
