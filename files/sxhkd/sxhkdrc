@@ -42,7 +42,7 @@ super + space
 
 # Focus the next/previous node in the current desktop
 super + {n,p}
-    bspc node -f {prev,next}.local
+    bspc node -f {next,prev}.local
 
 # Toggle window states from tiled to some other state
 super + {t,shift + t,s,f}

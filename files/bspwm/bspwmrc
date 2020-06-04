@@ -41,7 +41,7 @@ setxkbmap -option 'caps:swapescape' &
 
 # Adjust mouse pointer speed
 # '14' is the mouse pointer ID, '297' is the property ID, and '-0.5' is the acceleration factor.
-# You can identify devices by running 'xinput' without any arguments.
+# You can identify devices by running 'xinput' without arguments.
 xinput set-prop 14 297 -0.45 &
 
 # set keyboard repeat delay and rate.

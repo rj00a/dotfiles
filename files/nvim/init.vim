@@ -221,8 +221,8 @@ nnoremap <leader>= <esc>:e $MYVIMRC<cr>
 "vnoremap <leader>- y:<c-r>"<cr>
 
 " Delete trailing whitespace in buffer. (Or selection).
-nnoremap <leader>0 :%s/\s\+$//e\|noh\|up<cr>
-vnoremap <leader>0 :s/\s\+$//e\|noh\|up<cr>
+nnoremap <leader>0 :%s/\s\+$//e\|noh\|up<cr><c-o>
+vnoremap <leader>0 :s/\s\+$//e\|noh\|up<cr><c-o>
 
 " Toggle spell checking locally.
 nnoremap <leader>9 :setlocal spell!<cr>
@@ -388,6 +388,9 @@ autocmd! VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_i
 
 " Close Vim when the NERDTree buffer is the only one left.
 autocmd! BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" When editing Haskell, use two-space indentation.
+autocmd! FileType haskell setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 " When switching buffers, preserve window view.
 autocmd! BufLeave * call AutoSaveWinView()
