@@ -32,7 +32,7 @@ z --add "$CWD"
 
 set -x XDG_DOWNLOAD_DIR ~/dl/
 
-set -x VISUAL vi
+set -x VISUAL nvim
 set -x BROWSER chromium
 
 # Make python write .pyc files to this dir instead of cwd for wherever
