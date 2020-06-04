@@ -11,10 +11,10 @@ set fish_greeting
 #     fish_vi_key_bindings --no-erase
 # end
 # set -g fish_key_bindings hybrid_key_bindings
-# 
+#
 # # Disable the mode indicator
 # set fish_mode_prompt
-# 
+#
 # # Set the cursor shapes for the different vi modes.
 # set fish_cursor_default block blink
 # set fish_cursor_insert line blink
@@ -24,8 +24,10 @@ set fish_greeting
 # Show the full path of the cwd in the prompt.
 set fish_prompt_pwd_dir_length 0
 
+set -x DOTFILE_DIR ~/dotfiles/
+
 # Initialize z
-source ~/shared/files/z.fish
+source $DOTFILE_DIR/files/z.fish
 z --add "$CWD"
 
 set -x XDG_DOWNLOAD_DIR ~/dl/
@@ -37,13 +39,10 @@ set -x BROWSER chromium
 set -x PYTHONCACHEPREFIX "$HOME/.cache/cpython/"
 
 # Run this file on startup
-set -x PYTHONSTARTUP ~/shared/files/.pythonrc
+set -x PYTHONSTARTUP $DOTFILE_DIR/files/.pythonrc
 
 # Make less not write to ~/.lesshst
 set -x LESSHISTFILE -
-
-# Config directory for DOOM Emacs.
-set -x DOOMDIR ~/shared/files/.doom.d/
 
 # Set the timezone for 'date' command
 set -x TZ 'America/Los_Angeles'
@@ -52,7 +51,7 @@ set -x TZ 'America/Los_Angeles'
 alias nethack='nethack -d ~/games/nethack-playground'
 
 alias ls='ls -aA --color=auto --group-directories-first'
-alias backup='fish ~/shared/scripts/backup-data.fish'
+alias backup="fish $DOTFILE_DIR/scripts/backup-data.fish"
 
 # Don't let sxiv cache files for privacy reasons.
 alias sxiv='sxiv -p'
@@ -141,7 +140,7 @@ function playa -d 'Play a directory of audio files with mpv in proper album orde
     if [ -z "$dir" ]
         return
     end
-    set trax (python -B ~/shared/scripts/trackord.py "$dir"/*)
+    set trax (python -B $DOTFILE_DIR/scripts/trackord.py "$dir"/*)
     if [ -z "$trax" ]
         return
     end
@@ -181,7 +180,7 @@ end
 function update -d 'Update system packages and push changes to shared repos.'
     pushd .
     # ====
-    ~/shared &&
+    $DOTFILE_DIR &&
     echo '==== in '(pwd)' ====' &&
     yay -Syu &&
     fish gen-package-list.fish &&
@@ -212,7 +211,7 @@ function ezdd -d "'dd' with confirmation prompt and good arguments."
 end
 
 function em -d 'Fuzzy find an emoji and copy it to the clipboard'
-    set res (fzf < ~/shared/files/emojis.txt)
+    set res (fzf < $DOTFILE_DIR/files/emojis.txt)
     if [ $status = 0 ]
         printf '%s' (echo $res | cut -f 1 -d ' ') | xclip -selection clipboard
     end

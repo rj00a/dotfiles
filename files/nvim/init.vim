@@ -221,8 +221,8 @@ nnoremap <leader>= <esc>:e $MYVIMRC<cr>
 "vnoremap <leader>- y:<c-r>"<cr>
 
 " Delete trailing whitespace in buffer. (Or selection).
-nnoremap <leader>0 :%s/\s\+$//e\|noh\|up<cr><c-o>
-vnoremap <leader>0 :s/\s\+$//e\|noh\|up<cr><c-o>
+nnoremap <leader>0 :%s/\s\+$//e\|noh\|up<cr>
+vnoremap <leader>0 :s/\s\+$//e\|noh\|up<cr>
 
 " Toggle spell checking locally.
 nnoremap <leader>9 :setlocal spell!<cr>

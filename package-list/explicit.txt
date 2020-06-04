@@ -5,7 +5,7 @@ aic94xx-firmware
 alacritty
 alsa-utils
 antlr4
-arc-gtk-theme-jnsh-git
+arc-gtk-theme
 ascii
 aspell-en
 ats2-postiats
@@ -41,7 +41,7 @@ filesystem
 findutils
 fish
 flex
-fontpreview
+fontpreview-git
 fortune-mod
 fzf
 gawk
