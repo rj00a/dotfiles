@@ -185,7 +185,7 @@ function update -d 'Update system packages and push changes to shared repos.'
     yay -Syu &&
     fish gen-package-list.fish &&
     fish update-submodules.fish &&
-    nvim -c 'PlugUpdate|PlugInstall|qa' &&
+    nvim -c 'PlugUpdate|PlugInstall|PlugClean|qa' &&
     fish -c 'paplay files/bell.ogg' &&
     git-update &&
     /mnt/sdb1/private &&

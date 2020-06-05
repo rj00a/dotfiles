@@ -1,20 +1,17 @@
 " Plugin management with vim-plug.
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'cespare/vim-toml'
-Plug 'dag/vim-fish'
 Plug 'google/vim-searchindex'
 Plug 'junegunn/fzf.vim'
-Plug 'kovetskiy/sxhkd-vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'moll/vim-bbye'
 Plug 'preservim/nerdtree'
-Plug 'rust-lang/rust.vim'
+"Plug 'rust-lang/rust.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'tmhedberg/matchit'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ziglang/zig.vim'
 call plug#end()
 
 " Enable line numbers.
