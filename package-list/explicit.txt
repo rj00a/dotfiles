@@ -15,9 +15,9 @@ automake
 bash
 binutils
 bison
+breeze-obsidian-cursor-theme
 bspwm
 bzip2
-capitaine-cursors
 ccache
 chromium
 chromium-widevine

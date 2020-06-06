@@ -35,6 +35,7 @@ binutils 2.34-5
 bison 3.6.2-1
 bluez-libs 5.54-2
 boost-libs 1.72.0-2
+breeze-obsidian-cursor-theme 1.0-3
 brltty 6.0-10
 brotli 1.0.7-3
 bspwm 0.9.9-1
@@ -47,7 +48,6 @@ ca-certificates-utils 20181109-3
 cairo 1.17.2+25+gaee96d175-1
 cairomm 1.12.2-4
 cantarell-fonts 1:0.201-1
-capitaine-cursors 4-1
 ccache 3.7.9-1
 cdparanoia 10.2-8
 check 0.14.0-1

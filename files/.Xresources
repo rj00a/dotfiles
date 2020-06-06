@@ -1,6 +1,2 @@
-
 ! For the 'sxiv' image viewer
 Sxiv.background: #000000
-
-! Set mouse cursor
-Xcursor.theme: capitaine-cursors
