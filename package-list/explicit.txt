@@ -133,6 +133,8 @@ ripgrep
 rsync
 rustup
 s-nail
+sdl2_image
+sdl2_ttf
 sed
 shadow
 slock

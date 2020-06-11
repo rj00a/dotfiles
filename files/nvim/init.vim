@@ -5,7 +5,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'moll/vim-bbye'
 Plug 'preservim/nerdtree'
-"Plug 'rust-lang/rust.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tmhedberg/matchit'
 Plug 'tpope/vim-fugitive'
@@ -18,7 +17,7 @@ call plug#end()
 set number
 
 " Line numbers are close to the edge of the window.
-set numberwidth=2
+set numberwidth=3
 
 " Set column limit for formatting with 'gq'.
 set textwidth=100
@@ -294,6 +293,9 @@ let g:NERDTreeShowHidden = 1
 
 " Don't hijack the netrw commands, because it opens an unkillable buffer which is annoying.
 let g:NERDTreeHijackNetrw = 0
+
+" Getting real tired of seeing junk in my home directory.
+let g:NERDTreeBookmarksFile = "/tmp/.NERDTreeBookmarks"
 
 " How long to show highlighted yanked text (millis).
 let g:highlightedyank_highlight_duration = 150
