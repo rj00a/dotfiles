@@ -11,6 +11,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 " Enable line numbers.
@@ -43,7 +44,7 @@ set smartcase
 set splitright
 
 " Enable mouse support.
-"set mouse+=a
+set mouse+=a
 
 " In Gvim, remove the menu bar, toolbar, and scrollbar completely.
 set guioptions=aegit
@@ -178,14 +179,17 @@ noremap <leader>W :w !sudo tee %<cr>
 noremap <silent> <leader>w :up<cr>
 
 " Open vertical terminal.
-noremap <silent> <leader>t :vert term<cr>
+"noremap <silent> <leader>t :vert term<cr>
 
-" Don't let the integrated terminal interrupt buffer switching.
-tnoremap <silent> <c-j> <c-\><c-n>:bn<cr>
-tnoremap <silent> <c-k> <c-\><c-n>:bp<cr>
+" Toggle the floating terminal
+noremap <silent> <leader>t :FloatermToggle<cr>
 
 " Exit terminal mode.
-tnoremap <esc> <c-\><c-n>
+"tnoremap <esc> <c-\><c-n>
+
+" Toggle the floating terminal
+nnoremap <silent> <c-q> :FloatermToggle<cr>
+tnoremap <silent> <c-q> <c-\><c-n>:FloatermToggle<cr>
 
 " Rebind K to be a complement to J.
 vnoremap K <esc>i<cr><esc>k$
@@ -301,10 +305,15 @@ let g:NERDTreeBookmarksFile = "/tmp/.NERDTreeBookmarks"
 let g:highlightedyank_highlight_duration = 150
 
 " Make the yanked region color the same as the alduin search color.
+" TODO: neovim 5.0 makes the highlightedyank plugin obsolete.
 hi HighlightedyankRegion guifg=#dfdfaf guibg=#875f5f gui=NONE ctermfg=187 ctermbg=95 cterm=NONE
 
 " Change the fzf layout to a popup instead of the default split.
 let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.85 } }
+
+" Set the size of the floating terminal
+let g:floaterm_width = 0.95
+let g:floaterm_height = 0.95
 
 " Don't run zig fmt after saving.
 let g:zig_fmt_autosave = 0

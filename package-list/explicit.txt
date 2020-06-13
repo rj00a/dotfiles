@@ -36,6 +36,7 @@ dmenu
 e2fsprogs
 easytag
 fakeroot
+fd
 file
 filesystem
 findutils

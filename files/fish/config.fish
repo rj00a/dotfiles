@@ -35,6 +35,10 @@ set -x XDG_DOWNLOAD_DIR ~/dl/
 set -x VISUAL nvim
 set -x BROWSER chromium
 
+# make fzf use fd instead of find.
+# fd also ignores .git and stuff in .gitignore by default.
+set -x FZF_DEFAULT_COMMAND fd
+
 # Make python write .pyc files to this dir instead of cwd for wherever
 set -x PYTHONCACHEPREFIX "$HOME/.cache/cpython/"
 

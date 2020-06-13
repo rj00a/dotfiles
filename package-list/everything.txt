@@ -91,6 +91,7 @@ enchant 2.2.8-3
 exiv2 0.27.2-2
 expat 2.2.9-3
 fakeroot 1.24-2
+fd 8.1.1-1
 ffmpeg 1:4.2.3-5
 fftw 3.3.8-3
 file 5.38-3
@@ -160,7 +161,7 @@ gtkmm3 3.24.2-2
 gtkspell3 3.0.10-2
 guile 2.2.6-2
 guile2.0 2.0.14-4
-gzdoom 4.4.0-2
+gzdoom 4.4.1-1
 gzip 1.10-3
 harfbuzz 2.6.7-1
 harfbuzz-icu 2.6.7-1
@@ -178,14 +179,14 @@ iana-etc 20200601-1
 icu 67.1-1
 id3lib 3.8.3-18
 ijs 0.35-3
-imagemagick 7.0.10.18-1
+imagemagick 7.0.10.19-1
 imlib2 1.6.1-2
 inetutils 1.9.4-8
 inkscape 1.0-4
 intel-gmmlib 20.1.1-1
 intel-media-driver 20.1.1-1
 intel-media-sdk 20.1.1-1
-intel-ucode 20200609-1
+intel-ucode 20200609-2
 iotop 0.6-7
 iproute2 5.7.0-1
 iptables 1:1.8.5-2
@@ -298,7 +299,7 @@ lib32-libxxf86vm 1.1.4-2
 lib32-llvm-libs 10.0.0-1
 lib32-lm_sensors 3.6.0-1
 lib32-lz4 1.9.2-1
-lib32-mesa 20.1.0-4
+lib32-mesa 20.1.1-2
 lib32-ncurses 6.2-1
 lib32-nettle 3.6-1
 lib32-nspr 4.25-1
@@ -517,7 +518,7 @@ mariadb-libs 10.4.13-1
 mbedtls 2.16.5-1
 md4c 0.4.4-1
 mdadm 4.1-2
-mesa 20.1.0-4
+mesa 20.1.1-1
 minizip 1:1.2.11-4
 mkinitcpio 27-3
 mkinitcpio-busybox 1.31.1-1
@@ -668,7 +669,7 @@ python2 2.7.18-1
 qemu 5.0.0-7
 qpdf 10.0.1-1
 qrencode 4.0.2-2
-qt5-base 5.15.0-2
+qt5-base 5.15.0-3
 qt5-declarative 5.15.0-1
 qt5-multimedia 5.15.0-1
 qt5-svg 5.15.0-1
