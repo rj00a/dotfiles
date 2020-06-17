@@ -1,3 +1,5 @@
+" TODO: 'A' in visual block mode stopped working?
+
 " Plugin management with vim-plug.
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'google/vim-searchindex'
@@ -180,9 +182,6 @@ noremap <silent> <leader>w :up<cr>
 
 " Open vertical terminal.
 "noremap <silent> <leader>t :vert term<cr>
-
-" Toggle the floating terminal
-noremap <silent> <leader>t :FloatermToggle<cr>
 
 " Exit terminal mode.
 "tnoremap <esc> <c-\><c-n>
