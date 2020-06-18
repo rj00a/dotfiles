@@ -23,8 +23,9 @@ alert = #bd2c40
 pseudo-transparency = true
 
 [bar/main]
-modules-left = date title
+modules-left = date bspwm title
 modules-right = cpu temperature memory pulseaudio backlight battery
+modules-center = xkeyboard
 bottom = true
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -42,6 +43,12 @@ cursor-click = pointer
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+blacklist-1 = scroll lock
+format = <label-indicator>
+
 [module/title]
 type = internal/xwindow
 format-foreground = ${colors.reddish}
@@ -49,7 +56,7 @@ label-maxlen = 70
 
 [module/date]
 type = internal/date
-date = %a %b %d %Y
+date = %a %b %d
 time = %r
 label = %date% %time%
 
