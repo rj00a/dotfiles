@@ -40,10 +40,8 @@ xrdb -merge ~/.Xresources &
 setxkbmap -option 'caps:swapescape' &
 
 # Adjust mouse pointer speed
-# 'Logitech G502 HERO Gaming Mouse' is the mouse pointer ID, '297' is the property ID, and '-0.5' is
-# the acceleration factor.
 # You can identify devices by running 'xinput' without arguments.
-xinput set-prop 'Logitech G502 HERO Gaming Mouse' 297 -0.65
+xinput set-prop 'Logitech G502 HERO Gaming Mouse' 'libinput Accel Speed' -0.65
 
 # set keyboard repeat delay and rate.
 # '250' is the delay before autorepeat begins.

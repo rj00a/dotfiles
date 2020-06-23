@@ -16,6 +16,7 @@ bash
 binutils
 bison
 breeze-obsidian-cursor-theme
+brogue-ce
 bspwm
 bzip2
 ccache

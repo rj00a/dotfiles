@@ -24,7 +24,7 @@ pseudo-transparency = true
 
 [bar/main]
 modules-left = date bspwm title
-modules-right = cpu temperature memory pulseaudio backlight battery
+modules-right = cpu memory temperature pulseaudio backlight battery
 modules-center = xkeyboard
 bottom = true
 background = ${colors.background}
