@@ -135,6 +135,7 @@ ripgrep
 rsync
 rustup
 s-nail
+scc
 sdl2_image
 sdl2_ttf
 sed

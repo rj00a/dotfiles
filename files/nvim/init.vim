@@ -4,7 +4,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'google/vim-searchindex'
 Plug 'junegunn/fzf.vim'
-Plug 'machakann/vim-highlightedyank'
 Plug 'moll/vim-bbye'
 Plug 'preservim/nerdtree'
 Plug 'sheerun/vim-polyglot'
@@ -21,6 +20,9 @@ set number
 
 " Line numbers are close to the edge of the window.
 set numberwidth=3
+
+" Disable visual line wrapping
+set nowrap
 
 " Set column limit for formatting with 'gq'.
 set textwidth=100
@@ -194,6 +196,10 @@ tnoremap <silent> <c-q> <c-\><c-n>:FloatermToggle<cr>
 vnoremap K <esc>i<cr><esc>k$
 noremap K i<cr><esc>k$
 
+" Paste with indent (`] is a special mark)
+noremap p p=`]
+noremap P P=`]
+
 " Switch between buffers.
 noremap <silent> <c-k> :bp<cr>
 inoremap <silent> <c-k> <esc>:bp<cr>
@@ -300,12 +306,12 @@ let g:NERDTreeHijackNetrw = 0
 " Getting real tired of seeing junk in my home directory.
 let g:NERDTreeBookmarksFile = "/tmp/.NERDTreeBookmarks"
 
-" How long to show highlighted yanked text (millis).
-let g:highlightedyank_highlight_duration = 150
-
-" Make the yanked region color the same as the alduin search color.
-" TODO: neovim 5.0 makes the highlightedyank plugin obsolete.
-hi HighlightedyankRegion guifg=#dfdfaf guibg=#875f5f gui=NONE ctermfg=187 ctermbg=95 cterm=NONE
+" " How long to show highlighted yanked text (millis).
+" let g:highlightedyank_highlight_duration = 150
+" 
+" " Make the yanked region color the same as the alduin search color.
+" " TODO: neovim 5.0 makes the highlightedyank plugin obsolete.
+" hi HighlightedyankRegion guifg=#dfdfaf guibg=#875f5f gui=NONE ctermfg=187 ctermbg=95 cterm=NONE
 
 " Change the fzf layout to a popup instead of the default split.
 let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.85 } }
