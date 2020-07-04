@@ -52,6 +52,7 @@ gcc-libs
 gdb
 gettext
 ghc
+gifski
 git
 glibc
 gnu-netcat

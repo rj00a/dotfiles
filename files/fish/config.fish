@@ -208,7 +208,7 @@ function ezdd -d "'dd' with confirmation prompt and good arguments."
     set reply (read -n 1 -P "Are you sure you want to write \"$argv[1]\" to \"$argv[2]\"? [y/N] ")
     echo
     if [ "$reply" = y ]; or [ "$reply" = Y ]
-        sudo dd bs=16M if="$argv[1]" of="$argv[2]" status=progress
+        sudo dd if="$argv[1]" of="$argv[2]" bs=16M status=progress
     else
         return 2
     end
