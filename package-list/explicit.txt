@@ -57,6 +57,7 @@ git
 glibc
 gnu-netcat
 gperf
+gradle
 grep
 gzdoom
 gzip
@@ -89,6 +90,7 @@ maim
 make
 man-db
 man-pages
+maven
 mdadm
 mpv
 multimc-git
@@ -136,11 +138,14 @@ ripgrep
 rsync
 rustup
 s-nail
+sbt
+scala
 scc
 sdl2_image
 sdl2_ttf
 sed
 shadow
+shellcheck
 slock
 smbclient
 steam

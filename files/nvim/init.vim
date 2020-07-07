@@ -153,11 +153,18 @@ hi Cursor guifg=#000000 guibg=#ff0000 ctermfg=0 ctermbg=9
 " Set the leader key to space
 let mapleader = " "
 
-" Map Y to be consistent with C and D.
-noremap Y y$
+" Make yanking and pasting use the clipboard register instead of the default throwaway register.
+" This has the effect that deleting code will not overwrite what has been yanked.
+noremap y "*y
+noremap yy "*yy
+" Makes Y consistent with C and D
+noremap Y "*y$
+" Paste with indent (`] is a special mark)
+noremap p "*p=`]
+noremap P "*P=`]
 
 " Move display lines up/down, rather than actual lines.
-" Useful for wrapping lines.
+" Useful when line wrap is enabled.
 nnoremap j gj
 vnoremap j gj
 nnoremap k gk
@@ -195,10 +202,6 @@ tnoremap <silent> <c-q> <c-\><c-n>:FloatermToggle<cr>
 " Rebind K to be a complement to J.
 vnoremap K <esc>i<cr><esc>k$
 noremap K i<cr><esc>k$
-
-" Paste with indent (`] is a special mark)
-noremap p p=`]
-noremap P P=`]
 
 " Switch between buffers.
 noremap <silent> <c-k> :bp<cr>
@@ -293,6 +296,10 @@ cnoremap <c-p> <up>
 " My own idea.
 cnoremap <c-h> <s-left>
 cnoremap <c-l> <s-right>
+
+" Move the cursor left and right in insert mode
+inoremap <c-f> <right>
+inoremap <c-b> <left>
 
 " Disable help text.
 let g:NERDTreeMinimalUI = 1
