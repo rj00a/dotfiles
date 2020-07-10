@@ -155,8 +155,9 @@ let mapleader = " "
 
 " Make yanking and pasting use the clipboard register instead of the default throwaway register.
 " This has the effect that deleting code will not overwrite what has been yanked.
+"noremap yy "*yy
 noremap y "*y
-noremap yy "*yy
+nnoremap yy "*yy
 " Makes Y consistent with C and D
 noremap Y "*y$
 " Paste with indent (`] is a special mark)

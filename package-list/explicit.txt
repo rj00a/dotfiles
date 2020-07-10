@@ -66,6 +66,7 @@ hplip
 htop
 inetutils
 intel-ucode
+intellij-idea-ce
 iotop
 iproute2
 iputils
