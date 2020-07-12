@@ -51,6 +51,9 @@ set -x LESSHISTFILE -
 # Set the timezone for 'date' command
 set -x TZ 'America/Los_Angeles'
 
+# Workaround for a bug due to a weird interaction between Intellij and Bspwm.
+set -x _JAVA_AWT_WM_NONREPARENTING 1
+
 # Save data is located in nethack-playground
 alias nethack='nethack -d ~/games/nethack-playground'
 

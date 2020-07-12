@@ -112,6 +112,8 @@ ntp
 nvidia
 nvidia-settings
 obs-studio
+openjdk-doc
+openjdk-src
 openssh
 openvpn
 p7zip

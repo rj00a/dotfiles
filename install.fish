@@ -14,6 +14,7 @@ l .gdbinit.d ~/
 l .gitconfig ~/
 l .gtkrc-2.0 ~/
 l .haskeline ~/
+l .ideavimrc ~/
 l .inputrc ~/
 l .nethackrc ~/
 l .xinitrc ~/

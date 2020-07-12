@@ -153,16 +153,12 @@ hi Cursor guifg=#000000 guibg=#ff0000 ctermfg=0 ctermbg=9
 " Set the leader key to space
 let mapleader = " "
 
-" Make yanking and pasting use the clipboard register instead of the default throwaway register.
-" This has the effect that deleting code will not overwrite what has been yanked.
-"noremap yy "*yy
-noremap y "*y
-nnoremap yy "*yy
 " Makes Y consistent with C and D
 noremap Y "*y$
+
 " Paste with indent (`] is a special mark)
-noremap p "*p=`]
-noremap P "*P=`]
+noremap p p=`]
+noremap P P=`]
 
 " Move display lines up/down, rather than actual lines.
 " Useful when line wrap is enabled.
