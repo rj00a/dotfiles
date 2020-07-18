@@ -85,7 +85,7 @@ alias syu='yay -Syu'
 
 # Import math and fractions, start REPL, hide copyright msg, and don't write .pyc files
 # Makes python more suitable as a calculator
-alias py="python3 -Bqic 'from math import *; from fractions import Fraction'"
+alias py="python3 -Bqic 'from math import *; from fractions import Fraction as frac'"
 
 # Kill process by name
 alias fuck='sudo pkill -ie'

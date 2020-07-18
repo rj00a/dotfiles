@@ -2,6 +2,7 @@
 
 " Plugin management with vim-plug.
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'neovim/nvim-lsp'
 Plug 'google/vim-searchindex'
 Plug 'junegunn/fzf.vim'
 Plug 'moll/vim-bbye'
@@ -443,6 +444,17 @@ function! ToggleHardLineWrap()
         echo 'Hard line wrap enabled'
     endif
 endfunction
+
+" Language server configuration
+" To install a new lsp server, do :LspInstall <lsp name>
+" See `:h lsp` for more info
+lua << EOF
+lsp = require 'nvim_lsp'
+lsp.metals.setup {}
+
+
+
+EOF
 
 noh
 

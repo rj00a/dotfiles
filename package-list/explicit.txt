@@ -15,6 +15,7 @@ automake
 bash
 binutils
 bison
+bitwarden
 breeze-obsidian-cursor-theme
 brogue-ce
 bspwm
@@ -73,7 +74,6 @@ iputils
 jdk-openjdk
 jfsutils
 jq
-keepassxc
 krita
 less
 lib32-nvidia-utils
@@ -97,7 +97,7 @@ mpv
 multimc-git
 ncdu
 neofetch
-neovim
+neovim-git
 net-tools
 netctl
 nethack
@@ -184,6 +184,7 @@ vulkan-validation-layers
 wd719x-firmware
 wget
 which
+whois
 woeusb
 wpa_supplicant
 xclip
@@ -197,7 +198,6 @@ xorg-xsetroot
 xwallpaper
 yay
 youtube-dl
-z
 zathura
 zathura-cb
 zathura-djvu
