@@ -1,6 +1,6 @@
 # Make sxhkd reload its configuration files
-super + shift + k
-    pkill -USR1 -x sxhkd
+#super + shift + k
+#    pkill -USR1 -x sxhkd
 
 # Restart bspwm
 super + shift + r
