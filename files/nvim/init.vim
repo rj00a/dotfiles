@@ -109,10 +109,11 @@ set backspace=indent,eol,start
 set list
 set listchars=tab:>\ ,space:\ ,trail:-
 
-" Pressing tab inserts four spaces.
-" Hard tabs appear four spaces wide.
-set tabstop=4
-set shiftwidth=4
+" Pressing tab inserts two spaces.
+" Hard tabs appear two spaces wide.
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 
 " Copy indent from current line when starting new line.

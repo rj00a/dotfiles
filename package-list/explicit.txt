@@ -103,6 +103,7 @@ netctl
 nethack
 network-manager-applet
 networkmanager-openvpn
+nix
 nmap
 nodejs
 noto-fonts
