@@ -1,5 +1,3 @@
-" TODO: 'A' in visual block mode stopped working?
-
 " Plugin management with vim-plug.
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'neovim/nvim-lsp'

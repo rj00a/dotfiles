@@ -35,7 +35,7 @@ bash 5.0.017-1
 bc 1.07.1-4
 binutils 2.34-5
 bison 3.6.4-1
-bitwarden 1.20.0-1
+bitwarden 1.20.1-1
 bluez-libs 5.54-2
 boost 1.72.0-2
 boost-libs 1.72.0-2
@@ -53,6 +53,7 @@ ca-certificates-utils 20181109-4
 cairo 1.17.2+25+gaee96d175-1
 cairomm 1.12.2-4
 cantarell-fonts 1:0.201-1
+capitaine-cursors 4-1
 ccache 3.7.11-1
 cdparanoia 10.2-8
 check 0.15.0-2
@@ -227,7 +228,7 @@ inetutils 1.9.4-8
 inkscape 1.0-5
 intel-gmmlib 20.2.3-1
 intel-media-driver 20.2.0-1
-intel-media-sdk 20.2.0-1
+intel-media-sdk 20.2.1-1
 intel-ucode 20200616-1
 intellij-idea-ce 2020.1.3-1
 iotop 0.6-7
@@ -422,7 +423,7 @@ liblqr 0.4.2-3
 libluv 1.36.0-1
 libmad 0.15.1b-9
 libmagick6 6.9.11.24-1
-libmfx 20.2.0-1
+libmfx 20.2.1-1
 libmicrohttpd 0.9.71-1
 libmm-glib 1.14.0-1
 libmng 2.0.3-3
@@ -507,7 +508,7 @@ libwebp 1.1.0-1
 libwpd 0.10.3-2
 libwpe 1.6.0-1
 libwpg 0.3.3-2
-libx11 1.6.10-1
+libx11 1.6.10-2
 libxau 1.0.9-3
 libxcb 1.14-1
 libxcomposite 0.4.5-3
@@ -539,7 +540,7 @@ libxxf86vm 1.1.4-4
 libyaml 0.2.5-1
 licenses 20200427-1
 lilv 0.24.8-2
-linux 5.7.11.arch1-1
+linux 5.7.12.arch1-1
 linux-api-headers 5.6.11-1
 linux-firmware 20200721.2b823fc-1
 lld 10.0.1-1
@@ -606,7 +607,7 @@ nss 3.55-2
 ntfs-3g 2017.3.23-4
 ntp 4.2.8.p15-1
 numactl 2.0.13-3
-nvidia 450.57-5
+nvidia 450.57-6
 nvidia-settings 450.57-1
 nvidia-utils 450.57-2
 nvm 0.35.3-1
